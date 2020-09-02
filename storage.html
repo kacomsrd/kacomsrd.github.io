@@ -11,9 +11,8 @@
   <button>Click to grant permission</button>
 
   <script>
-    document.querySelector("button").addEventListener("click", () => {
-      const persisted = await navigator.storage.persist();
-      window.close();
+    document.querySelector("button").addEventListener("click", function () {
+      navigator.storage.persist();
     });
   </script>
 </body>
