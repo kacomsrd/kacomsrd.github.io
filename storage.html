@@ -8,12 +8,22 @@
 </head>
 
 <body>
-  <button>Click to grant permission</button>
-
   <script>
-    document.querySelector("button").addEventListener("click", function () {
+    const u = new URL(window.location.href);
+
+    const h = document.createElement("h1");
+    h.innerText = u.searchParams.get("t") || "Please grant storage permission";;
+
+    const p = document.createElement("p");
+    p.innerText = u.searchParams.get("m") || "This app has not been granted permission to use persistent storage. This permission is needed to ensure that messages can be stored on this computer.";
+
+    const btn = document.createElement("button");
+    btn.innerText = u.searchParams.get("b") || "Click here to grant permission";
+    btn.addEventListener("click", function () {
       navigator.storage.persist();
     });
+
+    document.body.append(h, p, btn);
   </script>
 </body>
 
