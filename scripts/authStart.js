@@ -1,3 +1,15344 @@
-/*! For license information please see authStart.js.LICENSE.txt */
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.FindMsg=t():e.FindMsg=t()}(self,(function(){return(()=>{"use strict";var e={80869:(e,t,r)=>{r.r(t),r.d(t,{AccountEntity:()=>J.r,ApiId:()=>g,AuthError:()=>k.l,AuthErrorMessage:()=>k.Y,AuthenticationHeaderParser:()=>Ve.d,AuthenticationScheme:()=>m.hO,BrowserAuthError:()=>P,BrowserAuthErrorMessage:()=>N,BrowserCacheLocation:()=>d,BrowserConfigurationAuthError:()=>oe,BrowserConfigurationAuthErrorMessage:()=>ne,BrowserUtils:()=>fe,ClientAuthError:()=>ae.e,ClientAuthErrorMessage:()=>ae.A,ClientConfigurationError:()=>we.r,ClientConfigurationErrorMessage:()=>we.L,EventMessageUtils:()=>Ye,EventType:()=>S,InteractionRequiredAuthError:()=>j.Yo,InteractionRequiredAuthErrorMessage:()=>j.Zy,InteractionStatus:()=>y,InteractionType:()=>f,LogLevel:()=>K.i,Logger:()=>K.Y,NavigationClient:()=>ye,ProtocolMode:()=>de.A,PublicClientApplication:()=>je,ServerError:()=>B.n,SignedHttpRequest:()=>ze,StringUtils:()=>O.x,UrlString:()=>se.G,WrapperSKU:()=>v,stubbedPublicClientApplication:()=>Je,version:()=>Ee});var n=function(e,t){return n=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r])},n(e,t)};function o(e,t){function r(){this.constructor=e}n(e,t),e.prototype=null===t?Object.create(t):(r.prototype=t.prototype,new r)}var i=function(){return i=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var o in t=arguments[r])Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o]);return e},i.apply(this,arguments)};function a(e,t,r,n){return new(r||(r=Promise))((function(o,i){function a(e){try{c(n.next(e))}catch(e){i(e)}}function s(e){try{c(n.throw(e))}catch(e){i(e)}}function c(e){var t;e.done?o(e.value):(t=e.value,t instanceof r?t:new r((function(e){e(t)}))).then(a,s)}c((n=n.apply(e,t||[])).next())}))}function s(e,t){var r,n,o,i,a={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return i={next:s(0),throw:s(1),return:s(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i;function s(i){return function(s){return function(i){if(r)throw new TypeError("Generator is already executing.");for(;a;)try{if(r=1,n&&(o=2&i[0]?n.return:i[0]?n.throw||((o=n.return)&&o.call(n),0):n.next)&&!(o=o.call(n,i[1])).done)return o;switch(n=0,o&&(i=[2&i[0],o.value]),i[0]){case 0:case 1:o=i;break;case 4:return a.label++,{value:i[1],done:!1};case 5:a.label++,n=i[1],i=[0];continue;case 7:i=a.ops.pop(),a.trys.pop();continue;default:if(!((o=(o=a.trys).length>0&&o[o.length-1])||6!==i[0]&&2!==i[0])){a=0;continue}if(3===i[0]&&(!o||i[1]>o[0]&&i[1]<o[3])){a.label=i[1];break}if(6===i[0]&&a.label<o[1]){a.label=o[1],o=i;break}if(o&&a.label<o[2]){a.label=o[2],a.ops.push(i);break}o[2]&&a.ops.pop(),a.trys.pop();continue}i=t.call(e,a)}catch(e){i=[6,e],n=0}finally{r=o=0}if(5&i[0])throw i[1];return{value:i[0]?i[1]:void 0,done:!0}}([i,s])}}}function c(e,t){var r="function"==typeof Symbol&&e[Symbol.iterator];if(!r)return e;var n,o,i=r.call(e),a=[];try{for(;(void 0===t||t-- >0)&&!(n=i.next()).done;)a.push(n.value)}catch(e){o={error:e}}finally{try{n&&!n.done&&(r=i.return)&&r.call(i)}finally{if(o)throw o.error}}return a}function u(){for(var e=[],t=0;t<arguments.length;t++)e=e.concat(c(arguments[t]));return e}var d,h,l,p,g,f,y,m=r(77891),E="msal.js.browser";!function(e){e.LocalStorage="localStorage",e.SessionStorage="sessionStorage",e.MemoryStorage="memoryStorage"}(d||(d={})),function(e){e.GET="GET",e.POST="POST"}(h||(h={})),function(e){e.AUTHORITY="authority",e.ACQUIRE_TOKEN_ACCOUNT="acquireToken.account",e.SESSION_STATE="session.state",e.REQUEST_STATE="request.state",e.NONCE_IDTOKEN="nonce.id_token",e.ORIGIN_URI="request.origin",e.RENEW_STATUS="token.renew.status",e.URL_HASH="urlHash",e.REQUEST_PARAMS="request.params",e.SCOPES="scopes",e.INTERACTION_STATUS_KEY="interaction.status",e.CCS_CREDENTIAL="ccs.credential",e.CORRELATION_ID="request.correlationId"}(l||(l={})),function(e){e.WRAPPER_SKU="wrapper.sku",e.WRAPPER_VER="wrapper.version"}(p||(p={})),function(e){e[e.acquireTokenRedirect=861]="acquireTokenRedirect",e[e.acquireTokenPopup=862]="acquireTokenPopup",e[e.ssoSilent=863]="ssoSilent",e[e.acquireTokenSilent_authCode=864]="acquireTokenSilent_authCode",e[e.handleRedirectPromise=865]="handleRedirectPromise",e[e.acquireTokenByCode=866]="acquireTokenByCode",e[e.acquireTokenSilent_silentFlow=61]="acquireTokenSilent_silentFlow",e[e.logout=961]="logout",e[e.logoutPopup=962]="logoutPopup"}(g||(g={})),function(e){e.Redirect="redirect",e.Popup="popup",e.Silent="silent"}(f||(f={})),function(e){e.Startup="startup",e.Login="login",e.Logout="logout",e.AcquireToken="acquireToken",e.SsoSilent="ssoSilent",e.HandleRedirect="handleRedirect",e.None="none"}(y||(y={}));var v,C={scopes:m.f_},T="jwk";!function(e){e.React="@azure/msal-react",e.Angular="@azure/msal-angular"}(v||(v={}));var S,w="msal.db",A=function(){function e(){}return e.decimalToHex=function(e){for(var t=e.toString(16);t.length<2;)t="0"+t;return t},e}(),I=function(){function e(e){this.cryptoObj=e}return e.prototype.generateGuid=function(){try{var e=new Uint8Array(16);return this.cryptoObj.getRandomValues(e),e[6]|=64,e[6]&=79,e[8]|=128,e[8]&=191,A.decimalToHex(e[0])+A.decimalToHex(e[1])+A.decimalToHex(e[2])+A.decimalToHex(e[3])+"-"+A.decimalToHex(e[4])+A.decimalToHex(e[5])+"-"+A.decimalToHex(e[6])+A.decimalToHex(e[7])+"-"+A.decimalToHex(e[8])+A.decimalToHex(e[9])+"-"+A.decimalToHex(e[10])+A.decimalToHex(e[11])+A.decimalToHex(e[12])+A.decimalToHex(e[13])+A.decimalToHex(e[14])+A.decimalToHex(e[15])}catch(e){for(var t="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",r="0123456789abcdef",n=0,o="",i=0;i<36;i++)"-"!==t[i]&&"4"!==t[i]&&(n=16*Math.random()|0),"x"===t[i]?o+=r[n]:"y"===t[i]?(n&=3,o+=r[n|=8]):o+=t[i];return o}},e.isGuid=function(e){return/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(e)},e}(),_=function(){function e(){}return e.stringToUtf8Arr=function(e){for(var t,r=0,n=e.length,o=0;o<n;o++)r+=(t=e.charCodeAt(o))<128?1:t<2048?2:t<65536?3:t<2097152?4:t<67108864?5:6;for(var i=new Uint8Array(r),a=0,s=0;a<r;s++)(t=e.charCodeAt(s))<128?i[a++]=t:t<2048?(i[a++]=192+(t>>>6),i[a++]=128+(63&t)):t<65536?(i[a++]=224+(t>>>12),i[a++]=128+(t>>>6&63),i[a++]=128+(63&t)):t<2097152?(i[a++]=240+(t>>>18),i[a++]=128+(t>>>12&63),i[a++]=128+(t>>>6&63),i[a++]=128+(63&t)):t<67108864?(i[a++]=248+(t>>>24),i[a++]=128+(t>>>18&63),i[a++]=128+(t>>>12&63),i[a++]=128+(t>>>6&63),i[a++]=128+(63&t)):(i[a++]=252+(t>>>30),i[a++]=128+(t>>>24&63),i[a++]=128+(t>>>18&63),i[a++]=128+(t>>>12&63),i[a++]=128+(t>>>6&63),i[a++]=128+(63&t));return i},e.stringToArrayBuffer=function(e){for(var t=new ArrayBuffer(e.length),r=new Uint8Array(t),n=0;n<e.length;n++)r[n]=e.charCodeAt(n);return t},e.utf8ArrToString=function(e){for(var t="",r=void 0,n=e.length,o=0;o<n;o++)r=e[o],t+=String.fromCharCode(r>251&&r<254&&o+5<n?1073741824*(r-252)+(e[++o]-128<<24)+(e[++o]-128<<18)+(e[++o]-128<<12)+(e[++o]-128<<6)+e[++o]-128:r>247&&r<252&&o+4<n?(r-248<<24)+(e[++o]-128<<18)+(e[++o]-128<<12)+(e[++o]-128<<6)+e[++o]-128:r>239&&r<248&&o+3<n?(r-240<<18)+(e[++o]-128<<12)+(e[++o]-128<<6)+e[++o]-128:r>223&&r<240&&o+2<n?(r-224<<12)+(e[++o]-128<<6)+e[++o]-128:r>191&&r<224&&o+1<n?(r-192<<6)+e[++o]-128:r);return t},e}(),b=function(){function e(){}return e.prototype.urlEncode=function(e){return encodeURIComponent(this.encode(e).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_"))},e.prototype.urlEncodeArr=function(e){return this.base64EncArr(e).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")},e.prototype.encode=function(e){var t=_.stringToUtf8Arr(e);return this.base64EncArr(t)},e.prototype.base64EncArr=function(e){for(var t=(3-e.length%3)%3,r="",n=void 0,o=e.length,i=0,a=0;a<o;a++)n=a%3,i|=e[a]<<(16>>>n&24),2!==n&&e.length-a!=1||(r+=String.fromCharCode(this.uint6ToB64(i>>>18&63),this.uint6ToB64(i>>>12&63),this.uint6ToB64(i>>>6&63),this.uint6ToB64(63&i)),i=0);return 0===t?r:r.substring(0,r.length-t)+(1===t?"=":"==")},e.prototype.uint6ToB64=function(e){return e<26?e+65:e<52?e+71:e<62?e-4:62===e?43:63===e?47:65},e}(),R=function(){function e(){}return e.prototype.decode=function(e){var t=e.replace(/-/g,"+").replace(/_/g,"/");switch(t.length%4){case 0:break;case 2:t+="==";break;case 3:t+="=";break;default:throw new Error("Invalid base64 string")}var r=this.base64DecToArr(t);return _.utf8ArrToString(r)},e.prototype.base64DecToArr=function(e,t){for(var r=e.replace(/[^A-Za-z0-9\+\/]/g,""),n=r.length,o=t?Math.ceil((3*n+1>>>2)/t)*t:3*n+1>>>2,i=new Uint8Array(o),a=void 0,s=void 0,c=0,u=0,d=0;d<n;d++)if(s=3&d,c|=this.b64ToUint6(r.charCodeAt(d))<<18-6*s,3===s||n-d==1){for(a=0;a<3&&u<o;a++,u++)i[u]=c>>>(16>>>a&24)&255;c=0}return i},e.prototype.b64ToUint6=function(e){return e>64&&e<91?e-65:e>96&&e<123?e-71:e>47&&e<58?e+4:43===e?62:47===e?63:0},e}(),O=r(61653),k=r(87342),N={pkceNotGenerated:{code:"pkce_not_created",desc:"The PKCE code challenge and verifier could not be generated."},cryptoDoesNotExist:{code:"crypto_nonexistent",desc:"The crypto object or function is not available."},httpMethodNotImplementedError:{code:"http_method_not_implemented",desc:"The HTTP method given has not been implemented in this library."},emptyNavigateUriError:{code:"empty_navigate_uri",desc:"Navigation URI is empty. Please check stack trace for more info."},hashEmptyError:{code:"hash_empty_error",desc:"Hash value cannot be processed because it is empty. Please verify that your redirectUri is not clearing the hash."},hashDoesNotContainStateError:{code:"no_state_in_hash",desc:"Hash does not contain state. Please verify that the request originated from msal."},hashDoesNotContainKnownPropertiesError:{code:"hash_does_not_contain_known_properties",desc:"Hash does not contain known properites. Please verify that your redirectUri is not changing the hash."},unableToParseStateError:{code:"unable_to_parse_state",desc:"Unable to parse state. Please verify that the request originated from msal."},stateInteractionTypeMismatchError:{code:"state_interaction_type_mismatch",desc:"Hash contains state but the interaction type does not match the caller."},interactionInProgress:{code:"interaction_in_progress",desc:"Interaction is currently in progress. Please ensure that this interaction has been completed before calling an interactive API.  For more visit: aka.ms/msaljs/browser-errors."},popupWindowError:{code:"popup_window_error",desc:"Error opening popup window. This can happen if you are using IE or if popups are blocked in the browser."},emptyWindowError:{code:"empty_window_error",desc:"window.open returned null or undefined window object."},userCancelledError:{code:"user_cancelled",desc:"User cancelled the flow."},monitorPopupTimeoutError:{code:"monitor_window_timeout",desc:"Token acquisition in popup failed due to timeout. For more visit: aka.ms/msaljs/browser-errors."},monitorIframeTimeoutError:{code:"monitor_window_timeout",desc:"Token acquisition in iframe failed due to timeout. For more visit: aka.ms/msaljs/browser-errors."},redirectInIframeError:{code:"redirect_in_iframe",desc:"Code flow is not supported inside an iframe. Please ensure you are using MSAL.js in a top frame of the window if using the redirect APIs, or use the popup APIs."},blockTokenRequestsInHiddenIframeError:{code:"block_iframe_reload",desc:"Request was blocked inside an iframe because MSAL detected an authentication response. For more visit: aka.ms/msaljs/browser-errors"},blockAcquireTokenInPopupsError:{code:"block_nested_popups",desc:"Request was blocked inside a popup because MSAL detected it was running in a popup."},iframeClosedPrematurelyError:{code:"iframe_closed_prematurely",desc:"The iframe being monitored was closed prematurely."},silentLogoutUnsupportedError:{code:"silent_logout_unsupported",desc:"Silent logout not supported. Please call logoutRedirect or logoutPopup instead."},noAccountError:{code:"no_account_error",desc:"No account object provided to acquireTokenSilent and no active account has been set. Please call setActiveAccount or provide an account on the request."},silentPromptValueError:{code:"silent_prompt_value_error",desc:"The value given for the prompt value is not valid for silent requests - must be set to 'none'."},noTokenRequestCacheError:{code:"no_token_request_cache_error",desc:"No token request found in cache."},unableToParseTokenRequestCacheError:{code:"unable_to_parse_token_request_cache_error",desc:"The cached token request could not be parsed."},noCachedAuthorityError:{code:"no_cached_authority_error",desc:"No cached authority found."},authRequestNotSet:{code:"auth_request_not_set_error",desc:"Auth Request not set. Please ensure initiateAuthRequest was called from the InteractionHandler"},invalidCacheType:{code:"invalid_cache_type",desc:"Invalid cache type"},notInBrowserEnvironment:{code:"non_browser_environment",desc:"Login and token requests are not supported in non-browser environments."},databaseNotOpen:{code:"database_not_open",desc:"Database is not open!"},noNetworkConnectivity:{code:"no_network_connectivity",desc:"No network connectivity. Check your internet connection."},postRequestFailed:{code:"post_request_failed",desc:"Network request failed: If the browser threw a CORS error, check that the redirectUri is registered in the Azure App Portal as type 'SPA'"},getRequestFailed:{code:"get_request_failed",desc:"Network request failed. Please check the network trace to determine root cause."},failedToParseNetworkResponse:{code:"failed_to_parse_response",desc:"Failed to parse network response. Check network trace."},unableToLoadTokenError:{code:"unable_to_load_token",desc:"Error loading token to cache."},signingKeyNotFoundInStorage:{code:"crypto_key_not_found",desc:"Cryptographic Key or Keypair not found in browser storage."},authCodeRequired:{code:"auth_code_required",desc:"An authorization code must be provided (as the `code` property on the request) to this flow."},databaseUnavailable:{code:"database_unavailable",desc:"IndexedDB, which is required for persistent cryptographic key storage, is unavailable. This may be caused by browser privacy features which block persistent storage in third-party contexts."}},P=function(e){function t(r,n){var o=e.call(this,r,n)||this;return Object.setPrototypeOf(o,t.prototype),o.name="BrowserAuthError",o}return o(t,e),t.createPkceNotGeneratedError=function(e){return new t(N.pkceNotGenerated.code,N.pkceNotGenerated.desc+" Detail:"+e)},t.createCryptoNotAvailableError=function(e){return new t(N.cryptoDoesNotExist.code,N.cryptoDoesNotExist.desc+" Detail:"+e)},t.createHttpMethodNotImplementedError=function(e){return new t(N.httpMethodNotImplementedError.code,N.httpMethodNotImplementedError.desc+" Given Method: "+e)},t.createEmptyNavigationUriError=function(){return new t(N.emptyNavigateUriError.code,N.emptyNavigateUriError.desc)},t.createEmptyHashError=function(e){return new t(N.hashEmptyError.code,N.hashEmptyError.desc+" Given Url: "+e)},t.createHashDoesNotContainStateError=function(){return new t(N.hashDoesNotContainStateError.code,N.hashDoesNotContainStateError.desc)},t.createHashDoesNotContainKnownPropertiesError=function(){return new t(N.hashDoesNotContainKnownPropertiesError.code,N.hashDoesNotContainKnownPropertiesError.desc)},t.createUnableToParseStateError=function(){return new t(N.unableToParseStateError.code,N.unableToParseStateError.desc)},t.createStateInteractionTypeMismatchError=function(){return new t(N.stateInteractionTypeMismatchError.code,N.stateInteractionTypeMismatchError.desc)},t.createInteractionInProgressError=function(){return new t(N.interactionInProgress.code,N.interactionInProgress.desc)},t.createPopupWindowError=function(e){var r=N.popupWindowError.desc;return r=O.x.isEmpty(e)?r:r+" Details: "+e,new t(N.popupWindowError.code,r)},t.createEmptyWindowCreatedError=function(){return new t(N.emptyWindowError.code,N.emptyWindowError.desc)},t.createUserCancelledError=function(){return new t(N.userCancelledError.code,N.userCancelledError.desc)},t.createMonitorPopupTimeoutError=function(){return new t(N.monitorPopupTimeoutError.code,N.monitorPopupTimeoutError.desc)},t.createMonitorIframeTimeoutError=function(){return new t(N.monitorIframeTimeoutError.code,N.monitorIframeTimeoutError.desc)},t.createRedirectInIframeError=function(e){return new t(N.redirectInIframeError.code,N.redirectInIframeError.desc+" (window.parent !== window) => "+e)},t.createBlockReloadInHiddenIframeError=function(){return new t(N.blockTokenRequestsInHiddenIframeError.code,N.blockTokenRequestsInHiddenIframeError.desc)},t.createBlockAcquireTokenInPopupsError=function(){return new t(N.blockAcquireTokenInPopupsError.code,N.blockAcquireTokenInPopupsError.desc)},t.createIframeClosedPrematurelyError=function(){return new t(N.iframeClosedPrematurelyError.code,N.iframeClosedPrematurelyError.desc)},t.createSilentLogoutUnsupportedError=function(){return new t(N.silentLogoutUnsupportedError.code,N.silentLogoutUnsupportedError.desc)},t.createNoAccountError=function(){return new t(N.noAccountError.code,N.noAccountError.desc)},t.createSilentPromptValueError=function(e){return new t(N.silentPromptValueError.code,N.silentPromptValueError.desc+" Given value: "+e)},t.createUnableToParseTokenRequestCacheError=function(){return new t(N.unableToParseTokenRequestCacheError.code,N.unableToParseTokenRequestCacheError.desc)},t.createNoTokenRequestCacheError=function(){return new t(N.noTokenRequestCacheError.code,N.noTokenRequestCacheError.desc)},t.createAuthRequestNotSetError=function(){return new t(N.authRequestNotSet.code,N.authRequestNotSet.desc)},t.createNoCachedAuthorityError=function(){return new t(N.noCachedAuthorityError.code,N.noCachedAuthorityError.desc)},t.createInvalidCacheTypeError=function(){return new t(N.invalidCacheType.code,""+N.invalidCacheType.desc)},t.createNonBrowserEnvironmentError=function(){return new t(N.notInBrowserEnvironment.code,N.notInBrowserEnvironment.desc)},t.createDatabaseNotOpenError=function(){return new t(N.databaseNotOpen.code,N.databaseNotOpen.desc)},t.createNoNetworkConnectivityError=function(){return new t(N.noNetworkConnectivity.code,N.noNetworkConnectivity.desc)},t.createPostRequestFailedError=function(e,r){return new t(N.postRequestFailed.code,N.postRequestFailed.desc+" | Network client threw: "+e+" | Attempted to reach: "+r.split("?")[0])},t.createGetRequestFailedError=function(e,r){return new t(N.getRequestFailed.code,N.getRequestFailed.desc+" | Network client threw: "+e+" | Attempted to reach: "+r.split("?")[0])},t.createFailedToParseNetworkResponseError=function(e){return new t(N.failedToParseNetworkResponse.code,N.failedToParseNetworkResponse.desc+" | Attempted to reach: "+e.split("?")[0])},t.createUnableToLoadTokenError=function(e){return new t(N.unableToLoadTokenError.code,N.unableToLoadTokenError.desc+" | "+e)},t.createSigningKeyNotFoundInStorageError=function(e){return new t(N.signingKeyNotFoundInStorage.code,N.signingKeyNotFoundInStorage.desc+" | No match found for KeyId: "+e)},t.createAuthCodeRequiredError=function(){return new t(N.authCodeRequired.code,N.authCodeRequired.desc)},t.createDatabaseUnavailableError=function(){return new t(N.databaseUnavailable.code,N.databaseUnavailable.desc)},t}(k.l),U=function(){function e(e){this.base64Encode=new b,this.cryptoObj=e}return e.prototype.generateCodes=function(){return a(this,void 0,void 0,(function(){var e,t;return s(this,(function(r){switch(r.label){case 0:return e=this.generateCodeVerifier(),[4,this.generateCodeChallengeFromVerifier(e)];case 1:return t=r.sent(),[2,{verifier:e,challenge:t}]}}))}))},e.prototype.generateCodeVerifier=function(){try{var e=new Uint8Array(32);return this.cryptoObj.getRandomValues(e),this.base64Encode.urlEncodeArr(e)}catch(e){throw P.createPkceNotGeneratedError(e)}},e.prototype.generateCodeChallengeFromVerifier=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:return n.trys.push([0,2,,3]),[4,this.cryptoObj.sha256Digest(e)];case 1:return t=n.sent(),[2,this.base64Encode.urlEncodeArr(new Uint8Array(t))];case 2:throw r=n.sent(),P.createPkceNotGeneratedError(r);case 3:return[2]}}))}))},e}(),M="SHA-256",L=new Uint8Array([1,0,1]),H=function(){function e(e){if(this.logger=e,!this.hasCryptoAPI())throw P.createCryptoNotAvailableError("Browser crypto or msCrypto object not available.");this._keygenAlgorithmOptions={name:"RSASSA-PKCS1-v1_5",hash:M,modulusLength:2048,publicExponent:L}}return e.prototype.sha256Digest=function(e){return a(this,void 0,void 0,(function(){var t;return s(this,(function(r){return t=_.stringToUtf8Arr(e),[2,this.hasIECrypto()?this.getMSCryptoDigest(M,t):this.getSubtleCryptoDigest(M,t)]}))}))},e.prototype.getRandomValues=function(e){var t=window.msCrypto||window.crypto;if(!t.getRandomValues)throw P.createCryptoNotAvailableError("getRandomValues does not exist.");t.getRandomValues(e)},e.prototype.generateKeyPair=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,this.hasIECrypto()?this.msCryptoGenerateKey(e,t):window.crypto.subtle.generateKey(this._keygenAlgorithmOptions,e,t)]}))}))},e.prototype.exportJwk=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){return[2,this.hasIECrypto()?this.msCryptoExportJwk(e):window.crypto.subtle.exportKey(T,e)]}))}))},e.prototype.importJwk=function(t,r,n){return a(this,void 0,void 0,(function(){var o,i;return s(this,(function(a){return o=e.getJwkString(t),i=_.stringToArrayBuffer(o),[2,this.hasIECrypto()?this.msCryptoImportKey(i,r,n):window.crypto.subtle.importKey(T,t,this._keygenAlgorithmOptions,r,n)]}))}))},e.prototype.sign=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,this.hasIECrypto()?this.msCryptoSign(e,t):window.crypto.subtle.sign(this._keygenAlgorithmOptions,e,t)]}))}))},e.prototype.hasCryptoAPI=function(){return this.hasIECrypto()||this.hasBrowserCrypto()},e.prototype.hasIECrypto=function(){return"msCrypto"in window},e.prototype.hasBrowserCrypto=function(){return"crypto"in window},e.prototype.getSubtleCryptoDigest=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,window.crypto.subtle.digest(e,t)]}))}))},e.prototype.getMSCryptoDigest=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,new Promise((function(r,n){var o=window.msCrypto.subtle.digest(e,t.buffer);o.addEventListener("complete",(function(e){r(e.target.result)})),o.addEventListener("error",(function(e){n(e)}))}))]}))}))},e.prototype.msCryptoGenerateKey=function(e,t){return a(this,void 0,void 0,(function(){var r=this;return s(this,(function(n){return[2,new Promise((function(n,o){var i=window.msCrypto.subtle.generateKey(r._keygenAlgorithmOptions,e,t);i.addEventListener("complete",(function(e){n(e.target.result)})),i.addEventListener("error",(function(e){o(e)}))}))]}))}))},e.prototype.msCryptoExportJwk=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){return[2,new Promise((function(t,r){var n=window.msCrypto.subtle.exportKey(T,e);n.addEventListener("complete",(function(e){var n=e.target.result,o=_.utf8ArrToString(new Uint8Array(n)).replace(/\r/g,"").replace(/\n/g,"").replace(/\t/g,"").split(" ").join("").replace("\0","");try{t(JSON.parse(o))}catch(e){r(e)}})),n.addEventListener("error",(function(e){r(e)}))}))]}))}))},e.prototype.msCryptoImportKey=function(e,t,r){return a(this,void 0,void 0,(function(){var n=this;return s(this,(function(o){return[2,new Promise((function(o,i){var a=window.msCrypto.subtle.importKey(T,e,n._keygenAlgorithmOptions,t,r);a.addEventListener("complete",(function(e){o(e.target.result)})),a.addEventListener("error",(function(e){i(e)}))}))]}))}))},e.prototype.msCryptoSign=function(e,t){return a(this,void 0,void 0,(function(){var r=this;return s(this,(function(n){return[2,new Promise((function(n,o){var i=window.msCrypto.subtle.sign(r._keygenAlgorithmOptions,e,t);i.addEventListener("complete",(function(e){n(e.target.result)})),i.addEventListener("error",(function(e){o(e)}))}))]}))}))},e.getJwkString=function(e){return JSON.stringify(e,Object.keys(e).sort())},e}(),q=function(){function e(){this.dbName=w,this.version=1,this.tableName="msal.db.keys",this.dbOpen=!1}return e.prototype.open=function(){return a(this,void 0,void 0,(function(){var e=this;return s(this,(function(t){return[2,new Promise((function(t,r){var n=window.indexedDB.open(e.dbName,e.version);n.addEventListener("upgradeneeded",(function(t){t.target.result.createObjectStore(e.tableName)})),n.addEventListener("success",(function(r){var n=r;e.db=n.target.result,e.dbOpen=!0,t()})),n.addEventListener("error",(function(){return r(P.createDatabaseUnavailableError())}))}))]}))}))},e.prototype.validateDbIsOpen=function(){return a(this,void 0,void 0,(function(){return s(this,(function(e){switch(e.label){case 0:return this.dbOpen?[3,2]:[4,this.open()];case 1:return[2,e.sent()];case 2:return[2]}}))}))},e.prototype.getItem=function(e){return a(this,void 0,void 0,(function(){var t=this;return s(this,(function(r){switch(r.label){case 0:return[4,this.validateDbIsOpen()];case 1:return r.sent(),[2,new Promise((function(r,n){if(!t.db)return n(P.createDatabaseNotOpenError());var o=t.db.transaction([t.tableName],"readonly").objectStore(t.tableName).get(e);o.addEventListener("success",(function(e){r(e.target.result)})),o.addEventListener("error",(function(e){return n(e)}))}))]}}))}))},e.prototype.setItem=function(e,t){return a(this,void 0,void 0,(function(){var r=this;return s(this,(function(n){switch(n.label){case 0:return[4,this.validateDbIsOpen()];case 1:return n.sent(),[2,new Promise((function(n,o){if(!r.db)return o(P.createDatabaseNotOpenError());var i=r.db.transaction([r.tableName],"readwrite").objectStore(r.tableName).put(t,e);i.addEventListener("success",(function(){return n()})),i.addEventListener("error",(function(e){return o(e)}))}))]}}))}))},e.prototype.removeItem=function(e){return a(this,void 0,void 0,(function(){var t=this;return s(this,(function(r){switch(r.label){case 0:return[4,this.validateDbIsOpen()];case 1:return r.sent(),[2,new Promise((function(r,n){if(!t.db)return n(P.createDatabaseNotOpenError());var o=t.db.transaction([t.tableName],"readwrite").objectStore(t.tableName).delete(e);o.addEventListener("success",(function(){return r()})),o.addEventListener("error",(function(e){return n(e)}))}))]}}))}))},e.prototype.getKeys=function(){return a(this,void 0,void 0,(function(){var e=this;return s(this,(function(t){switch(t.label){case 0:return[4,this.validateDbIsOpen()];case 1:return t.sent(),[2,new Promise((function(t,r){if(!e.db)return r(P.createDatabaseNotOpenError());var n=e.db.transaction([e.tableName],"readonly").objectStore(e.tableName).getAllKeys();n.addEventListener("success",(function(e){t(e.target.result)})),n.addEventListener("error",(function(e){return r(e)}))}))]}}))}))},e.prototype.containsKey=function(e){return a(this,void 0,void 0,(function(){var t=this;return s(this,(function(r){switch(r.label){case 0:return[4,this.validateDbIsOpen()];case 1:return r.sent(),[2,new Promise((function(r,n){if(!t.db)return n(P.createDatabaseNotOpenError());var o=t.db.transaction([t.tableName],"readonly").objectStore(t.tableName).count(e);o.addEventListener("success",(function(e){r(1===e.target.result)})),o.addEventListener("error",(function(e){return n(e)}))}))]}}))}))},e.prototype.deleteDatabase=function(){return a(this,void 0,void 0,(function(){return s(this,(function(e){return[2,new Promise((function(e,t){var r=window.indexedDB.deleteDatabase(w);r.addEventListener("success",(function(){return e(!0)})),r.addEventListener("error",(function(){return t(!1)}))}))]}))}))},e}(),D=function(){function e(){this.cache=new Map}return e.prototype.getItem=function(e){return this.cache.get(e)||null},e.prototype.setItem=function(e,t){this.cache.set(e,t)},e.prototype.removeItem=function(e){this.cache.delete(e)},e.prototype.getKeys=function(){var e=[];return this.cache.forEach((function(t,r){e.push(r)})),e},e.prototype.containsKey=function(e){return this.cache.has(e)},e.prototype.clear=function(){this.cache.clear()},e}(),F=function(){function e(e){this.inMemoryCache=new D,this.indexedDBCache=new q,this.logger=e}return e.prototype.handleDatabaseAccessError=function(e){e instanceof P&&e.errorCode===N.databaseUnavailable.code&&this.logger.error("Could not access persistent storage. This may be caused by browser privacy features which block persistent storage in third-party contexts.")},e.prototype.getItem=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:if(t=this.inMemoryCache.getItem(e))return[3,4];n.label=1;case 1:return n.trys.push([1,3,,4]),this.logger.verbose("Queried item not found in in-memory cache, now querying persistent storage."),[4,this.indexedDBCache.getItem(e)];case 2:return[2,n.sent()];case 3:return r=n.sent(),this.handleDatabaseAccessError(r),[3,4];case 4:return[2,t]}}))}))},e.prototype.setItem=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:this.inMemoryCache.setItem(e,t),n.label=1;case 1:return n.trys.push([1,3,,4]),[4,this.indexedDBCache.setItem(e,t)];case 2:return n.sent(),[3,4];case 3:return r=n.sent(),this.handleDatabaseAccessError(r),[3,4];case 4:return[2]}}))}))},e.prototype.removeItem=function(e){return a(this,void 0,void 0,(function(){var t;return s(this,(function(r){switch(r.label){case 0:this.inMemoryCache.removeItem(e),r.label=1;case 1:return r.trys.push([1,3,,4]),[4,this.indexedDBCache.removeItem(e)];case 2:return r.sent(),[3,4];case 3:return t=r.sent(),this.handleDatabaseAccessError(t),[3,4];case 4:return[2]}}))}))},e.prototype.getKeys=function(){return a(this,void 0,void 0,(function(){var e,t;return s(this,(function(r){switch(r.label){case 0:if(0!==(e=this.inMemoryCache.getKeys()).length)return[3,4];r.label=1;case 1:return r.trys.push([1,3,,4]),this.logger.verbose("In-memory cache is empty, now querying persistent storage."),[4,this.indexedDBCache.getKeys()];case 2:return[2,r.sent()];case 3:return t=r.sent(),this.handleDatabaseAccessError(t),[3,4];case 4:return[2,e]}}))}))},e.prototype.containsKey=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:if(t=this.inMemoryCache.containsKey(e))return[3,4];n.label=1;case 1:return n.trys.push([1,3,,4]),this.logger.verbose("Key not found in in-memory cache, now querying persistent storage."),[4,this.indexedDBCache.containsKey(e)];case 2:return[2,n.sent()];case 3:return r=n.sent(),this.handleDatabaseAccessError(r),[3,4];case 4:return[2,t]}}))}))},e.prototype.clear=function(){return a(this,void 0,void 0,(function(){var e;return s(this,(function(t){switch(t.label){case 0:this.inMemoryCache.clear(),t.label=1;case 1:return t.trys.push([1,3,,4]),[4,this.indexedDBCache.deleteDatabase()];case 2:return t.sent(),[3,4];case 3:return e=t.sent(),this.handleDatabaseAccessError(e),[3,4];case 4:return[2]}}))}))},e}(),x=function(){function e(e){this.logger=e,this.browserCrypto=new H(this.logger),this.b64Encode=new b,this.b64Decode=new R,this.guidGenerator=new I(this.browserCrypto),this.pkceGenerator=new U(this.browserCrypto),this.cache={asymmetricKeys:new F(this.logger),symmetricKeys:new F(this.logger)}}return e.prototype.createNewGuid=function(){return this.guidGenerator.generateGuid()},e.prototype.base64Encode=function(e){return this.b64Encode.encode(e)},e.prototype.base64Decode=function(e){return this.b64Decode.decode(e)},e.prototype.generatePkceCodes=function(){return a(this,void 0,void 0,(function(){return s(this,(function(e){return[2,this.pkceGenerator.generateCodes()]}))}))},e.prototype.getPublicKeyThumbprint=function(t){return a(this,void 0,void 0,(function(){var r,n,o,i,a,c,u;return s(this,(function(s){switch(s.label){case 0:return[4,this.browserCrypto.generateKeyPair(e.EXTRACTABLE,e.POP_KEY_USAGES)];case 1:return r=s.sent(),[4,this.browserCrypto.exportJwk(r.publicKey)];case 2:return n=s.sent(),o={e:n.e,kty:n.kty,n:n.n},i=H.getJwkString(o),[4,this.hashString(i)];case 3:return a=s.sent(),[4,this.browserCrypto.exportJwk(r.privateKey)];case 4:return c=s.sent(),[4,this.browserCrypto.importJwk(c,!1,["sign"])];case 5:return u=s.sent(),[4,this.cache.asymmetricKeys.setItem(a,{privateKey:u,publicKey:r.publicKey,requestMethod:t.resourceRequestMethod,requestUri:t.resourceRequestUri})];case 6:return s.sent(),[2,a]}}))}))},e.prototype.removeTokenBindingKey=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){switch(t.label){case 0:return[4,this.cache.asymmetricKeys.removeItem(e)];case 1:return t.sent(),[4,this.cache.asymmetricKeys.containsKey(e)];case 2:return[2,!t.sent()]}}))}))},e.prototype.clearKeystore=function(){return a(this,void 0,void 0,(function(){var e,t,r;return s(this,(function(n){switch(n.label){case 0:return e=Object.keys(this.cache),(t=this.cache[e[0]])?[4,t.deleteDatabase()]:[3,2];case 1:return r=n.sent(),[3,3];case 2:r=!1,n.label=3;case 3:return[2,r]}}))}))},e.prototype.signJwt=function(e,t){return a(this,void 0,void 0,(function(){var r,n,o,i,a,c,u,d,h,l;return s(this,(function(s){switch(s.label){case 0:return[4,this.cache.asymmetricKeys.getItem(t)];case 1:if(!(r=s.sent()))throw P.createSigningKeyNotFoundInStorageError(t);return[4,this.browserCrypto.exportJwk(r.publicKey)];case 2:return n=s.sent(),o=H.getJwkString(n),i={alg:n.alg,type:T},a=this.b64Encode.urlEncode(JSON.stringify(i)),e.cnf={jwk:JSON.parse(o)},c=this.b64Encode.urlEncode(JSON.stringify(e)),u=a+"."+c,d=_.stringToArrayBuffer(u),[4,this.browserCrypto.sign(r.privateKey,d)];case 3:return h=s.sent(),l=this.b64Encode.urlEncodeArr(new Uint8Array(h)),[2,u+"."+l]}}))}))},e.prototype.hashString=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:return[4,this.browserCrypto.sha256Digest(e)];case 1:return t=n.sent(),r=new Uint8Array(t),[2,this.b64Encode.urlEncodeArr(r)]}}))}))},e.POP_KEY_USAGES=["sign","verify"],e.EXTRACTABLE=!0,e}(),K=r(21362),G=r(66561),B=r(91359),j=r(83927),J=r(43640),Y=r(67656),W=r(70979),z=r(85907),V=r(11429),Q=r(59993),X=r(44612),Z=r(1713),$=r(4184),ee=r(3516),te=r(34726),re=r(70591),ne={redirectUriNotSet:{code:"redirect_uri_empty",desc:"A redirect URI is required for all calls, and none has been set."},postLogoutUriNotSet:{code:"post_logout_uri_empty",desc:"A post logout redirect has not been set."},storageNotSupportedError:{code:"storage_not_supported",desc:"Given storage configuration option was not supported."},noRedirectCallbacksSet:{code:"no_redirect_callbacks",desc:"No redirect callbacks have been set. Please call setRedirectCallbacks() with the appropriate function arguments before continuing. More information is available here: https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL-basics."},invalidCallbackObject:{code:"invalid_callback_object",desc:"The object passed for the callback was invalid. More information is available here: https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL-basics."},stubPcaInstanceCalled:{code:"stubbed_public_client_application_called",desc:"Stub instance of Public Client Application was called. If using msal-react, please ensure context is not used without a provider. For more visit: aka.ms/msaljs/browser-errors"},inMemRedirectUnavailable:{code:"in_mem_redirect_unavailable",desc:"Redirect cannot be supported. In-memory storage was selected and storeAuthStateInCookie=false, which would cause the library to be unable to handle the incoming hash. If you would like to use the redirect API, please use session/localStorage or set storeAuthStateInCookie=true."}},oe=function(e){function t(r,n){var o=e.call(this,r,n)||this;return o.name="BrowserConfigurationAuthError",Object.setPrototypeOf(o,t.prototype),o}return o(t,e),t.createRedirectUriEmptyError=function(){return new t(ne.redirectUriNotSet.code,ne.redirectUriNotSet.desc)},t.createPostLogoutRedirectUriEmptyError=function(){return new t(ne.postLogoutUriNotSet.code,ne.postLogoutUriNotSet.desc)},t.createStorageNotSupportedError=function(e){return new t(ne.storageNotSupportedError.code,ne.storageNotSupportedError.desc+" Given Location: "+e)},t.createRedirectCallbacksNotSetError=function(){return new t(ne.noRedirectCallbacksSet.code,ne.noRedirectCallbacksSet.desc)},t.createStubPcaInstanceCalledError=function(){return new t(ne.stubPcaInstanceCalled.code,ne.stubPcaInstanceCalled.desc)},t.createInMemoryRedirectUnavailableError=function(){return new t(ne.inMemRedirectUnavailable.code,ne.inMemRedirectUnavailable.desc)},t}(k.l),ie=function(){function e(e){this.validateWindowStorage(e),this.windowStorage=window[e]}return e.prototype.validateWindowStorage=function(e){if(e!==d.LocalStorage&&e!==d.SessionStorage)throw oe.createStorageNotSupportedError(e);if(!window[e])throw oe.createStorageNotSupportedError(e)},e.prototype.getItem=function(e){return this.windowStorage.getItem(e)},e.prototype.setItem=function(e,t){this.windowStorage.setItem(e,t)},e.prototype.removeItem=function(e){this.windowStorage.removeItem(e)},e.prototype.getKeys=function(){return Object.keys(this.windowStorage)},e.prototype.containsKey=function(e){return this.windowStorage.hasOwnProperty(e)},e}(),ae=r(60742),se=r(99860),ce=function(){function e(){}return e.extractBrowserRequestState=function(e,t){if(O.x.isEmpty(t))return null;try{return ee.C.parseRequestState(e,t).libraryState.meta}catch(e){throw ae.e.createInvalidStateError(t,e)}},e.parseServerResponseFromHash=function(e){if(!e)return{};var t=new se.G(e);return se.G.getDeserializedHash(t.getHash())},e}(),ue=function(e){function t(t,r,n,o){var i=e.call(this,t,n)||this;return i.COOKIE_LIFE_MULTIPLIER=864e5,i.cacheConfig=r,i.logger=o,i.internalStorage=new D,i.browserStorage=i.setupBrowserStorage(i.cacheConfig.cacheLocation),i.temporaryCacheStorage=i.setupTemporaryCacheStorage(i.cacheConfig.cacheLocation),i.migrateCacheEntries(),i}return o(t,e),t.prototype.setupBrowserStorage=function(e){switch(e){case d.LocalStorage:case d.SessionStorage:try{return new ie(e)}catch(e){this.logger.verbose(e);break}}return this.cacheConfig.cacheLocation=d.MemoryStorage,new D},t.prototype.setupTemporaryCacheStorage=function(e){switch(e){case d.LocalStorage:case d.SessionStorage:try{return new ie(d.SessionStorage)}catch(e){return this.logger.verbose(e),this.internalStorage}case d.MemoryStorage:default:return this.internalStorage}},t.prototype.migrateCacheEntries=function(){var e=this,t=m.gT.CACHE_PREFIX+"."+m.Vi.ID_TOKEN,r=m.gT.CACHE_PREFIX+"."+m.Vi.CLIENT_INFO,n=m.gT.CACHE_PREFIX+"."+m.Vi.ERROR,o=m.gT.CACHE_PREFIX+"."+m.Vi.ERROR_DESC,i=[this.browserStorage.getItem(t),this.browserStorage.getItem(r),this.browserStorage.getItem(n),this.browserStorage.getItem(o)];[m.Vi.ID_TOKEN,m.Vi.CLIENT_INFO,m.Vi.ERROR,m.Vi.ERROR_DESC].forEach((function(t,r){return e.migrateCacheEntry(t,i[r])}))},t.prototype.migrateCacheEntry=function(e,t){t&&this.setTemporaryCache(e,t,!0)},t.prototype.validateAndParseJson=function(e){try{var t=JSON.parse(e);return t&&"object"==typeof t?t:null}catch(e){return null}},t.prototype.getItem=function(e){return this.browserStorage.getItem(e)},t.prototype.setItem=function(e,t){this.browserStorage.setItem(e,t)},t.prototype.getAccount=function(e){var t=this.getItem(e);if(!t)return null;var r=this.validateAndParseJson(t);return r&&J.r.isAccountEntity(r)?Y.L.toObject(new J.r,r):null},t.prototype.setAccount=function(e){this.logger.trace("BrowserCacheManager.setAccount called");var t=e.generateAccountKey();this.setItem(t,JSON.stringify(e))},t.prototype.getIdTokenCredential=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getIdTokenCredential: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&W.w.isIdTokenEntity(r)?(this.logger.trace("BrowserCacheManager.getIdTokenCredential: cache hit"),Y.L.toObject(new W.w,r)):(this.logger.trace("BrowserCacheManager.getIdTokenCredential: called, no cache hit"),null)},t.prototype.setIdTokenCredential=function(e){this.logger.trace("BrowserCacheManager.setIdTokenCredential called");var t=e.generateCredentialKey();this.setItem(t,JSON.stringify(e))},t.prototype.getAccessTokenCredential=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getAccessTokenCredential: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&z._.isAccessTokenEntity(r)?(this.logger.trace("BrowserCacheManager.getAccessTokenCredential: cache hit"),Y.L.toObject(new z._,r)):(this.logger.trace("BrowserCacheManager.getAccessTokenCredential: called, no cache hit"),null)},t.prototype.setAccessTokenCredential=function(e){this.logger.trace("BrowserCacheManager.setAccessTokenCredential called");var t=e.generateCredentialKey();this.setItem(t,JSON.stringify(e))},t.prototype.getRefreshTokenCredential=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&V.e.isRefreshTokenEntity(r)?(this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: cache hit"),Y.L.toObject(new V.e,r)):(this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: called, no cache hit"),null)},t.prototype.setRefreshTokenCredential=function(e){this.logger.trace("BrowserCacheManager.setRefreshTokenCredential called");var t=e.generateCredentialKey();this.setItem(t,JSON.stringify(e))},t.prototype.getAppMetadata=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getAppMetadata: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&Q.T.isAppMetadataEntity(e,r)?(this.logger.trace("BrowserCacheManager.getAppMetadata: cache hit"),Y.L.toObject(new Q.T,r)):(this.logger.trace("BrowserCacheManager.getAppMetadata: called, no cache hit"),null)},t.prototype.setAppMetadata=function(e){this.logger.trace("BrowserCacheManager.setAppMetadata called");var t=e.generateAppMetadataKey();this.setItem(t,JSON.stringify(e))},t.prototype.getServerTelemetry=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getServerTelemetry: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&X.d.isServerTelemetryEntity(e,r)?(this.logger.trace("BrowserCacheManager.getServerTelemetry: cache hit"),Y.L.toObject(new X.d,r)):(this.logger.trace("BrowserCacheManager.getServerTelemetry: called, no cache hit"),null)},t.prototype.setServerTelemetry=function(e,t){this.logger.trace("BrowserCacheManager.setServerTelemetry called"),this.setItem(e,JSON.stringify(t))},t.prototype.getAuthorityMetadata=function(e){var t=this.internalStorage.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getAuthorityMetadata: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&Z.l.isAuthorityMetadataEntity(e,r)?(this.logger.trace("BrowserCacheManager.getAuthorityMetadata: cache hit"),Y.L.toObject(new Z.l,r)):null},t.prototype.getAuthorityMetadataKeys=function(){var e=this;return this.internalStorage.getKeys().filter((function(t){return e.isAuthorityMetadata(t)}))},t.prototype.setWrapperMetadata=function(e,t){this.internalStorage.setItem(p.WRAPPER_SKU,e),this.internalStorage.setItem(p.WRAPPER_VER,t)},t.prototype.getWrapperMetadata=function(){return[this.internalStorage.getItem(p.WRAPPER_SKU)||"",this.internalStorage.getItem(p.WRAPPER_VER)||""]},t.prototype.setAuthorityMetadata=function(e,t){this.logger.trace("BrowserCacheManager.setAuthorityMetadata called"),this.internalStorage.setItem(e,JSON.stringify(t))},t.prototype.getActiveAccount=function(){var e=this.generateCacheKey(m.Vi.ACTIVE_ACCOUNT),t=this.browserStorage.getItem(e);return t&&this.getAccountInfoByFilter({localAccountId:t})[0]||null},t.prototype.setActiveAccount=function(e){var t=this.generateCacheKey(m.Vi.ACTIVE_ACCOUNT);e?(this.logger.verbose("setActiveAccount: Active account set"),this.browserStorage.setItem(t,e.localAccountId)):(this.logger.verbose("setActiveAccount: No account passed, active account not set"),this.browserStorage.removeItem(t))},t.prototype.getAccountInfoByFilter=function(e){return this.getAllAccounts().filter((function(t){return!(e.username&&e.username.toLowerCase()!==t.username.toLowerCase()||e.homeAccountId&&e.homeAccountId!==t.homeAccountId||e.localAccountId&&e.localAccountId!==t.localAccountId||e.tenantId&&e.tenantId!==t.tenantId||e.environment&&e.environment!==t.environment)}))},t.prototype.getThrottlingCache=function(e){var t=this.getItem(e);if(!t)return this.logger.trace("BrowserCacheManager.getThrottlingCache: called, no cache hit"),null;var r=this.validateAndParseJson(t);return r&&$.A.isThrottlingEntity(e,r)?(this.logger.trace("BrowserCacheManager.getThrottlingCache: cache hit"),Y.L.toObject(new $.A,r)):(this.logger.trace("BrowserCacheManager.getThrottlingCache: called, no cache hit"),null)},t.prototype.setThrottlingCache=function(e,t){this.logger.trace("BrowserCacheManager.setThrottlingCache called"),this.setItem(e,JSON.stringify(t))},t.prototype.getTemporaryCache=function(e,t){var r=t?this.generateCacheKey(e):e;if(this.cacheConfig.storeAuthStateInCookie){var n=this.getItemCookie(r);if(n)return this.logger.trace("BrowserCacheManager.getTemporaryCache: storeAuthStateInCookies set to true, retrieving from cookies"),n}var o=this.temporaryCacheStorage.getItem(r);if(!o){if(this.cacheConfig.cacheLocation===d.LocalStorage){var i=this.browserStorage.getItem(r);if(i)return this.logger.trace("BrowserCacheManager.getTemporaryCache: Temporary cache item found in local storage"),i}return this.logger.trace("BrowserCacheManager.getTemporaryCache: No cache item found in local storage"),null}return this.logger.trace("BrowserCacheManager.getTemporaryCache: Temporary cache item returned"),o},t.prototype.setTemporaryCache=function(e,t,r){var n=r?this.generateCacheKey(e):e;this.temporaryCacheStorage.setItem(n,t),this.cacheConfig.storeAuthStateInCookie&&(this.logger.trace("BrowserCacheManager.setTemporaryCache: storeAuthStateInCookie set to true, setting item cookie"),this.setItemCookie(n,t))},t.prototype.removeItem=function(e){return this.browserStorage.removeItem(e),this.temporaryCacheStorage.removeItem(e),this.cacheConfig.storeAuthStateInCookie&&(this.logger.trace("BrowserCacheManager.removeItem: storeAuthStateInCookie is true, clearing item cookie"),this.clearItemCookie(e)),!0},t.prototype.containsKey=function(e){return this.browserStorage.containsKey(e)||this.temporaryCacheStorage.containsKey(e)},t.prototype.getKeys=function(){return u(this.browserStorage.getKeys(),this.temporaryCacheStorage.getKeys())},t.prototype.clear=function(){return a(this,void 0,void 0,(function(){var e=this;return s(this,(function(t){switch(t.label){case 0:return[4,this.removeAllAccounts()];case 1:return t.sent(),this.removeAppMetadata(),this.getKeys().forEach((function(t){!e.browserStorage.containsKey(t)&&!e.temporaryCacheStorage.containsKey(t)||-1===t.indexOf(m.gT.CACHE_PREFIX)&&-1===t.indexOf(e.clientId)||e.removeItem(t)})),this.internalStorage.clear(),[2]}}))}))},t.prototype.setItemCookie=function(e,t,r){var n=encodeURIComponent(e)+"="+encodeURIComponent(t)+";path=/;";r&&(n+="expires="+this.getCookieExpirationTime(r)+";"),this.cacheConfig.secureCookies&&(n+="Secure;"),document.cookie=n},t.prototype.getItemCookie=function(e){for(var t=encodeURIComponent(e)+"=",r=document.cookie.split(";"),n=0;n<r.length;n++){for(var o=r[n];" "===o.charAt(0);)o=o.substring(1);if(0===o.indexOf(t))return decodeURIComponent(o.substring(t.length,o.length))}return""},t.prototype.clearMsalCookies=function(){var e=this,t=m.gT.CACHE_PREFIX+"."+this.clientId;document.cookie.split(";").forEach((function(r){for(;" "===r.charAt(0);)r=r.substring(1);if(0===r.indexOf(t)){var n=r.split("=")[0];e.clearItemCookie(n)}}))},t.prototype.clearItemCookie=function(e){this.setItemCookie(e,"",-1)},t.prototype.getCookieExpirationTime=function(e){var t=new Date;return new Date(t.getTime()+e*this.COOKIE_LIFE_MULTIPLIER).toUTCString()},t.prototype.getCache=function(){return this.browserStorage},t.prototype.setCache=function(){},t.prototype.generateCacheKey=function(e){return this.validateAndParseJson(e)?JSON.stringify(e):O.x.startsWith(e,m.gT.CACHE_PREFIX)||O.x.startsWith(e,m.Vi.ADAL_ID_TOKEN)?e:m.gT.CACHE_PREFIX+"."+this.clientId+"."+e},t.prototype.generateAuthorityKey=function(e){var t=ee.C.parseRequestState(this.cryptoImpl,e).libraryState.id;return this.generateCacheKey(l.AUTHORITY+"."+t)},t.prototype.generateNonceKey=function(e){var t=ee.C.parseRequestState(this.cryptoImpl,e).libraryState.id;return this.generateCacheKey(l.NONCE_IDTOKEN+"."+t)},t.prototype.generateStateKey=function(e){var t=ee.C.parseRequestState(this.cryptoImpl,e).libraryState.id;return this.generateCacheKey(l.REQUEST_STATE+"."+t)},t.prototype.getCachedAuthority=function(e){var t=this.generateStateKey(e),r=this.getTemporaryCache(t);if(!r)return null;var n=this.generateAuthorityKey(r);return this.getTemporaryCache(n)},t.prototype.updateCacheEntries=function(e,t,r,n,o){this.logger.trace("BrowserCacheManager.updateCacheEntries called");var i=this.generateStateKey(e);this.setTemporaryCache(i,e,!1);var a=this.generateNonceKey(e);this.setTemporaryCache(a,t,!1);var s=this.generateAuthorityKey(e);if(this.setTemporaryCache(s,r,!1),o){var c={credential:o.homeAccountId,type:te.G.HOME_ACCOUNT_ID};this.setTemporaryCache(l.CCS_CREDENTIAL,JSON.stringify(c),!0)}else O.x.isEmpty(n)||(c={credential:n,type:te.G.UPN},this.setTemporaryCache(l.CCS_CREDENTIAL,JSON.stringify(c),!0))},t.prototype.resetRequestCache=function(e){var t=this;this.logger.trace("BrowserCacheManager.resetRequestCache called"),O.x.isEmpty(e)||this.getKeys().forEach((function(r){-1!==r.indexOf(e)&&t.removeItem(r)})),e&&(this.removeItem(this.generateStateKey(e)),this.removeItem(this.generateNonceKey(e)),this.removeItem(this.generateAuthorityKey(e))),this.removeItem(this.generateCacheKey(l.REQUEST_PARAMS)),this.removeItem(this.generateCacheKey(l.ORIGIN_URI)),this.removeItem(this.generateCacheKey(l.URL_HASH)),this.removeItem(this.generateCacheKey(l.CORRELATION_ID)),this.removeItem(this.generateCacheKey(l.CCS_CREDENTIAL)),this.setInteractionInProgress(!1)},t.prototype.cleanRequestByState=function(e){if(this.logger.trace("BrowserCacheManager.cleanRequestByState called"),e){var t=this.generateStateKey(e),r=this.temporaryCacheStorage.getItem(t);this.logger.infoPii("BrowserCacheManager.cleanRequestByState: Removing temporary cache items for state: "+r),this.resetRequestCache(r||"")}this.clearMsalCookies()},t.prototype.cleanRequestByInteractionType=function(e){var t=this;this.logger.trace("BrowserCacheManager.cleanRequestByInteractionType called"),this.getKeys().forEach((function(r){if(-1!==r.indexOf(l.REQUEST_STATE)){var n=t.temporaryCacheStorage.getItem(r);if(n){var o=ce.extractBrowserRequestState(t.cryptoImpl,n);o&&o.interactionType===e&&(t.logger.infoPii("BrowserCacheManager.cleanRequestByInteractionType: Removing temporary cache items for state: "+n),t.resetRequestCache(n))}}})),this.clearMsalCookies(),this.setInteractionInProgress(!1)},t.prototype.cacheCodeRequest=function(e,t){this.logger.trace("BrowserCacheManager.cacheCodeRequest called");var r=t.base64Encode(JSON.stringify(e));this.setTemporaryCache(l.REQUEST_PARAMS,r,!0)},t.prototype.getCachedRequest=function(e,t){this.logger.trace("BrowserCacheManager.getCachedRequest called");var r=this.getTemporaryCache(l.REQUEST_PARAMS,!0);if(!r)throw P.createNoTokenRequestCacheError();var n=this.validateAndParseJson(t.base64Decode(r));if(!n)throw P.createUnableToParseTokenRequestCacheError();if(this.removeItem(this.generateCacheKey(l.REQUEST_PARAMS)),O.x.isEmpty(n.authority)){var o=this.generateAuthorityKey(e),i=this.getTemporaryCache(o);if(!i)throw P.createNoCachedAuthorityError();n.authority=i}return n},t.prototype.isInteractionInProgress=function(e){var t=this.getInteractionInProgress();return e?t===this.clientId:!!t},t.prototype.getInteractionInProgress=function(){var e=m.gT.CACHE_PREFIX+"."+l.INTERACTION_STATUS_KEY;return this.getTemporaryCache(e,!1)},t.prototype.setInteractionInProgress=function(e){var t=this.getInteractionInProgress(),r=m.gT.CACHE_PREFIX+"."+l.INTERACTION_STATUS_KEY;e&&!t?this.setTemporaryCache(r,this.clientId,!1):e||t!==this.clientId||this.removeItem(r)},t.prototype.getLegacyLoginHint=function(){var e=this.getTemporaryCache(m.Vi.ADAL_ID_TOKEN);e&&(this.browserStorage.removeItem(m.Vi.ADAL_ID_TOKEN),this.logger.verbose("Cached ADAL id token retrieved."));var t=this.getTemporaryCache(m.Vi.ID_TOKEN,!0);t&&(this.removeItem(this.generateCacheKey(m.Vi.ID_TOKEN)),this.logger.verbose("Cached MSAL.js v1 id token retrieved"));var r=t||e;if(r){var n=new re.H(r,this.cryptoImpl);if(n.claims&&n.claims.preferred_username)return this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, setting ADAL/MSAL v1 preferred_username as loginHint"),n.claims.preferred_username;if(n.claims&&n.claims.upn)return this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, setting ADAL/MSAL v1 upn as loginHint"),n.claims.upn;this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, however, no account hint claim found. Enable preferred_username or upn id token claim to get SSO.")}return null},t.prototype.updateCredentialCacheKey=function(e,t){var r=t.generateCredentialKey();if(e!==r){var n=this.getItem(e);if(n)return this.removeItem(e),this.setItem(r,n),this.logger.verbose("Updated an outdated "+t.credentialType+" cache key"),r;this.logger.error("Attempted to update an outdated "+t.credentialType+" cache key but no item matching the outdated key was found in storage")}return e},t}(Y.L),de=r(82617),he=r(14854),le=r(30658),pe=function(){function e(){}return e.prototype.sendGetRequestAsync=function(e,t){return a(this,void 0,void 0,(function(){var r,n,o;return s(this,(function(i){switch(i.label){case 0:return i.trys.push([0,2,,3]),[4,fetch(e,{method:h.GET,headers:this.getFetchHeaders(t)})];case 1:return r=i.sent(),[3,3];case 2:throw n=i.sent(),window.navigator.onLine?P.createGetRequestFailedError(n,e):P.createNoNetworkConnectivityError();case 3:return i.trys.push([3,5,,6]),o={headers:this.getHeaderDict(r.headers)},[4,r.json()];case 4:return[2,(o.body=i.sent(),o.status=r.status,o)];case 5:throw i.sent(),P.createFailedToParseNetworkResponseError(e);case 6:return[2]}}))}))},e.prototype.sendPostRequestAsync=function(e,t){return a(this,void 0,void 0,(function(){var r,n,o,i;return s(this,(function(a){switch(a.label){case 0:r=t&&t.body||"",a.label=1;case 1:return a.trys.push([1,3,,4]),[4,fetch(e,{method:h.POST,headers:this.getFetchHeaders(t),body:r})];case 2:return n=a.sent(),[3,4];case 3:throw o=a.sent(),window.navigator.onLine?P.createPostRequestFailedError(o,e):P.createNoNetworkConnectivityError();case 4:return a.trys.push([4,6,,7]),i={headers:this.getHeaderDict(n.headers)},[4,n.json()];case 5:return[2,(i.body=a.sent(),i.status=n.status,i)];case 6:throw a.sent(),P.createFailedToParseNetworkResponseError(e);case 7:return[2]}}))}))},e.prototype.getFetchHeaders=function(e){var t=new Headers;if(!e||!e.headers)return t;var r=e.headers;return Object.keys(r).forEach((function(e){t.append(e,r[e])})),t},e.prototype.getHeaderDict=function(e){var t={};return e.forEach((function(e,r){t[r]=e})),t},e}(),ge=function(){function e(){}return e.prototype.sendGetRequestAsync=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,this.sendRequestAsync(e,h.GET,t)]}))}))},e.prototype.sendPostRequestAsync=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){return[2,this.sendRequestAsync(e,h.POST,t)]}))}))},e.prototype.sendRequestAsync=function(e,t,r){var n=this;return new Promise((function(o,i){var a=new XMLHttpRequest;if(a.open(t,e,!0),n.setXhrHeaders(a,r),a.onload=function(){(a.status<200||a.status>=300)&&(t===h.POST?i(P.createPostRequestFailedError("Failed with status "+a.status,e)):i(P.createGetRequestFailedError("Failed with status "+a.status,e)));try{var r=JSON.parse(a.responseText),s={headers:n.getHeaderDict(a),body:r,status:a.status};o(s)}catch(t){i(P.createFailedToParseNetworkResponseError(e))}},a.onerror=function(){window.navigator.onLine?t===h.POST?i(P.createPostRequestFailedError("Failed with status "+a.status,e)):i(P.createGetRequestFailedError("Failed with status "+a.status,e)):i(P.createNoNetworkConnectivityError())},t===h.POST&&r&&r.body)a.send(r.body);else{if(t!==h.GET)throw P.createHttpMethodNotImplementedError(t);a.send()}}))},e.prototype.setXhrHeaders=function(e,t){if(t&&t.headers){var r=t.headers;Object.keys(r).forEach((function(t){e.setRequestHeader(t,r[t])}))}},e.prototype.getHeaderDict=function(e){var t=e.getAllResponseHeaders().trim().split(/[\r\n]+/),r={};return t.forEach((function(e){var t=e.split(": "),n=t.shift(),o=t.join(": ");n&&o&&(r[n]=o)})),r},e}(),fe=function(){function e(){}return e.clearHash=function(e){e.location.hash=m.gT.EMPTY_STRING,"function"==typeof e.history.replaceState&&e.history.replaceState(null,m.gT.EMPTY_STRING,""+e.location.origin+e.location.pathname+e.location.search)},e.replaceHash=function(e){var t=e.split("#");t.shift(),window.location.hash=t.length>0?t.join("#"):""},e.isInIframe=function(){return window.parent!==window},e.isInPopup=function(){return"undefined"!=typeof window&&!!window.opener&&window.opener!==window&&"string"==typeof window.name&&0===window.name.indexOf("msal.")},e.getCurrentUri=function(){return window.location.href.split("?")[0].split("#")[0]},e.getHomepage=function(){var e=new se.G(window.location.href).getUrlComponents();return e.Protocol+"//"+e.HostNameAndPort+"/"},e.getBrowserNetworkClient=function(){return window.fetch&&window.Headers?new pe:new ge},e.blockReloadInHiddenIframes=function(){if(se.G.hashContainsKnownProperties(window.location.hash)&&e.isInIframe())throw P.createBlockReloadInHiddenIframeError()},e.blockRedirectInIframe=function(t,r){var n=e.isInIframe();if(t===f.Redirect&&n&&!r)throw P.createRedirectInIframeError(n)},e.blockAcquireTokenInPopups=function(){if(e.isInPopup())throw P.createBlockAcquireTokenInPopupsError()},e.blockNonBrowserEnvironment=function(e){if(!e)throw P.createNonBrowserEnvironmentError()},e.detectIEOrEdge=function(){var e=window.navigator.userAgent,t=e.indexOf("MSIE "),r=e.indexOf("Trident/"),n=e.indexOf("Edge/");return t>0||r>0||n>0},e}(),ye=function(){function e(){}return e.prototype.navigateInternal=function(t,r){return e.defaultNavigateWindow(t,r)},e.prototype.navigateExternal=function(t,r){return e.defaultNavigateWindow(t,r)},e.defaultNavigateWindow=function(e,t){return t.noHistory?window.location.replace(e):window.location.assign(e),new Promise((function(e){setTimeout((function(){e(!0)}),t.timeout)}))},e}(),me="@azure/msal-browser",Ee="2.21.0";!function(e){e.ACCOUNT_ADDED="msal:accountAdded",e.ACCOUNT_REMOVED="msal:accountRemoved",e.LOGIN_START="msal:loginStart",e.LOGIN_SUCCESS="msal:loginSuccess",e.LOGIN_FAILURE="msal:loginFailure",e.ACQUIRE_TOKEN_START="msal:acquireTokenStart",e.ACQUIRE_TOKEN_SUCCESS="msal:acquireTokenSuccess",e.ACQUIRE_TOKEN_FAILURE="msal:acquireTokenFailure",e.ACQUIRE_TOKEN_NETWORK_START="msal:acquireTokenFromNetworkStart",e.SSO_SILENT_START="msal:ssoSilentStart",e.SSO_SILENT_SUCCESS="msal:ssoSilentSuccess",e.SSO_SILENT_FAILURE="msal:ssoSilentFailure",e.ACQUIRE_TOKEN_BY_CODE_START="msal:acquireTokenByCodeStart",e.ACQUIRE_TOKEN_BY_CODE_SUCCESS="msal:acquireTokenByCodeSuccess",e.ACQUIRE_TOKEN_BY_CODE_FAILURE="msal:acquireTokenByCodeFailure",e.HANDLE_REDIRECT_START="msal:handleRedirectStart",e.HANDLE_REDIRECT_END="msal:handleRedirectEnd",e.POPUP_OPENED="msal:popupOpened",e.LOGOUT_START="msal:logoutStart",e.LOGOUT_SUCCESS="msal:logoutSuccess",e.LOGOUT_FAILURE="msal:logoutFailure",e.LOGOUT_END="msal:logoutEnd"}(S||(S={}));var ve=function(){function e(e,t){this.eventCallbacks=new Map,this.logger=e,this.browserCrypto=t,this.listeningToStorageEvents=!1,this.handleAccountCacheChange=this.handleAccountCacheChange.bind(this)}return e.prototype.addEventCallback=function(e){if("undefined"!=typeof window){var t=this.browserCrypto.createNewGuid();return this.eventCallbacks.set(t,e),this.logger.verbose("Event callback registered with id: "+t),t}return null},e.prototype.removeEventCallback=function(e){this.eventCallbacks.delete(e),this.logger.verbose("Event callback "+e+" removed.")},e.prototype.enableAccountStorageEvents=function(){"undefined"!=typeof window&&(this.listeningToStorageEvents?this.logger.verbose("Account storage listener already registered."):(this.logger.verbose("Adding account storage listener."),this.listeningToStorageEvents=!0,window.addEventListener("storage",this.handleAccountCacheChange)))},e.prototype.disableAccountStorageEvents=function(){"undefined"!=typeof window&&(this.listeningToStorageEvents?(this.logger.verbose("Removing account storage listener."),window.removeEventListener("storage",this.handleAccountCacheChange),this.listeningToStorageEvents=!1):this.logger.verbose("No account storage listener registered."))},e.prototype.emitEvent=function(e,t,r,n){var o=this;if("undefined"!=typeof window){var i={eventType:e,interactionType:t||null,payload:r||null,error:n||null,timestamp:Date.now()};this.logger.info("Emitting event: "+e),this.eventCallbacks.forEach((function(t,r){o.logger.verbose("Emitting event to callback "+r+": "+e),t.apply(null,[i])}))}},e.prototype.handleAccountCacheChange=function(e){try{var t=e.newValue||e.oldValue;if(!t)return;var r=JSON.parse(t);if("object"!=typeof r||!J.r.isAccountEntity(r))return;var n=Y.L.toObject(new J.r,r).getAccountInfo();!e.oldValue&&e.newValue?(this.logger.info("Account was added to cache in a different window"),this.emitEvent(S.ACCOUNT_ADDED,void 0,n)):!e.newValue&&e.oldValue&&(this.logger.info("Account was removed from cache in a different window"),this.emitEvent(S.ACCOUNT_REMOVED,void 0,n))}catch(e){return}},e}(),Ce=r(47282),Te=r(29046),Se=r(65676),we=r(47181),Ae=r(31093),Ie=function(e){function t(t,r,n,o,i,a,s){var c=e.call(this,t,r,n,o,i,s)||this;return c.navigationClient=a,c}return o(t,e),t.prototype.initializeAuthorizationCodeRequest=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:return this.logger.verbose("initializeAuthorizationRequest called",e.correlationId),[4,this.browserCrypto.generatePkceCodes()];case 1:return t=n.sent(),r=i(i({},e),{redirectUri:e.redirectUri,code:"",codeVerifier:t.verifier}),e.codeChallenge=t.challenge,e.codeChallengeMethod=m.gT.S256_CODE_CHALLENGE_METHOD,[2,r]}}))}))},t.prototype.initializeLogoutRequest=function(e){if(this.logger.verbose("initializeLogoutRequest called",null==e?void 0:e.correlationId),this.browserStorage.isInteractionInProgress())throw P.createInteractionInProgressError();var t=i({correlationId:this.browserCrypto.createNewGuid()},e);return e&&null===e.postLogoutRedirectUri?this.logger.verbose("postLogoutRedirectUri passed as null, not setting post logout redirect uri",t.correlationId):e&&e.postLogoutRedirectUri?(this.logger.verbose("Setting postLogoutRedirectUri to uri set on logout request",t.correlationId),t.postLogoutRedirectUri=se.G.getAbsoluteUrl(e.postLogoutRedirectUri,fe.getCurrentUri())):null===this.config.auth.postLogoutRedirectUri?this.logger.verbose("postLogoutRedirectUri configured as null and no uri set on request, not passing post logout redirect",t.correlationId):this.config.auth.postLogoutRedirectUri?(this.logger.verbose("Setting postLogoutRedirectUri to configured uri",t.correlationId),t.postLogoutRedirectUri=se.G.getAbsoluteUrl(this.config.auth.postLogoutRedirectUri,fe.getCurrentUri())):(this.logger.verbose("Setting postLogoutRedirectUri to current page",t.correlationId),t.postLogoutRedirectUri=se.G.getAbsoluteUrl(fe.getCurrentUri(),fe.getCurrentUri())),t},t.prototype.createAuthCodeClient=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return[4,this.getClientConfiguration(e,t)];case 1:return r=n.sent(),[2,new Te.U(r)]}}))}))},t.prototype.getClientConfiguration=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return this.logger.verbose("getClientConfiguration called"),[4,this.getDiscoveredAuthority(t)];case 1:return r=n.sent(),[2,{authOptions:{clientId:this.config.auth.clientId,authority:r,clientCapabilities:this.config.auth.clientCapabilities},systemOptions:{tokenRenewalOffsetSeconds:this.config.system.tokenRenewalOffsetSeconds,preventCorsPreflight:!0},loggerOptions:{loggerCallback:this.config.system.loggerOptions.loggerCallback,piiLoggingEnabled:this.config.system.loggerOptions.piiLoggingEnabled,logLevel:this.config.system.loggerOptions.logLevel,correlationId:this.correlationId},cryptoInterface:this.browserCrypto,networkInterface:this.networkClient,storageInterface:this.browserStorage,serverTelemetryManager:e,libraryInfo:{sku:E,version:Ee,cpu:"",os:""}}]}}))}))},t.prototype.validateAndExtractStateFromHash=function(e,t,r){this.logger.verbose("validateAndExtractStateFromHash called",r);var n=se.G.getDeserializedHash(e);if(!n.state)throw P.createHashDoesNotContainStateError();var o=ce.extractBrowserRequestState(this.browserCrypto,n.state);if(!o)throw P.createUnableToParseStateError();if(o.interactionType!==t)throw P.createStateInteractionTypeMismatchError();return this.logger.verbose("Returning state from hash",r),n.state},t.prototype.getDiscoveredAuthority=function(e){return a(this,void 0,void 0,(function(){var t;return s(this,(function(r){switch(r.label){case 0:return this.logger.verbose("getDiscoveredAuthority called"),t={protocolMode:this.config.auth.protocolMode,knownAuthorities:this.config.auth.knownAuthorities,cloudDiscoveryMetadata:this.config.auth.cloudDiscoveryMetadata,authorityMetadata:this.config.auth.authorityMetadata},e?(this.logger.verbose("Creating discovered authority with request authority"),[4,Se.A.createDiscoveredInstance(e,this.config.system.networkClient,this.browserStorage,t)]):[3,2];case 1:case 3:return[2,r.sent()];case 2:return this.logger.verbose("Creating discovered authority with configured authority"),[4,Se.A.createDiscoveredInstance(this.config.auth.authority,this.config.system.networkClient,this.browserStorage,t)]}}))}))},t.prototype.preflightInteractiveRequest=function(e,t){return a(this,void 0,void 0,(function(){return s(this,(function(r){switch(r.label){case 0:if(this.logger.verbose("preflightInteractiveRequest called, validating app environment",null==e?void 0:e.correlationId),fe.blockReloadInHiddenIframes(),this.browserStorage.isInteractionInProgress(!1))throw P.createInteractionInProgressError();return[4,this.initializeAuthorizationRequest(e,t)];case 1:return[2,r.sent()]}}))}))},t.prototype.initializeAuthorizationRequest=function(e,t){return a(this,void 0,void 0,(function(){var r,n,o,a,c,u,d;return s(this,(function(s){switch(s.label){case 0:return this.logger.verbose("initializeAuthorizationRequest called"),r=this.getRedirectUri(e.redirectUri),n={interactionType:t},o=ee.C.setRequestState(this.browserCrypto,e&&e.state||"",n),c=[{}],[4,this.initializeBaseRequest(e)];case 1:return a=i.apply(void 0,[i.apply(void 0,c.concat([s.sent()])),{redirectUri:r,state:o,nonce:e.nonce||this.browserCrypto.createNewGuid(),responseMode:m.vw.FRAGMENT}]),(u=e.account||this.browserStorage.getActiveAccount())&&(this.logger.verbose("Setting validated request account"),this.logger.verbosePii("Setting validated request account: "+u),a.account=u),O.x.isEmpty(a.loginHint)&&!u&&(d=this.browserStorage.getLegacyLoginHint())&&(a.loginHint=d),this.browserStorage.updateCacheEntries(a.state,a.nonce,a.authority,a.loginHint||"",a.account||null),[2,a]}}))}))},t}(function(){function e(e,t,r,n,o,i){this.config=e,this.browserStorage=t,this.browserCrypto=r,this.networkClient=this.config.system.networkClient,this.eventHandler=o,this.correlationId=i||this.browserCrypto.createNewGuid(),this.logger=n.clone(E,Ee,this.correlationId)}return e.prototype.clearCacheOnLogout=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){switch(t.label){case 0:if(!e)return[3,5];J.r.accountInfoIsEqual(e,this.browserStorage.getActiveAccount(),!1)&&(this.logger.verbose("Setting active account to null"),this.browserStorage.setActiveAccount(null)),t.label=1;case 1:return t.trys.push([1,3,,4]),[4,this.browserStorage.removeAccount(J.r.generateAccountCacheKey(e))];case 2:return t.sent(),this.logger.verbose("Cleared cache items belonging to the account provided in the logout request."),[3,4];case 3:return t.sent(),this.logger.error("Account provided in logout request was not found. Local cache unchanged."),[3,4];case 4:return[3,9];case 5:return t.trys.push([5,8,,9]),[4,this.browserStorage.clear()];case 6:return t.sent(),[4,this.browserCrypto.clearKeystore()];case 7:return t.sent(),this.logger.verbose("No account provided in logout request, clearing all cache items."),[3,9];case 8:return t.sent(),this.logger.error("Attempted to clear all MSAL cache items and failed. Local cache unchanged."),[3,9];case 9:return[2]}}))}))},e.prototype.initializeBaseRequest=function(e){return a(this,void 0,void 0,(function(){var t,r,n;return s(this,(function(o){switch(o.label){case 0:if(this.logger.verbose("Initializing BaseAuthRequest"),t=e.authority||this.config.auth.authority,r=u(e&&e.scopes||[]),e.authenticationScheme){if(e.authenticationScheme===m.hO.SSH){if(!e.sshJwk)throw we.r.createMissingSshJwkError();if(!e.sshKid)throw we.r.createMissingSshKidError()}this.logger.verbose('Authentication Scheme set to "'+e.authenticationScheme+'" as configured in Auth request')}else e.authenticationScheme=m.hO.BEARER,this.logger.verbose('Authentication Scheme wasn\'t explicitly set in request, defaulting to "Bearer" request');return!e.claims||O.x.isEmpty(e.claims)?[3,2]:(n=e,[4,this.browserCrypto.hashString(e.claims)]);case 1:n.requestedClaimsHash=o.sent(),o.label=2;case 2:return[2,i(i({},e),{correlationId:this.correlationId,authority:t,scopes:r})]}}))}))},e.prototype.getRedirectUri=function(e){this.logger.verbose("getRedirectUri called");var t=e||this.config.auth.redirectUri||fe.getCurrentUri();return se.G.getAbsoluteUrl(t,fe.getCurrentUri())},e.prototype.initializeServerTelemetryManager=function(e,t){this.logger.verbose("initializeServerTelemetryManager called");var r={clientId:this.config.auth.clientId,correlationId:this.correlationId,apiId:e,forceRefresh:t||!1,wrapperSKU:this.browserStorage.getWrapperMetadata()[0],wrapperVer:this.browserStorage.getWrapperMetadata()[1]};return new Ae.d(r,this.browserStorage)},e}()),_e=function(){function e(e,t){this.browserStorage=e,this.logger=t,this.unloadWindow=this.unloadWindow.bind(this)}return e.prototype.openPopup=function(t,r){try{var n=void 0;if(r.popup?(n=r.popup,this.logger.verbosePii("Navigating popup window to: "+t),n.location.assign(t)):void 0===r.popup&&(this.logger.verbosePii("Opening popup window to: "+t),n=e.openSizedPopup(t,r.popupName,r.popupWindowAttributes,this.logger)),!n)throw P.createEmptyWindowCreatedError();return n.focus&&n.focus(),this.currentWindow=n,window.addEventListener("beforeunload",this.unloadWindow),n}catch(e){throw this.logger.error("error opening popup "+e.message),this.browserStorage.setInteractionInProgress(!1),P.createPopupWindowError(e.toString())}},e.openSizedPopup=function(e,t,r,n){var o,i,a,s,c=window.screenLeft?window.screenLeft:window.screenX,u=window.screenTop?window.screenTop:window.screenY,d=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,h=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,l=null===(o=r.popupSize)||void 0===o?void 0:o.width,p=null===(i=r.popupSize)||void 0===i?void 0:i.height,g=null===(a=r.popupPosition)||void 0===a?void 0:a.top,f=null===(s=r.popupPosition)||void 0===s?void 0:s.left;return(!l||l<0||l>d)&&(n.verbose("Default popup window width used. Window width not configured or invalid."),l=483),(!p||p<0||p>h)&&(n.verbose("Default popup window height used. Window height not configured or invalid."),p=600),(!g||g<0||g>h)&&(n.verbose("Default popup window top position used. Window top not configured or invalid."),g=Math.max(0,h/2-300+u)),(!f||f<0||f>d)&&(n.verbose("Default popup window left position used. Window left not configured or invalid."),f=Math.max(0,d/2-241.5+c)),window.open(e,t,"width="+l+", height="+p+", top="+g+", left="+f+", scrollbars=yes")},e.prototype.unloadWindow=function(e){this.browserStorage.cleanRequestByInteractionType(f.Popup),this.currentWindow&&this.currentWindow.close(),e.preventDefault()},e.prototype.cleanPopup=function(e){e&&e.close(),window.removeEventListener("beforeunload",this.unloadWindow),this.browserStorage.setInteractionInProgress(!1)},e.prototype.monitorPopupForSameOrigin=function(e){var t=this;return new Promise((function(r,n){var o=setInterval((function(){if(e.closed)return t.cleanPopup(),clearInterval(o),void n(P.createUserCancelledError());var i=m.gT.EMPTY_STRING;try{i=e.location.href}catch(e){}O.x.isEmpty(i)||"about:blank"===i||(clearInterval(o),r())}),50)}))},e.generatePopupName=function(e,t){return"msal."+e+"."+t.scopes.join("-")+"."+t.authority+"."+t.correlationId},e.generateLogoutPopupName=function(e,t){return"msal."+e+"."+(t.account&&t.account.homeAccountId)+"."+t.correlationId},e}(),be=function(){function e(e,t,r,n){this.authModule=e,this.browserStorage=t,this.authCodeRequest=r,this.browserRequestLogger=n}return e.prototype.handleCodeResponseFromHash=function(e,t,r,n){return a(this,void 0,void 0,(function(){var o,i,a;return s(this,(function(s){if(this.browserRequestLogger.verbose("InteractionHandler.handleCodeResponse called"),O.x.isEmpty(e))throw P.createEmptyHashError(e);if(o=this.browserStorage.generateStateKey(t),!(i=this.browserStorage.getTemporaryCache(o)))throw ae.e.createStateNotFoundError("Cached State");return a=this.authModule.handleFragmentResponse(e,i),[2,this.handleCodeResponseFromServer(a,t,r,n)]}))}))},e.prototype.handleCodeResponseFromServer=function(e,t,r,n,o){return void 0===o&&(o=!0),a(this,void 0,void 0,(function(){var i,a,c,u,d,h;return s(this,(function(s){switch(s.label){case 0:if(this.browserRequestLogger.trace("InteractionHandler.handleCodeResponseFromServer called"),i=this.browserStorage.generateStateKey(t),!(a=this.browserStorage.getTemporaryCache(i)))throw ae.e.createStateNotFoundError("Cached State");return c=this.browserStorage.generateNonceKey(a),u=this.browserStorage.getTemporaryCache(c),this.authCodeRequest.code=e.code,e.cloud_instance_host_name?[4,this.updateTokenEndpointAuthority(e.cloud_instance_host_name,r,n)]:[3,2];case 1:s.sent(),s.label=2;case 2:return o&&(e.nonce=u||void 0),e.state=a,e.client_info?this.authCodeRequest.clientInfo=e.client_info:(d=this.checkCcsCredentials())&&(this.authCodeRequest.ccsCredential=d),[4,this.authModule.acquireToken(this.authCodeRequest,e)];case 3:return h=s.sent(),this.browserStorage.cleanRequestByState(t),[2,h]}}))}))},e.prototype.updateTokenEndpointAuthority=function(e,t,r){return a(this,void 0,void 0,(function(){var n,o;return s(this,(function(i){switch(i.label){case 0:return n="https://"+e+"/"+t.tenant+"/",[4,Se.A.createDiscoveredInstance(n,r,this.browserStorage,t.options)];case 1:return o=i.sent(),this.authModule.updateAuthority(o),[2]}}))}))},e.prototype.checkCcsCredentials=function(){var e=this.browserStorage.getTemporaryCache(l.CCS_CREDENTIAL,!0);if(e)try{return JSON.parse(e)}catch(t){this.authModule.logger.error("Cache credential could not be parsed"),this.authModule.logger.errorPii("Cache credential could not be parsed: "+e)}return null},e}(),Re=function(e){function t(t,r,n,o){var i=e.call(this,t,r,n,o)||this;return i.popupUtils=new _e(r,o),i}return o(t,e),t.prototype.initiateAuthRequest=function(e,t){if(O.x.isEmpty(e))throw this.browserRequestLogger.error("Navigate url is empty"),P.createEmptyNavigationUriError();return this.browserStorage.setInteractionInProgress(!0),this.browserRequestLogger.infoPii("Navigate to: "+e),this.popupUtils.openPopup(e,t)},t.prototype.monitorPopupForHash=function(e){var t=this;return this.popupUtils.monitorPopupForSameOrigin(e).then((function(){var r=e.location.hash;if(fe.clearHash(e),t.popupUtils.cleanPopup(e),!r)throw P.createEmptyHashError(e.location.href);if(se.G.hashContainsKnownProperties(r))return r;throw P.createHashDoesNotContainKnownPropertiesError()}))},t}(be),Oe=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i;return s(this,(function(a){switch(a.label){case 0:return a.trys.push([0,2,,3]),[4,this.preflightInteractiveRequest(e,f.Popup)];case 1:return t=a.sent(),r=_e.generatePopupName(this.config.auth.clientId,t),n=e.popupWindowAttributes||{},this.config.system.asyncPopups?(this.logger.verbose("asyncPopups set to true, acquiring token"),[2,this.acquireTokenPopupAsync(t,r,n)]):(this.logger.verbose("asyncPopup set to false, opening popup before acquiring token"),o=_e.openSizedPopup("about:blank",r,n,this.logger),[2,this.acquireTokenPopupAsync(t,r,n,o)]);case 2:return i=a.sent(),[2,Promise.reject(i)];case 3:return[2]}}))}))},t.prototype.logout=function(e){try{this.logger.verbose("logoutPopup called");var t=this.initializeLogoutRequest(e),r=_e.generateLogoutPopupName(this.config.auth.clientId,t),n=e&&e.authority,o=e&&e.mainWindowRedirectUri,i=(null==e?void 0:e.popupWindowAttributes)||{};if(this.config.system.asyncPopups)return this.logger.verbose("asyncPopups set to true"),this.logoutPopupAsync(t,r,i,n,void 0,o);this.logger.verbose("asyncPopup set to false, opening popup");var a=_e.openSizedPopup("about:blank",r,i,this.logger);return this.logoutPopupAsync(t,r,i,n,a,o)}catch(e){return Promise.reject(e)}},t.prototype.acquireTokenPopupAsync=function(e,t,r,n){return a(this,void 0,void 0,(function(){var o,i,a,c,u,d,h,l,p,y;return s(this,(function(s){switch(s.label){case 0:this.logger.verbose("acquireTokenPopupAsync called"),o=this.initializeServerTelemetryManager(g.acquireTokenPopup),s.label=1;case 1:return s.trys.push([1,7,,8]),[4,this.initializeAuthorizationCodeRequest(e)];case 2:return i=s.sent(),[4,this.createAuthCodeClient(o,e.authority)];case 3:return a=s.sent(),this.logger.verbose("Auth code client created"),[4,a.getAuthCodeUrl(e)];case 4:return c=s.sent(),u=new Re(a,this.browserStorage,i,this.logger),d={popup:n,popupName:t,popupWindowAttributes:r},h=u.initiateAuthRequest(c,d),this.eventHandler.emitEvent(S.POPUP_OPENED,f.Popup,{popupWindow:h},null),[4,u.monitorPopupForHash(h)];case 5:return l=s.sent(),p=this.validateAndExtractStateFromHash(l,f.Popup,e.correlationId),Ce.v.removeThrottle(this.browserStorage,this.config.auth.clientId,i),[4,u.handleCodeResponseFromHash(l,p,a.authority,this.networkClient)];case 6:return[2,s.sent()];case 7:throw y=s.sent(),n&&n.close(),y instanceof k.l&&y.setCorrelationId(this.correlationId),o.cacheFailedRequest(y),this.browserStorage.cleanRequestByState(e.state),y;case 8:return[2]}}))}))},t.prototype.logoutPopupAsync=function(e,t,r,n,o,i){return a(this,void 0,void 0,(function(){var a,c,u,d,h,l,p,y,m;return s(this,(function(s){switch(s.label){case 0:this.logger.verbose("logoutPopupAsync called"),this.eventHandler.emitEvent(S.LOGOUT_START,f.Popup,e),a=this.initializeServerTelemetryManager(g.logoutPopup),s.label=1;case 1:return s.trys.push([1,8,,9]),[4,this.clearCacheOnLogout(e.account)];case 2:return s.sent(),this.browserStorage.setInteractionInProgress(!0),[4,this.createAuthCodeClient(a,n)];case 3:c=s.sent(),this.logger.verbose("Auth code client created"),u=c.getLogoutUri(e),this.eventHandler.emitEvent(S.LOGOUT_SUCCESS,f.Popup,e),d=new _e(this.browserStorage,this.logger),h=d.openPopup(u,{popupName:t,popupWindowAttributes:r,popup:o}),this.eventHandler.emitEvent(S.POPUP_OPENED,f.Popup,{popupWindow:h},null),s.label=4;case 4:return s.trys.push([4,6,,7]),[4,d.monitorPopupForSameOrigin(h)];case 5:return s.sent(),this.logger.verbose("Popup successfully redirected to postLogoutRedirectUri"),[3,7];case 6:return l=s.sent(),this.logger.verbose("Error occurred while monitoring popup for same origin. Session on server may remain active. Error: "+l),[3,7];case 7:return d.cleanPopup(h),i?(p={apiId:g.logoutPopup,timeout:this.config.system.redirectNavigationTimeout,noHistory:!1},y=se.G.getAbsoluteUrl(i,fe.getCurrentUri()),this.logger.verbose("Redirecting main window to url specified in the request"),this.logger.verbosePii("Redirecing main window to: "+y),this.navigationClient.navigateInternal(y,p)):this.logger.verbose("No main window navigation requested"),[3,9];case 8:throw m=s.sent(),o&&o.close(),m instanceof k.l&&m.setCorrelationId(this.correlationId),this.browserStorage.setInteractionInProgress(!1),this.eventHandler.emitEvent(S.LOGOUT_FAILURE,f.Popup,null,m),this.eventHandler.emitEvent(S.LOGOUT_END,f.Popup),a.cacheFailedRequest(m),m;case 9:return this.eventHandler.emitEvent(S.LOGOUT_END,f.Popup),[2]}}))}))},t}(Ie),ke=function(e){function t(t,r,n,o,i){var a=e.call(this,t,r,n,o)||this;return a.browserCrypto=i,a}return o(t,e),t.prototype.initiateAuthRequest=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest called"),O.x.isEmpty(e)?[3,7]:(t.redirectStartPage&&(this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: redirectStartPage set, caching start page"),this.browserStorage.setTemporaryCache(l.ORIGIN_URI,t.redirectStartPage,!0)),this.browserStorage.setInteractionInProgress(!0),this.browserStorage.setTemporaryCache(l.CORRELATION_ID,this.authCodeRequest.correlationId,!0),this.browserStorage.cacheCodeRequest(this.authCodeRequest,this.browserCrypto),this.browserRequestLogger.infoPii("RedirectHandler.initiateAuthRequest: Navigate to: "+e),r={apiId:g.acquireTokenRedirect,timeout:t.redirectTimeout,noHistory:!1},"function"!=typeof t.onRedirectNavigate?[3,4]:(this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: Invoking onRedirectNavigate callback"),!1===t.onRedirectNavigate(e)?[3,2]:(this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: onRedirectNavigate did not return false, navigating"),[4,t.navigationClient.navigateExternal(e,r)])));case 1:case 5:return n.sent(),[2];case 2:return this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: onRedirectNavigate returned false, stopping navigation"),[2];case 3:return[3,6];case 4:return this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: Navigating window to navigate url"),[4,t.navigationClient.navigateExternal(e,r)];case 6:return[3,8];case 7:throw this.browserRequestLogger.info("RedirectHandler.initiateAuthRequest: Navigate url is empty"),P.createEmptyNavigationUriError();case 8:return[2]}}))}))},t.prototype.handleCodeResponseFromHash=function(e,t,r,n,o){return a(this,void 0,void 0,(function(){var i,a,c,u,d,h,l;return s(this,(function(s){switch(s.label){case 0:if(this.browserRequestLogger.verbose("RedirectHandler.handleCodeResponse called"),O.x.isEmpty(e))throw P.createEmptyHashError(e);if(this.browserStorage.setInteractionInProgress(!1),i=this.browserStorage.generateStateKey(t),!(a=this.browserStorage.getTemporaryCache(i)))throw ae.e.createStateNotFoundError("Cached State");return c=this.authModule.handleFragmentResponse(e,a),u=this.browserStorage.generateNonceKey(a),d=this.browserStorage.getTemporaryCache(u),this.authCodeRequest.code=c.code,c.cloud_instance_host_name?[4,this.updateTokenEndpointAuthority(c.cloud_instance_host_name,r,n)]:[3,2];case 1:s.sent(),s.label=2;case 2:return c.nonce=d||void 0,c.state=a,c.client_info?this.authCodeRequest.clientInfo=c.client_info:(h=this.checkCcsCredentials())&&(this.authCodeRequest.ccsCredential=h),o&&Ce.v.removeThrottle(this.browserStorage,o,this.authCodeRequest),[4,this.authModule.acquireToken(this.authCodeRequest,c)];case 3:return l=s.sent(),this.browserStorage.cleanRequestByState(t),[2,l]}}))}))},t}(be),Ne=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i,a,c,u;return s(this,(function(s){switch(s.label){case 0:return[4,this.preflightInteractiveRequest(e,f.Redirect)];case 1:t=s.sent(),r=this.initializeServerTelemetryManager(g.acquireTokenRedirect),s.label=2;case 2:return s.trys.push([2,7,,8]),[4,this.initializeAuthorizationCodeRequest(t)];case 3:return n=s.sent(),[4,this.createAuthCodeClient(r,t.authority)];case 4:return o=s.sent(),this.logger.verbose("Auth code client created"),i=new ke(o,this.browserStorage,n,this.logger,this.browserCrypto),[4,o.getAuthCodeUrl(t)];case 5:return a=s.sent(),c=this.getRedirectStartPage(e.redirectStartPage),this.logger.verbosePii("Redirect start page: "+c),[4,i.initiateAuthRequest(a,{navigationClient:this.navigationClient,redirectTimeout:this.config.system.redirectNavigationTimeout,redirectStartPage:c,onRedirectNavigate:e.onRedirectNavigate})];case 6:return[2,s.sent()];case 7:throw(u=s.sent())instanceof k.l&&u.setCorrelationId(this.correlationId),r.cacheFailedRequest(u),this.browserStorage.cleanRequestByState(t.state),u;case 8:return[2]}}))}))},t.prototype.handleRedirectPromise=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i,a,c,u,d,h,p;return s(this,(function(s){switch(s.label){case 0:t=this.initializeServerTelemetryManager(g.handleRedirectPromise),s.label=1;case 1:if(s.trys.push([1,10,,11]),!this.browserStorage.isInteractionInProgress(!0))return this.logger.info("handleRedirectPromise called but there is no interaction in progress, returning null."),[2,null];if(!(r=this.getRedirectResponseHash(e||window.location.hash)))return this.logger.info("handleRedirectPromise did not detect a response hash as a result of a redirect. Cleaning temporary cache."),this.browserStorage.cleanRequestByInteractionType(f.Redirect),[2,null];n=void 0;try{n=this.validateAndExtractStateFromHash(r,f.Redirect),fe.clearHash(window),this.logger.verbose("State extracted from hash")}catch(e){return this.logger.info("handleRedirectPromise was unable to extract state due to: "+e),this.browserStorage.cleanRequestByInteractionType(f.Redirect),[2,null]}return o=this.browserStorage.getTemporaryCache(l.ORIGIN_URI,!0)||"",i=se.G.removeHashFromUrl(o),a=se.G.removeHashFromUrl(window.location.href),i===a&&this.config.auth.navigateToLoginRequestUrl?(this.logger.verbose("Current page is loginRequestUrl, handling hash"),[4,this.handleHash(r,n,t)]):[3,3];case 2:return c=s.sent(),o.indexOf("#")>-1&&fe.replaceHash(o),[2,c];case 3:return this.config.auth.navigateToLoginRequestUrl?[3,4]:(this.logger.verbose("NavigateToLoginRequestUrl set to false, handling hash"),[2,this.handleHash(r,n,t)]);case 4:return fe.isInIframe()&&!this.config.system.allowRedirectInIframe?[3,9]:(this.browserStorage.setTemporaryCache(l.URL_HASH,r,!0),u={apiId:g.handleRedirectPromise,timeout:this.config.system.redirectNavigationTimeout,noHistory:!0},d=!0,o&&"null"!==o?[3,6]:(h=fe.getHomepage(),this.browserStorage.setTemporaryCache(l.ORIGIN_URI,h,!0),this.logger.warning("Unable to get valid login request url from cache, redirecting to home page"),[4,this.navigationClient.navigateInternal(h,u)]));case 5:return d=s.sent(),[3,8];case 6:return this.logger.verbose("Navigating to loginRequestUrl: "+o),[4,this.navigationClient.navigateInternal(o,u)];case 7:d=s.sent(),s.label=8;case 8:if(!d)return[2,this.handleHash(r,n,t)];s.label=9;case 9:return[2,null];case 10:throw(p=s.sent())instanceof k.l&&p.setCorrelationId(this.correlationId),t.cacheFailedRequest(p),this.browserStorage.cleanRequestByInteractionType(f.Redirect),p;case 11:return[2]}}))}))},t.prototype.getRedirectResponseHash=function(e){this.logger.verbose("getRedirectResponseHash called");var t=se.G.hashContainsKnownProperties(e),r=this.browserStorage.getTemporaryCache(l.URL_HASH,!0);return this.browserStorage.removeItem(this.browserStorage.generateCacheKey(l.URL_HASH)),t?(this.logger.verbose("Hash contains known properties, returning response hash"),e):(this.logger.verbose("Hash does not contain known properties, returning cached hash"),r)},t.prototype.handleHash=function(e,t,r){return a(this,void 0,void 0,(function(){var n,o,i;return s(this,(function(a){switch(a.label){case 0:if(n=this.browserStorage.getCachedRequest(t,this.browserCrypto),this.logger.verbose("handleHash called, retrieved cached request"),!(o=this.browserStorage.getCachedAuthority(t)))throw P.createNoCachedAuthorityError();return[4,this.createAuthCodeClient(r,o)];case 1:return i=a.sent(),this.logger.verbose("Auth code client created"),[4,new ke(i,this.browserStorage,n,this.logger,this.browserCrypto).handleCodeResponseFromHash(e,t,i.authority,this.networkClient,this.config.auth.clientId)];case 2:return[2,a.sent()]}}))}))},t.prototype.logout=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i,a;return s(this,(function(s){switch(s.label){case 0:this.logger.verbose("logoutRedirect called"),t=this.initializeLogoutRequest(e),r=this.initializeServerTelemetryManager(g.logout),s.label=1;case 1:return s.trys.push([1,10,,11]),this.eventHandler.emitEvent(S.LOGOUT_START,f.Redirect,e),[4,this.clearCacheOnLogout(t.account)];case 2:return s.sent(),n={apiId:g.logout,timeout:this.config.system.redirectNavigationTimeout,noHistory:!1},[4,this.createAuthCodeClient(r,e&&e.authority)];case 3:return o=s.sent(),this.logger.verbose("Auth code client created"),i=o.getLogoutUri(t),this.eventHandler.emitEvent(S.LOGOUT_SUCCESS,f.Redirect,t),e&&"function"==typeof e.onRedirectNavigate?!1===e.onRedirectNavigate(i)?[3,5]:(this.logger.verbose("Logout onRedirectNavigate did not return false, navigating"),[4,this.navigationClient.navigateExternal(i,n)]):[3,7];case 4:return s.sent(),[2];case 5:this.logger.verbose("Logout onRedirectNavigate returned false, stopping navigation"),s.label=6;case 6:return[3,9];case 7:return[4,this.navigationClient.navigateExternal(i,n)];case 8:return s.sent(),[2];case 9:return[3,11];case 10:throw(a=s.sent())instanceof k.l&&a.setCorrelationId(this.correlationId),r.cacheFailedRequest(a),this.eventHandler.emitEvent(S.LOGOUT_FAILURE,f.Redirect,null,a),this.eventHandler.emitEvent(S.LOGOUT_END,f.Redirect),a;case 11:return this.eventHandler.emitEvent(S.LOGOUT_END,f.Redirect),[2]}}))}))},t.prototype.getRedirectStartPage=function(e){var t=e||window.location.href;return se.G.getAbsoluteUrl(t,fe.getCurrentUri())},t}(Ie),Pe=function(e){function t(t,r,n,o,i){var a=e.call(this,t,r,n,o)||this;return a.navigateFrameWait=i,a}return o(t,e),t.prototype.initiateAuthRequest=function(e){return a(this,void 0,void 0,(function(){var t;return s(this,(function(r){switch(r.label){case 0:if(O.x.isEmpty(e))throw this.browserRequestLogger.info("Navigate url is empty"),P.createEmptyNavigationUriError();return this.navigateFrameWait?[4,this.loadFrame(e)]:[3,2];case 1:return t=r.sent(),[3,3];case 2:t=this.loadFrameSync(e),r.label=3;case 3:return[2,t]}}))}))},t.prototype.monitorIframeForHash=function(e,t){var r=this;return new Promise((function(n,o){t<6e3&&r.browserRequestLogger.warning("system.loadFrameTimeout or system.iframeHashTimeout set to lower ("+t+"ms) than the default (6000ms). This may result in timeouts.");var i=window.performance.now()+t,a=setInterval((function(){if(window.performance.now()>i)return r.removeHiddenIframe(e),clearInterval(a),void o(P.createMonitorIframeTimeoutError());var t=m.gT.EMPTY_STRING,s=e.contentWindow;try{t=s?s.location.href:m.gT.EMPTY_STRING}catch(e){}if(!O.x.isEmpty(t)){var c=s?s.location.hash:m.gT.EMPTY_STRING;return se.G.hashContainsKnownProperties(c)?(r.removeHiddenIframe(e),clearInterval(a),void n(c)):void 0}}),50)}))},t.prototype.loadFrame=function(e){var t=this;return new Promise((function(r,n){var o=t.createHiddenIframe();setTimeout((function(){o?(o.src=e,r(o)):n("Unable to load iframe")}),t.navigateFrameWait)}))},t.prototype.loadFrameSync=function(e){var t=this.createHiddenIframe();return t.src=e,t},t.prototype.createHiddenIframe=function(){var e=document.createElement("iframe");return e.style.visibility="hidden",e.style.position="absolute",e.style.width=e.style.height="0",e.style.border="0",e.setAttribute("sandbox","allow-scripts allow-same-origin allow-forms"),document.getElementsByTagName("body")[0].appendChild(e),e},t.prototype.removeHiddenIframe=function(e){document.body===e.parentNode&&document.body.removeChild(e)},t}(be),Ue=function(e){function t(t,r,n,o,i,a,s,c){var u=e.call(this,t,r,n,o,i,a,c)||this;return u.apiId=s,u}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,a,c;return s(this,(function(s){switch(s.label){case 0:if(this.logger.verbose("acquireTokenByIframe called"),O.x.isEmpty(e.loginHint)&&O.x.isEmpty(e.sid)&&(!e.account||O.x.isEmpty(e.account.username))&&this.logger.warning("No user hint provided. The authorization server may need more information to complete this request."),e.prompt&&e.prompt!==m.NJ.NONE)throw P.createSilentPromptValueError(e.prompt);return[4,this.initializeAuthorizationRequest(i(i({},e),{prompt:m.NJ.NONE}),f.Silent)];case 1:t=s.sent(),r=this.initializeServerTelemetryManager(this.apiId),s.label=2;case 2:return s.trys.push([2,7,,8]),[4,this.initializeAuthorizationCodeRequest(t)];case 3:return n=s.sent(),[4,this.createAuthCodeClient(r,t.authority)];case 4:return o=s.sent(),this.logger.verbose("Auth code client created"),[4,o.getAuthCodeUrl(t)];case 5:return a=s.sent(),[4,this.silentTokenHelper(a,n,o,this.logger)];case 6:return[2,s.sent()];case 7:throw(c=s.sent())instanceof k.l&&c.setCorrelationId(this.correlationId),r.cacheFailedRequest(c),this.browserStorage.cleanRequestByState(t.state),c;case 8:return[2]}}))}))},t.prototype.logout=function(){return Promise.reject(P.createSilentLogoutUnsupportedError())},t.prototype.silentTokenHelper=function(e,t,r,n){return a(this,void 0,void 0,(function(){var o,i,a,c;return s(this,(function(s){switch(s.label){case 0:return[4,(o=new Pe(r,this.browserStorage,t,n,this.config.system.navigateFrameWait)).initiateAuthRequest(e)];case 1:return i=s.sent(),[4,o.monitorIframeForHash(i,this.config.system.iframeHashTimeout)];case 2:return a=s.sent(),c=this.validateAndExtractStateFromHash(a,f.Silent,t.correlationId),[2,o.handleCodeResponseFromHash(a,c,r.authority,this.networkClient)]}}))}))},t}(Ie),Me=r(28508),Le=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,a=this;return s(this,(function(s){switch(s.label){case 0:return r=[i({},e)],[4,this.initializeBaseRequest(e)];case 1:return t=i.apply(void 0,r.concat([s.sent()])),n=this.initializeServerTelemetryManager(g.acquireTokenSilent_silentFlow),[4,this.createRefreshTokenClient(n,t.authority)];case 2:return o=s.sent(),this.logger.verbose("Refresh token client created"),[2,o.acquireTokenByRefreshToken(t).catch((function(e){throw e instanceof k.l&&e.setCorrelationId(a.correlationId),n.cacheFailedRequest(e),e}))]}}))}))},t.prototype.logout=function(){return Promise.reject(P.createSilentLogoutUnsupportedError())},t.prototype.createRefreshTokenClient=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return[4,this.getClientConfiguration(e,t)];case 1:return r=n.sent(),[2,new Me.Y(r)]}}))}))},t}(Ie),He=r(95622),qe=r(92613),De=function(){function e(e,t,r,n){this.isBrowserEnvironment="undefined"!=typeof window,this.config=e,this.storage=t,this.logger=r,this.cryptoObj=n}return e.prototype.loadExternalTokens=function(e,t,r){if(this.logger.info("TokenCache - loadExternalTokens called"),!t.id_token)throw P.createUnableToLoadTokenError("Please ensure server response includes id token.");if(e.account)this.loadIdToken(t.id_token,e.account.homeAccountId,e.account.environment,e.account.tenantId,r),this.loadAccessToken(e,t,e.account.homeAccountId,e.account.environment,e.account.tenantId,r);else{if(!e.authority)throw P.createUnableToLoadTokenError("Please provide a request with an account or a request with authority.");var n={protocolMode:this.config.auth.protocolMode,knownAuthorities:this.config.auth.knownAuthorities,cloudDiscoveryMetadata:this.config.auth.cloudDiscoveryMetadata,authorityMetadata:this.config.auth.authorityMetadata},o=new He.W(e.authority,this.config.system.networkClient,this.storage,n);if(r.clientInfo)this.logger.trace("TokenCache - homeAccountId from options"),this.loadIdToken(t.id_token,r.clientInfo,o.hostnameAndPort,o.tenant,r),this.loadAccessToken(e,t,r.clientInfo,o.hostnameAndPort,o.tenant,r);else{if(!t.client_info)throw P.createUnableToLoadTokenError("Please provide clientInfo in the response or options.");this.logger.trace("TokenCache - homeAccountId from response"),this.loadIdToken(t.id_token,t.client_info,o.hostnameAndPort,o.tenant,r),this.loadAccessToken(e,t,t.client_info,o.hostnameAndPort,o.tenant,r)}}},e.prototype.loadIdToken=function(e,t,r,n,o){var i=W.w.createIdTokenEntity(t,r,e,this.config.auth.clientId,n),a=new re.H(e,this.cryptoObj),s=o.clientInfo?J.r.createAccount(o.clientInfo,t,a,void 0,void 0,void 0,void 0,r):J.r.createGenericAccount(t,a,void 0,void 0,void 0,void 0,r);if(!this.isBrowserEnvironment)throw P.createUnableToLoadTokenError("loadExternalTokens is designed to work in browser environments only.");this.logger.verbose("TokenCache - loading id token"),this.storage.setAccount(s),this.storage.setIdTokenCredential(i)},e.prototype.loadAccessToken=function(e,t,r,n,o,i){if(t.access_token){if(!t.expires_in)throw P.createUnableToLoadTokenError("Please ensure server response includes expires_in value.");if(!i.extendedExpiresOn)throw P.createUnableToLoadTokenError("Please provide an extendedExpiresOn value in the options.");var a=new qe.i(e.scopes).printScopes(),s=t.expires_in,c=i.extendedExpiresOn,u=z._.createAccessTokenEntity(r,n,t.access_token,this.config.auth.clientId,o,a,s,c,this.cryptoObj);if(!this.isBrowserEnvironment)throw P.createUnableToLoadTokenError("loadExternalTokens is designed to work in browser environments only.");this.logger.verbose("TokenCache - loading access token"),this.storage.setAccessTokenCredential(u)}else this.logger.verbose("TokenCache - No access token provided for caching")},e}(),Fe=function(e){function t(t){var r=e.call(this,t)||this;return r.includeRedirectUri=!1,r}return o(t,e),t}(Te.U),xe=function(e){function t(t,r,n,o,i,a,s,c){var u=e.call(this,t,r,n,o,i,a,c)||this;return u.apiId=s,u}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,a,c;return s(this,(function(s){switch(s.label){case 0:if(this.logger.trace("SilentAuthCodeClient.acquireToken called"),!e.code)throw P.createAuthCodeRequiredError();return[4,this.initializeAuthorizationRequest(e,f.Silent)];case 1:t=s.sent(),r=this.initializeServerTelemetryManager(this.apiId),s.label=2;case 2:return s.trys.push([2,4,,5]),n=i(i({},t),{code:e.code}),[4,this.getClientConfiguration(r,t.authority)];case 3:return o=s.sent(),a=new Fe(o),this.logger.verbose("Auth code client created"),[2,new Pe(a,this.browserStorage,n,this.logger,this.config.system.navigateFrameWait).handleCodeResponseFromServer({code:e.code,msgraph_host:e.msGraphHost,cloud_graph_host_name:e.cloudGraphHostName,cloud_instance_host_name:e.cloudInstanceHostName},t.state,a.authority,this.networkClient,!1)];case 4:throw(c=s.sent())instanceof k.l&&c.setCorrelationId(this.correlationId),r.cacheFailedRequest(c),this.browserStorage.cleanRequestByState(t.state),c;case 5:return[2]}}))}))},t.prototype.logout=function(){return Promise.reject(P.createSilentLogoutUnsupportedError())},t}(Ie),Ke=function(){function e(e){var t,r,n,o,a,s,c,u,h,l,p,g;this.isBrowserEnvironment="undefined"!=typeof window,this.config=(t=e,r=this.isBrowserEnvironment,n=t.auth,o=t.cache,a=t.system,s={clientId:"",authority:""+m.gT.DEFAULT_AUTHORITY,knownAuthorities:[],cloudDiscoveryMetadata:"",authorityMetadata:"",redirectUri:"",postLogoutRedirectUri:"",navigateToLoginRequestUrl:!0,clientCapabilities:[],protocolMode:de.A.AAD},c={cacheLocation:d.SessionStorage,storeAuthStateInCookie:!1,secureCookies:!1},u={loggerCallback:function(){},logLevel:K.i.Info,piiLoggingEnabled:!1},h=i(i({},he.z),{loggerOptions:u,networkClient:r?fe.getBrowserNetworkClient():le.y,navigationClient:new ye,loadFrameTimeout:0,windowHashTimeout:a&&a.loadFrameTimeout||6e4,iframeHashTimeout:a&&a.loadFrameTimeout||6e3,navigateFrameWait:r&&fe.detectIEOrEdge()?500:0,redirectNavigationTimeout:3e4,asyncPopups:!1,allowRedirectInIframe:!1}),{auth:i(i({},s),n),cache:i(i({},c),o),system:i(i({},h),a)}),this.logger=new K.Y(this.config.system.loggerOptions,me,Ee),this.networkClient=this.config.system.networkClient,this.navigationClient=this.config.system.navigationClient,this.redirectResponse=new Map,this.hybridAuthCodeResponses=new Map,this.browserCrypto=this.isBrowserEnvironment?new x(this.logger):G.d,this.eventHandler=new ve(this.logger,this.browserCrypto),this.browserStorage=this.isBrowserEnvironment?new ue(this.config.auth.clientId,this.config.cache,this.browserCrypto,this.logger):(l=this.config.auth.clientId,p=this.logger,g={cacheLocation:d.MemoryStorage,storeAuthStateInCookie:!1,secureCookies:!1},new ue(l,g,G.d,p)),this.tokenCache=new De(this.config,this.browserStorage,this.logger,this.browserCrypto)}return e.prototype.handleRedirectPromise=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i,a=this;return s(this,(function(s){return this.logger.verbose("handleRedirectPromise called"),t=this.getAllAccounts(),this.isBrowserEnvironment?(r=e||m.gT.EMPTY_STRING,void 0===(n=this.redirectResponse.get(r))?(this.eventHandler.emitEvent(S.HANDLE_REDIRECT_START,f.Redirect),this.logger.verbose("handleRedirectPromise has been called for the first time, storing the promise"),o=this.browserStorage.getTemporaryCache(l.CORRELATION_ID,!0)||"",i=new Ne(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,o),n=i.handleRedirectPromise(e).then((function(e){return e&&(t.length<a.getAllAccounts().length?(a.eventHandler.emitEvent(S.LOGIN_SUCCESS,f.Redirect,e),a.logger.verbose("handleRedirectResponse returned result, login success")):(a.eventHandler.emitEvent(S.ACQUIRE_TOKEN_SUCCESS,f.Redirect,e),a.logger.verbose("handleRedirectResponse returned result, acquire token success"))),a.eventHandler.emitEvent(S.HANDLE_REDIRECT_END,f.Redirect),e})).catch((function(e){throw t.length>0?a.eventHandler.emitEvent(S.ACQUIRE_TOKEN_FAILURE,f.Redirect,null,e):a.eventHandler.emitEvent(S.LOGIN_FAILURE,f.Redirect,null,e),a.eventHandler.emitEvent(S.HANDLE_REDIRECT_END,f.Redirect),e})),this.redirectResponse.set(r,n)):this.logger.verbose("handleRedirectPromise has been called previously, returning the result from the first call"),[2,n]):(this.logger.verbose("handleRedirectPromise returns null, not browser environment"),[2,null])}))}))},e.prototype.acquireTokenRedirect=function(e){return a(this,void 0,void 0,(function(){var t,r=this;return s(this,(function(n){return this.preflightBrowserEnvironmentCheck(f.Redirect),this.logger.verbose("acquireTokenRedirect called"),(t=this.getAllAccounts().length>0)?this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_START,f.Redirect,e):this.eventHandler.emitEvent(S.LOGIN_START,f.Redirect,e),[2,new Ne(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,e.correlationId).acquireToken(e).catch((function(e){throw t?r.eventHandler.emitEvent(S.ACQUIRE_TOKEN_FAILURE,f.Redirect,null,e):r.eventHandler.emitEvent(S.LOGIN_FAILURE,f.Redirect,null,e),e}))]}))}))},e.prototype.acquireTokenPopup=function(e){var t=this;try{this.preflightBrowserEnvironmentCheck(f.Popup),this.logger.verbose("acquireTokenPopup called",e.correlationId)}catch(e){return Promise.reject(e)}var r=this.getAllAccounts();return r.length>0?this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_START,f.Popup,e):this.eventHandler.emitEvent(S.LOGIN_START,f.Popup,e),new Oe(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,e.correlationId).acquireToken(e).then((function(e){return r.length<t.getAllAccounts().length?t.eventHandler.emitEvent(S.LOGIN_SUCCESS,f.Popup,e):t.eventHandler.emitEvent(S.ACQUIRE_TOKEN_SUCCESS,f.Popup,e),e})).catch((function(e){return r.length>0?t.eventHandler.emitEvent(S.ACQUIRE_TOKEN_FAILURE,f.Popup,null,e):t.eventHandler.emitEvent(S.LOGIN_FAILURE,f.Popup,null,e),Promise.reject(e)}))},e.prototype.ssoSilent=function(e){return a(this,void 0,void 0,(function(){var t,r;return s(this,(function(n){switch(n.label){case 0:this.preflightBrowserEnvironmentCheck(f.Silent),this.logger.verbose("ssoSilent called",e.correlationId),this.eventHandler.emitEvent(S.SSO_SILENT_START,f.Silent,e),n.label=1;case 1:return n.trys.push([1,3,,4]),[4,new Ue(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,g.ssoSilent,e.correlationId).acquireToken(e)];case 2:return t=n.sent(),this.eventHandler.emitEvent(S.SSO_SILENT_SUCCESS,f.Silent,t),[2,t];case 3:throw r=n.sent(),this.eventHandler.emitEvent(S.SSO_SILENT_FAILURE,f.Silent,null,r),r;case 4:return[2]}}))}))},e.prototype.acquireTokenByCode=function(e){return a(this,void 0,void 0,(function(){var t,r=this;return s(this,(function(n){this.preflightBrowserEnvironmentCheck(f.Silent),this.logger.trace("acquireTokenByCode called",e.correlationId),this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_BY_CODE_START,f.Silent,e);try{if(!e.code)throw P.createAuthCodeRequiredError();return(t=this.hybridAuthCodeResponses.get(e.code))?this.logger.verbose("Existing acquireTokenByCode request found",e.correlationId):(this.logger.verbose("Initiating new acquireTokenByCode request",e.correlationId),t=this.acquireTokenByCodeAsync(e).then((function(t){return r.eventHandler.emitEvent(S.ACQUIRE_TOKEN_BY_CODE_SUCCESS,f.Silent,t),r.hybridAuthCodeResponses.delete(e.code),t})).catch((function(t){throw r.hybridAuthCodeResponses.delete(e.code),t})),this.hybridAuthCodeResponses.set(e.code,t)),[2,t]}catch(e){throw this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_BY_CODE_FAILURE,f.Silent,null,e),e}return[2]}))}))},e.prototype.acquireTokenByCodeAsync=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){switch(t.label){case 0:return this.logger.trace("acquireTokenByCodeAsync called",e.correlationId),[4,new xe(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,g.acquireTokenByCode,e.correlationId).acquireToken(e)];case 1:return[2,t.sent()]}}))}))},e.prototype.acquireTokenByRefreshToken=function(e){return a(this,void 0,void 0,(function(){var t=this;return s(this,(function(r){return this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_NETWORK_START,f.Silent,e),fe.blockReloadInHiddenIframes(),[2,new Le(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,e.correlationId).acquireToken(e).catch((function(r){var n=r instanceof B.n,o=r instanceof j.Yo,i="invalid_grant"===r.errorCode;if(n&&i&&!o)return t.logger.verbose("Refresh token expired or invalid, attempting acquire token by iframe",e.correlationId),new Ue(t.config,t.browserStorage,t.browserCrypto,t.logger,t.eventHandler,t.navigationClient,g.acquireTokenSilent_authCode,e.correlationId).acquireToken(e);throw r}))]}))}))},e.prototype.logout=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){return this.logger.warning("logout API is deprecated and will be removed in msal-browser v3.0.0. Use logoutRedirect instead."),[2,this.logoutRedirect(e)]}))}))},e.prototype.logoutRedirect=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){return this.preflightBrowserEnvironmentCheck(f.Redirect),[2,new Ne(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,null==e?void 0:e.correlationId).logout(e)]}))}))},e.prototype.logoutPopup=function(e){try{return this.preflightBrowserEnvironmentCheck(f.Popup),new Oe(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,null==e?void 0:e.correlationId).logout(e)}catch(e){return Promise.reject(e)}},e.prototype.getAllAccounts=function(){return this.logger.verbose("getAllAccounts called"),this.isBrowserEnvironment?this.browserStorage.getAllAccounts():[]},e.prototype.getAccountByUsername=function(e){var t=this.getAllAccounts();return!O.x.isEmpty(e)&&t&&t.length?(this.logger.verbose("Account matching username found, returning"),this.logger.verbosePii("Returning signed-in accounts matching username: "+e),t.filter((function(t){return t.username.toLowerCase()===e.toLowerCase()}))[0]||null):(this.logger.verbose("getAccountByUsername: No matching account found, returning null"),null)},e.prototype.getAccountByHomeId=function(e){var t=this.getAllAccounts();return!O.x.isEmpty(e)&&t&&t.length?(this.logger.verbose("Account matching homeAccountId found, returning"),this.logger.verbosePii("Returning signed-in accounts matching homeAccountId: "+e),t.filter((function(t){return t.homeAccountId===e}))[0]||null):(this.logger.verbose("getAccountByHomeId: No matching account found, returning null"),null)},e.prototype.getAccountByLocalId=function(e){var t=this.getAllAccounts();return!O.x.isEmpty(e)&&t&&t.length?(this.logger.verbose("Account matching localAccountId found, returning"),this.logger.verbosePii("Returning signed-in accounts matching localAccountId: "+e),t.filter((function(t){return t.localAccountId===e}))[0]||null):(this.logger.verbose("getAccountByLocalId: No matching account found, returning null"),null)},e.prototype.setActiveAccount=function(e){this.browserStorage.setActiveAccount(e)},e.prototype.getActiveAccount=function(){return this.browserStorage.getActiveAccount()},e.prototype.preflightBrowserEnvironmentCheck=function(e){if(this.logger.verbose("preflightBrowserEnvironmentCheck started"),fe.blockNonBrowserEnvironment(this.isBrowserEnvironment),fe.blockRedirectInIframe(e,this.config.system.allowRedirectInIframe),fe.blockReloadInHiddenIframes(),fe.blockAcquireTokenInPopups(),e===f.Redirect&&this.config.cache.cacheLocation===d.MemoryStorage&&!this.config.cache.storeAuthStateInCookie)throw oe.createInMemoryRedirectUnavailableError()},e.prototype.addEventCallback=function(e){return this.eventHandler.addEventCallback(e)},e.prototype.removeEventCallback=function(e){this.eventHandler.removeEventCallback(e)},e.prototype.enableAccountStorageEvents=function(){this.eventHandler.enableAccountStorageEvents()},e.prototype.disableAccountStorageEvents=function(){this.eventHandler.disableAccountStorageEvents()},e.prototype.getTokenCache=function(){return this.tokenCache},e.prototype.getLogger=function(){return this.logger},e.prototype.setLogger=function(e){this.logger=e},e.prototype.initializeWrapperLibrary=function(e,t){this.browserStorage.setWrapperMetadata(e,t)},e.prototype.setNavigationClient=function(e){this.navigationClient=e},e.prototype.getConfiguration=function(){return this.config},e}(),Ge=r(43387),Be=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return o(t,e),t.prototype.acquireToken=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o;return s(this,(function(i){switch(i.label){case 0:return t=this.initializeServerTelemetryManager(g.acquireTokenSilent_silentFlow),[4,this.createSilentFlowClient(t,e.authority)];case 1:r=i.sent(),this.logger.verbose("Silent auth client created"),i.label=2;case 2:return i.trys.push([2,4,,5]),[4,r.acquireCachedToken(e)];case 3:return n=i.sent(),this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_SUCCESS,f.Silent,n),[2,n];case 4:throw(o=i.sent())instanceof P&&o.errorCode===N.signingKeyNotFoundInStorage.code&&this.logger.verbose("Signing keypair for bound access token not found. Refreshing bound access token and generating a new crypto keypair."),o;case 5:return[2]}}))}))},t.prototype.logout=function(){return Promise.reject(P.createSilentLogoutUnsupportedError())},t.prototype.createSilentFlowClient=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return[4,this.getClientConfiguration(e,t)];case 1:return r=n.sent(),[2,new Ge.g(r)]}}))}))},t.prototype.initializeSilentRequest=function(e,t){return a(this,void 0,void 0,(function(){var r;return s(this,(function(n){switch(n.label){case 0:return r=[i({},e)],[4,this.initializeBaseRequest(e)];case 1:return[2,i.apply(void 0,[i.apply(void 0,r.concat([n.sent()])),{account:t,forceRefresh:e.forceRefresh||!1}])]}}))}))},t}(Ie),je=function(e){function t(t){var r=e.call(this,t)||this;return r.activeSilentTokenRequests=new Map,r}return o(t,e),t.prototype.loginRedirect=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){return this.logger.verbose("loginRedirect called"),[2,this.acquireTokenRedirect(e||C)]}))}))},t.prototype.loginPopup=function(e){return this.logger.verbose("loginPopup called"),this.acquireTokenPopup(e||C)},t.prototype.acquireTokenSilent=function(e){return a(this,void 0,void 0,(function(){var t,r,n,o,i,a=this;return s(this,(function(s){if(this.preflightBrowserEnvironmentCheck(f.Silent),this.logger.verbose("acquireTokenSilent called",e.correlationId),!(t=e.account||this.getActiveAccount()))throw P.createNoAccountError();return r={clientId:this.config.auth.clientId,authority:e.authority||"",scopes:e.scopes,homeAccountIdentifier:t.homeAccountId,claims:e.claims,authenticationScheme:e.authenticationScheme,resourceRequestMethod:e.resourceRequestMethod,resourceRequestUri:e.resourceRequestUri,shrClaims:e.shrClaims,sshKid:e.sshKid},n=JSON.stringify(r),void 0===(o=this.activeSilentTokenRequests.get(n))?(this.logger.verbose("acquireTokenSilent called for the first time, storing active request",e.correlationId),i=this.acquireTokenSilentAsync(e,t).then((function(e){return a.activeSilentTokenRequests.delete(n),e})).catch((function(e){throw a.activeSilentTokenRequests.delete(n),e})),this.activeSilentTokenRequests.set(n,i),[2,i]):(this.logger.verbose("acquireTokenSilent has been called previously, returning the result from the first call",e.correlationId),[2,o])}))}))},t.prototype.acquireTokenSilentAsync=function(e,t){return a(this,void 0,void 0,(function(){var r,n,o=this;return s(this,(function(i){switch(i.label){case 0:return[4,(r=new Be(this.config,this.browserStorage,this.browserCrypto,this.logger,this.eventHandler,this.navigationClient,e.correlationId)).initializeSilentRequest(e,t)];case 1:return n=i.sent(),this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_START,f.Silent,e),[2,r.acquireToken(n).catch((function(){return a(o,void 0,void 0,(function(){var e,t;return s(this,(function(r){switch(r.label){case 0:return r.trys.push([0,2,,3]),[4,this.acquireTokenByRefreshToken(n)];case 1:return e=r.sent(),this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_SUCCESS,f.Silent,e),[2,e];case 2:throw t=r.sent(),this.eventHandler.emitEvent(S.ACQUIRE_TOKEN_FAILURE,f.Silent,null,t),t;case 3:return[2]}}))}))}))]}}))}))},t}(Ke),Je={acquireTokenPopup:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},acquireTokenRedirect:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},acquireTokenSilent:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},acquireTokenByCode:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},getAllAccounts:function(){return[]},getAccountByHomeId:function(){return null},getAccountByUsername:function(){return null},getAccountByLocalId:function(){return null},handleRedirectPromise:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},loginPopup:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},loginRedirect:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},logout:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},logoutRedirect:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},logoutPopup:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},ssoSilent:function(){return Promise.reject(oe.createStubPcaInstanceCalledError())},addEventCallback:function(){return null},removeEventCallback:function(){},enableAccountStorageEvents:function(){},disableAccountStorageEvents:function(){},getTokenCache:function(){throw oe.createStubPcaInstanceCalledError()},getLogger:function(){throw oe.createStubPcaInstanceCalledError()},setLogger:function(){},setActiveAccount:function(){},getActiveAccount:function(){return null},initializeWrapperLibrary:function(){},setNavigationClient:function(){},getConfiguration:function(){throw oe.createStubPcaInstanceCalledError()}},Ye=function(){function e(){}return e.getInteractionStatusFromEvent=function(e,t){switch(e.eventType){case S.LOGIN_START:return y.Login;case S.SSO_SILENT_START:return y.SsoSilent;case S.ACQUIRE_TOKEN_START:if(e.interactionType===f.Redirect||e.interactionType===f.Popup)return y.AcquireToken;break;case S.HANDLE_REDIRECT_START:return y.HandleRedirect;case S.LOGOUT_START:return y.Logout;case S.SSO_SILENT_SUCCESS:case S.SSO_SILENT_FAILURE:if(t&&t!==y.SsoSilent)break;return y.None;case S.LOGOUT_END:if(t&&t!==y.Logout)break;return y.None;case S.HANDLE_REDIRECT_END:if(t&&t!==y.HandleRedirect)break;return y.None;case S.LOGIN_SUCCESS:case S.LOGIN_FAILURE:case S.ACQUIRE_TOKEN_SUCCESS:case S.ACQUIRE_TOKEN_FAILURE:if(e.interactionType===f.Redirect||e.interactionType===f.Popup){if(t&&t!==y.Login&&t!==y.AcquireToken)break;return y.None}}return null},e}(),We=r(17650),ze=function(){function e(e,t){var r=t&&t.loggerOptions||{};this.logger=new K.Y(r,me,Ee),this.cryptoOps=new x(this.logger),this.popTokenGenerator=new We.$(this.cryptoOps),this.shrParameters=e}return e.prototype.generatePublicKeyThumbprint=function(){return a(this,void 0,void 0,(function(){return s(this,(function(e){switch(e.label){case 0:return[4,this.popTokenGenerator.generateKid(this.shrParameters)];case 1:return[2,e.sent().kid]}}))}))},e.prototype.signRequest=function(e,t,r){return a(this,void 0,void 0,(function(){return s(this,(function(n){return[2,this.popTokenGenerator.signPayload(e,t,this.shrParameters,r)]}))}))},e.prototype.removeKeys=function(e){return a(this,void 0,void 0,(function(){return s(this,(function(t){switch(t.label){case 0:return[4,this.cryptoOps.removeTokenBindingKey(e)];case 1:return[2,t.sent()]}}))}))},e}(),Ve=r(32030)},5096:(e,t,r)=>{r.d(t,{pi:()=>i,mG:()=>a,ZT:()=>o,Jh:()=>s,pr:()=>c});var n=function(e,t){return n=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r])},n(e,t)};function o(e,t){function r(){this.constructor=e}n(e,t),e.prototype=null===t?Object.create(t):(r.prototype=t.prototype,new r)}var i=function(){return i=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var o in t=arguments[r])Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o]);return e},i.apply(this,arguments)};function a(e,t,r,n){return new(r||(r=Promise))((function(o,i){function a(e){try{c(n.next(e))}catch(e){i(e)}}function s(e){try{c(n.throw(e))}catch(e){i(e)}}function c(e){var t;e.done?o(e.value):(t=e.value,t instanceof r?t:new r((function(e){e(t)}))).then(a,s)}c((n=n.apply(e,t||[])).next())}))}function s(e,t){var r,n,o,i,a={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return i={next:s(0),throw:s(1),return:s(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i;function s(i){return function(s){return function(i){if(r)throw new TypeError("Generator is already executing.");for(;a;)try{if(r=1,n&&(o=2&i[0]?n.return:i[0]?n.throw||((o=n.return)&&o.call(n),0):n.next)&&!(o=o.call(n,i[1])).done)return o;switch(n=0,o&&(i=[2&i[0],o.value]),i[0]){case 0:case 1:o=i;break;case 4:return a.label++,{value:i[1],done:!1};case 5:a.label++,n=i[1],i=[0];continue;case 7:i=a.ops.pop(),a.trys.pop();continue;default:if(!((o=(o=a.trys).length>0&&o[o.length-1])||6!==i[0]&&2!==i[0])){a=0;continue}if(3===i[0]&&(!o||i[1]>o[0]&&i[1]<o[3])){a.label=i[1];break}if(6===i[0]&&a.label<o[1]){a.label=o[1],o=i;break}if(o&&a.label<o[2]){a.label=o[2],a.ops.push(i);break}o[2]&&a.ops.pop(),a.trys.pop();continue}i=t.call(e,a)}catch(e){i=[6,e],n=0}finally{r=o=0}if(5&i[0])throw i[1];return{value:i[0]?i[1]:void 0,done:!0}}([i,s])}}}function c(){for(var e=0,t=0,r=arguments.length;t<r;t++)e+=arguments[t].length;var n=Array(e),o=0;for(t=0;t<r;t++)for(var i=arguments[t],a=0,s=i.length;a<s;a++,o++)n[o]=i[a];return n}},70591:(e,t,r)=>{r.d(t,{H:()=>i});var n=r(60742),o=r(61653),i=function(){function e(t,r){if(o.x.isEmpty(t))throw n.e.createTokenNullOrEmptyError(t);this.rawToken=t,this.claims=e.extractTokenClaims(t,r)}return e.extractTokenClaims=function(e,t){var r=o.x.decodeAuthToken(e);try{var i=r.JWSPayload,a=t.base64Decode(i);return JSON.parse(a)}catch(e){throw n.e.createTokenParsingError(e)}},e}()},34726:(e,t,r)=>{var n;r.d(t,{G:()=>n}),function(e){e.HOME_ACCOUNT_ID="home_account_id",e.UPN="UPN"}(n||(n={}))},11520:(e,t,r)=>{r.d(t,{B:()=>a,j:()=>s});var n=r(60742),o=r(61653),i=r(77891);function a(e,t){if(o.x.isEmpty(e))throw n.e.createClientInfoEmptyError();try{var r=t.base64Decode(e);return JSON.parse(r)}catch(e){throw n.e.createClientInfoDecodingError(e)}}function s(e){if(o.x.isEmpty(e))throw n.e.createClientInfoDecodingError("Home account ID was empty.");var t=e.split(i.Bv.CLIENT_INFO_SEPARATOR,2);return{uid:t[0],utid:t.length<2?i.gT.EMPTY_STRING:t[1]}}},95622:(e,t,r)=>{r.d(t,{W:()=>p});var n=r(5096),o=r(52944);function i(e){return e.hasOwnProperty("authorization_endpoint")&&e.hasOwnProperty("token_endpoint")&&e.hasOwnProperty("issuer")}var a=r(99860),s=r(60742),c=r(77891),u=r(47181),d=r(82617),h=r(1713),l=function(){function e(e){this.networkInterface=e}return e.prototype.detectRegion=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r,o,i,a;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:if(r=e)return[3,8];n.label=1;case 1:return n.trys.push([1,6,,7]),[4,this.getRegionFromIMDS(c.gT.IMDS_VERSION)];case 2:return(o=n.sent()).status===c.YY.httpSuccess&&(r=o.body,t.region_source=c.W.IMDS),o.status!==c.YY.httpBadRequest?[3,5]:[4,this.getCurrentVersion()];case 3:return(i=n.sent())?[4,this.getRegionFromIMDS(i)]:(t.region_source=c.W.FAILED_AUTO_DETECTION,[2,null]);case 4:(a=n.sent()).status===c.YY.httpSuccess&&(r=a.body,t.region_source=c.W.IMDS),n.label=5;case 5:return[3,7];case 6:return n.sent(),t.region_source=c.W.FAILED_AUTO_DETECTION,[2,null];case 7:return[3,9];case 8:t.region_source=c.W.ENVIRONMENT_VARIABLE,n.label=9;case 9:return r||(t.region_source=c.W.FAILED_AUTO_DETECTION),[2,r||null]}}))}))},e.prototype.getRegionFromIMDS=function(t){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(r){return[2,this.networkInterface.sendGetRequestAsync(c.gT.IMDS_ENDPOINT+"?api-version="+t+"&format=text",e.IMDS_OPTIONS,c.gT.IMDS_TIMEOUT)]}))}))},e.prototype.getCurrentVersion=function(){return(0,n.mG)(this,void 0,void 0,(function(){var t;return(0,n.Jh)(this,(function(r){switch(r.label){case 0:return r.trys.push([0,2,,3]),[4,this.networkInterface.sendGetRequestAsync(c.gT.IMDS_ENDPOINT+"?format=json",e.IMDS_OPTIONS)];case 1:return(t=r.sent()).status===c.YY.httpBadRequest&&t.body&&t.body["newest-versions"]&&t.body["newest-versions"].length>0?[2,t.body["newest-versions"][0]]:[2,null];case 2:return r.sent(),[2,null];case 3:return[2]}}))}))},e.IMDS_OPTIONS={headers:{Metadata:"true"}},e}(),p=function(){function e(e,t,r,n){this.canonicalAuthority=e,this._canonicalAuthority.validateAsUri(),this.networkInterface=t,this.cacheManager=r,this.authorityOptions=n,this.regionDiscovery=new l(t),this.regionDiscoveryMetadata={region_used:void 0,region_source:void 0,region_outcome:void 0}}return Object.defineProperty(e.prototype,"authorityType",{get:function(){var e=this.canonicalAuthorityUrlComponents.PathSegments;return e.length&&e[0].toLowerCase()===c.gT.ADFS?o.a.Adfs:o.a.Default},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"protocolMode",{get:function(){return this.authorityOptions.protocolMode},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"options",{get:function(){return this.authorityOptions},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"canonicalAuthority",{get:function(){return this._canonicalAuthority.urlString},set:function(e){this._canonicalAuthority=new a.G(e),this._canonicalAuthority.validateAsUri(),this._canonicalAuthorityUrlComponents=null},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"canonicalAuthorityUrlComponents",{get:function(){return this._canonicalAuthorityUrlComponents||(this._canonicalAuthorityUrlComponents=this._canonicalAuthority.getUrlComponents()),this._canonicalAuthorityUrlComponents},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"hostnameAndPort",{get:function(){return this.canonicalAuthorityUrlComponents.HostNameAndPort.toLowerCase()},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"tenant",{get:function(){return this.canonicalAuthorityUrlComponents.PathSegments[0]},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"authorizationEndpoint",{get:function(){if(this.discoveryComplete()){var e=this.replacePath(this.metadata.authorization_endpoint);return this.replaceTenant(e)}throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"tokenEndpoint",{get:function(){if(this.discoveryComplete()){var e=this.replacePath(this.metadata.token_endpoint);return this.replaceTenant(e)}throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"deviceCodeEndpoint",{get:function(){if(this.discoveryComplete()){var e=this.replacePath(this.metadata.token_endpoint.replace("/token","/devicecode"));return this.replaceTenant(e)}throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"endSessionEndpoint",{get:function(){if(this.discoveryComplete()){if(!this.metadata.end_session_endpoint)throw s.e.createLogoutNotSupportedError();var e=this.replacePath(this.metadata.end_session_endpoint);return this.replaceTenant(e)}throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"selfSignedJwtAudience",{get:function(){if(this.discoveryComplete()){var e=this.replacePath(this.metadata.issuer);return this.replaceTenant(e)}throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},enumerable:!1,configurable:!0}),e.prototype.replaceTenant=function(e){return e.replace(/{tenant}|{tenantid}/g,this.tenant)},e.prototype.replacePath=function(e){var t=e,r=new a.G(this.metadata.canonical_authority).getUrlComponents().PathSegments;return this.canonicalAuthorityUrlComponents.PathSegments.forEach((function(e,n){var o=r[n];e!==o&&(t=t.replace("/"+o+"/","/"+e+"/"))})),t},Object.defineProperty(e.prototype,"defaultOpenIdConfigurationEndpoint",{get:function(){return this.authorityType===o.a.Adfs||this.protocolMode===d.A.OIDC?this.canonicalAuthority+".well-known/openid-configuration":this.canonicalAuthority+"v2.0/.well-known/openid-configuration"},enumerable:!1,configurable:!0}),e.prototype.discoveryComplete=function(){return!!this.metadata},e.prototype.resolveEndpointsAsync=function(){return(0,n.mG)(this,void 0,void 0,(function(){var e,t,r,o;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return(e=this.cacheManager.getAuthorityMetadataByAlias(this.hostnameAndPort))||(e=new h.l).updateCanonicalAuthority(this.canonicalAuthority),[4,this.updateCloudDiscoveryMetadata(e)];case 1:return t=n.sent(),this.canonicalAuthority=this.canonicalAuthority.replace(this.hostnameAndPort,e.preferred_network),[4,this.updateEndpointMetadata(e)];case 2:return r=n.sent(),t!==c.pQ.CACHE&&r!==c.pQ.CACHE&&(e.resetExpiresAt(),e.updateCanonicalAuthority(this.canonicalAuthority)),o=this.cacheManager.generateAuthorityMetadataCacheKey(e.preferred_cache),this.cacheManager.setAuthorityMetadata(o,e),this.metadata=e,[2]}}))}))},e.prototype.updateEndpointMetadata=function(t){var r;return(0,n.mG)(this,void 0,void 0,(function(){var o,i,a;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return(o=this.getEndpointMetadataFromConfig())?(t.updateEndpointMetadata(o,!1),[2,c.pQ.CONFIG]):this.isAuthoritySameType(t)&&t.endpointsFromNetwork&&!t.isExpired()?[2,c.pQ.CACHE]:[4,this.getEndpointMetadataFromNetwork()];case 1:return(o=n.sent())?(null===(r=this.authorityOptions.azureRegionConfiguration)||void 0===r?void 0:r.azureRegion)?[4,this.regionDiscovery.detectRegion(this.authorityOptions.azureRegionConfiguration.environmentRegion,this.regionDiscoveryMetadata)]:[3,3]:[3,4];case 2:i=n.sent(),a=this.authorityOptions.azureRegionConfiguration.azureRegion===c.gT.AZURE_REGION_AUTO_DISCOVER_FLAG?i:this.authorityOptions.azureRegionConfiguration.azureRegion,this.authorityOptions.azureRegionConfiguration.azureRegion===c.gT.AZURE_REGION_AUTO_DISCOVER_FLAG?this.regionDiscoveryMetadata.region_outcome=i?c.ki.AUTO_DETECTION_REQUESTED_SUCCESSFUL:c.ki.AUTO_DETECTION_REQUESTED_FAILED:this.regionDiscoveryMetadata.region_outcome=i?this.authorityOptions.azureRegionConfiguration.azureRegion===i?c.ki.CONFIGURED_MATCHES_DETECTED:c.ki.CONFIGURED_NOT_DETECTED:c.ki.CONFIGURED_NO_AUTO_DETECTION,a&&(this.regionDiscoveryMetadata.region_used=a,o=e.replaceWithRegionalInformation(o,a)),n.label=3;case 3:return t.updateEndpointMetadata(o,!0),[2,c.pQ.NETWORK];case 4:throw s.e.createUnableToGetOpenidConfigError(this.defaultOpenIdConfigurationEndpoint)}}))}))},e.prototype.isAuthoritySameType=function(e){return new a.G(e.canonical_authority).getUrlComponents().PathSegments.length===this.canonicalAuthorityUrlComponents.PathSegments.length},e.prototype.getEndpointMetadataFromConfig=function(){if(this.authorityOptions.authorityMetadata)try{return JSON.parse(this.authorityOptions.authorityMetadata)}catch(e){throw u.r.createInvalidAuthorityMetadataError()}return null},e.prototype.getEndpointMetadataFromNetwork=function(){return(0,n.mG)(this,void 0,void 0,(function(){var e;return(0,n.Jh)(this,(function(t){switch(t.label){case 0:return t.trys.push([0,2,,3]),[4,this.networkInterface.sendGetRequestAsync(this.defaultOpenIdConfigurationEndpoint)];case 1:return[2,i((e=t.sent()).body)?e.body:null];case 2:return t.sent(),[2,null];case 3:return[2]}}))}))},e.prototype.updateCloudDiscoveryMetadata=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t;return(0,n.Jh)(this,(function(r){switch(r.label){case 0:return(t=this.getCloudDiscoveryMetadataFromConfig())?(e.updateCloudDiscoveryMetadata(t,!1),[2,c.pQ.CONFIG]):this.isAuthoritySameType(e)&&e.aliasesFromNetwork&&!e.isExpired()?[2,c.pQ.CACHE]:[4,this.getCloudDiscoveryMetadataFromNetwork()];case 1:if(t=r.sent())return e.updateCloudDiscoveryMetadata(t,!0),[2,c.pQ.NETWORK];throw u.r.createUntrustedAuthorityError()}}))}))},e.prototype.getCloudDiscoveryMetadataFromConfig=function(){if(this.authorityOptions.cloudDiscoveryMetadata)try{var t=JSON.parse(this.authorityOptions.cloudDiscoveryMetadata),r=e.getCloudDiscoveryMetadataFromNetworkResponse(t.metadata,this.hostnameAndPort);if(r)return r}catch(e){throw u.r.createInvalidCloudDiscoveryMetadataError()}return this.isInKnownAuthorities()?e.createCloudDiscoveryMetadataFromHost(this.hostnameAndPort):null},e.prototype.getCloudDiscoveryMetadataFromNetwork=function(){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,o,i;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:t=""+c.gT.AAD_INSTANCE_DISCOVERY_ENDPT+this.canonicalAuthority+"oauth2/v2.0/authorize",r=null,n.label=1;case 1:return n.trys.push([1,3,,4]),[4,this.networkInterface.sendGetRequestAsync(t)];case 2:return o=n.sent(),i=function(e){return e.hasOwnProperty("tenant_discovery_endpoint")&&e.hasOwnProperty("metadata")}(o.body)?o.body.metadata:[],0===i.length?[2,null]:(r=e.getCloudDiscoveryMetadataFromNetworkResponse(i,this.hostnameAndPort),[3,4]);case 3:return n.sent(),[2,null];case 4:return r||(r=e.createCloudDiscoveryMetadataFromHost(this.hostnameAndPort)),[2,r]}}))}))},e.prototype.isInKnownAuthorities=function(){var e=this;return this.authorityOptions.knownAuthorities.filter((function(t){return a.G.getDomainFromUrl(t).toLowerCase()===e.hostnameAndPort})).length>0},e.createCloudDiscoveryMetadataFromHost=function(e){return{preferred_network:e,preferred_cache:e,aliases:[e]}},e.getCloudDiscoveryMetadataFromNetworkResponse=function(e,t){for(var r=0;r<e.length;r++){var n=e[r];if(n.aliases.indexOf(t)>-1)return n}return null},e.prototype.getPreferredCache=function(){if(this.discoveryComplete())return this.metadata.preferred_cache;throw s.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.")},e.prototype.isAlias=function(e){return this.metadata.aliases.indexOf(e)>-1},e.isPublicCloudAuthority=function(e){return c.gT.KNOWN_PUBLIC_CLOUDS.indexOf(e)>=0},e.buildRegionalAuthorityString=function(e,t,r){var o=new a.G(e);o.validateAsUri();var i=o.getUrlComponents(),s=t+"."+i.HostNameAndPort;this.isPublicCloudAuthority(i.HostNameAndPort)&&(s=t+"."+c.gT.REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX);var u=a.G.constructAuthorityUriFromObject((0,n.pi)((0,n.pi)({},o.getUrlComponents()),{HostNameAndPort:s})).urlString;return r?u+"?"+r:u},e.replaceWithRegionalInformation=function(t,r){return t.authorization_endpoint=e.buildRegionalAuthorityString(t.authorization_endpoint,r),t.token_endpoint=e.buildRegionalAuthorityString(t.token_endpoint,r,"allowestsrnonmsi=true"),t.end_session_endpoint&&(t.end_session_endpoint=e.buildRegionalAuthorityString(t.end_session_endpoint,r)),t},e}()},65676:(e,t,r)=>{r.d(t,{A:()=>c});var n=r(5096),o=r(95622),i=r(47181),a=r(61653),s=r(60742),c=function(){function e(){}return e.createDiscoveredInstance=function(t,r,o,i){return(0,n.mG)(this,void 0,void 0,(function(){var a,c;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:a=e.createInstance(t,r,o,i),n.label=1;case 1:return n.trys.push([1,3,,4]),[4,a.resolveEndpointsAsync()];case 2:return n.sent(),[2,a];case 3:throw c=n.sent(),s.e.createEndpointDiscoveryIncompleteError(c);case 4:return[2]}}))}))},e.createInstance=function(e,t,r,n){if(a.x.isEmpty(e))throw i.r.createUrlEmptyError();return new o.W(e,t,r,n)},e}()},52944:(e,t,r)=>{var n;r.d(t,{a:()=>n}),function(e){e[e.Default=0]="Default",e[e.Adfs=1]="Adfs"}(n||(n={}))},82617:(e,t,r)=>{var n;r.d(t,{A:()=>n}),function(e){e.AAD="AAD",e.OIDC="OIDC"}(n||(n={}))},67656:(e,t,r)=>{r.d(t,{L:()=>h,w:()=>l});var n=r(5096),o=r(77891),i=r(10521),a=r(92613),s=r(43640),c=r(87342),u=r(60742),d=r(70591),h=function(){function e(e,t){this.clientId=e,this.cryptoImpl=t}return e.prototype.getAllAccounts=function(){var t=this,r=this.getAccountsFilteredBy(),n=Object.keys(r).map((function(e){return r[e]}));return n.length<1?[]:n.map((function(r){var n=e.toObject(new s.r,r).getAccountInfo(),o=t.readIdTokenFromCache(t.clientId,n);return o&&!n.idTokenClaims&&(n.idTokenClaims=new d.H(o.secret,t.cryptoImpl).claims),n}))},e.prototype.saveCacheRecord=function(e){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(t){switch(t.label){case 0:if(!e)throw u.e.createNullOrUndefinedCacheRecord();return e.account&&this.setAccount(e.account),e.idToken&&this.setIdTokenCredential(e.idToken),e.accessToken?[4,this.saveAccessToken(e.accessToken)]:[3,2];case 1:t.sent(),t.label=2;case 2:return e.refreshToken&&this.setRefreshTokenCredential(e.refreshToken),e.appMetadata&&this.setAppMetadata(e.appMetadata),[2]}}))}))},e.prototype.saveAccessToken=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,o,i,s=this;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return t=this.getCredentialsFilteredBy({clientId:e.clientId,credentialType:e.credentialType,environment:e.environment,homeAccountId:e.homeAccountId,realm:e.realm,tokenType:e.tokenType,requestedClaimsHash:e.requestedClaimsHash}),r=a.i.fromString(e.target),(o=Object.keys(t.accessTokens).map((function(e){return t.accessTokens[e]})))?(i=[],o.forEach((function(e){a.i.fromString(e.target).intersectingScopeSets(r)&&i.push(s.removeCredential(e))})),[4,Promise.all(i)]):[3,2];case 1:n.sent(),n.label=2;case 2:return this.setAccessTokenCredential(e),[2]}}))}))},e.prototype.getAccountsFilteredBy=function(e){return this.getAccountsFilteredByInternal(e?e.homeAccountId:"",e?e.environment:"",e?e.realm:"")},e.prototype.getAccountsFilteredByInternal=function(e,t,r){var n=this,o=this.getKeys(),i={};return o.forEach((function(o){var a=n.getAccount(o);a&&(e&&!n.matchHomeAccountId(a,e)||t&&!n.matchEnvironment(a,t)||r&&!n.matchRealm(a,r)||(i[o]=a))})),i},e.prototype.getCredentialsFilteredBy=function(e){return this.getCredentialsFilteredByInternal(e.homeAccountId,e.environment,e.credentialType,e.clientId,e.familyId,e.realm,e.target,e.oboAssertion,e.tokenType,e.keyId,e.requestedClaimsHash)},e.prototype.getCredentialsFilteredByInternal=function(e,t,r,n,a,s,c,u,d,h,l){var p=this,g=this.getKeys(),f={idTokens:{},accessTokens:{},refreshTokens:{}};return g.forEach((function(g){var y=i.m.getCredentialType(g);if(y!==o.gT.NOT_DEFINED){var m=p.getSpecificCredential(g,y);if(m&&(!u||p.matchOboAssertion(m,u))&&(!e||p.matchHomeAccountId(m,e))&&(!t||p.matchEnvironment(m,t))&&(!s||p.matchRealm(m,s))&&(!r||p.matchCredentialType(m,r))&&(!n||p.matchClientId(m,n))&&(!a||p.matchFamilyId(m,a))&&(!c||p.matchTarget(m,c))&&(!l&&!m.requestedClaimsHash||m.requestedClaimsHash===l)){if(r===o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME){if(d&&!p.matchTokenType(m,d))return;if(d===o.hO.SSH&&h&&!p.matchKeyId(m,h))return}var E=p.updateCredentialCacheKey(g,m);switch(y){case o.d3.ID_TOKEN:f.idTokens[E]=m;break;case o.d3.ACCESS_TOKEN:case o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:f.accessTokens[E]=m;break;case o.d3.REFRESH_TOKEN:f.refreshTokens[E]=m}}}})),f},e.prototype.getAppMetadataFilteredBy=function(e){return this.getAppMetadataFilteredByInternal(e.environment,e.clientId)},e.prototype.getAppMetadataFilteredByInternal=function(e,t){var r=this,n=this.getKeys(),o={};return n.forEach((function(n){if(r.isAppMetadata(n)){var i=r.getAppMetadata(n);i&&(e&&!r.matchEnvironment(i,e)||t&&!r.matchClientId(i,t)||(o[n]=i))}})),o},e.prototype.getAuthorityMetadataByAlias=function(e){var t=this,r=this.getAuthorityMetadataKeys(),n=null;return r.forEach((function(r){if(t.isAuthorityMetadata(r)&&-1!==r.indexOf(t.clientId)){var o=t.getAuthorityMetadata(r);o&&-1!==o.aliases.indexOf(e)&&(n=o)}})),n},e.prototype.removeAllAccounts=function(){return(0,n.mG)(this,void 0,void 0,(function(){var e,t,r=this;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return e=this.getKeys(),t=[],e.forEach((function(e){r.getAccount(e)&&t.push(r.removeAccount(e))})),[4,Promise.all(t)];case 1:return n.sent(),[2,!0]}}))}))},e.prototype.removeAccount=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t;return(0,n.Jh)(this,(function(r){switch(r.label){case 0:if(!(t=this.getAccount(e)))throw u.e.createNoAccountFoundError();return[4,this.removeAccountContext(t)];case 1:return[2,r.sent()&&this.removeItem(e,o.Xj.ACCOUNT)]}}))}))},e.prototype.removeAccountContext=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,a,s=this;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return t=this.getKeys(),r=e.generateAccountId(),a=[],t.forEach((function(e){var t=i.m.getCredentialType(e);if(t!==o.gT.NOT_DEFINED){var n=s.getSpecificCredential(e,t);n&&r===n.generateAccountId()&&a.push(s.removeCredential(n))}})),[4,Promise.all(a)];case 1:return n.sent(),[2,!0]}}))}))},e.prototype.removeCredential=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:if(t=e.generateCredentialKey(),e.credentialType.toLowerCase()!==o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase())return[3,4];if(e.tokenType!==o.hO.POP)return[3,4];if(!(r=e.keyId))return[3,4];n.label=1;case 1:return n.trys.push([1,3,,4]),[4,this.cryptoImpl.removeTokenBindingKey(r)];case 2:return n.sent(),[3,4];case 3:throw n.sent(),u.e.createBindingKeyNotRemovedError();case 4:return[2,this.removeItem(t,o.Xj.CREDENTIAL)]}}))}))},e.prototype.removeAppMetadata=function(){var e=this;return this.getKeys().forEach((function(t){e.isAppMetadata(t)&&e.removeItem(t,o.Xj.APP_METADATA)})),!0},e.prototype.readCacheRecord=function(e,t,r,n){var o=this.readAccountFromCache(e),i=this.readIdTokenFromCache(t,e),a=this.readAccessTokenFromCache(t,e,r),s=this.readRefreshTokenFromCache(t,e,!1),c=this.readAppMetadataFromCache(n,t);return o&&i&&(o.idTokenClaims=new d.H(i.secret,this.cryptoImpl).claims),{account:o,idToken:i,accessToken:a,refreshToken:s,appMetadata:c}},e.prototype.readAccountFromCache=function(e){var t=s.r.generateAccountCacheKey(e);return this.getAccount(t)},e.prototype.readIdTokenFromCache=function(e,t){var r={homeAccountId:t.homeAccountId,environment:t.environment,credentialType:o.d3.ID_TOKEN,clientId:e,realm:t.tenantId},n=this.getCredentialsFilteredBy(r),i=Object.keys(n.idTokens).map((function(e){return n.idTokens[e]})),a=i.length;if(a<1)return null;if(a>1)throw u.e.createMultipleMatchingTokensInCacheError();return i[0]},e.prototype.readAccessTokenFromCache=function(e,t,r){var n=new a.i(r.scopes||[]),i=r.authenticationScheme||o.hO.BEARER,s=i&&i.toLowerCase()!==o.hO.BEARER.toLowerCase()?o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:o.d3.ACCESS_TOKEN,c={homeAccountId:t.homeAccountId,environment:t.environment,credentialType:s,clientId:e,realm:t.tenantId,target:n.printScopesLowerCase(),tokenType:i,keyId:r.sshKid,requestedClaimsHash:r.requestedClaimsHash},d=this.getCredentialsFilteredBy(c),h=Object.keys(d.accessTokens).map((function(e){return d.accessTokens[e]})),l=h.length;if(l<1)return null;if(l>1)throw u.e.createMultipleMatchingTokensInCacheError();return h[0]},e.prototype.readRefreshTokenFromCache=function(e,t,r){var n=r?o.ch:void 0,i={homeAccountId:t.homeAccountId,environment:t.environment,credentialType:o.d3.REFRESH_TOKEN,clientId:e,familyId:n},a=this.getCredentialsFilteredBy(i),s=Object.keys(a.refreshTokens).map((function(e){return a.refreshTokens[e]}));return s.length<1?null:s[0]},e.prototype.readAppMetadataFromCache=function(e,t){var r={environment:e,clientId:t},n=this.getAppMetadataFilteredBy(r),o=Object.keys(n).map((function(e){return n[e]})),i=o.length;if(i<1)return null;if(i>1)throw u.e.createMultipleMatchingAppMetadataInCacheError();return o[0]},e.prototype.isAppMetadataFOCI=function(e,t){var r=this.readAppMetadataFromCache(e,t);return!(!r||r.familyId!==o.ch)},e.prototype.matchHomeAccountId=function(e,t){return!(!e.homeAccountId||t!==e.homeAccountId)},e.prototype.matchOboAssertion=function(e,t){return!(!e.oboAssertion||t!==e.oboAssertion)},e.prototype.matchEnvironment=function(e,t){var r=this.getAuthorityMetadataByAlias(t);return!!(r&&r.aliases.indexOf(e.environment)>-1)},e.prototype.matchCredentialType=function(e,t){return e.credentialType&&t.toLowerCase()===e.credentialType.toLowerCase()},e.prototype.matchClientId=function(e,t){return!(!e.clientId||t!==e.clientId)},e.prototype.matchFamilyId=function(e,t){return!(!e.familyId||t!==e.familyId)},e.prototype.matchRealm=function(e,t){return!(!e.realm||t!==e.realm)},e.prototype.matchTarget=function(e,t){if(e.credentialType!==o.d3.ACCESS_TOKEN&&e.credentialType!==o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME||!e.target)return!1;var r=a.i.fromString(e.target),n=a.i.fromString(t);return n.containsOnlyOIDCScopes()?n.removeScope(o.gT.OFFLINE_ACCESS_SCOPE):n.removeOIDCScopes(),r.containsScopeSet(n)},e.prototype.matchTokenType=function(e,t){return!(!e.tokenType||e.tokenType!==t)},e.prototype.matchKeyId=function(e,t){return!(!e.keyId||e.keyId!==t)},e.prototype.isAppMetadata=function(e){return-1!==e.indexOf(o.dg)},e.prototype.isAuthorityMetadata=function(e){return-1!==e.indexOf(o.QU.CACHE_KEY)},e.prototype.generateAuthorityMetadataCacheKey=function(e){return o.QU.CACHE_KEY+"-"+this.clientId+"-"+e},e.prototype.getSpecificCredential=function(e,t){switch(t){case o.d3.ID_TOKEN:return this.getIdTokenCredential(e);case o.d3.ACCESS_TOKEN:case o.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:return this.getAccessTokenCredential(e);case o.d3.REFRESH_TOKEN:return this.getRefreshTokenCredential(e);default:return null}},e.toObject=function(e,t){for(var r in t)e[r]=t[r];return e},e}(),l=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return(0,n.ZT)(t,e),t.prototype.setAccount=function(){throw c.l.createUnexpectedError("Storage interface - setAccount() has not been implemented for the cacheStorage interface.")},t.prototype.getAccount=function(){throw c.l.createUnexpectedError("Storage interface - getAccount() has not been implemented for the cacheStorage interface.")},t.prototype.setIdTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - setIdTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.getIdTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - getIdTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.setAccessTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - setAccessTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.getAccessTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - getAccessTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.setRefreshTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - setRefreshTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.getRefreshTokenCredential=function(){throw c.l.createUnexpectedError("Storage interface - getRefreshTokenCredential() has not been implemented for the cacheStorage interface.")},t.prototype.setAppMetadata=function(){throw c.l.createUnexpectedError("Storage interface - setAppMetadata() has not been implemented for the cacheStorage interface.")},t.prototype.getAppMetadata=function(){throw c.l.createUnexpectedError("Storage interface - getAppMetadata() has not been implemented for the cacheStorage interface.")},t.prototype.setServerTelemetry=function(){throw c.l.createUnexpectedError("Storage interface - setServerTelemetry() has not been implemented for the cacheStorage interface.")},t.prototype.getServerTelemetry=function(){throw c.l.createUnexpectedError("Storage interface - getServerTelemetry() has not been implemented for the cacheStorage interface.")},t.prototype.setAuthorityMetadata=function(){throw c.l.createUnexpectedError("Storage interface - setAuthorityMetadata() has not been implemented for the cacheStorage interface.")},t.prototype.getAuthorityMetadata=function(){throw c.l.createUnexpectedError("Storage interface - getAuthorityMetadata() has not been implemented for the cacheStorage interface.")},t.prototype.getAuthorityMetadataKeys=function(){throw c.l.createUnexpectedError("Storage interface - getAuthorityMetadataKeys() has not been implemented for the cacheStorage interface.")},t.prototype.setThrottlingCache=function(){throw c.l.createUnexpectedError("Storage interface - setThrottlingCache() has not been implemented for the cacheStorage interface.")},t.prototype.getThrottlingCache=function(){throw c.l.createUnexpectedError("Storage interface - getThrottlingCache() has not been implemented for the cacheStorage interface.")},t.prototype.removeItem=function(){throw c.l.createUnexpectedError("Storage interface - removeItem() has not been implemented for the cacheStorage interface.")},t.prototype.containsKey=function(){throw c.l.createUnexpectedError("Storage interface - containsKey() has not been implemented for the cacheStorage interface.")},t.prototype.getKeys=function(){throw c.l.createUnexpectedError("Storage interface - getKeys() has not been implemented for the cacheStorage interface.")},t.prototype.clear=function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw c.l.createUnexpectedError("Storage interface - clear() has not been implemented for the cacheStorage interface.")}))}))},t.prototype.updateCredentialCacheKey=function(){throw c.l.createUnexpectedError("Storage interface - updateCredentialCacheKey() has not been implemented for the cacheStorage interface.")},t}(h)},85907:(e,t,r)=>{r.d(t,{_:()=>d});var n=r(5096),o=r(10521),i=r(77891),a=r(33848),s=r(61653),c=r(70591),u=r(60742),d=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return(0,n.ZT)(t,e),t.createAccessTokenEntity=function(e,r,n,o,d,h,l,p,g,f,y,m,E,v,C){var T,S,w=new t;w.homeAccountId=e,w.credentialType=i.d3.ACCESS_TOKEN,w.secret=n;var A=a.I.nowSeconds();if(w.cachedAt=A.toString(),w.expiresOn=l.toString(),w.extendedExpiresOn=p.toString(),f&&(w.refreshOn=f.toString()),w.environment=r,w.clientId=o,w.realm=d,w.target=h,w.oboAssertion=m,w.tokenType=s.x.isEmpty(y)?i.hO.BEARER:y,v&&(w.requestedClaims=v,w.requestedClaimsHash=C),(null===(T=w.tokenType)||void 0===T?void 0:T.toLowerCase())!==i.hO.BEARER.toLowerCase())switch(w.credentialType=i.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME,w.tokenType){case i.hO.POP:var I=c.H.extractTokenClaims(n,g);if(!(null===(S=null==I?void 0:I.cnf)||void 0===S?void 0:S.kid))throw u.e.createTokenClaimsRequiredError();w.keyId=I.cnf.kid;break;case i.hO.SSH:w.keyId=E}return w},t.isAccessTokenEntity=function(e){return!!e&&e.hasOwnProperty("homeAccountId")&&e.hasOwnProperty("environment")&&e.hasOwnProperty("credentialType")&&e.hasOwnProperty("realm")&&e.hasOwnProperty("clientId")&&e.hasOwnProperty("secret")&&e.hasOwnProperty("target")&&(e.credentialType===i.d3.ACCESS_TOKEN||e.credentialType===i.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME)},t}(o.m)},43640:(e,t,r)=>{r.d(t,{r:()=>c});var n=r(77891),o=r(11520),i=r(61653),a=r(60742),s=r(52944),c=function(){function e(){}return e.prototype.generateAccountId=function(){return[this.homeAccountId,this.environment].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.prototype.generateAccountKey=function(){return e.generateAccountCacheKey({homeAccountId:this.homeAccountId,environment:this.environment,tenantId:this.realm,username:this.username,localAccountId:this.localAccountId})},e.prototype.generateType=function(){switch(this.authorityType){case n.iR.ADFS_ACCOUNT_TYPE:return n.LL.ADFS;case n.iR.MSAV1_ACCOUNT_TYPE:return n.LL.MSA;case n.iR.MSSTS_ACCOUNT_TYPE:return n.LL.MSSTS;case n.iR.GENERIC_ACCOUNT_TYPE:return n.LL.GENERIC;default:throw a.e.createUnexpectedAccountTypeError()}},e.prototype.getAccountInfo=function(){return{homeAccountId:this.homeAccountId,environment:this.environment,tenantId:this.realm,username:this.username,localAccountId:this.localAccountId,name:this.name,idTokenClaims:this.idTokenClaims}},e.generateAccountCacheKey=function(e){return[e.homeAccountId,e.environment||"",e.tenantId||""].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.createAccount=function(t,r,o,i,s,c,u,d){var h,l,p,g,f,y,m=new e;m.authorityType=n.iR.MSSTS_ACCOUNT_TYPE,m.clientInfo=t,m.homeAccountId=r;var E=d||i&&i.getPreferredCache();if(!E)throw a.e.createInvalidCacheEnvironmentError();return m.environment=E,m.realm=(null===(h=null==o?void 0:o.claims)||void 0===h?void 0:h.tid)||"",m.oboAssertion=s,o&&(m.idTokenClaims=o.claims,m.localAccountId=(null===(l=null==o?void 0:o.claims)||void 0===l?void 0:l.oid)||(null===(p=null==o?void 0:o.claims)||void 0===p?void 0:p.sub)||"",m.username=(null===(g=null==o?void 0:o.claims)||void 0===g?void 0:g.preferred_username)||((null===(f=null==o?void 0:o.claims)||void 0===f?void 0:f.emails)?o.claims.emails[0]:""),m.name=null===(y=null==o?void 0:o.claims)||void 0===y?void 0:y.name),m.cloudGraphHostName=c,m.msGraphHost=u,m},e.createGenericAccount=function(t,r,o,i,c,u,d){var h,l,p,g,f=new e;f.authorityType=o&&o.authorityType===s.a.Adfs?n.iR.ADFS_ACCOUNT_TYPE:n.iR.GENERIC_ACCOUNT_TYPE,f.homeAccountId=t,f.realm="",f.oboAssertion=i;var y=d||o&&o.getPreferredCache();if(!y)throw a.e.createInvalidCacheEnvironmentError();return r&&(f.localAccountId=(null===(h=null==r?void 0:r.claims)||void 0===h?void 0:h.oid)||(null===(l=null==r?void 0:r.claims)||void 0===l?void 0:l.sub)||"",f.username=(null===(p=null==r?void 0:r.claims)||void 0===p?void 0:p.upn)||"",f.name=(null===(g=null==r?void 0:r.claims)||void 0===g?void 0:g.name)||"",f.idTokenClaims=null==r?void 0:r.claims),f.environment=y,f.cloudGraphHostName=c,f.msGraphHost=u,f},e.generateHomeAccountId=function(e,t,r,a,c){var u,d=(null===(u=null==c?void 0:c.claims)||void 0===u?void 0:u.sub)?c.claims.sub:n.gT.EMPTY_STRING;if(t===s.a.Adfs)return d;if(e)try{var h=(0,o.B)(e,a);if(!i.x.isEmpty(h.uid)&&!i.x.isEmpty(h.utid))return""+h.uid+n.Bv.CLIENT_INFO_SEPARATOR+h.utid}catch(e){}return r.verbose("No client info in response"),d},e.isAccountEntity=function(e){return!!e&&e.hasOwnProperty("homeAccountId")&&e.hasOwnProperty("environment")&&e.hasOwnProperty("realm")&&e.hasOwnProperty("localAccountId")&&e.hasOwnProperty("username")&&e.hasOwnProperty("authorityType")},e.accountInfoIsEqual=function(e,t,r){if(!e||!t)return!1;var n=!0;if(r){var o=e.idTokenClaims||{},i=t.idTokenClaims||{};n=o.iat===i.iat&&o.nonce===i.nonce}return e.homeAccountId===t.homeAccountId&&e.localAccountId===t.localAccountId&&e.username===t.username&&e.tenantId===t.tenantId&&e.environment===t.environment&&n},e}()},59993:(e,t,r)=>{r.d(t,{T:()=>o});var n=r(77891),o=function(){function e(){}return e.prototype.generateAppMetadataKey=function(){return e.generateAppMetadataCacheKey(this.environment,this.clientId)},e.generateAppMetadataCacheKey=function(e,t){return[n.dg,e,t].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.createAppMetadataEntity=function(t,r,n){var o=new e;return o.clientId=t,o.environment=r,n&&(o.familyId=n),o},e.isAppMetadataEntity=function(e,t){return!!t&&0===e.indexOf(n.dg)&&t.hasOwnProperty("clientId")&&t.hasOwnProperty("environment")},e}()},1713:(e,t,r)=>{r.d(t,{l:()=>i});var n=r(77891),o=r(33848),i=function(){function e(){this.expiresAt=o.I.nowSeconds()+n.QU.REFRESH_TIME_SECONDS}return e.prototype.updateCloudDiscoveryMetadata=function(e,t){this.aliases=e.aliases,this.preferred_cache=e.preferred_cache,this.preferred_network=e.preferred_network,this.aliasesFromNetwork=t},e.prototype.updateEndpointMetadata=function(e,t){this.authorization_endpoint=e.authorization_endpoint,this.token_endpoint=e.token_endpoint,this.end_session_endpoint=e.end_session_endpoint,this.issuer=e.issuer,this.endpointsFromNetwork=t},e.prototype.updateCanonicalAuthority=function(e){this.canonical_authority=e},e.prototype.resetExpiresAt=function(){this.expiresAt=o.I.nowSeconds()+n.QU.REFRESH_TIME_SECONDS},e.prototype.isExpired=function(){return this.expiresAt<=o.I.nowSeconds()},e.isAuthorityMetadataEntity=function(e,t){return!!t&&0===e.indexOf(n.QU.CACHE_KEY)&&t.hasOwnProperty("aliases")&&t.hasOwnProperty("preferred_cache")&&t.hasOwnProperty("preferred_network")&&t.hasOwnProperty("canonical_authority")&&t.hasOwnProperty("authorization_endpoint")&&t.hasOwnProperty("token_endpoint")&&t.hasOwnProperty("issuer")&&t.hasOwnProperty("aliasesFromNetwork")&&t.hasOwnProperty("endpointsFromNetwork")&&t.hasOwnProperty("expiresAt")},e}()},10521:(e,t,r)=>{r.d(t,{m:()=>i});var n=r(77891),o=r(60742),i=function(){function e(){}return e.prototype.generateAccountId=function(){return e.generateAccountIdForCacheKey(this.homeAccountId,this.environment)},e.prototype.generateCredentialId=function(){return e.generateCredentialIdForCacheKey(this.credentialType,this.clientId,this.realm,this.familyId)},e.prototype.generateTarget=function(){return e.generateTargetForCacheKey(this.target)},e.prototype.generateCredentialKey=function(){return e.generateCredentialCacheKey(this.homeAccountId,this.environment,this.credentialType,this.clientId,this.realm,this.target,this.familyId,this.tokenType,this.requestedClaimsHash)},e.prototype.generateType=function(){switch(this.credentialType){case n.d3.ID_TOKEN:return n.LL.ID_TOKEN;case n.d3.ACCESS_TOKEN:case n.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:return n.LL.ACCESS_TOKEN;case n.d3.REFRESH_TOKEN:return n.LL.REFRESH_TOKEN;default:throw o.e.createUnexpectedCredentialTypeError()}},e.getCredentialType=function(e){return-1!==e.indexOf(n.d3.ACCESS_TOKEN.toLowerCase())?-1!==e.indexOf(n.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase())?n.d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:n.d3.ACCESS_TOKEN:-1!==e.indexOf(n.d3.ID_TOKEN.toLowerCase())?n.d3.ID_TOKEN:-1!==e.indexOf(n.d3.REFRESH_TOKEN.toLowerCase())?n.d3.REFRESH_TOKEN:n.gT.NOT_DEFINED},e.generateCredentialCacheKey=function(e,t,r,o,i,a,s,c,u){return[this.generateAccountIdForCacheKey(e,t),this.generateCredentialIdForCacheKey(r,o,i,s),this.generateTargetForCacheKey(a),this.generateClaimsHashForCacheKey(u),this.generateSchemeForCacheKey(c)].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.generateAccountIdForCacheKey=function(e,t){return[e,t].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.generateCredentialIdForCacheKey=function(e,t,r,o){return[e,e===n.d3.REFRESH_TOKEN&&o||t,r||""].join(n.Bv.CACHE_KEY_SEPARATOR).toLowerCase()},e.generateTargetForCacheKey=function(e){return(e||"").toLowerCase()},e.generateClaimsHashForCacheKey=function(e){return(e||"").toLowerCase()},e.generateSchemeForCacheKey=function(e){return e&&e.toLowerCase()!==n.hO.BEARER.toLowerCase()?e.toLowerCase():""},e}()},70979:(e,t,r)=>{r.d(t,{w:()=>a});var n=r(5096),o=r(10521),i=r(77891),a=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return(0,n.ZT)(t,e),t.createIdTokenEntity=function(e,r,n,o,a,s){var c=new t;return c.credentialType=i.d3.ID_TOKEN,c.homeAccountId=e,c.environment=r,c.clientId=o,c.secret=n,c.realm=a,c.oboAssertion=s,c},t.isIdTokenEntity=function(e){return!!e&&e.hasOwnProperty("homeAccountId")&&e.hasOwnProperty("environment")&&e.hasOwnProperty("credentialType")&&e.hasOwnProperty("realm")&&e.hasOwnProperty("clientId")&&e.hasOwnProperty("secret")&&e.credentialType===i.d3.ID_TOKEN},t}(o.m)},11429:(e,t,r)=>{r.d(t,{e:()=>a});var n=r(5096),o=r(10521),i=r(77891),a=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return(0,n.ZT)(t,e),t.createRefreshTokenEntity=function(e,r,n,o,a,s){var c=new t;return c.clientId=o,c.credentialType=i.d3.REFRESH_TOKEN,c.environment=r,c.homeAccountId=e,c.secret=n,c.oboAssertion=s,a&&(c.familyId=a),c},t.isRefreshTokenEntity=function(e){return!!e&&e.hasOwnProperty("homeAccountId")&&e.hasOwnProperty("environment")&&e.hasOwnProperty("credentialType")&&e.hasOwnProperty("clientId")&&e.hasOwnProperty("secret")&&e.credentialType===i.d3.REFRESH_TOKEN},t}(o.m)},44612:(e,t,r)=>{r.d(t,{d:()=>o});var n=r(77891),o=function(){function e(){this.failedRequests=[],this.errors=[],this.cacheHits=0}return e.isServerTelemetryEntity=function(e,t){var r=0===e.indexOf(n.HN.CACHE_KEY),o=!0;return t&&(o=t.hasOwnProperty("failedRequests")&&t.hasOwnProperty("errors")&&t.hasOwnProperty("cacheHits")),r&&o},e}()},4184:(e,t,r)=>{r.d(t,{A:()=>o});var n=r(77891),o=function(){function e(){}return e.isThrottlingEntity=function(e,t){var r=!1;e&&(r=0===e.indexOf(n.bb.THROTTLING_PREFIX));var o=!0;return t&&(o=t.hasOwnProperty("throttleTime")),r&&o},e}()},59665:(e,t,r)=>{r.d(t,{C:()=>n});var n=function(){function e(e,t){this.cache=e,this.hasChanged=t}return Object.defineProperty(e.prototype,"cacheHasChanged",{get:function(){return this.hasChanged},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"tokenCache",{get:function(){return this.cache},enumerable:!1,configurable:!0}),e}()},29046:(e,t,r)=>{r.d(t,{U:()=>m});var n=r(5096),o=r(13761),i=r(87479),a=r(77891),s=r(32105),c=r(61653),u=r(60742),d=r(99860),h=r(17650),l=r(33848),p=r(11520),g=r(34726),f=r(47181),y=r(5035),m=function(e){function t(t){var r=e.call(this,t)||this;return r.includeRedirectUri=!0,r}return(0,n.ZT)(t,e),t.prototype.getAuthCodeUrl=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t;return(0,n.Jh)(this,(function(r){return t=this.createAuthCodeUrlQueryString(e),[2,d.G.appendQueryString(this.authority.authorizationEndpoint,t)]}))}))},t.prototype.acquireToken=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r,o,i;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:if(this.logger.info("in acquireToken call"),!e||c.x.isEmpty(e.code))throw u.e.createTokenRequestCannotBeMadeError();return r=l.I.nowSeconds(),[4,this.executeTokenRequest(this.authority,e)];case 1:return o=n.sent(),(i=new s.s(this.config.authOptions.clientId,this.cacheManager,this.cryptoUtils,this.logger,this.config.serializableCache,this.config.persistencePlugin)).validateTokenResponse(o.body),[4,i.handleServerTokenResponse(o.body,this.authority,r,e,t)];case 2:return[2,n.sent()]}}))}))},t.prototype.handleFragmentResponse=function(e,t){var r=new s.s(this.config.authOptions.clientId,this.cacheManager,this.cryptoUtils,this.logger,null,null),o=new d.G(e),i=d.G.getDeserializedHash(o.getHash());if(r.validateServerAuthorizationCodeResponse(i,t,this.cryptoUtils),!i.code)throw u.e.createNoAuthCodeInServerResponseError();return(0,n.pi)((0,n.pi)({},i),{code:i.code})},t.prototype.getLogoutUri=function(e){if(!e)throw f.r.createEmptyLogoutRequestError();var t=this.createLogoutUrlQueryString(e);return d.G.appendQueryString(this.authority.endSessionEndpoint,t)},t.prototype.executeTokenRequest=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r,o,i,s,u,d,h;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return r={clientId:this.config.authOptions.clientId,authority:e.canonicalAuthority,scopes:t.scopes,claims:t.claims,authenticationScheme:t.authenticationScheme,resourceRequestMethod:t.resourceRequestMethod,resourceRequestUri:t.resourceRequestUri,shrClaims:t.shrClaims,sshKid:t.sshKid},[4,this.createTokenRequestBody(t)];case 1:if(o=n.sent(),i=this.createTokenQueryParameters(t),s=void 0,t.clientInfo)try{u=(0,p.B)(t.clientInfo,this.cryptoUtils),s={credential:""+u.uid+a.Bv.CLIENT_INFO_SEPARATOR+u.utid,type:g.G.HOME_ACCOUNT_ID}}catch(e){this.logger.verbose("Could not parse client info for CCS Header: "+e)}return d=this.createTokenRequestHeaders(s||t.ccsCredential),h=c.x.isEmpty(i)?e.tokenEndpoint:e.tokenEndpoint+"?"+i,[2,this.executePostToTokenEndpoint(h,o,d,r)]}}))}))},t.prototype.createTokenQueryParameters=function(e){var t=new i.H;return e.tokenQueryParameters&&t.addExtraQueryParameters(e.tokenQueryParameters),t.createQueryString()},t.prototype.createTokenRequestBody=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,o,s,u,d,l;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return(t=new i.H).addClientId(this.config.authOptions.clientId),this.includeRedirectUri?t.addRedirectUri(e.redirectUri):y.D.validateRedirectUri(e.redirectUri),t.addScopes(e.scopes),t.addAuthorizationCode(e.code),t.addLibraryInfo(this.config.libraryInfo),t.addThrottling(),this.serverTelemetryManager&&t.addServerTelemetry(this.serverTelemetryManager),e.codeVerifier&&t.addCodeVerifier(e.codeVerifier),this.config.clientCredentials.clientSecret&&t.addClientSecret(this.config.clientCredentials.clientSecret),this.config.clientCredentials.clientAssertion&&(r=this.config.clientCredentials.clientAssertion,t.addClientAssertion(r.assertion),t.addClientAssertionType(r.assertionType)),t.addGrantType(a.qJ.AUTHORIZATION_CODE_GRANT),t.addClientInfo(),e.authenticationScheme!==a.hO.POP?[3,2]:[4,new h.$(this.cryptoUtils).generateCnf(e)];case 1:return o=n.sent(),t.addPopToken(o),[3,3];case 2:if(e.authenticationScheme===a.hO.SSH){if(!e.sshJwk)throw f.r.createMissingSshJwkError();t.addSshJwk(e.sshJwk)}n.label=3;case 3:if(s=e.correlationId||this.config.cryptoInterface.createNewGuid(),t.addCorrelationId(s),(!c.x.isEmptyObj(e.claims)||this.config.authOptions.clientCapabilities&&this.config.authOptions.clientCapabilities.length>0)&&t.addClaims(e.claims,this.config.authOptions.clientCapabilities),u=void 0,e.clientInfo)try{d=(0,p.B)(e.clientInfo,this.cryptoUtils),u={credential:""+d.uid+a.Bv.CLIENT_INFO_SEPARATOR+d.utid,type:g.G.HOME_ACCOUNT_ID}}catch(e){this.logger.verbose("Could not parse client info for CCS Header: "+e)}else u=e.ccsCredential;if(this.config.systemOptions.preventCorsPreflight&&u)switch(u.type){case g.G.HOME_ACCOUNT_ID:try{d=(0,p.j)(u.credential),t.addCcsOid(d)}catch(e){this.logger.verbose("Could not parse home account ID for CCS Header: "+e)}break;case g.G.UPN:t.addCcsUpn(u.credential)}return e.tokenBodyParameters&&t.addExtraQueryParameters(e.tokenBodyParameters),!e.enableSpaAuthorizationCode||e.tokenBodyParameters&&e.tokenBodyParameters[a.Fo.RETURN_SPA_CODE]||t.addExtraQueryParameters(((l={})[a.Fo.RETURN_SPA_CODE]="1",l)),[2,t.createQueryString()]}}))}))},t.prototype.createAuthCodeUrlQueryString=function(e){var t=new i.H;t.addClientId(this.config.authOptions.clientId);var r=(0,n.pr)(e.scopes||[],e.extraScopesToConsent||[]);t.addScopes(r),t.addRedirectUri(e.redirectUri);var o=e.correlationId||this.config.cryptoInterface.createNewGuid();if(t.addCorrelationId(o),t.addResponseMode(e.responseMode),t.addResponseTypeCode(),t.addLibraryInfo(this.config.libraryInfo),t.addClientInfo(),e.codeChallenge&&e.codeChallengeMethod&&t.addCodeChallengeParams(e.codeChallenge,e.codeChallengeMethod),e.prompt&&t.addPrompt(e.prompt),e.domainHint&&t.addDomainHint(e.domainHint),e.prompt!==a.NJ.SELECT_ACCOUNT)if(e.sid&&e.prompt===a.NJ.NONE)this.logger.verbose("createAuthCodeUrlQueryString: Prompt is none, adding sid from request"),t.addSid(e.sid);else if(e.account){var s=this.extractAccountSid(e.account);if(s&&e.prompt===a.NJ.NONE){this.logger.verbose("createAuthCodeUrlQueryString: Prompt is none, adding sid from account"),t.addSid(s);try{var u=(0,p.j)(e.account.homeAccountId);t.addCcsOid(u)}catch(e){this.logger.verbose("Could not parse home account ID for CCS Header: "+e)}}else if(e.loginHint)this.logger.verbose("createAuthCodeUrlQueryString: Adding login_hint from request"),t.addLoginHint(e.loginHint),t.addCcsUpn(e.loginHint);else if(e.account.username){this.logger.verbose("createAuthCodeUrlQueryString: Adding login_hint from account"),t.addLoginHint(e.account.username);try{u=(0,p.j)(e.account.homeAccountId),t.addCcsOid(u)}catch(e){this.logger.verbose("Could not parse home account ID for CCS Header: "+e)}}}else e.loginHint&&(this.logger.verbose("createAuthCodeUrlQueryString: No account, adding login_hint from request"),t.addLoginHint(e.loginHint),t.addCcsUpn(e.loginHint));else this.logger.verbose("createAuthCodeUrlQueryString: Prompt is select_account, ignoring account hints");return e.nonce&&t.addNonce(e.nonce),e.state&&t.addState(e.state),(!c.x.isEmpty(e.claims)||this.config.authOptions.clientCapabilities&&this.config.authOptions.clientCapabilities.length>0)&&t.addClaims(e.claims,this.config.authOptions.clientCapabilities),e.extraQueryParameters&&t.addExtraQueryParameters(e.extraQueryParameters),t.createQueryString()},t.prototype.createLogoutUrlQueryString=function(e){var t=new i.H;return e.postLogoutRedirectUri&&t.addPostLogoutRedirectUri(e.postLogoutRedirectUri),e.correlationId&&t.addCorrelationId(e.correlationId),e.idTokenHint&&t.addIdTokenHint(e.idTokenHint),e.state&&t.addState(e.state),e.extraQueryParameters&&t.addExtraQueryParameters(e.extraQueryParameters),t.createQueryString()},t.prototype.extractAccountSid=function(e){return e.idTokenClaims&&e.idTokenClaims.sid||null},t}(o.W)},13761:(e,t,r)=>{r.d(t,{W:()=>l});var n=r(5096),o=r(14854),i=r(97482),a=r(21362),s=r(77891),c=r(26246),u=r(60742),d=r(34726),h=r(11520),l=function(){function e(e){this.config=(0,o.j)(e),this.logger=new a.Y(this.config.loggerOptions,c.u,c.i),this.cryptoUtils=this.config.cryptoInterface,this.cacheManager=this.config.storageInterface,this.networkClient=this.config.networkInterface,this.networkManager=new i.r(this.networkClient,this.cacheManager),this.serverTelemetryManager=this.config.serverTelemetryManager,this.authority=this.config.authOptions.authority}return e.prototype.createTokenRequestHeaders=function(e){var t={};if(t[s.SZ.CONTENT_TYPE]=s.gT.URL_FORM_CONTENT_TYPE,!this.config.systemOptions.preventCorsPreflight&&e)switch(e.type){case d.G.HOME_ACCOUNT_ID:try{var r=(0,h.j)(e.credential);t[s.SZ.CCS_HEADER]="Oid:"+r.uid+"@"+r.utid}catch(e){this.logger.verbose("Could not parse home account ID for CCS Header: "+e)}break;case d.G.UPN:t[s.SZ.CCS_HEADER]="UPN: "+e.credential}return t},e.prototype.executePostToTokenEndpoint=function(e,t,r,o){return(0,n.mG)(this,void 0,void 0,(function(){var i;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return[4,this.networkManager.sendPostRequest(o,e,{body:t,headers:r})];case 1:return i=n.sent(),this.config.serverTelemetryManager&&i.status<500&&429!==i.status&&this.config.serverTelemetryManager.clearTelemetryCache(),[2,i]}}))}))},e.prototype.updateAuthority=function(e){if(!e.discoveryComplete())throw u.e.createEndpointDiscoveryIncompleteError("Updated authority has not completed endpoint discovery.");this.authority=e},e}()},28508:(e,t,r)=>{r.d(t,{Y:()=>E});var n=r(5096),o=r(13761),i=r(87479),a=r(77891),s=r(32105),c=r(17650),u=r(61653),d=r(47181),h=r(60742),l=r(91359),p=r(33848),g=r(99860),f=r(34726),y=r(11520),m=r(83927),E=function(e){function t(t){return e.call(this,t)||this}return(0,n.ZT)(t,e),t.prototype.acquireToken=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,o;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return t=p.I.nowSeconds(),[4,this.executeTokenRequest(e,this.authority)];case 1:return r=n.sent(),(o=new s.s(this.config.authOptions.clientId,this.cacheManager,this.cryptoUtils,this.logger,this.config.serializableCache,this.config.persistencePlugin)).validateTokenResponse(r.body),[2,o.handleServerTokenResponse(r.body,this.authority,t,e,void 0,void 0,!0)]}}))}))},t.prototype.acquireTokenByRefreshToken=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r;return(0,n.Jh)(this,(function(n){if(!e)throw d.r.createEmptyTokenRequestError();if(!e.account)throw h.e.createNoAccountInSilentRequestError();if(this.cacheManager.isAppMetadataFOCI(e.account.environment,this.config.authOptions.clientId))try{return[2,this.acquireTokenWithCachedRefreshToken(e,!0)]}catch(n){if(t=n instanceof m.Yo&&n.errorCode===m.Zy.noTokensFoundError.code,r=n instanceof l.n&&n.errorCode===a.D1.INVALID_GRANT_ERROR&&n.subError===a.D1.CLIENT_MISMATCH_ERROR,t||r)return[2,this.acquireTokenWithCachedRefreshToken(e,!1)];throw n}return[2,this.acquireTokenWithCachedRefreshToken(e,!1)]}))}))},t.prototype.acquireTokenWithCachedRefreshToken=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r,o;return(0,n.Jh)(this,(function(i){if(!(r=this.cacheManager.readRefreshTokenFromCache(this.config.authOptions.clientId,e.account,t)))throw m.Yo.createNoTokensFoundError();return o=(0,n.pi)((0,n.pi)({},e),{refreshToken:r.secret,authenticationScheme:e.authenticationScheme||a.hO.BEARER,ccsCredential:{credential:e.account.homeAccountId,type:f.G.HOME_ACCOUNT_ID}}),[2,this.acquireToken(o)]}))}))},t.prototype.executeTokenRequest=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r,o,i,a,s;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return[4,this.createTokenRequestBody(e)];case 1:return r=n.sent(),o=this.createTokenQueryParameters(e),i=this.createTokenRequestHeaders(e.ccsCredential),a={clientId:this.config.authOptions.clientId,authority:t.canonicalAuthority,scopes:e.scopes,claims:e.claims,authenticationScheme:e.authenticationScheme,resourceRequestMethod:e.resourceRequestMethod,resourceRequestUri:e.resourceRequestUri,shrClaims:e.shrClaims,sshKid:e.sshKid},s=g.G.appendQueryString(t.tokenEndpoint,o),[2,this.executePostToTokenEndpoint(s,r,i,a)]}}))}))},t.prototype.createTokenQueryParameters=function(e){var t=new i.H;return e.tokenQueryParameters&&t.addExtraQueryParameters(e.tokenQueryParameters),t.createQueryString()},t.prototype.createTokenRequestBody=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t,r,o,s,h;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return(t=new i.H).addClientId(this.config.authOptions.clientId),t.addScopes(e.scopes),t.addGrantType(a.qJ.REFRESH_TOKEN_GRANT),t.addClientInfo(),t.addLibraryInfo(this.config.libraryInfo),t.addThrottling(),this.serverTelemetryManager&&t.addServerTelemetry(this.serverTelemetryManager),r=e.correlationId||this.config.cryptoInterface.createNewGuid(),t.addCorrelationId(r),t.addRefreshToken(e.refreshToken),this.config.clientCredentials.clientSecret&&t.addClientSecret(this.config.clientCredentials.clientSecret),this.config.clientCredentials.clientAssertion&&(o=this.config.clientCredentials.clientAssertion,t.addClientAssertion(o.assertion),t.addClientAssertionType(o.assertionType)),e.authenticationScheme!==a.hO.POP?[3,2]:[4,new c.$(this.cryptoUtils).generateCnf(e)];case 1:return s=n.sent(),t.addPopToken(s),[3,3];case 2:if(e.authenticationScheme===a.hO.SSH){if(!e.sshJwk)throw d.r.createMissingSshJwkError();t.addSshJwk(e.sshJwk)}n.label=3;case 3:if((!u.x.isEmptyObj(e.claims)||this.config.authOptions.clientCapabilities&&this.config.authOptions.clientCapabilities.length>0)&&t.addClaims(e.claims,this.config.authOptions.clientCapabilities),this.config.systemOptions.preventCorsPreflight&&e.ccsCredential)switch(e.ccsCredential.type){case f.G.HOME_ACCOUNT_ID:try{h=(0,y.j)(e.ccsCredential.credential),t.addCcsOid(h)}catch(e){this.logger.verbose("Could not parse home account ID for CCS Header: "+e)}break;case f.G.UPN:t.addCcsUpn(e.ccsCredential.credential)}return[2,t.createQueryString()]}}))}))},t}(o.W)},43387:(e,t,r)=>{r.d(t,{g:()=>l});var n=r(5096),o=r(13761),i=r(70591),a=r(33848),s=r(28508),c=r(60742),u=r(47181),d=r(32105),h=r(77891),l=function(e){function t(t){return e.call(this,t)||this}return(0,n.ZT)(t,e),t.prototype.acquireToken=function(e){return(0,n.mG)(this,void 0,void 0,(function(){var t;return(0,n.Jh)(this,(function(r){switch(r.label){case 0:return r.trys.push([0,2,,3]),[4,this.acquireCachedToken(e)];case 1:return[2,r.sent()];case 2:if((t=r.sent())instanceof c.e&&t.errorCode===c.A.tokenRefreshRequired.code)return[2,new s.Y(this.config).acquireTokenByRefreshToken(e)];throw t;case 3:return[2]}}))}))},t.prototype.acquireCachedToken=function(e){var t,r,o,i;return(0,n.mG)(this,void 0,void 0,(function(){var s,d;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:if(!e)throw u.r.createEmptyTokenRequestError();if(e.forceRefresh)throw null===(t=this.serverTelemetryManager)||void 0===t||t.setCacheOutcome(h.To.FORCE_REFRESH),this.logger.info("SilentFlowClient:acquireCachedToken - Skipping cache because forceRefresh is true."),c.e.createRefreshRequiredError();if(!e.account)throw c.e.createNoAccountInSilentRequestError();if(s=e.authority||this.authority.getPreferredCache(),!(d=this.cacheManager.readCacheRecord(e.account,this.config.authOptions.clientId,e,s)).accessToken)throw null===(r=this.serverTelemetryManager)||void 0===r||r.setCacheOutcome(h.To.NO_CACHED_ACCESS_TOKEN),this.logger.info("SilentFlowClient:acquireCachedToken - No access token found in cache for the given properties."),c.e.createRefreshRequiredError();if(a.I.wasClockTurnedBack(d.accessToken.cachedAt)||a.I.isTokenExpired(d.accessToken.expiresOn,this.config.systemOptions.tokenRenewalOffsetSeconds))throw null===(o=this.serverTelemetryManager)||void 0===o||o.setCacheOutcome(h.To.CACHED_ACCESS_TOKEN_EXPIRED),this.logger.info("SilentFlowClient:acquireCachedToken - Cached access token is expired or will expire within "+this.config.systemOptions.tokenRenewalOffsetSeconds+" seconds."),c.e.createRefreshRequiredError();if(d.accessToken.refreshOn&&a.I.isTokenExpired(d.accessToken.refreshOn,0))throw null===(i=this.serverTelemetryManager)||void 0===i||i.setCacheOutcome(h.To.REFRESH_CACHED_ACCESS_TOKEN),this.logger.info("SilentFlowClient:acquireCachedToken - Cached access token's refreshOn property has been exceeded'."),c.e.createRefreshRequiredError();return this.config.serverTelemetryManager&&this.config.serverTelemetryManager.incrementCacheHits(),[4,this.generateResultFromCacheRecord(d,e)];case 1:return[2,n.sent()]}}))}))},t.prototype.generateResultFromCacheRecord=function(e,t){return(0,n.mG)(this,void 0,void 0,(function(){var r;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return e.idToken&&(r=new i.H(e.idToken.secret,this.config.cryptoInterface)),[4,d.s.generateAuthenticationResult(this.cryptoUtils,this.authority,e,!0,t,r)];case 1:return[2,n.sent()]}}))}))},t}(o.W)},14854:(e,t,r)=>{r.d(t,{z:()=>d,j:()=>f});var n=r(5096),o=r(66561),i=r(87342),a=r(21362),s=r(77891),c=r(26246),u=r(67656),d={tokenRenewalOffsetSeconds:300,preventCorsPreflight:!1},h={loggerCallback:function(){},piiLoggingEnabled:!1,logLevel:a.i.Info,correlationId:""},l={sendGetRequestAsync:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw i.l.createUnexpectedError("Network interface - sendGetRequestAsync() has not been implemented")}))}))},sendPostRequestAsync:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw i.l.createUnexpectedError("Network interface - sendPostRequestAsync() has not been implemented")}))}))}},p={sku:s.gT.SKU,version:c.i,cpu:"",os:""},g={clientSecret:"",clientAssertion:void 0};function f(e){var t,r=e.authOptions,i=e.systemOptions,a=e.loggerOptions,s=e.storageInterface,c=e.networkInterface,f=e.cryptoInterface,y=e.clientCredentials,m=e.libraryInfo,E=e.serverTelemetryManager,v=e.persistencePlugin,C=e.serializableCache,T=(0,n.pi)((0,n.pi)({},h),a);return{authOptions:(t=r,(0,n.pi)({clientCapabilities:[]},t)),systemOptions:(0,n.pi)((0,n.pi)({},d),i),loggerOptions:T,storageInterface:s||new u.w(r.clientId,o.d),networkInterface:c||l,cryptoInterface:f||o.d,clientCredentials:y||g,libraryInfo:(0,n.pi)((0,n.pi)({},p),m),serverTelemetryManager:E||null,persistencePlugin:v||null,serializableCache:C||null}}},66561:(e,t,r)=>{r.d(t,{d:()=>i});var n=r(5096),o=r(87342),i={createNewGuid:function(){throw o.l.createUnexpectedError("Crypto interface - createNewGuid() has not been implemented")},base64Decode:function(){throw o.l.createUnexpectedError("Crypto interface - base64Decode() has not been implemented")},base64Encode:function(){throw o.l.createUnexpectedError("Crypto interface - base64Encode() has not been implemented")},generatePkceCodes:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - generatePkceCodes() has not been implemented")}))}))},getPublicKeyThumbprint:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - getPublicKeyThumbprint() has not been implemented")}))}))},removeTokenBindingKey:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - removeTokenBindingKey() has not been implemented")}))}))},clearKeystore:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - clearKeystore() has not been implemented")}))}))},signJwt:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - signJwt() has not been implemented")}))}))},hashString:function(){return(0,n.mG)(this,void 0,void 0,(function(){return(0,n.Jh)(this,(function(e){throw o.l.createUnexpectedError("Crypto interface - hashString() has not been implemented")}))}))}}},17650:(e,t,r)=>{r.d(t,{$:()=>u});var n,o=r(5096),i=r(70591),a=r(33848),s=r(99860),c=r(60742);!function(e){e.SW="sw",e.UHW="uhw"}(n||(n={}));var u=function(){function e(e){this.cryptoUtils=e}return e.prototype.generateCnf=function(e){return(0,o.mG)(this,void 0,void 0,(function(){var t;return(0,o.Jh)(this,(function(r){switch(r.label){case 0:return[4,this.generateKid(e)];case 1:return t=r.sent(),[2,this.cryptoUtils.base64Encode(JSON.stringify(t))]}}))}))},e.prototype.generateKid=function(e){return(0,o.mG)(this,void 0,void 0,(function(){return(0,o.Jh)(this,(function(t){switch(t.label){case 0:return[4,this.cryptoUtils.getPublicKeyThumbprint(e)];case 1:return[2,{kid:t.sent(),xms_ksl:n.SW}]}}))}))},e.prototype.signPopToken=function(e,t){var r;return(0,o.mG)(this,void 0,void 0,(function(){var n;return(0,o.Jh)(this,(function(o){if(n=i.H.extractTokenClaims(e,this.cryptoUtils),!(null===(r=null==n?void 0:n.cnf)||void 0===r?void 0:r.kid))throw c.e.createTokenClaimsRequiredError();return[2,this.signPayload(e,n.cnf.kid,t)]}))}))},e.prototype.signPayload=function(e,t,r,n){return(0,o.mG)(this,void 0,void 0,(function(){var i,c,u,d,h,l;return(0,o.Jh)(this,(function(p){switch(p.label){case 0:return i=r.resourceRequestMethod,c=r.resourceRequestUri,u=r.shrClaims,d=r.shrNonce,h=c?new s.G(c):void 0,l=null==h?void 0:h.getUrlComponents(),[4,this.cryptoUtils.signJwt((0,o.pi)({at:e,ts:a.I.nowSeconds(),m:null==i?void 0:i.toUpperCase(),u:null==l?void 0:l.HostNameAndPort,nonce:d||this.cryptoUtils.createNewGuid(),p:null==l?void 0:l.AbsolutePath,q:(null==l?void 0:l.QueryString)?[[],l.QueryString]:void 0,client_claims:u||void 0},n),t)];case 1:return[2,p.sent()]}}))}))},e}()},87342:(e,t,r)=>{r.d(t,{l:()=>a,Y:()=>i});var n=r(5096),o=r(77891),i={unexpectedError:{code:"unexpected_error",desc:"Unexpected error in authentication."}},a=function(e){function t(r,n,i){var a=this,s=n?r+": "+n:r;return a=e.call(this,s)||this,Object.setPrototypeOf(a,t.prototype),a.errorCode=r||o.gT.EMPTY_STRING,a.errorMessage=n||"",a.subError=i||"",a.name="AuthError",a}return(0,n.ZT)(t,e),t.prototype.setCorrelationId=function(e){this.correlationId=e},t.createUnexpectedError=function(e){return new t(i.unexpectedError.code,i.unexpectedError.desc+": "+e)},t}(Error)},60742:(e,t,r)=>{r.d(t,{e:()=>a,A:()=>i});var n=r(5096),o=r(87342),i={clientInfoDecodingError:{code:"client_info_decoding_error",desc:"The client info could not be parsed/decoded correctly. Please review the trace to determine the root cause."},clientInfoEmptyError:{code:"client_info_empty_error",desc:"The client info was empty. Please review the trace to determine the root cause."},tokenParsingError:{code:"token_parsing_error",desc:"Token cannot be parsed. Please review stack trace to determine root cause."},nullOrEmptyToken:{code:"null_or_empty_token",desc:"The token is null or empty. Please review the trace to determine the root cause."},endpointResolutionError:{code:"endpoints_resolution_error",desc:"Error: could not resolve endpoints. Please check network and try again."},networkError:{code:"network_error",desc:"Network request failed. Please check network trace to determine root cause."},unableToGetOpenidConfigError:{code:"openid_config_error",desc:"Could not retrieve endpoints. Check your authority and verify the .well-known/openid-configuration endpoint returns the required endpoints."},hashNotDeserialized:{code:"hash_not_deserialized",desc:"The hash parameters could not be deserialized. Please review the trace to determine the root cause."},blankGuidGenerated:{code:"blank_guid_generated",desc:"The guid generated was blank. Please review the trace to determine the root cause."},invalidStateError:{code:"invalid_state",desc:"State was not the expected format. Please check the logs to determine whether the request was sent using ProtocolUtils.setRequestState()."},stateMismatchError:{code:"state_mismatch",desc:"State mismatch error. Please check your network. Continued requests may cause cache overflow."},stateNotFoundError:{code:"state_not_found",desc:"State not found"},nonceMismatchError:{code:"nonce_mismatch",desc:"Nonce mismatch error. This may be caused by a race condition in concurrent requests."},nonceNotFoundError:{code:"nonce_not_found",desc:"nonce not found"},noTokensFoundError:{code:"no_tokens_found",desc:"No tokens were found for the given scopes, and no authorization code was passed to acquireToken. You must retrieve an authorization code before making a call to acquireToken()."},multipleMatchingTokens:{code:"multiple_matching_tokens",desc:"The cache contains multiple tokens satisfying the requirements. Call AcquireToken again providing more requirements such as authority or account."},multipleMatchingAccounts:{code:"multiple_matching_accounts",desc:"The cache contains multiple accounts satisfying the given parameters. Please pass more info to obtain the correct account"},multipleMatchingAppMetadata:{code:"multiple_matching_appMetadata",desc:"The cache contains multiple appMetadata satisfying the given parameters. Please pass more info to obtain the correct appMetadata"},tokenRequestCannotBeMade:{code:"request_cannot_be_made",desc:"Token request cannot be made without authorization code or refresh token."},appendEmptyScopeError:{code:"cannot_append_empty_scope",desc:"Cannot append null or empty scope to ScopeSet. Please check the stack trace for more info."},removeEmptyScopeError:{code:"cannot_remove_empty_scope",desc:"Cannot remove null or empty scope from ScopeSet. Please check the stack trace for more info."},appendScopeSetError:{code:"cannot_append_scopeset",desc:"Cannot append ScopeSet due to error."},emptyInputScopeSetError:{code:"empty_input_scopeset",desc:"Empty input ScopeSet cannot be processed."},DeviceCodePollingCancelled:{code:"device_code_polling_cancelled",desc:"Caller has cancelled token endpoint polling during device code flow by setting DeviceCodeRequest.cancel = true."},DeviceCodeExpired:{code:"device_code_expired",desc:"Device code is expired."},DeviceCodeUnknownError:{code:"device_code_unknown_error",desc:"Device code stopped polling for unknown reasons."},NoAccountInSilentRequest:{code:"no_account_in_silent_request",desc:"Please pass an account object, silent flow is not supported without account information"},invalidCacheRecord:{code:"invalid_cache_record",desc:"Cache record object was null or undefined."},invalidCacheEnvironment:{code:"invalid_cache_environment",desc:"Invalid environment when attempting to create cache entry"},noAccountFound:{code:"no_account_found",desc:"No account found in cache for given key."},CachePluginError:{code:"no cache plugin set on CacheManager",desc:"ICachePlugin needs to be set before using readFromStorage or writeFromStorage"},noCryptoObj:{code:"no_crypto_object",desc:"No crypto object detected. This is required for the following operation: "},invalidCacheType:{code:"invalid_cache_type",desc:"Invalid cache type"},unexpectedAccountType:{code:"unexpected_account_type",desc:"Unexpected account type."},unexpectedCredentialType:{code:"unexpected_credential_type",desc:"Unexpected credential type."},invalidAssertion:{code:"invalid_assertion",desc:"Client assertion must meet requirements described in https://tools.ietf.org/html/rfc7515"},invalidClientCredential:{code:"invalid_client_credential",desc:"Client credential (secret, certificate, or assertion) must not be empty when creating a confidential client. An application should at most have one credential"},tokenRefreshRequired:{code:"token_refresh_required",desc:"Cannot return token from cache because it must be refreshed. This may be due to one of the following reasons: forceRefresh parameter is set to true, claims have been requested, there is no cached access token or it is expired."},userTimeoutReached:{code:"user_timeout_reached",desc:"User defined timeout for device code polling reached"},tokenClaimsRequired:{code:"token_claims_cnf_required_for_signedjwt",desc:"Cannot generate a POP jwt if the token_claims are not populated"},noAuthorizationCodeFromServer:{code:"authorization_code_missing_from_server_response",desc:"Server response does not contain an authorization code to proceed"},noAzureRegionDetected:{code:"no_azure_region_detected",desc:"No azure region was detected and no fallback was made available"},accessTokenEntityNullError:{code:"access_token_entity_null",desc:"Access token entity is null, please check logs and cache to ensure a valid access token is present."},bindingKeyNotRemovedError:{code:"binding_key_not_removed",desc:"Could not remove the credential's binding key from storage."},logoutNotSupported:{code:"end_session_endpoint_not_supported",desc:"Provided authority does not support logout."}},a=function(e){function t(r,n){var o=e.call(this,r,n)||this;return o.name="ClientAuthError",Object.setPrototypeOf(o,t.prototype),o}return(0,n.ZT)(t,e),t.createClientInfoDecodingError=function(e){return new t(i.clientInfoDecodingError.code,i.clientInfoDecodingError.desc+" Failed with error: "+e)},t.createClientInfoEmptyError=function(){return new t(i.clientInfoEmptyError.code,""+i.clientInfoEmptyError.desc)},t.createTokenParsingError=function(e){return new t(i.tokenParsingError.code,i.tokenParsingError.desc+" Failed with error: "+e)},t.createTokenNullOrEmptyError=function(e){return new t(i.nullOrEmptyToken.code,i.nullOrEmptyToken.desc+" Raw Token Value: "+e)},t.createEndpointDiscoveryIncompleteError=function(e){return new t(i.endpointResolutionError.code,i.endpointResolutionError.desc+" Detail: "+e)},t.createNetworkError=function(e,r){return new t(i.networkError.code,i.networkError.desc+" | Fetch client threw: "+r+" | Attempted to reach: "+e.split("?")[0])},t.createUnableToGetOpenidConfigError=function(e){return new t(i.unableToGetOpenidConfigError.code,i.unableToGetOpenidConfigError.desc+" Attempted to retrieve endpoints from: "+e)},t.createHashNotDeserializedError=function(e){return new t(i.hashNotDeserialized.code,i.hashNotDeserialized.desc+" Given Object: "+e)},t.createInvalidStateError=function(e,r){return new t(i.invalidStateError.code,i.invalidStateError.desc+" Invalid State: "+e+", Root Err: "+r)},t.createStateMismatchError=function(){return new t(i.stateMismatchError.code,i.stateMismatchError.desc)},t.createStateNotFoundError=function(e){return new t(i.stateNotFoundError.code,i.stateNotFoundError.desc+":  "+e)},t.createNonceMismatchError=function(){return new t(i.nonceMismatchError.code,i.nonceMismatchError.desc)},t.createNonceNotFoundError=function(e){return new t(i.nonceNotFoundError.code,i.nonceNotFoundError.desc+":  "+e)},t.createMultipleMatchingTokensInCacheError=function(){return new t(i.multipleMatchingTokens.code,i.multipleMatchingTokens.desc+".")},t.createMultipleMatchingAccountsInCacheError=function(){return new t(i.multipleMatchingAccounts.code,i.multipleMatchingAccounts.desc)},t.createMultipleMatchingAppMetadataInCacheError=function(){return new t(i.multipleMatchingAppMetadata.code,i.multipleMatchingAppMetadata.desc)},t.createTokenRequestCannotBeMadeError=function(){return new t(i.tokenRequestCannotBeMade.code,i.tokenRequestCannotBeMade.desc)},t.createAppendEmptyScopeToSetError=function(e){return new t(i.appendEmptyScopeError.code,i.appendEmptyScopeError.desc+" Given Scope: "+e)},t.createRemoveEmptyScopeFromSetError=function(e){return new t(i.removeEmptyScopeError.code,i.removeEmptyScopeError.desc+" Given Scope: "+e)},t.createAppendScopeSetError=function(e){return new t(i.appendScopeSetError.code,i.appendScopeSetError.desc+" Detail Error: "+e)},t.createEmptyInputScopeSetError=function(){return new t(i.emptyInputScopeSetError.code,""+i.emptyInputScopeSetError.desc)},t.createDeviceCodeCancelledError=function(){return new t(i.DeviceCodePollingCancelled.code,""+i.DeviceCodePollingCancelled.desc)},t.createDeviceCodeExpiredError=function(){return new t(i.DeviceCodeExpired.code,""+i.DeviceCodeExpired.desc)},t.createDeviceCodeUnknownError=function(){return new t(i.DeviceCodeUnknownError.code,""+i.DeviceCodeUnknownError.desc)},t.createNoAccountInSilentRequestError=function(){return new t(i.NoAccountInSilentRequest.code,""+i.NoAccountInSilentRequest.desc)},t.createNullOrUndefinedCacheRecord=function(){return new t(i.invalidCacheRecord.code,i.invalidCacheRecord.desc)},t.createInvalidCacheEnvironmentError=function(){return new t(i.invalidCacheEnvironment.code,i.invalidCacheEnvironment.desc)},t.createNoAccountFoundError=function(){return new t(i.noAccountFound.code,i.noAccountFound.desc)},t.createCachePluginError=function(){return new t(i.CachePluginError.code,""+i.CachePluginError.desc)},t.createNoCryptoObjectError=function(e){return new t(i.noCryptoObj.code,""+i.noCryptoObj.desc+e)},t.createInvalidCacheTypeError=function(){return new t(i.invalidCacheType.code,""+i.invalidCacheType.desc)},t.createUnexpectedAccountTypeError=function(){return new t(i.unexpectedAccountType.code,""+i.unexpectedAccountType.desc)},t.createUnexpectedCredentialTypeError=function(){return new t(i.unexpectedCredentialType.code,""+i.unexpectedCredentialType.desc)},t.createInvalidAssertionError=function(){return new t(i.invalidAssertion.code,""+i.invalidAssertion.desc)},t.createInvalidCredentialError=function(){return new t(i.invalidClientCredential.code,""+i.invalidClientCredential.desc)},t.createRefreshRequiredError=function(){return new t(i.tokenRefreshRequired.code,i.tokenRefreshRequired.desc)},t.createUserTimeoutReachedError=function(){return new t(i.userTimeoutReached.code,i.userTimeoutReached.desc)},t.createTokenClaimsRequiredError=function(){return new t(i.tokenClaimsRequired.code,i.tokenClaimsRequired.desc)},t.createNoAuthCodeInServerResponseError=function(){return new t(i.noAuthorizationCodeFromServer.code,i.noAuthorizationCodeFromServer.desc)},t.createBindingKeyNotRemovedError=function(){return new t(i.bindingKeyNotRemovedError.code,i.bindingKeyNotRemovedError.desc)},t.createLogoutNotSupportedError=function(){return new t(i.logoutNotSupported.code,i.logoutNotSupported.desc)},t}(o.l)},47181:(e,t,r)=>{r.d(t,{r:()=>a,L:()=>i});var n=r(5096),o=r(60742),i={redirectUriNotSet:{code:"redirect_uri_empty",desc:"A redirect URI is required for all calls, and none has been set."},postLogoutUriNotSet:{code:"post_logout_uri_empty",desc:"A post logout redirect has not been set."},claimsRequestParsingError:{code:"claims_request_parsing_error",desc:"Could not parse the given claims request object."},authorityUriInsecure:{code:"authority_uri_insecure",desc:"Authority URIs must use https.  Please see here for valid authority configuration options: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-js-initializing-client-applications#configuration-options"},urlParseError:{code:"url_parse_error",desc:"URL could not be parsed into appropriate segments."},urlEmptyError:{code:"empty_url_error",desc:"URL was empty or null."},emptyScopesError:{code:"empty_input_scopes_error",desc:"Scopes cannot be passed as null, undefined or empty array because they are required to obtain an access token."},nonArrayScopesError:{code:"nonarray_input_scopes_error",desc:"Scopes cannot be passed as non-array."},clientIdSingleScopeError:{code:"clientid_input_scopes_error",desc:"Client ID can only be provided as a single scope."},invalidPrompt:{code:"invalid_prompt_value",desc:"Supported prompt values are 'login', 'select_account', 'consent', 'create' and 'none'.  Please see here for valid configuration options: https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#commonauthorizationurlrequest"},invalidClaimsRequest:{code:"invalid_claims",desc:"Given claims parameter must be a stringified JSON object."},tokenRequestEmptyError:{code:"token_request_empty",desc:"Token request was empty and not found in cache."},logoutRequestEmptyError:{code:"logout_request_empty",desc:"The logout request was null or undefined."},invalidCodeChallengeMethod:{code:"invalid_code_challenge_method",desc:'code_challenge_method passed is invalid. Valid values are "plain" and "S256".'},invalidCodeChallengeParams:{code:"pkce_params_missing",desc:"Both params: code_challenge and code_challenge_method are to be passed if to be sent in the request"},invalidCloudDiscoveryMetadata:{code:"invalid_cloud_discovery_metadata",desc:"Invalid cloudDiscoveryMetadata provided. Must be a stringified JSON object containing tenant_discovery_endpoint and metadata fields"},invalidAuthorityMetadata:{code:"invalid_authority_metadata",desc:"Invalid authorityMetadata provided. Must by a stringified JSON object containing authorization_endpoint, token_endpoint, issuer fields."},untrustedAuthority:{code:"untrusted_authority",desc:"The provided authority is not a trusted authority. Please include this authority in the knownAuthorities config parameter."},missingSshJwk:{code:"missing_ssh_jwk",desc:"Missing sshJwk in SSH certificate request. A stringified JSON Web Key is required when using the SSH authentication scheme."},missingSshKid:{code:"missing_ssh_kid",desc:"Missing sshKid in SSH certificate request. A string that uniquely identifies the public SSH key is required when using the SSH authentication scheme."},missingNonceAuthenticationHeader:{code:"missing_nonce_authentication_header",desc:"Unable to find an authentication header containing server nonce. Either the Authentication-Info or WWW-Authenticate headers must be present in order to obtain a server nonce."},invalidAuthenticationHeader:{code:"invalid_authentication_header",desc:"Invalid authentication header provided"}},a=function(e){function t(r,n){var o=e.call(this,r,n)||this;return o.name="ClientConfigurationError",Object.setPrototypeOf(o,t.prototype),o}return(0,n.ZT)(t,e),t.createRedirectUriEmptyError=function(){return new t(i.redirectUriNotSet.code,i.redirectUriNotSet.desc)},t.createPostLogoutRedirectUriEmptyError=function(){return new t(i.postLogoutUriNotSet.code,i.postLogoutUriNotSet.desc)},t.createClaimsRequestParsingError=function(e){return new t(i.claimsRequestParsingError.code,i.claimsRequestParsingError.desc+" Given value: "+e)},t.createInsecureAuthorityUriError=function(e){return new t(i.authorityUriInsecure.code,i.authorityUriInsecure.desc+" Given URI: "+e)},t.createUrlParseError=function(e){return new t(i.urlParseError.code,i.urlParseError.desc+" Given Error: "+e)},t.createUrlEmptyError=function(){return new t(i.urlEmptyError.code,i.urlEmptyError.desc)},t.createEmptyScopesArrayError=function(){return new t(i.emptyScopesError.code,""+i.emptyScopesError.desc)},t.createClientIdSingleScopeError=function(e){return new t(i.clientIdSingleScopeError.code,i.clientIdSingleScopeError.desc+" Given Scopes: "+e)},t.createInvalidPromptError=function(e){return new t(i.invalidPrompt.code,i.invalidPrompt.desc+" Given value: "+e)},t.createInvalidClaimsRequestError=function(){return new t(i.invalidClaimsRequest.code,i.invalidClaimsRequest.desc)},t.createEmptyLogoutRequestError=function(){return new t(i.logoutRequestEmptyError.code,i.logoutRequestEmptyError.desc)},t.createEmptyTokenRequestError=function(){return new t(i.tokenRequestEmptyError.code,i.tokenRequestEmptyError.desc)},t.createInvalidCodeChallengeMethodError=function(){return new t(i.invalidCodeChallengeMethod.code,i.invalidCodeChallengeMethod.desc)},t.createInvalidCodeChallengeParamsError=function(){return new t(i.invalidCodeChallengeParams.code,i.invalidCodeChallengeParams.desc)},t.createInvalidCloudDiscoveryMetadataError=function(){return new t(i.invalidCloudDiscoveryMetadata.code,i.invalidCloudDiscoveryMetadata.desc)},t.createInvalidAuthorityMetadataError=function(){return new t(i.invalidAuthorityMetadata.code,i.invalidAuthorityMetadata.desc)},t.createUntrustedAuthorityError=function(){return new t(i.untrustedAuthority.code,i.untrustedAuthority.desc)},t.createMissingSshJwkError=function(){return new t(i.missingSshJwk.code,i.missingSshJwk.desc)},t.createMissingSshKidError=function(){return new t(i.missingSshKid.code,i.missingSshKid.desc)},t.createMissingNonceAuthenticationHeadersError=function(){return new t(i.missingNonceAuthenticationHeader.code,i.missingNonceAuthenticationHeader.desc)},t.createInvalidAuthenticationHeaderError=function(e,r){return new t(i.invalidAuthenticationHeader.code,i.invalidAuthenticationHeader.desc+". Invalid header: "+e+". Details: "+r)},t}(o.e)},83927:(e,t,r)=>{r.d(t,{Yo:()=>c,Zy:()=>s});var n=r(5096),o=r(87342),i=["interaction_required","consent_required","login_required"],a=["message_only","additional_action","basic_action","user_password_expired","consent_required"],s={noTokensFoundError:{code:"no_tokens_found",desc:"No refresh token found in the cache. Please sign-in."}},c=function(e){function t(r,n,o){var i=e.call(this,r,n,o)||this;return i.name="InteractionRequiredAuthError",Object.setPrototypeOf(i,t.prototype),i}return(0,n.ZT)(t,e),t.isInteractionRequiredError=function(e,t,r){var n=!!e&&i.indexOf(e)>-1,o=!!r&&a.indexOf(r)>-1,s=!!t&&i.some((function(e){return t.indexOf(e)>-1}));return n||s||o},t.createNoTokensFoundError=function(){return new t(s.noTokensFoundError.code,s.noTokensFoundError.desc)},t}(o.l)},91359:(e,t,r)=>{r.d(t,{n:()=>o});var n=r(5096),o=function(e){function t(r,n,o){var i=e.call(this,r,n,o)||this;return i.name="ServerError",Object.setPrototypeOf(i,t.prototype),i}return(0,n.ZT)(t,e),t}(r(87342).l)},21362:(e,t,r)=>{r.d(t,{i:()=>n,Y:()=>a});var n,o=r(61653),i=r(77891);!function(e){e[e.Error=0]="Error",e[e.Warning=1]="Warning",e[e.Info=2]="Info",e[e.Verbose=3]="Verbose",e[e.Trace=4]="Trace"}(n||(n={}));var a=function(){function e(e,t,r){this.level=n.Info,this.localCallback=e.loggerCallback||function(){},this.piiLoggingEnabled=e.piiLoggingEnabled||!1,this.level="number"==typeof e.logLevel?e.logLevel:n.Info,this.correlationId=e.correlationId||"",this.packageName=t||i.gT.EMPTY_STRING,this.packageVersion=r||i.gT.EMPTY_STRING}return e.prototype.clone=function(t,r,n){return new e({loggerCallback:this.localCallback,piiLoggingEnabled:this.piiLoggingEnabled,logLevel:this.level,correlationId:n||this.correlationId},t,r)},e.prototype.logMessage=function(e,t){if(!(t.logLevel>this.level||!this.piiLoggingEnabled&&t.containsPii)){var r=(new Date).toUTCString(),i=(o.x.isEmpty(t.correlationId)?o.x.isEmpty(this.correlationId)?"["+r+"]":"["+r+"] : ["+this.correlationId+"]":"["+r+"] : ["+t.correlationId+"]")+" : "+this.packageName+"@"+this.packageVersion+" : "+n[t.logLevel]+" - "+e;this.executeCallback(t.logLevel,i,t.containsPii||!1)}},e.prototype.executeCallback=function(e,t,r){this.localCallback&&this.localCallback(e,t,r)},e.prototype.error=function(e,t){this.logMessage(e,{logLevel:n.Error,containsPii:!1,correlationId:t||""})},e.prototype.errorPii=function(e,t){this.logMessage(e,{logLevel:n.Error,containsPii:!0,correlationId:t||""})},e.prototype.warning=function(e,t){this.logMessage(e,{logLevel:n.Warning,containsPii:!1,correlationId:t||""})},e.prototype.warningPii=function(e,t){this.logMessage(e,{logLevel:n.Warning,containsPii:!0,correlationId:t||""})},e.prototype.info=function(e,t){this.logMessage(e,{logLevel:n.Info,containsPii:!1,correlationId:t||""})},e.prototype.infoPii=function(e,t){this.logMessage(e,{logLevel:n.Info,containsPii:!0,correlationId:t||""})},e.prototype.verbose=function(e,t){this.logMessage(e,{logLevel:n.Verbose,containsPii:!1,correlationId:t||""})},e.prototype.verbosePii=function(e,t){this.logMessage(e,{logLevel:n.Verbose,containsPii:!0,correlationId:t||""})},e.prototype.trace=function(e,t){this.logMessage(e,{logLevel:n.Trace,containsPii:!1,correlationId:t||""})},e.prototype.tracePii=function(e,t){this.logMessage(e,{logLevel:n.Trace,containsPii:!0,correlationId:t||""})},e.prototype.isPiiLoggingEnabled=function(){return this.piiLoggingEnabled||!1},e}()},30658:(e,t,r)=>{r.d(t,{y:()=>o});var n=r(87342),o={sendGetRequestAsync:function(){return Promise.reject(n.l.createUnexpectedError("Network interface - sendGetRequestAsync() has not been implemented for the Network interface."))},sendPostRequestAsync:function(){return Promise.reject(n.l.createUnexpectedError("Network interface - sendPostRequestAsync() has not been implemented for the Network interface."))}}},97482:(e,t,r)=>{r.d(t,{r:()=>s});var n=r(5096),o=r(47282),i=r(60742),a=r(87342),s=function(){function e(e,t){this.networkClient=e,this.cacheManager=t}return e.prototype.sendPostRequest=function(e,t,r){return(0,n.mG)(this,void 0,void 0,(function(){var s,c;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:o.v.preProcess(this.cacheManager,e),n.label=1;case 1:return n.trys.push([1,3,,4]),[4,this.networkClient.sendPostRequestAsync(t,r)];case 2:return s=n.sent(),[3,4];case 3:throw(c=n.sent())instanceof a.l?c:i.e.createNetworkError(t,c);case 4:return o.v.postProcess(this.cacheManager,e,s),[2,s]}}))}))},e}()},47282:(e,t,r)=>{r.d(t,{v:()=>i});var n=r(77891),o=r(91359),i=function(){function e(){}return e.generateThrottlingStorageKey=function(e){return n.bb.THROTTLING_PREFIX+"."+JSON.stringify(e)},e.preProcess=function(t,r){var i,a=e.generateThrottlingStorageKey(r),s=t.getThrottlingCache(a);if(s){if(s.throttleTime<Date.now())return void t.removeItem(a,n.Xj.THROTTLING);throw new o.n((null===(i=s.errorCodes)||void 0===i?void 0:i.join(" "))||n.gT.EMPTY_STRING,s.errorMessage,s.subError)}},e.postProcess=function(t,r,o){if(e.checkResponseStatus(o)||e.checkResponseForRetryAfter(o)){var i={throttleTime:e.calculateThrottleTime(parseInt(o.headers[n.SZ.RETRY_AFTER])),error:o.body.error,errorCodes:o.body.error_codes,errorMessage:o.body.error_description,subError:o.body.suberror};t.setThrottlingCache(e.generateThrottlingStorageKey(r),i)}},e.checkResponseStatus=function(e){return 429===e.status||e.status>=500&&e.status<600},e.checkResponseForRetryAfter=function(e){return!!e.headers&&e.headers.hasOwnProperty(n.SZ.RETRY_AFTER)&&(e.status<200||e.status>=300)},e.calculateThrottleTime=function(e){var t=e<=0?0:e,r=Date.now()/1e3;return Math.floor(1e3*Math.min(r+(t||n.bb.DEFAULT_THROTTLE_TIME_SECONDS),r+n.bb.DEFAULT_MAX_THROTTLE_TIME_SECONDS))},e.removeThrottle=function(e,t,r,o){var i={clientId:t,authority:r.authority,scopes:r.scopes,homeAccountIdentifier:o,claims:r.claims,authenticationScheme:r.authenticationScheme,resourceRequestMethod:r.resourceRequestMethod,resourceRequestUri:r.resourceRequestUri,shrClaims:r.shrClaims,sshKid:r.sshKid},a=this.generateThrottlingStorageKey(i);return e.removeItem(a,n.Xj.THROTTLING)},e}()},26246:(e,t,r)=>{r.d(t,{u:()=>n,i:()=>o});var n="@azure/msal-common",o="6.0.0"},32030:(e,t,r)=>{r.d(t,{d:()=>i});var n=r(47181),o=r(77891),i=function(){function e(e){this.headers=e}return e.prototype.getShrNonce=function(){var e=this.headers[o.SZ.AuthenticationInfo];if(e){var t=this.parseChallenges(e);if(t.nextnonce)return t.nextnonce;throw n.r.createInvalidAuthenticationHeaderError(o.SZ.AuthenticationInfo,"nextnonce challenge is missing.")}var r=this.headers[o.SZ.WWWAuthenticate];if(r){var i=this.parseChallenges(r);if(i.nonce)return i.nonce;throw n.r.createInvalidAuthenticationHeaderError(o.SZ.WWWAuthenticate,"nonce challenge is missing.")}throw n.r.createMissingNonceAuthenticationHeadersError()},e.prototype.parseChallenges=function(e){var t=e.indexOf(" "),r=e.substr(t+1).split(","),n={};return r.forEach((function(e){var t=e.split("="),r=t[0],o=t[1];n[r]=unescape(o.replace(/['"]+/g,""))})),n},e}()},87479:(e,t,r)=>{r.d(t,{H:()=>u});var n=r(5096),o=r(77891),i=r(92613),a=r(47181),s=r(5035),c=r(61653),u=function(){function e(){this.parameters=new Map}return e.prototype.addResponseTypeCode=function(){this.parameters.set(o.Fo.RESPONSE_TYPE,encodeURIComponent(o.gT.CODE_RESPONSE_TYPE))},e.prototype.addResponseMode=function(e){this.parameters.set(o.Fo.RESPONSE_MODE,encodeURIComponent(e||o.vw.QUERY))},e.prototype.addScopes=function(e,t){void 0===t&&(t=!0);var r=t?(0,n.pr)(e||[],o.f_):e||[],a=new i.i(r);this.parameters.set(o.Fo.SCOPE,encodeURIComponent(a.printScopes()))},e.prototype.addClientId=function(e){this.parameters.set(o.Fo.CLIENT_ID,encodeURIComponent(e))},e.prototype.addRedirectUri=function(e){s.D.validateRedirectUri(e),this.parameters.set(o.Fo.REDIRECT_URI,encodeURIComponent(e))},e.prototype.addPostLogoutRedirectUri=function(e){s.D.validateRedirectUri(e),this.parameters.set(o.Fo.POST_LOGOUT_URI,encodeURIComponent(e))},e.prototype.addIdTokenHint=function(e){this.parameters.set(o.Fo.ID_TOKEN_HINT,encodeURIComponent(e))},e.prototype.addDomainHint=function(e){this.parameters.set(o.VO.DOMAIN_HINT,encodeURIComponent(e))},e.prototype.addLoginHint=function(e){this.parameters.set(o.VO.LOGIN_HINT,encodeURIComponent(e))},e.prototype.addCcsUpn=function(e){this.parameters.set(o.SZ.CCS_HEADER,encodeURIComponent("UPN:"+e))},e.prototype.addCcsOid=function(e){this.parameters.set(o.SZ.CCS_HEADER,encodeURIComponent("Oid:"+e.uid+"@"+e.utid))},e.prototype.addSid=function(e){this.parameters.set(o.VO.SID,encodeURIComponent(e))},e.prototype.addClaims=function(e,t){var r=this.addClientCapabilitiesToClaims(e,t);s.D.validateClaims(r),this.parameters.set(o.Fo.CLAIMS,encodeURIComponent(r))},e.prototype.addCorrelationId=function(e){this.parameters.set(o.Fo.CLIENT_REQUEST_ID,encodeURIComponent(e))},e.prototype.addLibraryInfo=function(e){this.parameters.set(o.Fo.X_CLIENT_SKU,e.sku),this.parameters.set(o.Fo.X_CLIENT_VER,e.version),this.parameters.set(o.Fo.X_CLIENT_OS,e.os),this.parameters.set(o.Fo.X_CLIENT_CPU,e.cpu)},e.prototype.addPrompt=function(e){s.D.validatePrompt(e),this.parameters.set(""+o.Fo.PROMPT,encodeURIComponent(e))},e.prototype.addState=function(e){c.x.isEmpty(e)||this.parameters.set(o.Fo.STATE,encodeURIComponent(e))},e.prototype.addNonce=function(e){this.parameters.set(o.Fo.NONCE,encodeURIComponent(e))},e.prototype.addCodeChallengeParams=function(e,t){if(s.D.validateCodeChallengeParams(e,t),!e||!t)throw a.r.createInvalidCodeChallengeParamsError();this.parameters.set(o.Fo.CODE_CHALLENGE,encodeURIComponent(e)),this.parameters.set(o.Fo.CODE_CHALLENGE_METHOD,encodeURIComponent(t))},e.prototype.addAuthorizationCode=function(e){this.parameters.set(o.Fo.CODE,encodeURIComponent(e))},e.prototype.addDeviceCode=function(e){this.parameters.set(o.Fo.DEVICE_CODE,encodeURIComponent(e))},e.prototype.addRefreshToken=function(e){this.parameters.set(o.Fo.REFRESH_TOKEN,encodeURIComponent(e))},e.prototype.addCodeVerifier=function(e){this.parameters.set(o.Fo.CODE_VERIFIER,encodeURIComponent(e))},e.prototype.addClientSecret=function(e){this.parameters.set(o.Fo.CLIENT_SECRET,encodeURIComponent(e))},e.prototype.addClientAssertion=function(e){this.parameters.set(o.Fo.CLIENT_ASSERTION,encodeURIComponent(e))},e.prototype.addClientAssertionType=function(e){this.parameters.set(o.Fo.CLIENT_ASSERTION_TYPE,encodeURIComponent(e))},e.prototype.addOboAssertion=function(e){this.parameters.set(o.Fo.OBO_ASSERTION,encodeURIComponent(e))},e.prototype.addRequestTokenUse=function(e){this.parameters.set(o.Fo.REQUESTED_TOKEN_USE,encodeURIComponent(e))},e.prototype.addGrantType=function(e){this.parameters.set(o.Fo.GRANT_TYPE,encodeURIComponent(e))},e.prototype.addClientInfo=function(){this.parameters.set(o.sR,"1")},e.prototype.addExtraQueryParameters=function(e){var t=this;s.D.sanitizeEQParams(e,this.parameters),Object.keys(e).forEach((function(r){t.parameters.set(r,e[r])}))},e.prototype.addClientCapabilitiesToClaims=function(e,t){var r;if(e)try{r=JSON.parse(e)}catch(e){throw a.r.createInvalidClaimsRequestError()}else r={};return t&&t.length>0&&(r.hasOwnProperty(o.As.ACCESS_TOKEN)||(r[o.As.ACCESS_TOKEN]={}),r[o.As.ACCESS_TOKEN][o.As.XMS_CC]={values:t}),JSON.stringify(r)},e.prototype.addUsername=function(e){this.parameters.set(o.Ge.username,e)},e.prototype.addPassword=function(e){this.parameters.set(o.Ge.password,e)},e.prototype.addPopToken=function(e){c.x.isEmpty(e)||(this.parameters.set(o.Fo.TOKEN_TYPE,o.hO.POP),this.parameters.set(o.Fo.REQ_CNF,encodeURIComponent(e)))},e.prototype.addSshJwk=function(e){c.x.isEmpty(e)||(this.parameters.set(o.Fo.TOKEN_TYPE,o.hO.SSH),this.parameters.set(o.Fo.REQ_CNF,encodeURIComponent(e)))},e.prototype.addServerTelemetry=function(e){this.parameters.set(o.Fo.X_CLIENT_CURR_TELEM,e.generateCurrentRequestHeaderValue()),this.parameters.set(o.Fo.X_CLIENT_LAST_TELEM,e.generateLastRequestHeaderValue())},e.prototype.addThrottling=function(){this.parameters.set(o.Fo.X_MS_LIB_CAPABILITY,o.bb.X_MS_LIB_CAPABILITY_VALUE)},e.prototype.createQueryString=function(){var e=new Array;return this.parameters.forEach((function(t,r){e.push(r+"="+t)})),e.join("&")},e}()},5035:(e,t,r)=>{r.d(t,{D:()=>a});var n=r(61653),o=r(47181),i=r(77891),a=function(){function e(){}return e.validateRedirectUri=function(e){if(n.x.isEmpty(e))throw o.r.createRedirectUriEmptyError()},e.validatePrompt=function(e){var t=[];for(var r in i.NJ)t.push(i.NJ[r]);if(t.indexOf(e)<0)throw o.r.createInvalidPromptError(e)},e.validateClaims=function(e){try{JSON.parse(e)}catch(e){throw o.r.createInvalidClaimsRequestError()}},e.validateCodeChallengeParams=function(e,t){if(n.x.isEmpty(e)||n.x.isEmpty(t))throw o.r.createInvalidCodeChallengeParamsError();this.validateCodeChallengeMethod(t)},e.validateCodeChallengeMethod=function(e){if([i.VX.PLAIN,i.VX.S256].indexOf(e)<0)throw o.r.createInvalidCodeChallengeMethodError()},e.sanitizeEQParams=function(e,t){return e?(t.forEach((function(t,r){e[r]&&delete e[r]})),e):{}},e}()},92613:(e,t,r)=>{r.d(t,{i:()=>c});var n=r(5096),o=r(47181),i=r(61653),a=r(60742),s=r(77891),c=function(){function e(e){var t=this,r=e?i.x.trimArrayEntries((0,n.pr)(e)):[],o=r?i.x.removeEmptyStringsFromArray(r):[];this.validateInputScopes(o),this.scopes=new Set,o.forEach((function(e){return t.scopes.add(e)}))}return e.fromString=function(t){return new e((t||"").split(" "))},e.prototype.validateInputScopes=function(e){if(!e||e.length<1)throw o.r.createEmptyScopesArrayError()},e.prototype.containsScope=function(t){var r=new e(this.printScopesLowerCase().split(" "));return!i.x.isEmpty(t)&&r.scopes.has(t.toLowerCase())},e.prototype.containsScopeSet=function(e){var t=this;return!(!e||e.scopes.size<=0)&&this.scopes.size>=e.scopes.size&&e.asArray().every((function(e){return t.containsScope(e)}))},e.prototype.containsOnlyOIDCScopes=function(){var e=this,t=0;return s.$f.forEach((function(r){e.containsScope(r)&&(t+=1)})),this.scopes.size===t},e.prototype.appendScope=function(e){i.x.isEmpty(e)||this.scopes.add(e.trim())},e.prototype.appendScopes=function(e){var t=this;try{e.forEach((function(e){return t.appendScope(e)}))}catch(e){throw a.e.createAppendScopeSetError(e)}},e.prototype.removeScope=function(e){if(i.x.isEmpty(e))throw a.e.createRemoveEmptyScopeFromSetError(e);this.scopes.delete(e.trim())},e.prototype.removeOIDCScopes=function(){var e=this;s.$f.forEach((function(t){e.scopes.delete(t)}))},e.prototype.unionScopeSets=function(e){if(!e)throw a.e.createEmptyInputScopeSetError();var t=new Set;return e.scopes.forEach((function(e){return t.add(e.toLowerCase())})),this.scopes.forEach((function(e){return t.add(e.toLowerCase())})),t},e.prototype.intersectingScopeSets=function(e){if(!e)throw a.e.createEmptyInputScopeSetError();e.containsOnlyOIDCScopes()||e.removeOIDCScopes();var t=this.unionScopeSets(e),r=e.getScopeCount(),n=this.getScopeCount();return t.size<n+r},e.prototype.getScopeCount=function(){return this.scopes.size},e.prototype.asArray=function(){var e=[];return this.scopes.forEach((function(t){return e.push(t)})),e},e.prototype.printScopes=function(){return this.scopes?this.asArray().join(" "):""},e.prototype.printScopesLowerCase=function(){return this.printScopes().toLowerCase()},e}()},32105:(e,t,r)=>{r.d(t,{s:()=>S});var n=r(5096),o=r(11520),i=r(60742),a=r(61653),s=r(91359),c=r(70591),u=r(92613),d=r(43640),h=r(52944),l=r(70979),p=r(85907),g=r(11429),f=r(83927),y=function(e,t,r,n,o){this.account=e||null,this.idToken=t||null,this.accessToken=r||null,this.refreshToken=n||null,this.appMetadata=o||null},m=r(3516),E=r(77891),v=r(17650),C=r(59993),T=r(59665),S=function(){function e(e,t,r,n,o,i){this.clientId=e,this.cacheStorage=t,this.cryptoObj=r,this.logger=n,this.serializableCache=o,this.persistencePlugin=i}return e.prototype.validateServerAuthorizationCodeResponse=function(e,t,r){if(!e.state||!t)throw e.state?i.e.createStateNotFoundError("Cached State"):i.e.createStateNotFoundError("Server State");if(decodeURIComponent(e.state)!==decodeURIComponent(t))throw i.e.createStateMismatchError();if(e.error||e.error_description||e.suberror){if(f.Yo.isInteractionRequiredError(e.error,e.error_description,e.suberror))throw new f.Yo(e.error||E.gT.EMPTY_STRING,e.error_description,e.suberror);throw new s.n(e.error||E.gT.EMPTY_STRING,e.error_description,e.suberror)}e.client_info&&(0,o.B)(e.client_info,r)},e.prototype.validateTokenResponse=function(e){if(e.error||e.error_description||e.suberror){if(f.Yo.isInteractionRequiredError(e.error,e.error_description,e.suberror))throw new f.Yo(e.error,e.error_description,e.suberror);var t=e.error_codes+" - ["+e.timestamp+"]: "+e.error_description+" - Correlation ID: "+e.correlation_id+" - Trace ID: "+e.trace_id;throw new s.n(e.error,t,e.suberror)}},e.prototype.handleServerTokenResponse=function(t,r,o,s,u,h,l){return(0,n.mG)(this,void 0,void 0,(function(){var p,g,f,y,v;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:if(t.id_token&&(p=new c.H(t.id_token||E.gT.EMPTY_STRING,this.cryptoObj),u&&!a.x.isEmpty(u.nonce)&&p.claims.nonce!==u.nonce))throw i.e.createNonceMismatchError();this.homeAccountIdentifier=d.r.generateHomeAccountId(t.client_info||E.gT.EMPTY_STRING,r.authorityType,this.logger,this.cryptoObj,p),u&&u.state&&(g=m.C.parseRequestState(this.cryptoObj,u.state)),t.key_id=t.key_id||s.sshKid||void 0,f=this.generateCacheRecord(t,r,o,s,p,h,u),n.label=1;case 1:return n.trys.push([1,,5,8]),this.persistencePlugin&&this.serializableCache?(this.logger.verbose("Persistence enabled, calling beforeCacheAccess"),y=new T.C(this.serializableCache,!0),[4,this.persistencePlugin.beforeCacheAccess(y)]):[3,3];case 2:n.sent(),n.label=3;case 3:return l&&f.account&&(v=f.account.generateAccountKey(),!this.cacheStorage.getAccount(v))?(this.logger.warning("Account used to refresh tokens not in persistence, refreshed tokens will not be stored in the cache"),[2,e.generateAuthenticationResult(this.cryptoObj,r,f,!1,s,p,g)]):[4,this.cacheStorage.saveCacheRecord(f)];case 4:return n.sent(),[3,8];case 5:return this.persistencePlugin&&this.serializableCache&&y?(this.logger.verbose("Persistence enabled, calling afterCacheAccess"),[4,this.persistencePlugin.afterCacheAccess(y)]):[3,7];case 6:n.sent(),n.label=7;case 7:return[7];case 8:return[2,e.generateAuthenticationResult(this.cryptoObj,r,f,!1,s,p,g,t.spa_code)]}}))}))},e.prototype.generateCacheRecord=function(e,t,r,n,o,s,c){var d,h,f=t.getPreferredCache();if(a.x.isEmpty(f))throw i.e.createInvalidCacheEnvironmentError();!a.x.isEmpty(e.id_token)&&o&&(d=l.w.createIdTokenEntity(this.homeAccountIdentifier,f,e.id_token||E.gT.EMPTY_STRING,this.clientId,o.claims.tid||E.gT.EMPTY_STRING,s),h=this.generateAccountEntity(e,o,t,s,c));var m=null;if(!a.x.isEmpty(e.access_token)){var v=e.scope?u.i.fromString(e.scope):new u.i(n.scopes||[]),T=("string"==typeof e.expires_in?parseInt(e.expires_in,10):e.expires_in)||0,S=("string"==typeof e.ext_expires_in?parseInt(e.ext_expires_in,10):e.ext_expires_in)||0,w=("string"==typeof e.refresh_in?parseInt(e.refresh_in,10):e.refresh_in)||void 0,A=r+T,I=A+S,_=w&&w>0?r+w:void 0;m=p._.createAccessTokenEntity(this.homeAccountIdentifier,f,e.access_token||E.gT.EMPTY_STRING,this.clientId,o?o.claims.tid||E.gT.EMPTY_STRING:t.tenant,v.printScopes(),A,I,this.cryptoObj,_,e.token_type,s,e.key_id,n.claims,n.requestedClaimsHash)}var b=null;a.x.isEmpty(e.refresh_token)||(b=g.e.createRefreshTokenEntity(this.homeAccountIdentifier,f,e.refresh_token||E.gT.EMPTY_STRING,this.clientId,e.foci,s));var R=null;return a.x.isEmpty(e.foci)||(R=C.T.createAppMetadataEntity(this.clientId,f,e.foci)),new y(h,d,m,b,R)},e.prototype.generateAccountEntity=function(e,t,r,n,o){var s=r.authorityType,c=o?o.cloud_graph_host_name:"",u=o?o.msgraph_host:"";if(s===h.a.Adfs)return this.logger.verbose("Authority type is ADFS, creating ADFS account"),d.r.createGenericAccount(this.homeAccountIdentifier,t,r,n,c,u);if(a.x.isEmpty(e.client_info)&&"AAD"===r.protocolMode)throw i.e.createClientInfoEmptyError();return e.client_info?d.r.createAccount(e.client_info,this.homeAccountIdentifier,t,r,n,c,u):d.r.createGenericAccount(this.homeAccountIdentifier,t,r,n,c,u)},e.generateAuthenticationResult=function(e,t,r,o,i,a,s,c){var d,h,l;return(0,n.mG)(this,void 0,void 0,(function(){var p,g,f,y,m,C,T;return(0,n.Jh)(this,(function(n){switch(n.label){case 0:return p="",g=[],f=null,m=E.gT.EMPTY_STRING,r.accessToken?r.accessToken.tokenType!==E.hO.POP?[3,2]:[4,new v.$(e).signPopToken(r.accessToken.secret,i)]:[3,4];case 1:return p=n.sent(),[3,3];case 2:p=r.accessToken.secret,n.label=3;case 3:g=u.i.fromString(r.accessToken.target).asArray(),f=new Date(1e3*Number(r.accessToken.expiresOn)),y=new Date(1e3*Number(r.accessToken.extendedExpiresOn)),n.label=4;case 4:return r.appMetadata&&(m=r.appMetadata.familyId===E.ch?E.ch:E.gT.EMPTY_STRING),C=(null==a?void 0:a.claims.oid)||(null==a?void 0:a.claims.sub)||E.gT.EMPTY_STRING,T=(null==a?void 0:a.claims.tid)||E.gT.EMPTY_STRING,[2,{authority:t.canonicalAuthority,uniqueId:C,tenantId:T,scopes:g,account:r.account?r.account.getAccountInfo():null,idToken:a?a.rawToken:E.gT.EMPTY_STRING,idTokenClaims:a?a.claims:{},accessToken:p,fromCache:o,expiresOn:f,correlationId:i.correlationId,extExpiresOn:y,familyId:m,tokenType:(null===(d=r.accessToken)||void 0===d?void 0:d.tokenType)||E.gT.EMPTY_STRING,state:s?s.userRequestState:E.gT.EMPTY_STRING,cloudGraphHostName:(null===(h=r.account)||void 0===h?void 0:h.cloudGraphHostName)||E.gT.EMPTY_STRING,msGraphHost:(null===(l=r.account)||void 0===l?void 0:l.msGraphHost)||E.gT.EMPTY_STRING,code:c}]}}))}))},e}()},31093:(e,t,r)=>{r.d(t,{d:()=>a});var n=r(77891),o=r(44612),i=r(61653),a=function(){function e(e,t){this.cacheOutcome=n.To.NO_CACHE_HIT,this.cacheManager=t,this.apiId=e.apiId,this.correlationId=e.correlationId,this.wrapperSKU=e.wrapperSKU||n.gT.EMPTY_STRING,this.wrapperVer=e.wrapperVer||n.gT.EMPTY_STRING,this.telemetryCacheKey=n.HN.CACHE_KEY+n.Bv.CACHE_KEY_SEPARATOR+e.clientId}return e.prototype.generateCurrentRequestHeaderValue=function(){var e=""+this.apiId+n.HN.VALUE_SEPARATOR+this.cacheOutcome,t=[this.wrapperSKU,this.wrapperVer].join(n.HN.VALUE_SEPARATOR),r=[e,this.getRegionDiscoveryFields()].join(n.HN.VALUE_SEPARATOR);return[n.HN.SCHEMA_VERSION,r,t].join(n.HN.CATEGORY_SEPARATOR)},e.prototype.generateLastRequestHeaderValue=function(){var t=this.getLastRequests(),r=e.maxErrorsToSend(t),o=t.failedRequests.slice(0,2*r).join(n.HN.VALUE_SEPARATOR),i=t.errors.slice(0,r).join(n.HN.VALUE_SEPARATOR),a=t.errors.length,s=[a,r<a?n.HN.OVERFLOW_TRUE:n.HN.OVERFLOW_FALSE].join(n.HN.VALUE_SEPARATOR);return[n.HN.SCHEMA_VERSION,t.cacheHits,o,i,s].join(n.HN.CATEGORY_SEPARATOR)},e.prototype.cacheFailedRequest=function(e){var t=this.getLastRequests();t.errors.length>=n.HN.MAX_CACHED_ERRORS&&(t.failedRequests.shift(),t.failedRequests.shift(),t.errors.shift()),t.failedRequests.push(this.apiId,this.correlationId),i.x.isEmpty(e.subError)?i.x.isEmpty(e.errorCode)?e&&e.toString()?t.errors.push(e.toString()):t.errors.push(n.HN.UNKNOWN_ERROR):t.errors.push(e.errorCode):t.errors.push(e.subError),this.cacheManager.setServerTelemetry(this.telemetryCacheKey,t)},e.prototype.incrementCacheHits=function(){var e=this.getLastRequests();return e.cacheHits+=1,this.cacheManager.setServerTelemetry(this.telemetryCacheKey,e),e.cacheHits},e.prototype.getLastRequests=function(){var e=new o.d;return this.cacheManager.getServerTelemetry(this.telemetryCacheKey)||e},e.prototype.clearTelemetryCache=function(){var t=this.getLastRequests(),r=e.maxErrorsToSend(t);if(r===t.errors.length)this.cacheManager.removeItem(this.telemetryCacheKey);else{var n=new o.d;n.failedRequests=t.failedRequests.slice(2*r),n.errors=t.errors.slice(r),this.cacheManager.setServerTelemetry(this.telemetryCacheKey,n)}},e.maxErrorsToSend=function(e){var t,r=0,o=0,i=e.errors.length;for(t=0;t<i;t++){var a=e.failedRequests[2*t]||n.gT.EMPTY_STRING,s=e.failedRequests[2*t+1]||n.gT.EMPTY_STRING,c=e.errors[t]||n.gT.EMPTY_STRING;if(!((o+=a.toString().length+s.toString().length+c.length+3)<n.HN.MAX_LAST_HEADER_BYTES))break;r+=1}return r},e.prototype.getRegionDiscoveryFields=function(){var e=[];return e.push(this.regionUsed||""),e.push(this.regionSource||""),e.push(this.regionOutcome||""),e.join(",")},e.prototype.updateRegionDiscoveryMetadata=function(e){this.regionUsed=e.region_used,this.regionSource=e.region_source,this.regionOutcome=e.region_outcome},e.prototype.setCacheOutcome=function(e){this.cacheOutcome=e},e}()},99860:(e,t,r)=>{r.d(t,{G:()=>s});var n=r(47181),o=r(60742),i=r(61653),a=r(77891),s=function(){function e(t){if(this._urlString=t,i.x.isEmpty(this._urlString))throw n.r.createUrlEmptyError();i.x.isEmpty(this.getHash())&&(this._urlString=e.canonicalizeUri(t))}return Object.defineProperty(e.prototype,"urlString",{get:function(){return this._urlString},enumerable:!1,configurable:!0}),e.canonicalizeUri=function(e){if(e){var t=e.toLowerCase();return i.x.endsWith(t,"?")?t=t.slice(0,-1):i.x.endsWith(t,"?/")&&(t=t.slice(0,-2)),i.x.endsWith(t,"/")||(t+="/"),t}return e},e.prototype.validateAsUri=function(){var e;try{e=this.getUrlComponents()}catch(e){throw n.r.createUrlParseError(e)}if(!e.HostNameAndPort||!e.PathSegments)throw n.r.createUrlParseError("Given url string: "+this.urlString);if(!e.Protocol||"https:"!==e.Protocol.toLowerCase())throw n.r.createInsecureAuthorityUriError(this.urlString)},e.appendQueryString=function(e,t){return i.x.isEmpty(t)?e:e.indexOf("?")<0?e+"?"+t:e+"&"+t},e.removeHashFromUrl=function(t){return e.canonicalizeUri(t.split("#")[0])},e.prototype.replaceTenantPath=function(t){var r=this.getUrlComponents(),n=r.PathSegments;return!t||0===n.length||n[0]!==a.Nb.COMMON&&n[0]!==a.Nb.ORGANIZATIONS||(n[0]=t),e.constructAuthorityUriFromObject(r)},e.prototype.getHash=function(){return e.parseHash(this.urlString)},e.prototype.getUrlComponents=function(){var e=RegExp("^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"),t=this.urlString.match(e);if(!t)throw n.r.createUrlParseError("Given url string: "+this.urlString);var r={Protocol:t[1],HostNameAndPort:t[4],AbsolutePath:t[5],QueryString:t[7]},o=r.AbsolutePath.split("/");return o=o.filter((function(e){return e&&e.length>0})),r.PathSegments=o,!i.x.isEmpty(r.QueryString)&&r.QueryString.endsWith("/")&&(r.QueryString=r.QueryString.substring(0,r.QueryString.length-1)),r},e.getDomainFromUrl=function(e){var t=RegExp("^([^:/?#]+://)?([^/?#]*)"),r=e.match(t);if(!r)throw n.r.createUrlParseError("Given url string: "+e);return r[2]},e.getAbsoluteUrl=function(t,r){if(t[0]===a.gT.FORWARD_SLASH){var n=new e(r).getUrlComponents();return n.Protocol+"//"+n.HostNameAndPort+t}return t},e.parseHash=function(e){var t=e.indexOf("#"),r=e.indexOf("#/");return r>-1?e.substring(r+2):t>-1?e.substring(t+1):""},e.constructAuthorityUriFromObject=function(t){return new e(t.Protocol+"//"+t.HostNameAndPort+"/"+t.PathSegments.join("/"))},e.getDeserializedHash=function(t){if(i.x.isEmpty(t))return{};var r=e.parseHash(t),n=i.x.queryStringToObject(i.x.isEmpty(r)?t:r);if(!n)throw o.e.createHashNotDeserializedError(JSON.stringify(n));return n},e.hashContainsKnownProperties=function(t){if(i.x.isEmpty(t)||t.indexOf("=")<0)return!1;var r=e.getDeserializedHash(t);return!!(r.code||r.error_description||r.error||r.state)},e}()},77891:(e,t,r)=>{r.d(t,{Nb:()=>i,Fo:()=>a,dg:()=>w,QU:()=>_,hO:()=>b,pQ:()=>S,sR:()=>A,iR:()=>y,To:()=>U,Xj:()=>v,LL:()=>C,As:()=>s,VX:()=>T,gT:()=>u,d3:()=>E,D1:()=>L,qJ:()=>f,SZ:()=>n,f_:()=>d,$f:()=>h,Ge:()=>O,Vi:()=>o,NJ:()=>p,ki:()=>P,W:()=>N,YY:()=>k,vw:()=>g,HN:()=>R,VO:()=>l,Bv:()=>m,ch:()=>I,bb:()=>M});var n,o,i,a,s,c=r(5096),u={LIBRARY_NAME:"MSAL.JS",SKU:"msal.js.common",CACHE_PREFIX:"msal",DEFAULT_AUTHORITY:"https://login.microsoftonline.com/common/",DEFAULT_AUTHORITY_HOST:"login.microsoftonline.com",ADFS:"adfs",AAD_INSTANCE_DISCOVERY_ENDPT:"https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=",RESOURCE_DELIM:"|",NO_ACCOUNT:"NO_ACCOUNT",CLAIMS:"claims",CONSUMER_UTID:"9188040d-6c67-4c5b-b112-36a304b66dad",OPENID_SCOPE:"openid",PROFILE_SCOPE:"profile",OFFLINE_ACCESS_SCOPE:"offline_access",EMAIL_SCOPE:"email",CODE_RESPONSE_TYPE:"code",CODE_GRANT_TYPE:"authorization_code",RT_GRANT_TYPE:"refresh_token",FRAGMENT_RESPONSE_MODE:"fragment",S256_CODE_CHALLENGE_METHOD:"S256",URL_FORM_CONTENT_TYPE:"application/x-www-form-urlencoded;charset=utf-8",AUTHORIZATION_PENDING:"authorization_pending",NOT_DEFINED:"not_defined",EMPTY_STRING:"",FORWARD_SLASH:"/",IMDS_ENDPOINT:"http://169.254.169.254/metadata/instance/compute/location",IMDS_VERSION:"2020-06-01",IMDS_TIMEOUT:2e3,AZURE_REGION_AUTO_DISCOVER_FLAG:"TryAutoDetect",REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX:"login.microsoft.com",KNOWN_PUBLIC_CLOUDS:["login.microsoftonline.com","login.windows.net","login.microsoft.com","sts.windows.net"]},d=[u.OPENID_SCOPE,u.PROFILE_SCOPE,u.OFFLINE_ACCESS_SCOPE],h=(0,c.pr)(d,[u.EMAIL_SCOPE]);!function(e){e.CONTENT_TYPE="Content-Type",e.RETRY_AFTER="Retry-After",e.CCS_HEADER="X-AnchorMailbox",e.WWWAuthenticate="WWW-Authenticate",e.AuthenticationInfo="Authentication-Info"}(n||(n={})),function(e){e.ID_TOKEN="idtoken",e.CLIENT_INFO="client.info",e.ADAL_ID_TOKEN="adal.idtoken",e.ERROR="error",e.ERROR_DESC="error.description",e.ACTIVE_ACCOUNT="active-account"}(o||(o={})),function(e){e.COMMON="common",e.ORGANIZATIONS="organizations",e.CONSUMERS="consumers"}(i||(i={})),function(e){e.CLIENT_ID="client_id",e.REDIRECT_URI="redirect_uri",e.RESPONSE_TYPE="response_type",e.RESPONSE_MODE="response_mode",e.GRANT_TYPE="grant_type",e.CLAIMS="claims",e.SCOPE="scope",e.ERROR="error",e.ERROR_DESCRIPTION="error_description",e.ACCESS_TOKEN="access_token",e.ID_TOKEN="id_token",e.REFRESH_TOKEN="refresh_token",e.EXPIRES_IN="expires_in",e.STATE="state",e.NONCE="nonce",e.PROMPT="prompt",e.SESSION_STATE="session_state",e.CLIENT_INFO="client_info",e.CODE="code",e.CODE_CHALLENGE="code_challenge",e.CODE_CHALLENGE_METHOD="code_challenge_method",e.CODE_VERIFIER="code_verifier",e.CLIENT_REQUEST_ID="client-request-id",e.X_CLIENT_SKU="x-client-SKU",e.X_CLIENT_VER="x-client-VER",e.X_CLIENT_OS="x-client-OS",e.X_CLIENT_CPU="x-client-CPU",e.X_CLIENT_CURR_TELEM="x-client-current-telemetry",e.X_CLIENT_LAST_TELEM="x-client-last-telemetry",e.X_MS_LIB_CAPABILITY="x-ms-lib-capability",e.POST_LOGOUT_URI="post_logout_redirect_uri",e.ID_TOKEN_HINT="id_token_hint",e.DEVICE_CODE="device_code",e.CLIENT_SECRET="client_secret",e.CLIENT_ASSERTION="client_assertion",e.CLIENT_ASSERTION_TYPE="client_assertion_type",e.TOKEN_TYPE="token_type",e.REQ_CNF="req_cnf",e.OBO_ASSERTION="assertion",e.REQUESTED_TOKEN_USE="requested_token_use",e.ON_BEHALF_OF="on_behalf_of",e.FOCI="foci",e.CCS_HEADER="X-AnchorMailbox",e.RETURN_SPA_CODE="return_spa_code"}(a||(a={})),function(e){e.ACCESS_TOKEN="access_token",e.XMS_CC="xms_cc"}(s||(s={}));var l,p={LOGIN:"login",SELECT_ACCOUNT:"select_account",CONSENT:"consent",NONE:"none",CREATE:"create"};!function(e){e.ACCOUNT="account",e.SID="sid",e.LOGIN_HINT="login_hint",e.ID_TOKEN="id_token",e.DOMAIN_HINT="domain_hint",e.ORGANIZATIONS="organizations",e.CONSUMERS="consumers",e.ACCOUNT_ID="accountIdentifier",e.HOMEACCOUNT_ID="homeAccountIdentifier"}(l||(l={}));var g,f,y,m,E,v,C,T={PLAIN:"plain",S256:"S256"};!function(e){e.QUERY="query",e.FRAGMENT="fragment",e.FORM_POST="form_post"}(g||(g={})),function(e){e.IMPLICIT_GRANT="implicit",e.AUTHORIZATION_CODE_GRANT="authorization_code",e.CLIENT_CREDENTIALS_GRANT="client_credentials",e.RESOURCE_OWNER_PASSWORD_GRANT="password",e.REFRESH_TOKEN_GRANT="refresh_token",e.DEVICE_CODE_GRANT="device_code",e.JWT_BEARER="urn:ietf:params:oauth:grant-type:jwt-bearer"}(f||(f={})),function(e){e.MSSTS_ACCOUNT_TYPE="MSSTS",e.ADFS_ACCOUNT_TYPE="ADFS",e.MSAV1_ACCOUNT_TYPE="MSA",e.GENERIC_ACCOUNT_TYPE="Generic"}(y||(y={})),function(e){e.CACHE_KEY_SEPARATOR="-",e.CLIENT_INFO_SEPARATOR="."}(m||(m={})),function(e){e.ID_TOKEN="IdToken",e.ACCESS_TOKEN="AccessToken",e.ACCESS_TOKEN_WITH_AUTH_SCHEME="AccessToken_With_AuthScheme",e.REFRESH_TOKEN="RefreshToken"}(E||(E={})),function(e){e.ACCOUNT="Account",e.CREDENTIAL="Credential",e.ID_TOKEN="IdToken",e.ACCESS_TOKEN="AccessToken",e.REFRESH_TOKEN="RefreshToken",e.APP_METADATA="AppMetadata",e.TEMPORARY="TempCache",e.TELEMETRY="Telemetry",e.UNDEFINED="Undefined",e.THROTTLING="Throttling"}(v||(v={})),function(e){e[e.ADFS=1001]="ADFS",e[e.MSA=1002]="MSA",e[e.MSSTS=1003]="MSSTS",e[e.GENERIC=1004]="GENERIC",e[e.ACCESS_TOKEN=2001]="ACCESS_TOKEN",e[e.REFRESH_TOKEN=2002]="REFRESH_TOKEN",e[e.ID_TOKEN=2003]="ID_TOKEN",e[e.APP_METADATA=3001]="APP_METADATA",e[e.UNDEFINED=9999]="UNDEFINED"}(C||(C={}));var S,w="appmetadata",A="client_info",I="1",_={CACHE_KEY:"authority-metadata",REFRESH_TIME_SECONDS:86400};!function(e){e.CONFIG="config",e.CACHE="cache",e.NETWORK="network"}(S||(S={}));var b,R={SCHEMA_VERSION:5,MAX_CUR_HEADER_BYTES:80,MAX_LAST_HEADER_BYTES:330,MAX_CACHED_ERRORS:50,CACHE_KEY:"server-telemetry",CATEGORY_SEPARATOR:"|",VALUE_SEPARATOR:",",OVERFLOW_TRUE:"1",OVERFLOW_FALSE:"0",UNKNOWN_ERROR:"unknown_error"};!function(e){e.BEARER="Bearer",e.POP="pop",e.SSH="ssh-cert"}(b||(b={}));var O,k,N,P,U,M={DEFAULT_THROTTLE_TIME_SECONDS:60,DEFAULT_MAX_THROTTLE_TIME_SECONDS:3600,THROTTLING_PREFIX:"throttling",X_MS_LIB_CAPABILITY_VALUE:"retry-after, h429"},L={INVALID_GRANT_ERROR:"invalid_grant",CLIENT_MISMATCH_ERROR:"client_mismatch"};!function(e){e.username="username",e.password="password"}(O||(O={})),function(e){e[e.httpSuccess=200]="httpSuccess",e[e.httpBadRequest=400]="httpBadRequest"}(k||(k={})),function(e){e.FAILED_AUTO_DETECTION="1",e.INTERNAL_CACHE="2",e.ENVIRONMENT_VARIABLE="3",e.IMDS="4"}(N||(N={})),function(e){e.CONFIGURED_MATCHES_DETECTED="1",e.CONFIGURED_NO_AUTO_DETECTION="2",e.CONFIGURED_NOT_DETECTED="3",e.AUTO_DETECTION_REQUESTED_SUCCESSFUL="4",e.AUTO_DETECTION_REQUESTED_FAILED="5"}(P||(P={})),function(e){e.NO_CACHE_HIT="0",e.FORCE_REFRESH="1",e.NO_CACHED_ACCESS_TOKEN="2",e.CACHED_ACCESS_TOKEN_EXPIRED="3",e.REFRESH_CACHED_ACCESS_TOKEN="4"}(U||(U={}))},3516:(e,t,r)=>{r.d(t,{C:()=>a});var n=r(61653),o=r(77891),i=r(60742),a=function(){function e(){}return e.setRequestState=function(t,r,i){var a=e.generateLibraryState(t,i);return n.x.isEmpty(r)?a:""+a+o.gT.RESOURCE_DELIM+r},e.generateLibraryState=function(e,t){if(!e)throw i.e.createNoCryptoObjectError("generateLibraryState");var r={id:e.createNewGuid()};t&&(r.meta=t);var n=JSON.stringify(r);return e.base64Encode(n)},e.parseRequestState=function(e,t){if(!e)throw i.e.createNoCryptoObjectError("parseRequestState");if(n.x.isEmpty(t))throw i.e.createInvalidStateError(t,"Null, undefined or empty state");try{var r=t.split(o.gT.RESOURCE_DELIM),a=r[0],s=r.length>1?r.slice(1).join(o.gT.RESOURCE_DELIM):"",c=e.base64Decode(a),u=JSON.parse(c);return{userRequestState:n.x.isEmpty(s)?"":s,libraryState:u}}catch(e){throw i.e.createInvalidStateError(t,e)}},e}()},61653:(e,t,r)=>{r.d(t,{x:()=>o});var n=r(60742),o=function(){function e(){}return e.decodeAuthToken=function(t){if(e.isEmpty(t))throw n.e.createTokenNullOrEmptyError(t);var r=/^([^\.\s]*)\.([^\.\s]+)\.([^\.\s]*)$/.exec(t);if(!r||r.length<4)throw n.e.createTokenParsingError("Given token is malformed: "+JSON.stringify(t));return{header:r[1],JWSPayload:r[2],JWSSig:r[3]}},e.isEmpty=function(e){return void 0===e||!e||0===e.length},e.isEmptyObj=function(t){if(t&&!e.isEmpty(t))try{var r=JSON.parse(t);return 0===Object.keys(r).length}catch(e){}return!0},e.startsWith=function(e,t){return 0===e.indexOf(t)},e.endsWith=function(e,t){return e.length>=t.length&&e.lastIndexOf(t)===e.length-t.length},e.queryStringToObject=function(e){var t={},r=e.split("&"),n=function(e){return decodeURIComponent(e.replace(/\+/g," "))};return r.forEach((function(e){if(e.trim()){var r=e.split(/=(.+)/g,2),o=r[0],i=r[1];o&&i&&(t[n(o)]=n(i))}})),t},e.trimArrayEntries=function(e){return e.map((function(e){return e.trim()}))},e.removeEmptyStringsFromArray=function(t){return t.filter((function(t){return!e.isEmpty(t)}))},e.jsonParseHelper=function(e){try{return JSON.parse(e)}catch(e){return null}},e.matchPattern=function(e,t){return new RegExp(e.replace(/\\/g,"\\\\").replace(/\*/g,"[^ ]*").replace(/\?/g,"\\?")).test(t)},e}()},33848:(e,t,r)=>{r.d(t,{I:()=>n});var n=function(){function e(){}return e.nowSeconds=function(){return Math.round((new Date).getTime()/1e3)},e.isTokenExpired=function(t,r){var n=Number(t)||0;return e.nowSeconds()+r>n},e.wasClockTurnedBack=function(t){return Number(t)>e.nowSeconds()},e.delay=function(e,t){return new Promise((function(r){return setTimeout((function(){return r(t)}),e)}))},e}()},98917:(e,t,r)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.client=void 0;const n=r(80869),o=r(48134).AppConfig.AuthClient.AppId;t.client=new n.PublicClientApplication({auth:{clientId:o,authority:"https://login.microsoftonline.com/organizations/",navigateToLoginRequestUrl:!1},cache:{cacheLocation:"localStorage"}})},48134:(e,t)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.AppConfig=void 0,t.AppConfig={AppInfo:{name:null!=="FindMsg"?"FindMsg":"",appName:null!=="G Message Finder"?"G Message Finder":"",logo:("https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product-fluent/svg/teams_48x1.svg","https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product-fluent/svg/teams_48x1.svg"),host:null!=="kacomsrd.github.io"?"kacomsrd.github.io":""},AuthClient:{AppId:null!=="67dc74f0-fb8c-47a4-8435-63253a3fc3bb"?"67dc74f0-fb8c-47a4-8435-63253a3fc3bb":""},AppInsight:{instrumentationKey:null!=="474f6161-5de0-419b-baa4-9d57b2abdb37"?"474f6161-5de0-419b-baa4-9d57b2abdb37":""}}}},t={};function r(n){var o=t[n];if(void 0!==o)return o.exports;var i=t[n]={exports:{}};return e[n](i,i.exports,r),i.exports}r.d=(e,t)=>{for(var n in t)r.o(t,n)&&!r.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var n={};return(()=>{var e=n;Object.defineProperty(e,"__esModule",{value:!0});const t=r(98917);!function(){var e;const r=new URL(location.href),n=JSON.parse(null!==(e=r.searchParams.get("params"))&&void 0!==e?e:JSON.stringify(null));t.client.loginRedirect(n)}()})(),n})()}));
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["FindMsg"] = factory();
+	else
+		root["FindMsg"] = factory();
+})(self, function() {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 80869:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "AccountEntity": () => (/* reexport */ AccountEntity/* AccountEntity */.r),
+  "ApiId": () => (/* reexport */ ApiId),
+  "AuthError": () => (/* reexport */ AuthError/* AuthError */.l),
+  "AuthErrorMessage": () => (/* reexport */ AuthError/* AuthErrorMessage */.Y),
+  "AuthenticationHeaderParser": () => (/* reexport */ AuthenticationHeaderParser/* AuthenticationHeaderParser */.d),
+  "AuthenticationScheme": () => (/* reexport */ Constants/* AuthenticationScheme */.hO),
+  "BrowserAuthError": () => (/* reexport */ BrowserAuthError),
+  "BrowserAuthErrorMessage": () => (/* reexport */ BrowserAuthErrorMessage),
+  "BrowserCacheLocation": () => (/* reexport */ BrowserCacheLocation),
+  "BrowserConfigurationAuthError": () => (/* reexport */ BrowserConfigurationAuthError),
+  "BrowserConfigurationAuthErrorMessage": () => (/* reexport */ BrowserConfigurationAuthErrorMessage),
+  "BrowserUtils": () => (/* reexport */ BrowserUtils),
+  "ClientAuthError": () => (/* reexport */ ClientAuthError/* ClientAuthError */.e),
+  "ClientAuthErrorMessage": () => (/* reexport */ ClientAuthError/* ClientAuthErrorMessage */.A),
+  "ClientConfigurationError": () => (/* reexport */ ClientConfigurationError/* ClientConfigurationError */.r),
+  "ClientConfigurationErrorMessage": () => (/* reexport */ ClientConfigurationError/* ClientConfigurationErrorMessage */.L),
+  "EventMessageUtils": () => (/* reexport */ EventMessageUtils),
+  "EventType": () => (/* reexport */ EventType),
+  "InteractionRequiredAuthError": () => (/* reexport */ InteractionRequiredAuthError/* InteractionRequiredAuthError */.Yo),
+  "InteractionRequiredAuthErrorMessage": () => (/* reexport */ InteractionRequiredAuthError/* InteractionRequiredAuthErrorMessage */.Zy),
+  "InteractionStatus": () => (/* reexport */ InteractionStatus),
+  "InteractionType": () => (/* reexport */ InteractionType),
+  "LogLevel": () => (/* reexport */ Logger/* LogLevel */.i),
+  "Logger": () => (/* reexport */ Logger/* Logger */.Y),
+  "NavigationClient": () => (/* reexport */ NavigationClient),
+  "ProtocolMode": () => (/* reexport */ ProtocolMode/* ProtocolMode */.A),
+  "PublicClientApplication": () => (/* reexport */ PublicClientApplication),
+  "ServerError": () => (/* reexport */ ServerError/* ServerError */.n),
+  "SignedHttpRequest": () => (/* reexport */ SignedHttpRequest),
+  "StringUtils": () => (/* reexport */ StringUtils/* StringUtils */.x),
+  "UrlString": () => (/* reexport */ UrlString/* UrlString */.G),
+  "WrapperSKU": () => (/* reexport */ WrapperSKU),
+  "stubbedPublicClientApplication": () => (/* reexport */ stubbedPublicClientApplication),
+  "version": () => (/* reexport */ version)
+});
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+
+//# sourceMappingURL=_tslib.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/Constants.js
+var Constants = __webpack_require__(77891);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Constants
+ */
+var BrowserConstants = {
+    /**
+     * Interaction in progress cache value
+     */
+    INTERACTION_IN_PROGRESS_VALUE: "interaction_in_progress",
+    /**
+     * Invalid grant error code
+     */
+    INVALID_GRANT_ERROR: "invalid_grant",
+    /**
+     * Default popup window width
+     */
+    POPUP_WIDTH: 483,
+    /**
+     * Default popup window height
+     */
+    POPUP_HEIGHT: 600,
+    /**
+     * Name of the popup window starts with
+     */
+    POPUP_NAME_PREFIX: "msal",
+    /**
+     * Default popup monitor poll interval in milliseconds
+     */
+    POLL_INTERVAL_MS: 50,
+    /**
+     * Msal-browser SKU
+     */
+    MSAL_SKU: "msal.js.browser",
+};
+var BrowserCacheLocation;
+(function (BrowserCacheLocation) {
+    BrowserCacheLocation["LocalStorage"] = "localStorage";
+    BrowserCacheLocation["SessionStorage"] = "sessionStorage";
+    BrowserCacheLocation["MemoryStorage"] = "memoryStorage";
+})(BrowserCacheLocation || (BrowserCacheLocation = {}));
+/**
+ * HTTP Request types supported by MSAL.
+ */
+var HTTP_REQUEST_TYPE;
+(function (HTTP_REQUEST_TYPE) {
+    HTTP_REQUEST_TYPE["GET"] = "GET";
+    HTTP_REQUEST_TYPE["POST"] = "POST";
+})(HTTP_REQUEST_TYPE || (HTTP_REQUEST_TYPE = {}));
+/**
+ * Temporary cache keys for MSAL, deleted after any request.
+ */
+var TemporaryCacheKeys;
+(function (TemporaryCacheKeys) {
+    TemporaryCacheKeys["AUTHORITY"] = "authority";
+    TemporaryCacheKeys["ACQUIRE_TOKEN_ACCOUNT"] = "acquireToken.account";
+    TemporaryCacheKeys["SESSION_STATE"] = "session.state";
+    TemporaryCacheKeys["REQUEST_STATE"] = "request.state";
+    TemporaryCacheKeys["NONCE_IDTOKEN"] = "nonce.id_token";
+    TemporaryCacheKeys["ORIGIN_URI"] = "request.origin";
+    TemporaryCacheKeys["RENEW_STATUS"] = "token.renew.status";
+    TemporaryCacheKeys["URL_HASH"] = "urlHash";
+    TemporaryCacheKeys["REQUEST_PARAMS"] = "request.params";
+    TemporaryCacheKeys["SCOPES"] = "scopes";
+    TemporaryCacheKeys["INTERACTION_STATUS_KEY"] = "interaction.status";
+    TemporaryCacheKeys["CCS_CREDENTIAL"] = "ccs.credential";
+    TemporaryCacheKeys["CORRELATION_ID"] = "request.correlationId";
+})(TemporaryCacheKeys || (TemporaryCacheKeys = {}));
+/**
+ * Cache keys stored in-memory
+ */
+var InMemoryCacheKeys;
+(function (InMemoryCacheKeys) {
+    InMemoryCacheKeys["WRAPPER_SKU"] = "wrapper.sku";
+    InMemoryCacheKeys["WRAPPER_VER"] = "wrapper.version";
+})(InMemoryCacheKeys || (InMemoryCacheKeys = {}));
+/**
+ * API Codes for Telemetry purposes.
+ * Before adding a new code you must claim it in the MSAL Telemetry tracker as these number spaces are shared across all MSALs
+ * 0-99 Silent Flow
+ * 800-899 Auth Code Flow
+ */
+var ApiId;
+(function (ApiId) {
+    ApiId[ApiId["acquireTokenRedirect"] = 861] = "acquireTokenRedirect";
+    ApiId[ApiId["acquireTokenPopup"] = 862] = "acquireTokenPopup";
+    ApiId[ApiId["ssoSilent"] = 863] = "ssoSilent";
+    ApiId[ApiId["acquireTokenSilent_authCode"] = 864] = "acquireTokenSilent_authCode";
+    ApiId[ApiId["handleRedirectPromise"] = 865] = "handleRedirectPromise";
+    ApiId[ApiId["acquireTokenByCode"] = 866] = "acquireTokenByCode";
+    ApiId[ApiId["acquireTokenSilent_silentFlow"] = 61] = "acquireTokenSilent_silentFlow";
+    ApiId[ApiId["logout"] = 961] = "logout";
+    ApiId[ApiId["logoutPopup"] = 962] = "logoutPopup";
+})(ApiId || (ApiId = {}));
+/*
+ * Interaction type of the API - used for state and telemetry
+ */
+var InteractionType;
+(function (InteractionType) {
+    InteractionType["Redirect"] = "redirect";
+    InteractionType["Popup"] = "popup";
+    InteractionType["Silent"] = "silent";
+})(InteractionType || (InteractionType = {}));
+/**
+ * Types of interaction currently in progress.
+ * Used in events in wrapper libraries to invoke functions when certain interaction is in progress or all interactions are complete.
+ */
+var InteractionStatus;
+(function (InteractionStatus) {
+    /**
+     * Initial status before interaction occurs
+     */
+    InteractionStatus["Startup"] = "startup";
+    /**
+     * Status set when all login calls occuring
+     */
+    InteractionStatus["Login"] = "login";
+    /**
+     * Status set when logout call occuring
+     */
+    InteractionStatus["Logout"] = "logout";
+    /**
+     * Status set for acquireToken calls
+     */
+    InteractionStatus["AcquireToken"] = "acquireToken";
+    /**
+     * Status set for ssoSilent calls
+     */
+    InteractionStatus["SsoSilent"] = "ssoSilent";
+    /**
+     * Status set when handleRedirect in progress
+     */
+    InteractionStatus["HandleRedirect"] = "handleRedirect";
+    /**
+     * Status set when interaction is complete
+     */
+    InteractionStatus["None"] = "none";
+})(InteractionStatus || (InteractionStatus = {}));
+var DEFAULT_REQUEST = {
+    scopes: Constants/* OIDC_DEFAULT_SCOPES */.f_
+};
+/**
+ * JWK Key Format string (Type MUST be defined for window crypto APIs)
+ */
+var KEY_FORMAT_JWK = "jwk";
+// Supported wrapper SKUs
+var WrapperSKU;
+(function (WrapperSKU) {
+    WrapperSKU["React"] = "@azure/msal-react";
+    WrapperSKU["Angular"] = "@azure/msal-angular";
+})(WrapperSKU || (WrapperSKU = {}));
+// DatabaseStorage Constants
+var DB_NAME = "msal.db";
+var DB_VERSION = 1;
+var DB_TABLE_NAME = DB_NAME + ".keys";
+
+
+//# sourceMappingURL=BrowserConstants.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/MathUtils.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Utility class for math specific functions in browser.
+ */
+var MathUtils = /** @class */ (function () {
+    function MathUtils() {
+    }
+    /**
+     * Decimal to Hex
+     *
+     * @param num
+     */
+    MathUtils.decimalToHex = function (num) {
+        var hex = num.toString(16);
+        while (hex.length < 2) {
+            hex = "0" + hex;
+        }
+        return hex;
+    };
+    return MathUtils;
+}());
+
+
+//# sourceMappingURL=MathUtils.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/crypto/GuidGenerator.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var GuidGenerator = /** @class */ (function () {
+    function GuidGenerator(cryptoObj) {
+        this.cryptoObj = cryptoObj;
+    }
+    /*
+     * RFC4122: The version 4 UUID is meant for generating UUIDs from truly-random or
+     * pseudo-random numbers.
+     * The algorithm is as follows:
+     *     Set the two most significant bits (bits 6 and 7) of the
+     *        clock_seq_hi_and_reserved to zero and one, respectively.
+     *     Set the four most significant bits (bits 12 through 15) of the
+     *        time_hi_and_version field to the 4-bit version number from
+     *        Section 4.1.3. Version4
+     *     Set all the other bits to randomly (or pseudo-randomly) chosen
+     *     values.
+     * UUID                   = time-low "-" time-mid "-"time-high-and-version "-"clock-seq-reserved and low(2hexOctet)"-" node
+     * time-low               = 4hexOctet
+     * time-mid               = 2hexOctet
+     * time-high-and-version  = 2hexOctet
+     * clock-seq-and-reserved = hexOctet:
+     * clock-seq-low          = hexOctet
+     * node                   = 6hexOctet
+     * Format: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx
+     * y could be 1000, 1001, 1010, 1011 since most significant two bits needs to be 10
+     * y values are 8, 9, A, B
+     */
+    GuidGenerator.prototype.generateGuid = function () {
+        try {
+            var buffer = new Uint8Array(16);
+            this.cryptoObj.getRandomValues(buffer);
+            // buffer[6] and buffer[7] represents the time_hi_and_version field. We will set the four most significant bits (4 through 7) of buffer[6] to represent decimal number 4 (UUID version number).
+            buffer[6] |= 0x40; // buffer[6] | 01000000 will set the 6 bit to 1.
+            buffer[6] &= 0x4f; // buffer[6] & 01001111 will set the 4, 5, and 7 bit to 0 such that bits 4-7 == 0100 = "4".
+            // buffer[8] represents the clock_seq_hi_and_reserved field. We will set the two most significant bits (6 and 7) of the clock_seq_hi_and_reserved to zero and one, respectively.
+            buffer[8] |= 0x80; // buffer[8] | 10000000 will set the 7 bit to 1.
+            buffer[8] &= 0xbf; // buffer[8] & 10111111 will set the 6 bit to 0.
+            return MathUtils.decimalToHex(buffer[0]) + MathUtils.decimalToHex(buffer[1])
+                + MathUtils.decimalToHex(buffer[2]) + MathUtils.decimalToHex(buffer[3])
+                + "-" + MathUtils.decimalToHex(buffer[4]) + MathUtils.decimalToHex(buffer[5])
+                + "-" + MathUtils.decimalToHex(buffer[6]) + MathUtils.decimalToHex(buffer[7])
+                + "-" + MathUtils.decimalToHex(buffer[8]) + MathUtils.decimalToHex(buffer[9])
+                + "-" + MathUtils.decimalToHex(buffer[10]) + MathUtils.decimalToHex(buffer[11])
+                + MathUtils.decimalToHex(buffer[12]) + MathUtils.decimalToHex(buffer[13])
+                + MathUtils.decimalToHex(buffer[14]) + MathUtils.decimalToHex(buffer[15]);
+        }
+        catch (err) {
+            var guidHolder = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+            var hex = "0123456789abcdef";
+            var r = 0;
+            var guidResponse = "";
+            for (var i = 0; i < 36; i++) {
+                if (guidHolder[i] !== "-" && guidHolder[i] !== "4") {
+                    // each x and y needs to be random
+                    r = Math.random() * 16 | 0;
+                }
+                if (guidHolder[i] === "x") {
+                    guidResponse += hex[r];
+                }
+                else if (guidHolder[i] === "y") {
+                    // clock-seq-and-reserved first hex is filtered and remaining hex values are random
+                    r &= 0x3; // bit and with 0011 to set pos 2 to zero ?0??
+                    r |= 0x8; // set pos 3 to 1 as 1???
+                    guidResponse += hex[r];
+                }
+                else {
+                    guidResponse += guidHolder[i];
+                }
+            }
+            return guidResponse;
+        }
+    };
+    /**
+     * verifies if a string is  GUID
+     * @param guid
+     */
+    GuidGenerator.isGuid = function (guid) {
+        var regexGuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+        return regexGuid.test(guid);
+    };
+    return GuidGenerator;
+}());
+
+
+//# sourceMappingURL=GuidGenerator.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/BrowserStringUtils.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Utility functions for strings in a browser. See here for implementation details:
+ * https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+ */
+var BrowserStringUtils = /** @class */ (function () {
+    function BrowserStringUtils() {
+    }
+    /**
+     * Converts string to Uint8Array
+     * @param sDOMStr
+     */
+    BrowserStringUtils.stringToUtf8Arr = function (sDOMStr) {
+        var nChr;
+        var nArrLen = 0;
+        var nStrLen = sDOMStr.length;
+        /* mapping... */
+        for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
+            nChr = sDOMStr.charCodeAt(nMapIdx);
+            nArrLen += nChr < 0x80 ? 1 : nChr < 0x800 ? 2 : nChr < 0x10000 ? 3 : nChr < 0x200000 ? 4 : nChr < 0x4000000 ? 5 : 6;
+        }
+        var aBytes = new Uint8Array(nArrLen);
+        /* transcription... */
+        for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
+            nChr = sDOMStr.charCodeAt(nChrIdx);
+            if (nChr < 128) {
+                /* one byte */
+                aBytes[nIdx++] = nChr;
+            }
+            else if (nChr < 0x800) {
+                /* two bytes */
+                aBytes[nIdx++] = 192 + (nChr >>> 6);
+                aBytes[nIdx++] = 128 + (nChr & 63);
+            }
+            else if (nChr < 0x10000) {
+                /* three bytes */
+                aBytes[nIdx++] = 224 + (nChr >>> 12);
+                aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+                aBytes[nIdx++] = 128 + (nChr & 63);
+            }
+            else if (nChr < 0x200000) {
+                /* four bytes */
+                aBytes[nIdx++] = 240 + (nChr >>> 18);
+                aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+                aBytes[nIdx++] = 128 + (nChr & 63);
+            }
+            else if (nChr < 0x4000000) {
+                /* five bytes */
+                aBytes[nIdx++] = 248 + (nChr >>> 24);
+                aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+                aBytes[nIdx++] = 128 + (nChr & 63);
+            }
+            else /* if (nChr <= 0x7fffffff) */ {
+                /* six bytes */
+                aBytes[nIdx++] = 252 + (nChr >>> 30);
+                aBytes[nIdx++] = 128 + (nChr >>> 24 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+                aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+                aBytes[nIdx++] = 128 + (nChr & 63);
+            }
+        }
+        return aBytes;
+    };
+    /**
+     * Converst string to ArrayBuffer
+     * @param dataString
+     */
+    BrowserStringUtils.stringToArrayBuffer = function (dataString) {
+        var data = new ArrayBuffer(dataString.length);
+        var dataView = new Uint8Array(data);
+        for (var i = 0; i < dataString.length; i++) {
+            dataView[i] = dataString.charCodeAt(i);
+        }
+        return data;
+    };
+    /**
+     * Converts Uint8Array to a string
+     * @param aBytes
+     */
+    BrowserStringUtils.utf8ArrToString = function (aBytes) {
+        var sView = "";
+        for (var nPart = void 0, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
+            nPart = aBytes[nIdx];
+            sView += String.fromCharCode(nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
+                /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
+                (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
+                    (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                    : nPart > 239 && nPart < 248 && nIdx + 3 < nLen ? /* four bytes */
+                        (nPart - 240 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen ? /* three bytes */
+                            (nPart - 224 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                            : nPart > 191 && nPart < 224 && nIdx + 1 < nLen ? /* two bytes */
+                                (nPart - 192 << 6) + aBytes[++nIdx] - 128
+                                : /* nPart < 127 ? */ /* one byte */
+                                    nPart);
+        }
+        return sView;
+    };
+    return BrowserStringUtils;
+}());
+
+
+//# sourceMappingURL=BrowserStringUtils.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/encode/Base64Encode.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Class which exposes APIs to encode plaintext to base64 encoded string. See here for implementation details:
+ * https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+ */
+var Base64Encode = /** @class */ (function () {
+    function Base64Encode() {
+    }
+    /**
+     * Returns URL Safe b64 encoded string from a plaintext string.
+     * @param input
+     */
+    Base64Encode.prototype.urlEncode = function (input) {
+        return encodeURIComponent(this.encode(input)
+            .replace(/=/g, "")
+            .replace(/\+/g, "-")
+            .replace(/\//g, "_"));
+    };
+    /**
+     * Returns URL Safe b64 encoded string from an int8Array.
+     * @param inputArr
+     */
+    Base64Encode.prototype.urlEncodeArr = function (inputArr) {
+        return this.base64EncArr(inputArr)
+            .replace(/=/g, "")
+            .replace(/\+/g, "-")
+            .replace(/\//g, "_");
+    };
+    /**
+     * Returns b64 encoded string from plaintext string.
+     * @param input
+     */
+    Base64Encode.prototype.encode = function (input) {
+        var inputUtf8Arr = BrowserStringUtils.stringToUtf8Arr(input);
+        return this.base64EncArr(inputUtf8Arr);
+    };
+    /**
+     * Base64 encode byte array
+     * @param aBytes
+     */
+    Base64Encode.prototype.base64EncArr = function (aBytes) {
+        var eqLen = (3 - (aBytes.length % 3)) % 3;
+        var sB64Enc = "";
+        for (var nMod3 = void 0, nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
+            nMod3 = nIdx % 3;
+            /* Uncomment the following line in order to split the output in lines 76-character long: */
+            /*
+             *if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
+             */
+            nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
+            if (nMod3 === 2 || aBytes.length - nIdx === 1) {
+                sB64Enc += String.fromCharCode(this.uint6ToB64(nUint24 >>> 18 & 63), this.uint6ToB64(nUint24 >>> 12 & 63), this.uint6ToB64(nUint24 >>> 6 & 63), this.uint6ToB64(nUint24 & 63));
+                nUint24 = 0;
+            }
+        }
+        return eqLen === 0 ? sB64Enc : sB64Enc.substring(0, sB64Enc.length - eqLen) + (eqLen === 1 ? "=" : "==");
+    };
+    /**
+     * Base64 string to array encoding helper
+     * @param nUint6
+     */
+    Base64Encode.prototype.uint6ToB64 = function (nUint6) {
+        return nUint6 < 26 ?
+            nUint6 + 65
+            : nUint6 < 52 ?
+                nUint6 + 71
+                : nUint6 < 62 ?
+                    nUint6 - 4
+                    : nUint6 === 62 ?
+                        43
+                        : nUint6 === 63 ?
+                            47
+                            :
+                                65;
+    };
+    return Base64Encode;
+}());
+
+
+//# sourceMappingURL=Base64Encode.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/encode/Base64Decode.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Class which exposes APIs to decode base64 strings to plaintext. See here for implementation details:
+ * https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+ */
+var Base64Decode = /** @class */ (function () {
+    function Base64Decode() {
+    }
+    /**
+     * Returns a URL-safe plaintext decoded string from b64 encoded input.
+     * @param input
+     */
+    Base64Decode.prototype.decode = function (input) {
+        var encodedString = input.replace(/-/g, "+").replace(/_/g, "/");
+        switch (encodedString.length % 4) {
+            case 0:
+                break;
+            case 2:
+                encodedString += "==";
+                break;
+            case 3:
+                encodedString += "=";
+                break;
+            default:
+                throw new Error("Invalid base64 string");
+        }
+        var inputUtf8Arr = this.base64DecToArr(encodedString);
+        return BrowserStringUtils.utf8ArrToString(inputUtf8Arr);
+    };
+    /**
+     * Decodes base64 into Uint8Array
+     * @param base64String
+     * @param nBlockSize
+     */
+    Base64Decode.prototype.base64DecToArr = function (base64String, nBlockSize) {
+        var sB64Enc = base64String.replace(/[^A-Za-z0-9\+\/]/g, "");
+        var nInLen = sB64Enc.length;
+        var nOutLen = nBlockSize ? Math.ceil((nInLen * 3 + 1 >>> 2) / nBlockSize) * nBlockSize : nInLen * 3 + 1 >>> 2;
+        var aBytes = new Uint8Array(nOutLen);
+        for (var nMod3 = void 0, nMod4 = void 0, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
+            nMod4 = nInIdx & 3;
+            nUint24 |= this.b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+            if (nMod4 === 3 || nInLen - nInIdx === 1) {
+                for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
+                    aBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
+                }
+                nUint24 = 0;
+            }
+        }
+        return aBytes;
+    };
+    /**
+     * Base64 string to array decoding helper
+     * @param charNum
+     */
+    Base64Decode.prototype.b64ToUint6 = function (charNum) {
+        return charNum > 64 && charNum < 91 ?
+            charNum - 65
+            : charNum > 96 && charNum < 123 ?
+                charNum - 71
+                : charNum > 47 && charNum < 58 ?
+                    charNum + 4
+                    : charNum === 43 ?
+                        62
+                        : charNum === 47 ?
+                            63
+                            :
+                                0;
+    };
+    return Base64Decode;
+}());
+
+
+//# sourceMappingURL=Base64Decode.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/StringUtils.js
+var StringUtils = __webpack_require__(61653);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/AuthError.js
+var AuthError = __webpack_require__(87342);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * BrowserAuthErrorMessage class containing string constants used by error codes and messages.
+ */
+var BrowserAuthErrorMessage = {
+    pkceNotGenerated: {
+        code: "pkce_not_created",
+        desc: "The PKCE code challenge and verifier could not be generated."
+    },
+    cryptoDoesNotExist: {
+        code: "crypto_nonexistent",
+        desc: "The crypto object or function is not available."
+    },
+    httpMethodNotImplementedError: {
+        code: "http_method_not_implemented",
+        desc: "The HTTP method given has not been implemented in this library."
+    },
+    emptyNavigateUriError: {
+        code: "empty_navigate_uri",
+        desc: "Navigation URI is empty. Please check stack trace for more info."
+    },
+    hashEmptyError: {
+        code: "hash_empty_error",
+        desc: "Hash value cannot be processed because it is empty. Please verify that your redirectUri is not clearing the hash."
+    },
+    hashDoesNotContainStateError: {
+        code: "no_state_in_hash",
+        desc: "Hash does not contain state. Please verify that the request originated from msal."
+    },
+    hashDoesNotContainKnownPropertiesError: {
+        code: "hash_does_not_contain_known_properties",
+        desc: "Hash does not contain known properites. Please verify that your redirectUri is not changing the hash."
+    },
+    unableToParseStateError: {
+        code: "unable_to_parse_state",
+        desc: "Unable to parse state. Please verify that the request originated from msal."
+    },
+    stateInteractionTypeMismatchError: {
+        code: "state_interaction_type_mismatch",
+        desc: "Hash contains state but the interaction type does not match the caller."
+    },
+    interactionInProgress: {
+        code: "interaction_in_progress",
+        desc: "Interaction is currently in progress. Please ensure that this interaction has been completed before calling an interactive API.  For more visit: aka.ms/msaljs/browser-errors."
+    },
+    popupWindowError: {
+        code: "popup_window_error",
+        desc: "Error opening popup window. This can happen if you are using IE or if popups are blocked in the browser."
+    },
+    emptyWindowError: {
+        code: "empty_window_error",
+        desc: "window.open returned null or undefined window object."
+    },
+    userCancelledError: {
+        code: "user_cancelled",
+        desc: "User cancelled the flow."
+    },
+    monitorPopupTimeoutError: {
+        code: "monitor_window_timeout",
+        desc: "Token acquisition in popup failed due to timeout. For more visit: aka.ms/msaljs/browser-errors."
+    },
+    monitorIframeTimeoutError: {
+        code: "monitor_window_timeout",
+        desc: "Token acquisition in iframe failed due to timeout. For more visit: aka.ms/msaljs/browser-errors."
+    },
+    redirectInIframeError: {
+        code: "redirect_in_iframe",
+        desc: "Code flow is not supported inside an iframe. Please ensure you are using MSAL.js in a top frame of the window if using the redirect APIs, or use the popup APIs."
+    },
+    blockTokenRequestsInHiddenIframeError: {
+        code: "block_iframe_reload",
+        desc: "Request was blocked inside an iframe because MSAL detected an authentication response. For more visit: aka.ms/msaljs/browser-errors"
+    },
+    blockAcquireTokenInPopupsError: {
+        code: "block_nested_popups",
+        desc: "Request was blocked inside a popup because MSAL detected it was running in a popup."
+    },
+    iframeClosedPrematurelyError: {
+        code: "iframe_closed_prematurely",
+        desc: "The iframe being monitored was closed prematurely."
+    },
+    silentLogoutUnsupportedError: {
+        code: "silent_logout_unsupported",
+        desc: "Silent logout not supported. Please call logoutRedirect or logoutPopup instead."
+    },
+    noAccountError: {
+        code: "no_account_error",
+        desc: "No account object provided to acquireTokenSilent and no active account has been set. Please call setActiveAccount or provide an account on the request."
+    },
+    silentPromptValueError: {
+        code: "silent_prompt_value_error",
+        desc: "The value given for the prompt value is not valid for silent requests - must be set to 'none'."
+    },
+    noTokenRequestCacheError: {
+        code: "no_token_request_cache_error",
+        desc: "No token request found in cache."
+    },
+    unableToParseTokenRequestCacheError: {
+        code: "unable_to_parse_token_request_cache_error",
+        desc: "The cached token request could not be parsed."
+    },
+    noCachedAuthorityError: {
+        code: "no_cached_authority_error",
+        desc: "No cached authority found."
+    },
+    authRequestNotSet: {
+        code: "auth_request_not_set_error",
+        desc: "Auth Request not set. Please ensure initiateAuthRequest was called from the InteractionHandler"
+    },
+    invalidCacheType: {
+        code: "invalid_cache_type",
+        desc: "Invalid cache type"
+    },
+    notInBrowserEnvironment: {
+        code: "non_browser_environment",
+        desc: "Login and token requests are not supported in non-browser environments."
+    },
+    databaseNotOpen: {
+        code: "database_not_open",
+        desc: "Database is not open!"
+    },
+    noNetworkConnectivity: {
+        code: "no_network_connectivity",
+        desc: "No network connectivity. Check your internet connection."
+    },
+    postRequestFailed: {
+        code: "post_request_failed",
+        desc: "Network request failed: If the browser threw a CORS error, check that the redirectUri is registered in the Azure App Portal as type 'SPA'"
+    },
+    getRequestFailed: {
+        code: "get_request_failed",
+        desc: "Network request failed. Please check the network trace to determine root cause."
+    },
+    failedToParseNetworkResponse: {
+        code: "failed_to_parse_response",
+        desc: "Failed to parse network response. Check network trace."
+    },
+    unableToLoadTokenError: {
+        code: "unable_to_load_token",
+        desc: "Error loading token to cache."
+    },
+    signingKeyNotFoundInStorage: {
+        code: "crypto_key_not_found",
+        desc: "Cryptographic Key or Keypair not found in browser storage."
+    },
+    authCodeRequired: {
+        code: "auth_code_required",
+        desc: "An authorization code must be provided (as the `code` property on the request) to this flow."
+    },
+    databaseUnavailable: {
+        code: "database_unavailable",
+        desc: "IndexedDB, which is required for persistent cryptographic key storage, is unavailable. This may be caused by browser privacy features which block persistent storage in third-party contexts."
+    }
+};
+/**
+ * Browser library error class thrown by the MSAL.js library for SPAs
+ */
+var BrowserAuthError = /** @class */ (function (_super) {
+    __extends(BrowserAuthError, _super);
+    function BrowserAuthError(errorCode, errorMessage) {
+        var _this = _super.call(this, errorCode, errorMessage) || this;
+        Object.setPrototypeOf(_this, BrowserAuthError.prototype);
+        _this.name = "BrowserAuthError";
+        return _this;
+    }
+    /**
+     * Creates an error thrown when PKCE is not implemented.
+     * @param errDetail
+     */
+    BrowserAuthError.createPkceNotGeneratedError = function (errDetail) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.pkceNotGenerated.code, BrowserAuthErrorMessage.pkceNotGenerated.desc + " Detail:" + errDetail);
+    };
+    /**
+     * Creates an error thrown when the crypto object is unavailable.
+     * @param errDetail
+     */
+    BrowserAuthError.createCryptoNotAvailableError = function (errDetail) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.cryptoDoesNotExist.code, BrowserAuthErrorMessage.cryptoDoesNotExist.desc + " Detail:" + errDetail);
+    };
+    /**
+     * Creates an error thrown when an HTTP method hasn't been implemented by the browser class.
+     * @param method
+     */
+    BrowserAuthError.createHttpMethodNotImplementedError = function (method) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.httpMethodNotImplementedError.code, BrowserAuthErrorMessage.httpMethodNotImplementedError.desc + " Given Method: " + method);
+    };
+    /**
+     * Creates an error thrown when the navigation URI is empty.
+     */
+    BrowserAuthError.createEmptyNavigationUriError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.emptyNavigateUriError.code, BrowserAuthErrorMessage.emptyNavigateUriError.desc);
+    };
+    /**
+     * Creates an error thrown when the hash string value is unexpectedly empty.
+     * @param hashValue
+     */
+    BrowserAuthError.createEmptyHashError = function (hashValue) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.hashEmptyError.code, BrowserAuthErrorMessage.hashEmptyError.desc + " Given Url: " + hashValue);
+    };
+    /**
+     * Creates an error thrown when the hash string value is unexpectedly empty.
+     */
+    BrowserAuthError.createHashDoesNotContainStateError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.hashDoesNotContainStateError.code, BrowserAuthErrorMessage.hashDoesNotContainStateError.desc);
+    };
+    /**
+     * Creates an error thrown when the hash string value does not contain known properties
+     */
+    BrowserAuthError.createHashDoesNotContainKnownPropertiesError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.hashDoesNotContainKnownPropertiesError.code, BrowserAuthErrorMessage.hashDoesNotContainKnownPropertiesError.desc);
+    };
+    /**
+     * Creates an error thrown when the hash string value is unexpectedly empty.
+     */
+    BrowserAuthError.createUnableToParseStateError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.unableToParseStateError.code, BrowserAuthErrorMessage.unableToParseStateError.desc);
+    };
+    /**
+     * Creates an error thrown when the state value in the hash does not match the interaction type of the API attempting to consume it.
+     */
+    BrowserAuthError.createStateInteractionTypeMismatchError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.stateInteractionTypeMismatchError.code, BrowserAuthErrorMessage.stateInteractionTypeMismatchError.desc);
+    };
+    /**
+     * Creates an error thrown when a browser interaction (redirect or popup) is in progress.
+     */
+    BrowserAuthError.createInteractionInProgressError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.interactionInProgress.code, BrowserAuthErrorMessage.interactionInProgress.desc);
+    };
+    /**
+     * Creates an error thrown when the popup window could not be opened.
+     * @param errDetail
+     */
+    BrowserAuthError.createPopupWindowError = function (errDetail) {
+        var errorMessage = BrowserAuthErrorMessage.popupWindowError.desc;
+        errorMessage = !StringUtils/* StringUtils.isEmpty */.x.isEmpty(errDetail) ? errorMessage + " Details: " + errDetail : errorMessage;
+        return new BrowserAuthError(BrowserAuthErrorMessage.popupWindowError.code, errorMessage);
+    };
+    /**
+     * Creates an error thrown when window.open returns an empty window object.
+     * @param errDetail
+     */
+    BrowserAuthError.createEmptyWindowCreatedError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.emptyWindowError.code, BrowserAuthErrorMessage.emptyWindowError.desc);
+    };
+    /**
+     * Creates an error thrown when the user closes a popup.
+     */
+    BrowserAuthError.createUserCancelledError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.userCancelledError.code, BrowserAuthErrorMessage.userCancelledError.desc);
+    };
+    /**
+     * Creates an error thrown when monitorPopupFromHash times out for a given popup.
+     */
+    BrowserAuthError.createMonitorPopupTimeoutError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.monitorPopupTimeoutError.code, BrowserAuthErrorMessage.monitorPopupTimeoutError.desc);
+    };
+    /**
+     * Creates an error thrown when monitorIframeFromHash times out for a given iframe.
+     */
+    BrowserAuthError.createMonitorIframeTimeoutError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.monitorIframeTimeoutError.code, BrowserAuthErrorMessage.monitorIframeTimeoutError.desc);
+    };
+    /**
+     * Creates an error thrown when navigateWindow is called inside an iframe.
+     * @param windowParentCheck
+     */
+    BrowserAuthError.createRedirectInIframeError = function (windowParentCheck) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.redirectInIframeError.code, BrowserAuthErrorMessage.redirectInIframeError.desc + " (window.parent !== window) => " + windowParentCheck);
+    };
+    /**
+     * Creates an error thrown when an auth reload is done inside an iframe.
+     */
+    BrowserAuthError.createBlockReloadInHiddenIframeError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.blockTokenRequestsInHiddenIframeError.code, BrowserAuthErrorMessage.blockTokenRequestsInHiddenIframeError.desc);
+    };
+    /**
+     * Creates an error thrown when a popup attempts to call an acquireToken API
+     * @returns
+     */
+    BrowserAuthError.createBlockAcquireTokenInPopupsError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.blockAcquireTokenInPopupsError.code, BrowserAuthErrorMessage.blockAcquireTokenInPopupsError.desc);
+    };
+    /**
+     * Creates an error thrown when an iframe is found to be closed before the timeout is reached.
+     */
+    BrowserAuthError.createIframeClosedPrematurelyError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.iframeClosedPrematurelyError.code, BrowserAuthErrorMessage.iframeClosedPrematurelyError.desc);
+    };
+    /**
+     * Creates an error thrown when the logout API is called on any of the silent interaction clients
+     */
+    BrowserAuthError.createSilentLogoutUnsupportedError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.silentLogoutUnsupportedError.code, BrowserAuthErrorMessage.silentLogoutUnsupportedError.desc);
+    };
+    /**
+     * Creates an error thrown when the account object is not provided in the acquireTokenSilent API.
+     */
+    BrowserAuthError.createNoAccountError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.noAccountError.code, BrowserAuthErrorMessage.noAccountError.desc);
+    };
+    /**
+     * Creates an error thrown when a given prompt value is invalid for silent requests.
+     */
+    BrowserAuthError.createSilentPromptValueError = function (givenPrompt) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.silentPromptValueError.code, BrowserAuthErrorMessage.silentPromptValueError.desc + " Given value: " + givenPrompt);
+    };
+    /**
+     * Creates an error thrown when the cached token request could not be retrieved from the cache
+     */
+    BrowserAuthError.createUnableToParseTokenRequestCacheError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.unableToParseTokenRequestCacheError.code, BrowserAuthErrorMessage.unableToParseTokenRequestCacheError.desc);
+    };
+    /**
+     * Creates an error thrown when the token request could not be retrieved from the cache
+     */
+    BrowserAuthError.createNoTokenRequestCacheError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.noTokenRequestCacheError.code, BrowserAuthErrorMessage.noTokenRequestCacheError.desc);
+    };
+    /**
+     * Creates an error thrown when handleCodeResponse is called before initiateAuthRequest (InteractionHandler)
+     */
+    BrowserAuthError.createAuthRequestNotSetError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.authRequestNotSet.code, BrowserAuthErrorMessage.authRequestNotSet.desc);
+    };
+    /**
+     * Creates an error thrown when the authority could not be retrieved from the cache
+     */
+    BrowserAuthError.createNoCachedAuthorityError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.noCachedAuthorityError.code, BrowserAuthErrorMessage.noCachedAuthorityError.desc);
+    };
+    /**
+     * Creates an error thrown if cache type is invalid.
+     */
+    BrowserAuthError.createInvalidCacheTypeError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.invalidCacheType.code, "" + BrowserAuthErrorMessage.invalidCacheType.desc);
+    };
+    /**
+     * Create an error thrown when login and token requests are made from a non-browser environment
+     */
+    BrowserAuthError.createNonBrowserEnvironmentError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.notInBrowserEnvironment.code, BrowserAuthErrorMessage.notInBrowserEnvironment.desc);
+    };
+    /**
+     * Create an error thrown when indexDB database is not open
+     */
+    BrowserAuthError.createDatabaseNotOpenError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.databaseNotOpen.code, BrowserAuthErrorMessage.databaseNotOpen.desc);
+    };
+    /**
+     * Create an error thrown when token fetch fails due to no internet
+     */
+    BrowserAuthError.createNoNetworkConnectivityError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.noNetworkConnectivity.code, BrowserAuthErrorMessage.noNetworkConnectivity.desc);
+    };
+    /**
+     * Create an error thrown when token fetch fails due to reasons other than internet connectivity
+     */
+    BrowserAuthError.createPostRequestFailedError = function (errorDesc, endpoint) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.postRequestFailed.code, BrowserAuthErrorMessage.postRequestFailed.desc + " | Network client threw: " + errorDesc + " | Attempted to reach: " + endpoint.split("?")[0]);
+    };
+    /**
+     * Create an error thrown when get request fails due to reasons other than internet connectivity
+     */
+    BrowserAuthError.createGetRequestFailedError = function (errorDesc, endpoint) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.getRequestFailed.code, BrowserAuthErrorMessage.getRequestFailed.desc + " | Network client threw: " + errorDesc + " | Attempted to reach: " + endpoint.split("?")[0]);
+    };
+    /**
+     * Create an error thrown when network client fails to parse network response
+     */
+    BrowserAuthError.createFailedToParseNetworkResponseError = function (endpoint) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.failedToParseNetworkResponse.code, BrowserAuthErrorMessage.failedToParseNetworkResponse.desc + " | Attempted to reach: " + endpoint.split("?")[0]);
+    };
+    /**
+     * Create an error thrown when the necessary information is not available to sideload tokens
+     */
+    BrowserAuthError.createUnableToLoadTokenError = function (errorDetail) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.unableToLoadTokenError.code, BrowserAuthErrorMessage.unableToLoadTokenError.desc + " | " + errorDetail);
+    };
+    /**
+     * Create an error thrown when the queried cryptographic key is not found in IndexedDB
+     */
+    BrowserAuthError.createSigningKeyNotFoundInStorageError = function (keyId) {
+        return new BrowserAuthError(BrowserAuthErrorMessage.signingKeyNotFoundInStorage.code, BrowserAuthErrorMessage.signingKeyNotFoundInStorage.desc + " | No match found for KeyId: " + keyId);
+    };
+    /**
+     * Create an error when an authorization code is required but not provided
+     */
+    BrowserAuthError.createAuthCodeRequiredError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.authCodeRequired.code, BrowserAuthErrorMessage.authCodeRequired.desc);
+    };
+    /**
+     * Create an error when IndexedDB is unavailable
+     */
+    BrowserAuthError.createDatabaseUnavailableError = function () {
+        return new BrowserAuthError(BrowserAuthErrorMessage.databaseUnavailable.code, BrowserAuthErrorMessage.databaseUnavailable.desc);
+    };
+    return BrowserAuthError;
+}(AuthError/* AuthError */.l));
+
+
+//# sourceMappingURL=BrowserAuthError.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/crypto/PkceGenerator.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+// Constant byte array length
+var RANDOM_BYTE_ARR_LENGTH = 32;
+/**
+ * Class which exposes APIs to generate PKCE codes and code verifiers.
+ */
+var PkceGenerator = /** @class */ (function () {
+    function PkceGenerator(cryptoObj) {
+        this.base64Encode = new Base64Encode();
+        this.cryptoObj = cryptoObj;
+    }
+    /**
+     * Generates PKCE Codes. See the RFC for more information: https://tools.ietf.org/html/rfc7636
+     */
+    PkceGenerator.prototype.generateCodes = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var codeVerifier, codeChallenge;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        codeVerifier = this.generateCodeVerifier();
+                        return [4 /*yield*/, this.generateCodeChallengeFromVerifier(codeVerifier)];
+                    case 1:
+                        codeChallenge = _a.sent();
+                        return [2 /*return*/, {
+                                verifier: codeVerifier,
+                                challenge: codeChallenge
+                            }];
+                }
+            });
+        });
+    };
+    /**
+     * Generates a random 32 byte buffer and returns the base64
+     * encoded string to be used as a PKCE Code Verifier
+     */
+    PkceGenerator.prototype.generateCodeVerifier = function () {
+        try {
+            // Generate random values as utf-8
+            var buffer = new Uint8Array(RANDOM_BYTE_ARR_LENGTH);
+            this.cryptoObj.getRandomValues(buffer);
+            // encode verifier as base64
+            var pkceCodeVerifierB64 = this.base64Encode.urlEncodeArr(buffer);
+            return pkceCodeVerifierB64;
+        }
+        catch (e) {
+            throw BrowserAuthError.createPkceNotGeneratedError(e);
+        }
+    };
+    /**
+     * Creates a base64 encoded PKCE Code Challenge string from the
+     * hash created from the PKCE Code Verifier supplied
+     */
+    PkceGenerator.prototype.generateCodeChallengeFromVerifier = function (pkceCodeVerifier) {
+        return __awaiter(this, void 0, void 0, function () {
+            var pkceHashedCodeVerifier, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.cryptoObj.sha256Digest(pkceCodeVerifier)];
+                    case 1:
+                        pkceHashedCodeVerifier = _a.sent();
+                        // encode hash as base64
+                        return [2 /*return*/, this.base64Encode.urlEncodeArr(new Uint8Array(pkceHashedCodeVerifier))];
+                    case 2:
+                        e_1 = _a.sent();
+                        throw BrowserAuthError.createPkceNotGeneratedError(e_1);
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return PkceGenerator;
+}());
+
+
+//# sourceMappingURL=PkceGenerator.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/crypto/BrowserCrypto.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * See here for more info on RsaHashedKeyGenParams: https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedKeyGenParams
+ */
+// RSA KeyGen Algorithm
+var PKCS1_V15_KEYGEN_ALG = "RSASSA-PKCS1-v1_5";
+// SHA-256 hashing algorithm
+var S256_HASH_ALG = "SHA-256";
+// MOD length for PoP tokens
+var MODULUS_LENGTH = 2048;
+// Public Exponent
+var PUBLIC_EXPONENT = new Uint8Array([0x01, 0x00, 0x01]);
+/**
+ * This class implements functions used by the browser library to perform cryptography operations such as
+ * hashing and encoding. It also has helper functions to validate the availability of specific APIs.
+ */
+var BrowserCrypto = /** @class */ (function () {
+    function BrowserCrypto(logger) {
+        this.logger = logger;
+        if (!(this.hasCryptoAPI())) {
+            throw BrowserAuthError.createCryptoNotAvailableError("Browser crypto or msCrypto object not available.");
+        }
+        this._keygenAlgorithmOptions = {
+            name: PKCS1_V15_KEYGEN_ALG,
+            hash: S256_HASH_ALG,
+            modulusLength: MODULUS_LENGTH,
+            publicExponent: PUBLIC_EXPONENT
+        };
+    }
+    /**
+     * Returns a sha-256 hash of the given dataString as an ArrayBuffer.
+     * @param dataString
+     */
+    BrowserCrypto.prototype.sha256Digest = function (dataString) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data;
+            return __generator(this, function (_a) {
+                data = BrowserStringUtils.stringToUtf8Arr(dataString);
+                return [2 /*return*/, this.hasIECrypto() ? this.getMSCryptoDigest(S256_HASH_ALG, data) : this.getSubtleCryptoDigest(S256_HASH_ALG, data)];
+            });
+        });
+    };
+    /**
+     * Populates buffer with cryptographically random values.
+     * @param dataBuffer
+     */
+    BrowserCrypto.prototype.getRandomValues = function (dataBuffer) {
+        var cryptoObj = window["msCrypto"] || window.crypto;
+        if (!cryptoObj.getRandomValues) {
+            throw BrowserAuthError.createCryptoNotAvailableError("getRandomValues does not exist.");
+        }
+        cryptoObj.getRandomValues(dataBuffer);
+    };
+    /**
+     * Generates a keypair based on current keygen algorithm config.
+     * @param extractable
+     * @param usages
+     */
+    BrowserCrypto.prototype.generateKeyPair = function (extractable, usages) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, (this.hasIECrypto() ?
+                        this.msCryptoGenerateKey(extractable, usages)
+                        : window.crypto.subtle.generateKey(this._keygenAlgorithmOptions, extractable, usages))];
+            });
+        });
+    };
+    /**
+     * Export key as Json Web Key (JWK)
+     * @param key
+     * @param format
+     */
+    BrowserCrypto.prototype.exportJwk = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.hasIECrypto() ? this.msCryptoExportJwk(key) : window.crypto.subtle.exportKey(KEY_FORMAT_JWK, key)];
+            });
+        });
+    };
+    /**
+     * Imports key as Json Web Key (JWK), can set extractable and usages.
+     * @param key
+     * @param format
+     * @param extractable
+     * @param usages
+     */
+    BrowserCrypto.prototype.importJwk = function (key, extractable, usages) {
+        return __awaiter(this, void 0, void 0, function () {
+            var keyString, keyBuffer;
+            return __generator(this, function (_a) {
+                keyString = BrowserCrypto.getJwkString(key);
+                keyBuffer = BrowserStringUtils.stringToArrayBuffer(keyString);
+                return [2 /*return*/, this.hasIECrypto() ?
+                        this.msCryptoImportKey(keyBuffer, extractable, usages)
+                        : window.crypto.subtle.importKey(KEY_FORMAT_JWK, key, this._keygenAlgorithmOptions, extractable, usages)];
+            });
+        });
+    };
+    /**
+     * Signs given data with given key
+     * @param key
+     * @param data
+     */
+    BrowserCrypto.prototype.sign = function (key, data) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.hasIECrypto() ?
+                        this.msCryptoSign(key, data)
+                        : window.crypto.subtle.sign(this._keygenAlgorithmOptions, key, data)];
+            });
+        });
+    };
+    /**
+     * Check whether IE crypto or other browser cryptography is available.
+     */
+    BrowserCrypto.prototype.hasCryptoAPI = function () {
+        return this.hasIECrypto() || this.hasBrowserCrypto();
+    };
+    /**
+     * Checks whether IE crypto (AKA msCrypto) is available.
+     */
+    BrowserCrypto.prototype.hasIECrypto = function () {
+        return "msCrypto" in window;
+    };
+    /**
+     * Check whether browser crypto is available.
+     */
+    BrowserCrypto.prototype.hasBrowserCrypto = function () {
+        return "crypto" in window;
+    };
+    /**
+     * Helper function for SHA digest.
+     * @param algorithm
+     * @param data
+     */
+    BrowserCrypto.prototype.getSubtleCryptoDigest = function (algorithm, data) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, window.crypto.subtle.digest(algorithm, data)];
+            });
+        });
+    };
+    /**
+     * IE Helper function for SHA digest.
+     * @param algorithm
+     * @param data
+     */
+    BrowserCrypto.prototype.getMSCryptoDigest = function (algorithm, data) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var digestOperation = window["msCrypto"].subtle.digest(algorithm, data.buffer);
+                        digestOperation.addEventListener("complete", function (e) {
+                            resolve(e.target.result);
+                        });
+                        digestOperation.addEventListener("error", function (error) {
+                            reject(error);
+                        });
+                    })];
+            });
+        });
+    };
+    /**
+     * IE Helper function for generating a keypair
+     * @param extractable
+     * @param usages
+     */
+    BrowserCrypto.prototype.msCryptoGenerateKey = function (extractable, usages) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var msGenerateKey = window["msCrypto"].subtle.generateKey(_this._keygenAlgorithmOptions, extractable, usages);
+                        msGenerateKey.addEventListener("complete", function (e) {
+                            resolve(e.target.result);
+                        });
+                        msGenerateKey.addEventListener("error", function (error) {
+                            reject(error);
+                        });
+                    })];
+            });
+        });
+    };
+    /**
+     * IE Helper function for exportKey
+     * @param key
+     * @param format
+     */
+    BrowserCrypto.prototype.msCryptoExportJwk = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var msExportKey = window["msCrypto"].subtle.exportKey(KEY_FORMAT_JWK, key);
+                        msExportKey.addEventListener("complete", function (e) {
+                            var resultBuffer = e.target.result;
+                            var resultString = BrowserStringUtils.utf8ArrToString(new Uint8Array(resultBuffer))
+                                .replace(/\r/g, "")
+                                .replace(/\n/g, "")
+                                .replace(/\t/g, "")
+                                .split(" ").join("")
+                                .replace("\u0000", "");
+                            try {
+                                resolve(JSON.parse(resultString));
+                            }
+                            catch (e) {
+                                reject(e);
+                            }
+                        });
+                        msExportKey.addEventListener("error", function (error) {
+                            reject(error);
+                        });
+                    })];
+            });
+        });
+    };
+    /**
+     * IE Helper function for importKey
+     * @param key
+     * @param format
+     * @param extractable
+     * @param usages
+     */
+    BrowserCrypto.prototype.msCryptoImportKey = function (keyBuffer, extractable, usages) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var msImportKey = window["msCrypto"].subtle.importKey(KEY_FORMAT_JWK, keyBuffer, _this._keygenAlgorithmOptions, extractable, usages);
+                        msImportKey.addEventListener("complete", function (e) {
+                            resolve(e.target.result);
+                        });
+                        msImportKey.addEventListener("error", function (error) {
+                            reject(error);
+                        });
+                    })];
+            });
+        });
+    };
+    /**
+     * IE Helper function for sign JWT
+     * @param key
+     * @param data
+     */
+    BrowserCrypto.prototype.msCryptoSign = function (key, data) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var msSign = window["msCrypto"].subtle.sign(_this._keygenAlgorithmOptions, key, data);
+                        msSign.addEventListener("complete", function (e) {
+                            resolve(e.target.result);
+                        });
+                        msSign.addEventListener("error", function (error) {
+                            reject(error);
+                        });
+                    })];
+            });
+        });
+    };
+    /**
+     * Returns stringified jwk.
+     * @param jwk
+     */
+    BrowserCrypto.getJwkString = function (jwk) {
+        return JSON.stringify(jwk, Object.keys(jwk).sort());
+    };
+    return BrowserCrypto;
+}());
+
+
+//# sourceMappingURL=BrowserCrypto.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/DatabaseStorage.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Storage wrapper for IndexedDB storage in browsers: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+ */
+var DatabaseStorage = /** @class */ (function () {
+    function DatabaseStorage() {
+        this.dbName = DB_NAME;
+        this.version = DB_VERSION;
+        this.tableName = DB_TABLE_NAME;
+        this.dbOpen = false;
+    }
+    /**
+     * Opens IndexedDB instance.
+     */
+    DatabaseStorage.prototype.open = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var openDB = window.indexedDB.open(_this.dbName, _this.version);
+                        openDB.addEventListener("upgradeneeded", function (e) {
+                            var event = e;
+                            event.target.result.createObjectStore(_this.tableName);
+                        });
+                        openDB.addEventListener("success", function (e) {
+                            var event = e;
+                            _this.db = event.target.result;
+                            _this.dbOpen = true;
+                            resolve();
+                        });
+                        openDB.addEventListener("error", function () { return reject(BrowserAuthError.createDatabaseUnavailableError()); });
+                    })];
+            });
+        });
+    };
+    /**
+     * Opens database if it's not already open
+     */
+    DatabaseStorage.prototype.validateDbIsOpen = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!!this.dbOpen) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.open()];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Retrieves item from IndexedDB instance.
+     * @param key
+     */
+    DatabaseStorage.prototype.getItem = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.validateDbIsOpen()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                // TODO: Add timeouts?
+                                if (!_this.db) {
+                                    return reject(BrowserAuthError.createDatabaseNotOpenError());
+                                }
+                                var transaction = _this.db.transaction([_this.tableName], "readonly");
+                                var objectStore = transaction.objectStore(_this.tableName);
+                                var dbGet = objectStore.get(key);
+                                dbGet.addEventListener("success", function (e) {
+                                    var event = e;
+                                    resolve(event.target.result);
+                                });
+                                dbGet.addEventListener("error", function (e) { return reject(e); });
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     * Adds item to IndexedDB under given key
+     * @param key
+     * @param payload
+     */
+    DatabaseStorage.prototype.setItem = function (key, payload) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.validateDbIsOpen()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                // TODO: Add timeouts?
+                                if (!_this.db) {
+                                    return reject(BrowserAuthError.createDatabaseNotOpenError());
+                                }
+                                var transaction = _this.db.transaction([_this.tableName], "readwrite");
+                                var objectStore = transaction.objectStore(_this.tableName);
+                                var dbPut = objectStore.put(payload, key);
+                                dbPut.addEventListener("success", function () { return resolve(); });
+                                dbPut.addEventListener("error", function (e) { return reject(e); });
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     * Removes item from IndexedDB under given key
+     * @param key
+     */
+    DatabaseStorage.prototype.removeItem = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.validateDbIsOpen()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                if (!_this.db) {
+                                    return reject(BrowserAuthError.createDatabaseNotOpenError());
+                                }
+                                var transaction = _this.db.transaction([_this.tableName], "readwrite");
+                                var objectStore = transaction.objectStore(_this.tableName);
+                                var dbDelete = objectStore.delete(key);
+                                dbDelete.addEventListener("success", function () { return resolve(); });
+                                dbDelete.addEventListener("error", function (e) { return reject(e); });
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     * Get all the keys from the storage object as an iterable array of strings.
+     */
+    DatabaseStorage.prototype.getKeys = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.validateDbIsOpen()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                if (!_this.db) {
+                                    return reject(BrowserAuthError.createDatabaseNotOpenError());
+                                }
+                                var transaction = _this.db.transaction([_this.tableName], "readonly");
+                                var objectStore = transaction.objectStore(_this.tableName);
+                                var dbGetKeys = objectStore.getAllKeys();
+                                dbGetKeys.addEventListener("success", function (e) {
+                                    var event = e;
+                                    resolve(event.target.result);
+                                });
+                                dbGetKeys.addEventListener("error", function (e) { return reject(e); });
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     *
+     * Checks whether there is an object under the search key in the object store
+     */
+    DatabaseStorage.prototype.containsKey = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.validateDbIsOpen()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                if (!_this.db) {
+                                    return reject(BrowserAuthError.createDatabaseNotOpenError());
+                                }
+                                var transaction = _this.db.transaction([_this.tableName], "readonly");
+                                var objectStore = transaction.objectStore(_this.tableName);
+                                var dbContainsKey = objectStore.count(key);
+                                dbContainsKey.addEventListener("success", function (e) {
+                                    var event = e;
+                                    resolve(event.target.result === 1);
+                                });
+                                dbContainsKey.addEventListener("error", function (e) { return reject(e); });
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     * Deletes the MSAL database. The database is deleted rather than cleared to make it possible
+     * for client applications to downgrade to a previous MSAL version without worrying about forward compatibility issues
+     * with IndexedDB database versions.
+     */
+    DatabaseStorage.prototype.deleteDatabase = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var deleteDbRequest = window.indexedDB.deleteDatabase(DB_NAME);
+                        deleteDbRequest.addEventListener("success", function () { return resolve(true); });
+                        deleteDbRequest.addEventListener("error", function () { return reject(false); });
+                    })];
+            });
+        });
+    };
+    return DatabaseStorage;
+}());
+
+
+//# sourceMappingURL=DatabaseStorage.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/MemoryStorage.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var MemoryStorage = /** @class */ (function () {
+    function MemoryStorage() {
+        this.cache = new Map();
+    }
+    MemoryStorage.prototype.getItem = function (key) {
+        return this.cache.get(key) || null;
+    };
+    MemoryStorage.prototype.setItem = function (key, value) {
+        this.cache.set(key, value);
+    };
+    MemoryStorage.prototype.removeItem = function (key) {
+        this.cache.delete(key);
+    };
+    MemoryStorage.prototype.getKeys = function () {
+        var cacheKeys = [];
+        this.cache.forEach(function (value, key) {
+            cacheKeys.push(key);
+        });
+        return cacheKeys;
+    };
+    MemoryStorage.prototype.containsKey = function (key) {
+        return this.cache.has(key);
+    };
+    MemoryStorage.prototype.clear = function () {
+        this.cache.clear();
+    };
+    return MemoryStorage;
+}());
+
+
+//# sourceMappingURL=MemoryStorage.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/AsyncMemoryStorage.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class allows MSAL to store artifacts asynchronously using the DatabaseStorage IndexedDB wrapper,
+ * backed up with the more volatile MemoryStorage object for cases in which IndexedDB may be unavailable.
+ */
+var AsyncMemoryStorage = /** @class */ (function () {
+    function AsyncMemoryStorage(logger) {
+        this.inMemoryCache = new MemoryStorage();
+        this.indexedDBCache = new DatabaseStorage();
+        this.logger = logger;
+    }
+    AsyncMemoryStorage.prototype.handleDatabaseAccessError = function (error) {
+        if (error instanceof BrowserAuthError && error.errorCode === BrowserAuthErrorMessage.databaseUnavailable.code) {
+            this.logger.error("Could not access persistent storage. This may be caused by browser privacy features which block persistent storage in third-party contexts.");
+        }
+    };
+    /**
+     * Get the item matching the given key. Tries in-memory cache first, then in the asynchronous
+     * storage object if item isn't found in-memory.
+     * @param key
+     */
+    AsyncMemoryStorage.prototype.getItem = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var item, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        item = this.inMemoryCache.getItem(key);
+                        if (!!item) return [3 /*break*/, 4];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        this.logger.verbose("Queried item not found in in-memory cache, now querying persistent storage.");
+                        return [4 /*yield*/, this.indexedDBCache.getItem(key)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                    case 3:
+                        e_1 = _a.sent();
+                        this.handleDatabaseAccessError(e_1);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/, item];
+                }
+            });
+        });
+    };
+    /**
+     * Sets the item in the in-memory cache and then tries to set it in the asynchronous
+     * storage object with the given key.
+     * @param key
+     * @param value
+     */
+    AsyncMemoryStorage.prototype.setItem = function (key, value) {
+        return __awaiter(this, void 0, void 0, function () {
+            var e_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.inMemoryCache.setItem(key, value);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.indexedDBCache.setItem(key, value)];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_2 = _a.sent();
+                        this.handleDatabaseAccessError(e_2);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Removes the item matching the key from the in-memory cache, then tries to remove it from the asynchronous storage object.
+     * @param key
+     */
+    AsyncMemoryStorage.prototype.removeItem = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.inMemoryCache.removeItem(key);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.indexedDBCache.removeItem(key)];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_3 = _a.sent();
+                        this.handleDatabaseAccessError(e_3);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Get all the keys from the in-memory cache as an iterable array of strings. If no keys are found, query the keys in the
+     * asynchronous storage object.
+     */
+    AsyncMemoryStorage.prototype.getKeys = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var cacheKeys, e_4;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        cacheKeys = this.inMemoryCache.getKeys();
+                        if (!(cacheKeys.length === 0)) return [3 /*break*/, 4];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        this.logger.verbose("In-memory cache is empty, now querying persistent storage.");
+                        return [4 /*yield*/, this.indexedDBCache.getKeys()];
+                    case 2: return [2 /*return*/, _a.sent()];
+                    case 3:
+                        e_4 = _a.sent();
+                        this.handleDatabaseAccessError(e_4);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/, cacheKeys];
+                }
+            });
+        });
+    };
+    /**
+     * Returns true or false if the given key is present in the cache.
+     * @param key
+     */
+    AsyncMemoryStorage.prototype.containsKey = function (key) {
+        return __awaiter(this, void 0, void 0, function () {
+            var containsKey, e_5;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        containsKey = this.inMemoryCache.containsKey(key);
+                        if (!!containsKey) return [3 /*break*/, 4];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        this.logger.verbose("Key not found in in-memory cache, now querying persistent storage.");
+                        return [4 /*yield*/, this.indexedDBCache.containsKey(key)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                    case 3:
+                        e_5 = _a.sent();
+                        this.handleDatabaseAccessError(e_5);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/, containsKey];
+                }
+            });
+        });
+    };
+    /**
+     * Clears in-memory Map and tries to delete the IndexedDB database.
+     */
+    AsyncMemoryStorage.prototype.clear = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var e_6;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.inMemoryCache.clear();
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.indexedDBCache.deleteDatabase()];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_6 = _a.sent();
+                        this.handleDatabaseAccessError(e_6);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return AsyncMemoryStorage;
+}());
+
+
+//# sourceMappingURL=AsyncMemoryStorage.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/crypto/CryptoOps.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class implements MSAL's crypto interface, which allows it to perform base64 encoding and decoding, generating cryptographically random GUIDs and
+ * implementing Proof Key for Code Exchange specs for the OAuth Authorization Code Flow using PKCE (rfc here: https://tools.ietf.org/html/rfc7636).
+ */
+var CryptoOps = /** @class */ (function () {
+    function CryptoOps(logger) {
+        this.logger = logger;
+        // Browser crypto needs to be validated first before any other classes can be set.
+        this.browserCrypto = new BrowserCrypto(this.logger);
+        this.b64Encode = new Base64Encode();
+        this.b64Decode = new Base64Decode();
+        this.guidGenerator = new GuidGenerator(this.browserCrypto);
+        this.pkceGenerator = new PkceGenerator(this.browserCrypto);
+        this.cache = {
+            asymmetricKeys: new AsyncMemoryStorage(this.logger),
+            symmetricKeys: new AsyncMemoryStorage(this.logger)
+        };
+    }
+    /**
+     * Creates a new random GUID - used to populate state and nonce.
+     * @returns string (GUID)
+     */
+    CryptoOps.prototype.createNewGuid = function () {
+        return this.guidGenerator.generateGuid();
+    };
+    /**
+     * Encodes input string to base64.
+     * @param input
+     */
+    CryptoOps.prototype.base64Encode = function (input) {
+        return this.b64Encode.encode(input);
+    };
+    /**
+     * Decodes input string from base64.
+     * @param input
+     */
+    CryptoOps.prototype.base64Decode = function (input) {
+        return this.b64Decode.decode(input);
+    };
+    /**
+     * Generates PKCE codes used in Authorization Code Flow.
+     */
+    CryptoOps.prototype.generatePkceCodes = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.pkceGenerator.generateCodes()];
+            });
+        });
+    };
+    /**
+     * Generates a keypair, stores it and returns a thumbprint
+     * @param request
+     */
+    CryptoOps.prototype.getPublicKeyThumbprint = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var keyPair, publicKeyJwk, pubKeyThumprintObj, publicJwkString, publicJwkHash, privateKeyJwk, unextractablePrivateKey;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.browserCrypto.generateKeyPair(CryptoOps.EXTRACTABLE, CryptoOps.POP_KEY_USAGES)];
+                    case 1:
+                        keyPair = _a.sent();
+                        return [4 /*yield*/, this.browserCrypto.exportJwk(keyPair.publicKey)];
+                    case 2:
+                        publicKeyJwk = _a.sent();
+                        pubKeyThumprintObj = {
+                            e: publicKeyJwk.e,
+                            kty: publicKeyJwk.kty,
+                            n: publicKeyJwk.n
+                        };
+                        publicJwkString = BrowserCrypto.getJwkString(pubKeyThumprintObj);
+                        return [4 /*yield*/, this.hashString(publicJwkString)];
+                    case 3:
+                        publicJwkHash = _a.sent();
+                        return [4 /*yield*/, this.browserCrypto.exportJwk(keyPair.privateKey)];
+                    case 4:
+                        privateKeyJwk = _a.sent();
+                        return [4 /*yield*/, this.browserCrypto.importJwk(privateKeyJwk, false, ["sign"])];
+                    case 5:
+                        unextractablePrivateKey = _a.sent();
+                        // Store Keypair data in keystore
+                        return [4 /*yield*/, this.cache.asymmetricKeys.setItem(publicJwkHash, {
+                                privateKey: unextractablePrivateKey,
+                                publicKey: keyPair.publicKey,
+                                requestMethod: request.resourceRequestMethod,
+                                requestUri: request.resourceRequestUri
+                            })];
+                    case 6:
+                        // Store Keypair data in keystore
+                        _a.sent();
+                        return [2 /*return*/, publicJwkHash];
+                }
+            });
+        });
+    };
+    /**
+     * Removes cryptographic keypair from key store matching the keyId passed in
+     * @param kid
+     */
+    CryptoOps.prototype.removeTokenBindingKey = function (kid) {
+        return __awaiter(this, void 0, void 0, function () {
+            var keyFound;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.cache.asymmetricKeys.removeItem(kid)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.cache.asymmetricKeys.containsKey(kid)];
+                    case 2:
+                        keyFound = _a.sent();
+                        return [2 /*return*/, !keyFound];
+                }
+            });
+        });
+    };
+    /**
+     * Removes all cryptographic keys from IndexedDB storage
+     */
+    CryptoOps.prototype.clearKeystore = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var dataStoreNames, databaseStorage, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        dataStoreNames = Object.keys(this.cache);
+                        databaseStorage = this.cache[dataStoreNames[0]];
+                        if (!databaseStorage) return [3 /*break*/, 2];
+                        return [4 /*yield*/, databaseStorage.deleteDatabase()];
+                    case 1:
+                        _a = _b.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        _a = false;
+                        _b.label = 3;
+                    case 3: return [2 /*return*/, _a];
+                }
+            });
+        });
+    };
+    /**
+     * Signs the given object as a jwt payload with private key retrieved by given kid.
+     * @param payload
+     * @param kid
+     */
+    CryptoOps.prototype.signJwt = function (payload, kid) {
+        return __awaiter(this, void 0, void 0, function () {
+            var cachedKeyPair, publicKeyJwk, publicKeyJwkString, header, encodedHeader, encodedPayload, tokenString, tokenBuffer, signatureBuffer, encodedSignature;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.cache.asymmetricKeys.getItem(kid)];
+                    case 1:
+                        cachedKeyPair = _a.sent();
+                        if (!cachedKeyPair) {
+                            throw BrowserAuthError.createSigningKeyNotFoundInStorageError(kid);
+                        }
+                        return [4 /*yield*/, this.browserCrypto.exportJwk(cachedKeyPair.publicKey)];
+                    case 2:
+                        publicKeyJwk = _a.sent();
+                        publicKeyJwkString = BrowserCrypto.getJwkString(publicKeyJwk);
+                        header = {
+                            alg: publicKeyJwk.alg,
+                            type: KEY_FORMAT_JWK
+                        };
+                        encodedHeader = this.b64Encode.urlEncode(JSON.stringify(header));
+                        // Generate payload
+                        payload.cnf = {
+                            jwk: JSON.parse(publicKeyJwkString)
+                        };
+                        encodedPayload = this.b64Encode.urlEncode(JSON.stringify(payload));
+                        tokenString = encodedHeader + "." + encodedPayload;
+                        tokenBuffer = BrowserStringUtils.stringToArrayBuffer(tokenString);
+                        return [4 /*yield*/, this.browserCrypto.sign(cachedKeyPair.privateKey, tokenBuffer)];
+                    case 3:
+                        signatureBuffer = _a.sent();
+                        encodedSignature = this.b64Encode.urlEncodeArr(new Uint8Array(signatureBuffer));
+                        return [2 /*return*/, tokenString + "." + encodedSignature];
+                }
+            });
+        });
+    };
+    /**
+     * Returns the SHA-256 hash of an input string
+     * @param plainText
+     */
+    CryptoOps.prototype.hashString = function (plainText) {
+        return __awaiter(this, void 0, void 0, function () {
+            var hashBuffer, hashBytes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.browserCrypto.sha256Digest(plainText)];
+                    case 1:
+                        hashBuffer = _a.sent();
+                        hashBytes = new Uint8Array(hashBuffer);
+                        return [2 /*return*/, this.b64Encode.urlEncodeArr(hashBytes)];
+                }
+            });
+        });
+    };
+    CryptoOps.POP_KEY_USAGES = ["sign", "verify"];
+    CryptoOps.EXTRACTABLE = true;
+    return CryptoOps;
+}());
+
+
+//# sourceMappingURL=CryptoOps.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/logger/Logger.js
+var Logger = __webpack_require__(21362);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/crypto/ICrypto.js
+var ICrypto = __webpack_require__(66561);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ServerError.js
+var ServerError = __webpack_require__(91359);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/InteractionRequiredAuthError.js
+var InteractionRequiredAuthError = __webpack_require__(83927);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AccountEntity.js
+var AccountEntity = __webpack_require__(43640);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/CacheManager.js
+var CacheManager = __webpack_require__(67656);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/IdTokenEntity.js
+var IdTokenEntity = __webpack_require__(70979);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AccessTokenEntity.js
+var AccessTokenEntity = __webpack_require__(85907);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/RefreshTokenEntity.js
+var RefreshTokenEntity = __webpack_require__(11429);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AppMetadataEntity.js
+var AppMetadataEntity = __webpack_require__(59993);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/ServerTelemetryEntity.js
+var ServerTelemetryEntity = __webpack_require__(44612);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AuthorityMetadataEntity.js
+var AuthorityMetadataEntity = __webpack_require__(1713);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/ThrottlingEntity.js
+var ThrottlingEntity = __webpack_require__(4184);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/ProtocolUtils.js
+var ProtocolUtils = __webpack_require__(3516);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/account/CcsCredential.js
+var CcsCredential = __webpack_require__(34726);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/account/AuthToken.js
+var AuthToken = __webpack_require__(70591);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/error/BrowserConfigurationAuthError.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * BrowserAuthErrorMessage class containing string constants used by error codes and messages.
+ */
+var BrowserConfigurationAuthErrorMessage = {
+    redirectUriNotSet: {
+        code: "redirect_uri_empty",
+        desc: "A redirect URI is required for all calls, and none has been set."
+    },
+    postLogoutUriNotSet: {
+        code: "post_logout_uri_empty",
+        desc: "A post logout redirect has not been set."
+    },
+    storageNotSupportedError: {
+        code: "storage_not_supported",
+        desc: "Given storage configuration option was not supported."
+    },
+    noRedirectCallbacksSet: {
+        code: "no_redirect_callbacks",
+        desc: "No redirect callbacks have been set. Please call setRedirectCallbacks() with the appropriate function arguments before continuing. " +
+            "More information is available here: https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL-basics."
+    },
+    invalidCallbackObject: {
+        code: "invalid_callback_object",
+        desc: "The object passed for the callback was invalid. " +
+            "More information is available here: https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL-basics."
+    },
+    stubPcaInstanceCalled: {
+        code: "stubbed_public_client_application_called",
+        desc: "Stub instance of Public Client Application was called. If using msal-react, please ensure context is not used without a provider. For more visit: aka.ms/msaljs/browser-errors"
+    },
+    inMemRedirectUnavailable: {
+        code: "in_mem_redirect_unavailable",
+        desc: "Redirect cannot be supported. In-memory storage was selected and storeAuthStateInCookie=false, which would cause the library to be unable to handle the incoming hash. If you would like to use the redirect API, please use session/localStorage or set storeAuthStateInCookie=true."
+    }
+};
+/**
+ * Browser library error class thrown by the MSAL.js library for SPAs
+ */
+var BrowserConfigurationAuthError = /** @class */ (function (_super) {
+    __extends(BrowserConfigurationAuthError, _super);
+    function BrowserConfigurationAuthError(errorCode, errorMessage) {
+        var _this = _super.call(this, errorCode, errorMessage) || this;
+        _this.name = "BrowserConfigurationAuthError";
+        Object.setPrototypeOf(_this, BrowserConfigurationAuthError.prototype);
+        return _this;
+    }
+    /**
+     * Creates an error thrown when the redirect uri is empty (not set by caller)
+     */
+    BrowserConfigurationAuthError.createRedirectUriEmptyError = function () {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.redirectUriNotSet.code, BrowserConfigurationAuthErrorMessage.redirectUriNotSet.desc);
+    };
+    /**
+     * Creates an error thrown when the post-logout redirect uri is empty (not set by caller)
+     */
+    BrowserConfigurationAuthError.createPostLogoutRedirectUriEmptyError = function () {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.postLogoutUriNotSet.code, BrowserConfigurationAuthErrorMessage.postLogoutUriNotSet.desc);
+    };
+    /**
+     * Creates error thrown when given storage location is not supported.
+     * @param givenStorageLocation
+     */
+    BrowserConfigurationAuthError.createStorageNotSupportedError = function (givenStorageLocation) {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.storageNotSupportedError.code, BrowserConfigurationAuthErrorMessage.storageNotSupportedError.desc + " Given Location: " + givenStorageLocation);
+    };
+    /**
+     * Creates error thrown when redirect callbacks are not set before calling loginRedirect() or acquireTokenRedirect().
+     */
+    BrowserConfigurationAuthError.createRedirectCallbacksNotSetError = function () {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.noRedirectCallbacksSet.code, BrowserConfigurationAuthErrorMessage.noRedirectCallbacksSet.desc);
+    };
+    /**
+     * Creates error thrown when the stub instance of PublicClientApplication is called.
+     */
+    BrowserConfigurationAuthError.createStubPcaInstanceCalledError = function () {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.stubPcaInstanceCalled.code, BrowserConfigurationAuthErrorMessage.stubPcaInstanceCalled.desc);
+    };
+    /*
+     * Create an error thrown when in-memory storage is used and storeAuthStateInCookie=false.
+     */
+    BrowserConfigurationAuthError.createInMemoryRedirectUnavailableError = function () {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.inMemRedirectUnavailable.code, BrowserConfigurationAuthErrorMessage.inMemRedirectUnavailable.desc);
+    };
+    return BrowserConfigurationAuthError;
+}(AuthError/* AuthError */.l));
+
+
+//# sourceMappingURL=BrowserConfigurationAuthError.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/BrowserStorage.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var BrowserStorage = /** @class */ (function () {
+    function BrowserStorage(cacheLocation) {
+        this.validateWindowStorage(cacheLocation);
+        this.windowStorage = window[cacheLocation];
+    }
+    BrowserStorage.prototype.validateWindowStorage = function (cacheLocation) {
+        if (cacheLocation !== BrowserCacheLocation.LocalStorage && cacheLocation !== BrowserCacheLocation.SessionStorage) {
+            throw BrowserConfigurationAuthError.createStorageNotSupportedError(cacheLocation);
+        }
+        var storageSupported = !!window[cacheLocation];
+        if (!storageSupported) {
+            throw BrowserConfigurationAuthError.createStorageNotSupportedError(cacheLocation);
+        }
+    };
+    BrowserStorage.prototype.getItem = function (key) {
+        return this.windowStorage.getItem(key);
+    };
+    BrowserStorage.prototype.setItem = function (key, value) {
+        this.windowStorage.setItem(key, value);
+    };
+    BrowserStorage.prototype.removeItem = function (key) {
+        this.windowStorage.removeItem(key);
+    };
+    BrowserStorage.prototype.getKeys = function () {
+        return Object.keys(this.windowStorage);
+    };
+    BrowserStorage.prototype.containsKey = function (key) {
+        return this.windowStorage.hasOwnProperty(key);
+    };
+    return BrowserStorage;
+}());
+
+
+//# sourceMappingURL=BrowserStorage.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ClientAuthError.js
+var ClientAuthError = __webpack_require__(60742);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/url/UrlString.js
+var UrlString = __webpack_require__(99860);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/BrowserProtocolUtils.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var BrowserProtocolUtils = /** @class */ (function () {
+    function BrowserProtocolUtils() {
+    }
+    /**
+     * Extracts the BrowserStateObject from the state string.
+     * @param browserCrypto
+     * @param state
+     */
+    BrowserProtocolUtils.extractBrowserRequestState = function (browserCrypto, state) {
+        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(state)) {
+            return null;
+        }
+        try {
+            var requestStateObj = ProtocolUtils/* ProtocolUtils.parseRequestState */.C.parseRequestState(browserCrypto, state);
+            return requestStateObj.libraryState.meta;
+        }
+        catch (e) {
+            throw ClientAuthError/* ClientAuthError.createInvalidStateError */.e.createInvalidStateError(state, e);
+        }
+    };
+    /**
+     * Parses properties of server response from url hash
+     * @param locationHash Hash from url
+     */
+    BrowserProtocolUtils.parseServerResponseFromHash = function (locationHash) {
+        if (!locationHash) {
+            return {};
+        }
+        var hashUrlString = new UrlString/* UrlString */.G(locationHash);
+        return UrlString/* UrlString.getDeserializedHash */.G.getDeserializedHash(hashUrlString.getHash());
+    };
+    return BrowserProtocolUtils;
+}());
+
+
+//# sourceMappingURL=BrowserProtocolUtils.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/BrowserCacheManager.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class implements the cache storage interface for MSAL through browser local or session storage.
+ * Cookies are only used if storeAuthStateInCookie is true, and are only used for
+ * parameters such as state and nonce, generally.
+ */
+var BrowserCacheManager = /** @class */ (function (_super) {
+    __extends(BrowserCacheManager, _super);
+    function BrowserCacheManager(clientId, cacheConfig, cryptoImpl, logger) {
+        var _this = _super.call(this, clientId, cryptoImpl) || this;
+        // Cookie life calculation (hours * minutes * seconds * ms)
+        _this.COOKIE_LIFE_MULTIPLIER = 24 * 60 * 60 * 1000;
+        _this.cacheConfig = cacheConfig;
+        _this.logger = logger;
+        _this.internalStorage = new MemoryStorage();
+        _this.browserStorage = _this.setupBrowserStorage(_this.cacheConfig.cacheLocation);
+        _this.temporaryCacheStorage = _this.setupTemporaryCacheStorage(_this.cacheConfig.cacheLocation);
+        // Migrate any cache entries from older versions of MSAL.
+        _this.migrateCacheEntries();
+        return _this;
+    }
+    /**
+     * Returns a window storage class implementing the IWindowStorage interface that corresponds to the configured cacheLocation.
+     * @param cacheLocation
+     */
+    BrowserCacheManager.prototype.setupBrowserStorage = function (cacheLocation) {
+        switch (cacheLocation) {
+            case BrowserCacheLocation.LocalStorage:
+            case BrowserCacheLocation.SessionStorage:
+                try {
+                    // Temporary cache items will always be stored in session storage to mitigate problems caused by multiple tabs
+                    return new BrowserStorage(cacheLocation);
+                }
+                catch (e) {
+                    this.logger.verbose(e);
+                    break;
+                }
+        }
+        this.cacheConfig.cacheLocation = BrowserCacheLocation.MemoryStorage;
+        return new MemoryStorage();
+    };
+    /**
+     *
+     * @param cacheLocation
+     */
+    BrowserCacheManager.prototype.setupTemporaryCacheStorage = function (cacheLocation) {
+        switch (cacheLocation) {
+            case BrowserCacheLocation.LocalStorage:
+            case BrowserCacheLocation.SessionStorage:
+                try {
+                    // Temporary cache items will always be stored in session storage to mitigate problems caused by multiple tabs
+                    return new BrowserStorage(BrowserCacheLocation.SessionStorage);
+                }
+                catch (e) {
+                    this.logger.verbose(e);
+                    return this.internalStorage;
+                }
+            case BrowserCacheLocation.MemoryStorage:
+            default:
+                return this.internalStorage;
+        }
+    };
+    /**
+     * Migrate all old cache entries to new schema. No rollback supported.
+     * @param storeAuthStateInCookie
+     */
+    BrowserCacheManager.prototype.migrateCacheEntries = function () {
+        var _this = this;
+        var idTokenKey = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + Constants/* PersistentCacheKeys.ID_TOKEN */.Vi.ID_TOKEN;
+        var clientInfoKey = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + Constants/* PersistentCacheKeys.CLIENT_INFO */.Vi.CLIENT_INFO;
+        var errorKey = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + Constants/* PersistentCacheKeys.ERROR */.Vi.ERROR;
+        var errorDescKey = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + Constants/* PersistentCacheKeys.ERROR_DESC */.Vi.ERROR_DESC;
+        var idTokenValue = this.browserStorage.getItem(idTokenKey);
+        var clientInfoValue = this.browserStorage.getItem(clientInfoKey);
+        var errorValue = this.browserStorage.getItem(errorKey);
+        var errorDescValue = this.browserStorage.getItem(errorDescKey);
+        var values = [idTokenValue, clientInfoValue, errorValue, errorDescValue];
+        var keysToMigrate = [Constants/* PersistentCacheKeys.ID_TOKEN */.Vi.ID_TOKEN, Constants/* PersistentCacheKeys.CLIENT_INFO */.Vi.CLIENT_INFO, Constants/* PersistentCacheKeys.ERROR */.Vi.ERROR, Constants/* PersistentCacheKeys.ERROR_DESC */.Vi.ERROR_DESC];
+        keysToMigrate.forEach(function (cacheKey, index) { return _this.migrateCacheEntry(cacheKey, values[index]); });
+    };
+    /**
+     * Utility function to help with migration.
+     * @param newKey
+     * @param value
+     * @param storeAuthStateInCookie
+     */
+    BrowserCacheManager.prototype.migrateCacheEntry = function (newKey, value) {
+        if (value) {
+            this.setTemporaryCache(newKey, value, true);
+        }
+    };
+    /**
+     * Parses passed value as JSON object, JSON.parse() will throw an error.
+     * @param input
+     */
+    BrowserCacheManager.prototype.validateAndParseJson = function (jsonValue) {
+        try {
+            var parsedJson = JSON.parse(jsonValue);
+            /**
+             * There are edge cases in which JSON.parse will successfully parse a non-valid JSON object
+             * (e.g. JSON.parse will parse an escaped string into an unescaped string), so adding a type check
+             * of the parsed value is necessary in order to be certain that the string represents a valid JSON object.
+             *
+             */
+            return (parsedJson && typeof parsedJson === "object") ? parsedJson : null;
+        }
+        catch (error) {
+            return null;
+        }
+    };
+    /**
+     * fetches the entry from the browser storage based off the key
+     * @param key
+     */
+    BrowserCacheManager.prototype.getItem = function (key) {
+        return this.browserStorage.getItem(key);
+    };
+    /**
+     * sets the entry in the browser storage
+     * @param key
+     * @param value
+     */
+    BrowserCacheManager.prototype.setItem = function (key, value) {
+        this.browserStorage.setItem(key, value);
+    };
+    /**
+     * fetch the account entity from the platform cache
+     * @param accountKey
+     */
+    BrowserCacheManager.prototype.getAccount = function (accountKey) {
+        var account = this.getItem(accountKey);
+        if (!account) {
+            return null;
+        }
+        var parsedAccount = this.validateAndParseJson(account);
+        if (!parsedAccount || !AccountEntity/* AccountEntity.isAccountEntity */.r.isAccountEntity(parsedAccount)) {
+            return null;
+        }
+        return CacheManager/* CacheManager.toObject */.L.toObject(new AccountEntity/* AccountEntity */.r(), parsedAccount);
+    };
+    /**
+     * set account entity in the platform cache
+     * @param key
+     * @param value
+     */
+    BrowserCacheManager.prototype.setAccount = function (account) {
+        this.logger.trace("BrowserCacheManager.setAccount called");
+        var key = account.generateAccountKey();
+        this.setItem(key, JSON.stringify(account));
+    };
+    /**
+     * generates idToken entity from a string
+     * @param idTokenKey
+     */
+    BrowserCacheManager.prototype.getIdTokenCredential = function (idTokenKey) {
+        var value = this.getItem(idTokenKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getIdTokenCredential: called, no cache hit");
+            return null;
+        }
+        var parsedIdToken = this.validateAndParseJson(value);
+        if (!parsedIdToken || !IdTokenEntity/* IdTokenEntity.isIdTokenEntity */.w.isIdTokenEntity(parsedIdToken)) {
+            this.logger.trace("BrowserCacheManager.getIdTokenCredential: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getIdTokenCredential: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new IdTokenEntity/* IdTokenEntity */.w(), parsedIdToken);
+    };
+    /**
+     * set IdToken credential to the platform cache
+     * @param idToken
+     */
+    BrowserCacheManager.prototype.setIdTokenCredential = function (idToken) {
+        this.logger.trace("BrowserCacheManager.setIdTokenCredential called");
+        var idTokenKey = idToken.generateCredentialKey();
+        this.setItem(idTokenKey, JSON.stringify(idToken));
+    };
+    /**
+     * generates accessToken entity from a string
+     * @param key
+     */
+    BrowserCacheManager.prototype.getAccessTokenCredential = function (accessTokenKey) {
+        var value = this.getItem(accessTokenKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getAccessTokenCredential: called, no cache hit");
+            return null;
+        }
+        var parsedAccessToken = this.validateAndParseJson(value);
+        if (!parsedAccessToken || !AccessTokenEntity/* AccessTokenEntity.isAccessTokenEntity */._.isAccessTokenEntity(parsedAccessToken)) {
+            this.logger.trace("BrowserCacheManager.getAccessTokenCredential: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getAccessTokenCredential: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new AccessTokenEntity/* AccessTokenEntity */._(), parsedAccessToken);
+    };
+    /**
+     * set accessToken credential to the platform cache
+     * @param accessToken
+     */
+    BrowserCacheManager.prototype.setAccessTokenCredential = function (accessToken) {
+        this.logger.trace("BrowserCacheManager.setAccessTokenCredential called");
+        var accessTokenKey = accessToken.generateCredentialKey();
+        this.setItem(accessTokenKey, JSON.stringify(accessToken));
+    };
+    /**
+     * generates refreshToken entity from a string
+     * @param refreshTokenKey
+     */
+    BrowserCacheManager.prototype.getRefreshTokenCredential = function (refreshTokenKey) {
+        var value = this.getItem(refreshTokenKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: called, no cache hit");
+            return null;
+        }
+        var parsedRefreshToken = this.validateAndParseJson(value);
+        if (!parsedRefreshToken || !RefreshTokenEntity/* RefreshTokenEntity.isRefreshTokenEntity */.e.isRefreshTokenEntity(parsedRefreshToken)) {
+            this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getRefreshTokenCredential: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new RefreshTokenEntity/* RefreshTokenEntity */.e(), parsedRefreshToken);
+    };
+    /**
+     * set refreshToken credential to the platform cache
+     * @param refreshToken
+     */
+    BrowserCacheManager.prototype.setRefreshTokenCredential = function (refreshToken) {
+        this.logger.trace("BrowserCacheManager.setRefreshTokenCredential called");
+        var refreshTokenKey = refreshToken.generateCredentialKey();
+        this.setItem(refreshTokenKey, JSON.stringify(refreshToken));
+    };
+    /**
+     * fetch appMetadata entity from the platform cache
+     * @param appMetadataKey
+     */
+    BrowserCacheManager.prototype.getAppMetadata = function (appMetadataKey) {
+        var value = this.getItem(appMetadataKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getAppMetadata: called, no cache hit");
+            return null;
+        }
+        var parsedMetadata = this.validateAndParseJson(value);
+        if (!parsedMetadata || !AppMetadataEntity/* AppMetadataEntity.isAppMetadataEntity */.T.isAppMetadataEntity(appMetadataKey, parsedMetadata)) {
+            this.logger.trace("BrowserCacheManager.getAppMetadata: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getAppMetadata: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new AppMetadataEntity/* AppMetadataEntity */.T(), parsedMetadata);
+    };
+    /**
+     * set appMetadata entity to the platform cache
+     * @param appMetadata
+     */
+    BrowserCacheManager.prototype.setAppMetadata = function (appMetadata) {
+        this.logger.trace("BrowserCacheManager.setAppMetadata called");
+        var appMetadataKey = appMetadata.generateAppMetadataKey();
+        this.setItem(appMetadataKey, JSON.stringify(appMetadata));
+    };
+    /**
+     * fetch server telemetry entity from the platform cache
+     * @param serverTelemetryKey
+     */
+    BrowserCacheManager.prototype.getServerTelemetry = function (serverTelemetryKey) {
+        var value = this.getItem(serverTelemetryKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getServerTelemetry: called, no cache hit");
+            return null;
+        }
+        var parsedMetadata = this.validateAndParseJson(value);
+        if (!parsedMetadata || !ServerTelemetryEntity/* ServerTelemetryEntity.isServerTelemetryEntity */.d.isServerTelemetryEntity(serverTelemetryKey, parsedMetadata)) {
+            this.logger.trace("BrowserCacheManager.getServerTelemetry: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getServerTelemetry: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new ServerTelemetryEntity/* ServerTelemetryEntity */.d(), parsedMetadata);
+    };
+    /**
+     * set server telemetry entity to the platform cache
+     * @param serverTelemetryKey
+     * @param serverTelemetry
+     */
+    BrowserCacheManager.prototype.setServerTelemetry = function (serverTelemetryKey, serverTelemetry) {
+        this.logger.trace("BrowserCacheManager.setServerTelemetry called");
+        this.setItem(serverTelemetryKey, JSON.stringify(serverTelemetry));
+    };
+    /**
+     *
+     */
+    BrowserCacheManager.prototype.getAuthorityMetadata = function (key) {
+        var value = this.internalStorage.getItem(key);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getAuthorityMetadata: called, no cache hit");
+            return null;
+        }
+        var parsedMetadata = this.validateAndParseJson(value);
+        if (parsedMetadata && AuthorityMetadataEntity/* AuthorityMetadataEntity.isAuthorityMetadataEntity */.l.isAuthorityMetadataEntity(key, parsedMetadata)) {
+            this.logger.trace("BrowserCacheManager.getAuthorityMetadata: cache hit");
+            return CacheManager/* CacheManager.toObject */.L.toObject(new AuthorityMetadataEntity/* AuthorityMetadataEntity */.l(), parsedMetadata);
+        }
+        return null;
+    };
+    /**
+     *
+     */
+    BrowserCacheManager.prototype.getAuthorityMetadataKeys = function () {
+        var _this = this;
+        var allKeys = this.internalStorage.getKeys();
+        return allKeys.filter(function (key) {
+            return _this.isAuthorityMetadata(key);
+        });
+    };
+    /**
+     * Sets wrapper metadata in memory
+     * @param wrapperSKU
+     * @param wrapperVersion
+     */
+    BrowserCacheManager.prototype.setWrapperMetadata = function (wrapperSKU, wrapperVersion) {
+        this.internalStorage.setItem(InMemoryCacheKeys.WRAPPER_SKU, wrapperSKU);
+        this.internalStorage.setItem(InMemoryCacheKeys.WRAPPER_VER, wrapperVersion);
+    };
+    /**
+     * Returns wrapper metadata from in-memory storage
+     */
+    BrowserCacheManager.prototype.getWrapperMetadata = function () {
+        var sku = this.internalStorage.getItem(InMemoryCacheKeys.WRAPPER_SKU) || "";
+        var version = this.internalStorage.getItem(InMemoryCacheKeys.WRAPPER_VER) || "";
+        return [sku, version];
+    };
+    /**
+     *
+     * @param entity
+     */
+    BrowserCacheManager.prototype.setAuthorityMetadata = function (key, entity) {
+        this.logger.trace("BrowserCacheManager.setAuthorityMetadata called");
+        this.internalStorage.setItem(key, JSON.stringify(entity));
+    };
+    /**
+     * Gets the active account
+     */
+    BrowserCacheManager.prototype.getActiveAccount = function () {
+        var activeAccountIdKey = this.generateCacheKey(Constants/* PersistentCacheKeys.ACTIVE_ACCOUNT */.Vi.ACTIVE_ACCOUNT);
+        var activeAccountId = this.browserStorage.getItem(activeAccountIdKey);
+        if (!activeAccountId) {
+            return null;
+        }
+        return this.getAccountInfoByFilter({ localAccountId: activeAccountId })[0] || null;
+    };
+    /**
+     * Sets the active account's localAccountId in cache
+     * @param account
+     */
+    BrowserCacheManager.prototype.setActiveAccount = function (account) {
+        var activeAccountIdKey = this.generateCacheKey(Constants/* PersistentCacheKeys.ACTIVE_ACCOUNT */.Vi.ACTIVE_ACCOUNT);
+        if (account) {
+            this.logger.verbose("setActiveAccount: Active account set");
+            this.browserStorage.setItem(activeAccountIdKey, account.localAccountId);
+        }
+        else {
+            this.logger.verbose("setActiveAccount: No account passed, active account not set");
+            this.browserStorage.removeItem(activeAccountIdKey);
+        }
+    };
+    /**
+     * Gets a list of accounts that match all of the filters provided
+     * @param account
+     */
+    BrowserCacheManager.prototype.getAccountInfoByFilter = function (accountFilter) {
+        var allAccounts = this.getAllAccounts();
+        return allAccounts.filter(function (accountObj) {
+            if (accountFilter.username && accountFilter.username.toLowerCase() !== accountObj.username.toLowerCase()) {
+                return false;
+            }
+            if (accountFilter.homeAccountId && accountFilter.homeAccountId !== accountObj.homeAccountId) {
+                return false;
+            }
+            if (accountFilter.localAccountId && accountFilter.localAccountId !== accountObj.localAccountId) {
+                return false;
+            }
+            if (accountFilter.tenantId && accountFilter.tenantId !== accountObj.tenantId) {
+                return false;
+            }
+            if (accountFilter.environment && accountFilter.environment !== accountObj.environment) {
+                return false;
+            }
+            return true;
+        });
+    };
+    /**
+     * fetch throttling entity from the platform cache
+     * @param throttlingCacheKey
+     */
+    BrowserCacheManager.prototype.getThrottlingCache = function (throttlingCacheKey) {
+        var value = this.getItem(throttlingCacheKey);
+        if (!value) {
+            this.logger.trace("BrowserCacheManager.getThrottlingCache: called, no cache hit");
+            return null;
+        }
+        var parsedThrottlingCache = this.validateAndParseJson(value);
+        if (!parsedThrottlingCache || !ThrottlingEntity/* ThrottlingEntity.isThrottlingEntity */.A.isThrottlingEntity(throttlingCacheKey, parsedThrottlingCache)) {
+            this.logger.trace("BrowserCacheManager.getThrottlingCache: called, no cache hit");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getThrottlingCache: cache hit");
+        return CacheManager/* CacheManager.toObject */.L.toObject(new ThrottlingEntity/* ThrottlingEntity */.A(), parsedThrottlingCache);
+    };
+    /**
+     * set throttling entity to the platform cache
+     * @param throttlingCacheKey
+     * @param throttlingCache
+     */
+    BrowserCacheManager.prototype.setThrottlingCache = function (throttlingCacheKey, throttlingCache) {
+        this.logger.trace("BrowserCacheManager.setThrottlingCache called");
+        this.setItem(throttlingCacheKey, JSON.stringify(throttlingCache));
+    };
+    /**
+     * Gets cache item with given key.
+     * Will retrieve from cookies if storeAuthStateInCookie is set to true.
+     * @param key
+     */
+    BrowserCacheManager.prototype.getTemporaryCache = function (cacheKey, generateKey) {
+        var key = generateKey ? this.generateCacheKey(cacheKey) : cacheKey;
+        if (this.cacheConfig.storeAuthStateInCookie) {
+            var itemCookie = this.getItemCookie(key);
+            if (itemCookie) {
+                this.logger.trace("BrowserCacheManager.getTemporaryCache: storeAuthStateInCookies set to true, retrieving from cookies");
+                return itemCookie;
+            }
+        }
+        var value = this.temporaryCacheStorage.getItem(key);
+        if (!value) {
+            // If temp cache item not found in session/memory, check local storage for items set by old versions
+            if (this.cacheConfig.cacheLocation === BrowserCacheLocation.LocalStorage) {
+                var item = this.browserStorage.getItem(key);
+                if (item) {
+                    this.logger.trace("BrowserCacheManager.getTemporaryCache: Temporary cache item found in local storage");
+                    return item;
+                }
+            }
+            this.logger.trace("BrowserCacheManager.getTemporaryCache: No cache item found in local storage");
+            return null;
+        }
+        this.logger.trace("BrowserCacheManager.getTemporaryCache: Temporary cache item returned");
+        return value;
+    };
+    /**
+     * Sets the cache item with the key and value given.
+     * Stores in cookie if storeAuthStateInCookie is set to true.
+     * This can cause cookie overflow if used incorrectly.
+     * @param key
+     * @param value
+     */
+    BrowserCacheManager.prototype.setTemporaryCache = function (cacheKey, value, generateKey) {
+        var key = generateKey ? this.generateCacheKey(cacheKey) : cacheKey;
+        this.temporaryCacheStorage.setItem(key, value);
+        if (this.cacheConfig.storeAuthStateInCookie) {
+            this.logger.trace("BrowserCacheManager.setTemporaryCache: storeAuthStateInCookie set to true, setting item cookie");
+            this.setItemCookie(key, value);
+        }
+    };
+    /**
+     * Removes the cache item with the given key.
+     * Will also clear the cookie item if storeAuthStateInCookie is set to true.
+     * @param key
+     */
+    BrowserCacheManager.prototype.removeItem = function (key) {
+        this.browserStorage.removeItem(key);
+        this.temporaryCacheStorage.removeItem(key);
+        if (this.cacheConfig.storeAuthStateInCookie) {
+            this.logger.trace("BrowserCacheManager.removeItem: storeAuthStateInCookie is true, clearing item cookie");
+            this.clearItemCookie(key);
+        }
+        return true;
+    };
+    /**
+     * Checks whether key is in cache.
+     * @param key
+     */
+    BrowserCacheManager.prototype.containsKey = function (key) {
+        return this.browserStorage.containsKey(key) || this.temporaryCacheStorage.containsKey(key);
+    };
+    /**
+     * Gets all keys in window.
+     */
+    BrowserCacheManager.prototype.getKeys = function () {
+        return __spread(this.browserStorage.getKeys(), this.temporaryCacheStorage.getKeys());
+    };
+    /**
+     * Clears all cache entries created by MSAL.
+     */
+    BrowserCacheManager.prototype.clear = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: 
+                    // Removes all accounts and their credentials
+                    return [4 /*yield*/, this.removeAllAccounts()];
+                    case 1:
+                        // Removes all accounts and their credentials
+                        _a.sent();
+                        this.removeAppMetadata();
+                        // Removes all remaining MSAL cache items
+                        this.getKeys().forEach(function (cacheKey) {
+                            // Check if key contains msal prefix; For now, we are clearing all the cache items created by MSAL.js
+                            if ((_this.browserStorage.containsKey(cacheKey) || _this.temporaryCacheStorage.containsKey(cacheKey)) && ((cacheKey.indexOf(Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX) !== -1) || (cacheKey.indexOf(_this.clientId) !== -1))) {
+                                _this.removeItem(cacheKey);
+                            }
+                        });
+                        this.internalStorage.clear();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Add value to cookies
+     * @param cookieName
+     * @param cookieValue
+     * @param expires
+     */
+    BrowserCacheManager.prototype.setItemCookie = function (cookieName, cookieValue, expires) {
+        var cookieStr = encodeURIComponent(cookieName) + "=" + encodeURIComponent(cookieValue) + ";path=/;";
+        if (expires) {
+            var expireTime = this.getCookieExpirationTime(expires);
+            cookieStr += "expires=" + expireTime + ";";
+        }
+        if (this.cacheConfig.secureCookies) {
+            cookieStr += "Secure;";
+        }
+        document.cookie = cookieStr;
+    };
+    /**
+     * Get one item by key from cookies
+     * @param cookieName
+     */
+    BrowserCacheManager.prototype.getItemCookie = function (cookieName) {
+        var name = encodeURIComponent(cookieName) + "=";
+        var cookieList = document.cookie.split(";");
+        for (var i = 0; i < cookieList.length; i++) {
+            var cookie = cookieList[i];
+            while (cookie.charAt(0) === " ") {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(name) === 0) {
+                return decodeURIComponent(cookie.substring(name.length, cookie.length));
+            }
+        }
+        return "";
+    };
+    /**
+     * Clear all msal-related cookies currently set in the browser. Should only be used to clear temporary cache items.
+     */
+    BrowserCacheManager.prototype.clearMsalCookies = function () {
+        var _this = this;
+        var cookiePrefix = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + this.clientId;
+        var cookieList = document.cookie.split(";");
+        cookieList.forEach(function (cookie) {
+            while (cookie.charAt(0) === " ") {
+                // eslint-disable-next-line no-param-reassign
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(cookiePrefix) === 0) {
+                var cookieKey = cookie.split("=")[0];
+                _this.clearItemCookie(cookieKey);
+            }
+        });
+    };
+    /**
+     * Clear an item in the cookies by key
+     * @param cookieName
+     */
+    BrowserCacheManager.prototype.clearItemCookie = function (cookieName) {
+        this.setItemCookie(cookieName, "", -1);
+    };
+    /**
+     * Get cookie expiration time
+     * @param cookieLifeDays
+     */
+    BrowserCacheManager.prototype.getCookieExpirationTime = function (cookieLifeDays) {
+        var today = new Date();
+        var expr = new Date(today.getTime() + cookieLifeDays * this.COOKIE_LIFE_MULTIPLIER);
+        return expr.toUTCString();
+    };
+    /**
+     * Gets the cache object referenced by the browser
+     */
+    BrowserCacheManager.prototype.getCache = function () {
+        return this.browserStorage;
+    };
+    /**
+     * interface compat, we cannot overwrite browser cache; Functionality is supported by individual entities in browser
+     */
+    BrowserCacheManager.prototype.setCache = function () {
+        // sets nothing
+    };
+    /**
+     * Prepend msal.<client-id> to each key; Skip for any JSON object as Key (defined schemas do not need the key appended: AccessToken Keys or the upcoming schema)
+     * @param key
+     * @param addInstanceId
+     */
+    BrowserCacheManager.prototype.generateCacheKey = function (key) {
+        var generatedKey = this.validateAndParseJson(key);
+        if (!generatedKey) {
+            if (StringUtils/* StringUtils.startsWith */.x.startsWith(key, Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX) || StringUtils/* StringUtils.startsWith */.x.startsWith(key, Constants/* PersistentCacheKeys.ADAL_ID_TOKEN */.Vi.ADAL_ID_TOKEN)) {
+                return key;
+            }
+            return Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + this.clientId + "." + key;
+        }
+        return JSON.stringify(key);
+    };
+    /**
+     * Create authorityKey to cache authority
+     * @param state
+     */
+    BrowserCacheManager.prototype.generateAuthorityKey = function (stateString) {
+        var stateId = ProtocolUtils/* ProtocolUtils.parseRequestState */.C.parseRequestState(this.cryptoImpl, stateString).libraryState.id;
+        return this.generateCacheKey(TemporaryCacheKeys.AUTHORITY + "." + stateId);
+    };
+    /**
+     * Create Nonce key to cache nonce
+     * @param state
+     */
+    BrowserCacheManager.prototype.generateNonceKey = function (stateString) {
+        var stateId = ProtocolUtils/* ProtocolUtils.parseRequestState */.C.parseRequestState(this.cryptoImpl, stateString).libraryState.id;
+        return this.generateCacheKey(TemporaryCacheKeys.NONCE_IDTOKEN + "." + stateId);
+    };
+    /**
+     * Creates full cache key for the request state
+     * @param stateString State string for the request
+     */
+    BrowserCacheManager.prototype.generateStateKey = function (stateString) {
+        // Use the library state id to key temp storage for uniqueness for multiple concurrent requests
+        var stateId = ProtocolUtils/* ProtocolUtils.parseRequestState */.C.parseRequestState(this.cryptoImpl, stateString).libraryState.id;
+        return this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE + "." + stateId);
+    };
+    /**
+     * Gets the cached authority based on the cached state. Returns empty if no cached state found.
+     */
+    BrowserCacheManager.prototype.getCachedAuthority = function (cachedState) {
+        var stateCacheKey = this.generateStateKey(cachedState);
+        var state = this.getTemporaryCache(stateCacheKey);
+        if (!state) {
+            return null;
+        }
+        var authorityCacheKey = this.generateAuthorityKey(state);
+        return this.getTemporaryCache(authorityCacheKey);
+    };
+    /**
+     * Updates account, authority, and state in cache
+     * @param serverAuthenticationRequest
+     * @param account
+     */
+    BrowserCacheManager.prototype.updateCacheEntries = function (state, nonce, authorityInstance, loginHint, account) {
+        this.logger.trace("BrowserCacheManager.updateCacheEntries called");
+        // Cache the request state
+        var stateCacheKey = this.generateStateKey(state);
+        this.setTemporaryCache(stateCacheKey, state, false);
+        // Cache the nonce
+        var nonceCacheKey = this.generateNonceKey(state);
+        this.setTemporaryCache(nonceCacheKey, nonce, false);
+        // Cache authorityKey
+        var authorityCacheKey = this.generateAuthorityKey(state);
+        this.setTemporaryCache(authorityCacheKey, authorityInstance, false);
+        if (account) {
+            var ccsCredential = {
+                credential: account.homeAccountId,
+                type: CcsCredential/* CcsCredentialType.HOME_ACCOUNT_ID */.G.HOME_ACCOUNT_ID
+            };
+            this.setTemporaryCache(TemporaryCacheKeys.CCS_CREDENTIAL, JSON.stringify(ccsCredential), true);
+        }
+        else if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(loginHint)) {
+            var ccsCredential = {
+                credential: loginHint,
+                type: CcsCredential/* CcsCredentialType.UPN */.G.UPN
+            };
+            this.setTemporaryCache(TemporaryCacheKeys.CCS_CREDENTIAL, JSON.stringify(ccsCredential), true);
+        }
+    };
+    /**
+     * Reset all temporary cache items
+     * @param state
+     */
+    BrowserCacheManager.prototype.resetRequestCache = function (state) {
+        var _this = this;
+        this.logger.trace("BrowserCacheManager.resetRequestCache called");
+        // check state and remove associated cache items
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(state)) {
+            this.getKeys().forEach(function (key) {
+                if (key.indexOf(state) !== -1) {
+                    _this.removeItem(key);
+                }
+            });
+        }
+        // delete generic interactive request parameters
+        if (state) {
+            this.removeItem(this.generateStateKey(state));
+            this.removeItem(this.generateNonceKey(state));
+            this.removeItem(this.generateAuthorityKey(state));
+        }
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS));
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.ORIGIN_URI));
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.URL_HASH));
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.CORRELATION_ID));
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.CCS_CREDENTIAL));
+        this.setInteractionInProgress(false);
+    };
+    /**
+     * Removes temporary cache for the provided state
+     * @param stateString
+     */
+    BrowserCacheManager.prototype.cleanRequestByState = function (stateString) {
+        this.logger.trace("BrowserCacheManager.cleanRequestByState called");
+        // Interaction is completed - remove interaction status.
+        if (stateString) {
+            var stateKey = this.generateStateKey(stateString);
+            var cachedState = this.temporaryCacheStorage.getItem(stateKey);
+            this.logger.infoPii("BrowserCacheManager.cleanRequestByState: Removing temporary cache items for state: " + cachedState);
+            this.resetRequestCache(cachedState || "");
+        }
+        this.clearMsalCookies();
+    };
+    /**
+     * Looks in temporary cache for any state values with the provided interactionType and removes all temporary cache items for that state
+     * Used in scenarios where temp cache needs to be cleaned but state is not known, such as clicking browser back button.
+     * @param interactionType
+     */
+    BrowserCacheManager.prototype.cleanRequestByInteractionType = function (interactionType) {
+        var _this = this;
+        this.logger.trace("BrowserCacheManager.cleanRequestByInteractionType called");
+        // Loop through all keys to find state key
+        this.getKeys().forEach(function (key) {
+            // If this key is not the state key, move on
+            if (key.indexOf(TemporaryCacheKeys.REQUEST_STATE) === -1) {
+                return;
+            }
+            // Retrieve state value, return if not a valid value
+            var stateValue = _this.temporaryCacheStorage.getItem(key);
+            if (!stateValue) {
+                return;
+            }
+            // Extract state and ensure it matches given InteractionType, then clean request cache
+            var parsedState = BrowserProtocolUtils.extractBrowserRequestState(_this.cryptoImpl, stateValue);
+            if (parsedState && parsedState.interactionType === interactionType) {
+                _this.logger.infoPii("BrowserCacheManager.cleanRequestByInteractionType: Removing temporary cache items for state: " + stateValue);
+                _this.resetRequestCache(stateValue);
+            }
+        });
+        this.clearMsalCookies();
+        this.setInteractionInProgress(false);
+    };
+    BrowserCacheManager.prototype.cacheCodeRequest = function (authCodeRequest, browserCrypto) {
+        this.logger.trace("BrowserCacheManager.cacheCodeRequest called");
+        var encodedValue = browserCrypto.base64Encode(JSON.stringify(authCodeRequest));
+        this.setTemporaryCache(TemporaryCacheKeys.REQUEST_PARAMS, encodedValue, true);
+    };
+    /**
+     * Gets the token exchange parameters from the cache. Throws an error if nothing is found.
+     */
+    BrowserCacheManager.prototype.getCachedRequest = function (state, browserCrypto) {
+        this.logger.trace("BrowserCacheManager.getCachedRequest called");
+        // Get token request from cache and parse as TokenExchangeParameters.
+        var encodedTokenRequest = this.getTemporaryCache(TemporaryCacheKeys.REQUEST_PARAMS, true);
+        if (!encodedTokenRequest) {
+            throw BrowserAuthError.createNoTokenRequestCacheError();
+        }
+        var parsedRequest = this.validateAndParseJson(browserCrypto.base64Decode(encodedTokenRequest));
+        if (!parsedRequest) {
+            throw BrowserAuthError.createUnableToParseTokenRequestCacheError();
+        }
+        this.removeItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS));
+        // Get cached authority and use if no authority is cached with request.
+        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(parsedRequest.authority)) {
+            var authorityCacheKey = this.generateAuthorityKey(state);
+            var cachedAuthority = this.getTemporaryCache(authorityCacheKey);
+            if (!cachedAuthority) {
+                throw BrowserAuthError.createNoCachedAuthorityError();
+            }
+            parsedRequest.authority = cachedAuthority;
+        }
+        return parsedRequest;
+    };
+    BrowserCacheManager.prototype.isInteractionInProgress = function (matchClientId) {
+        var clientId = this.getInteractionInProgress();
+        if (matchClientId) {
+            return clientId === this.clientId;
+        }
+        else {
+            return !!clientId;
+        }
+    };
+    BrowserCacheManager.prototype.getInteractionInProgress = function () {
+        var key = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + TemporaryCacheKeys.INTERACTION_STATUS_KEY;
+        return this.getTemporaryCache(key, false);
+    };
+    BrowserCacheManager.prototype.setInteractionInProgress = function (inProgress) {
+        var clientId = this.getInteractionInProgress();
+        // Ensure we don't overwrite interaction in progress for a different clientId
+        var key = Constants/* Constants.CACHE_PREFIX */.gT.CACHE_PREFIX + "." + TemporaryCacheKeys.INTERACTION_STATUS_KEY;
+        if (inProgress && !clientId) {
+            // No interaction is in progress
+            this.setTemporaryCache(key, this.clientId, false);
+        }
+        else if (!inProgress && clientId === this.clientId) {
+            this.removeItem(key);
+        }
+    };
+    /**
+     * Returns username retrieved from ADAL or MSAL v1 idToken
+     */
+    BrowserCacheManager.prototype.getLegacyLoginHint = function () {
+        // Only check for adal/msal token if no SSO params are being used
+        var adalIdTokenString = this.getTemporaryCache(Constants/* PersistentCacheKeys.ADAL_ID_TOKEN */.Vi.ADAL_ID_TOKEN);
+        if (adalIdTokenString) {
+            this.browserStorage.removeItem(Constants/* PersistentCacheKeys.ADAL_ID_TOKEN */.Vi.ADAL_ID_TOKEN);
+            this.logger.verbose("Cached ADAL id token retrieved.");
+        }
+        // Check for cached MSAL v1 id token
+        var msalIdTokenString = this.getTemporaryCache(Constants/* PersistentCacheKeys.ID_TOKEN */.Vi.ID_TOKEN, true);
+        if (msalIdTokenString) {
+            this.removeItem(this.generateCacheKey(Constants/* PersistentCacheKeys.ID_TOKEN */.Vi.ID_TOKEN));
+            this.logger.verbose("Cached MSAL.js v1 id token retrieved");
+        }
+        var cachedIdTokenString = msalIdTokenString || adalIdTokenString;
+        if (cachedIdTokenString) {
+            var cachedIdToken = new AuthToken/* AuthToken */.H(cachedIdTokenString, this.cryptoImpl);
+            if (cachedIdToken.claims && cachedIdToken.claims.preferred_username) {
+                this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, setting ADAL/MSAL v1 preferred_username as loginHint");
+                return cachedIdToken.claims.preferred_username;
+            }
+            else if (cachedIdToken.claims && cachedIdToken.claims.upn) {
+                this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, setting ADAL/MSAL v1 upn as loginHint");
+                return cachedIdToken.claims.upn;
+            }
+            else {
+                this.logger.verbose("No SSO params used and ADAL/MSAL v1 token retrieved, however, no account hint claim found. Enable preferred_username or upn id token claim to get SSO.");
+            }
+        }
+        return null;
+    };
+    /**
+     * Updates a credential's cache key if the current cache key is outdated
+     */
+    BrowserCacheManager.prototype.updateCredentialCacheKey = function (currentCacheKey, credential) {
+        var updatedCacheKey = credential.generateCredentialKey();
+        if (currentCacheKey !== updatedCacheKey) {
+            var cacheItem = this.getItem(currentCacheKey);
+            if (cacheItem) {
+                this.removeItem(currentCacheKey);
+                this.setItem(updatedCacheKey, cacheItem);
+                this.logger.verbose("Updated an outdated " + credential.credentialType + " cache key");
+                return updatedCacheKey;
+            }
+            else {
+                this.logger.error("Attempted to update an outdated " + credential.credentialType + " cache key but no item matching the outdated key was found in storage");
+            }
+        }
+        return currentCacheKey;
+    };
+    return BrowserCacheManager;
+}(CacheManager/* CacheManager */.L));
+var DEFAULT_BROWSER_CACHE_MANAGER = function (clientId, logger) {
+    var cacheOptions = {
+        cacheLocation: BrowserCacheLocation.MemoryStorage,
+        storeAuthStateInCookie: false,
+        secureCookies: false
+    };
+    return new BrowserCacheManager(clientId, cacheOptions, ICrypto/* DEFAULT_CRYPTO_IMPLEMENTATION */.d, logger);
+};
+
+
+//# sourceMappingURL=BrowserCacheManager.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/ProtocolMode.js
+var ProtocolMode = __webpack_require__(82617);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/config/ClientConfiguration.js
+var ClientConfiguration = __webpack_require__(14854);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/network/INetworkModule.js
+var INetworkModule = __webpack_require__(30658);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/network/FetchClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class implements the Fetch API for GET and POST requests. See more here: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ */
+var FetchClient = /** @class */ (function () {
+    function FetchClient() {
+    }
+    /**
+     * Fetch Client for REST endpoints - Get request
+     * @param url
+     * @param headers
+     * @param body
+     */
+    FetchClient.prototype.sendGetRequestAsync = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response, e_1, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, fetch(url, {
+                                method: HTTP_REQUEST_TYPE.GET,
+                                headers: this.getFetchHeaders(options)
+                            })];
+                    case 1:
+                        response = _b.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _b.sent();
+                        if (window.navigator.onLine) {
+                            throw BrowserAuthError.createGetRequestFailedError(e_1, url);
+                        }
+                        else {
+                            throw BrowserAuthError.createNoNetworkConnectivityError();
+                        }
+                    case 3:
+                        _b.trys.push([3, 5, , 6]);
+                        _a = {
+                            headers: this.getHeaderDict(response.headers)
+                        };
+                        return [4 /*yield*/, response.json()];
+                    case 4: return [2 /*return*/, (_a.body = (_b.sent()),
+                            _a.status = response.status,
+                            _a)];
+                    case 5:
+                        _b.sent();
+                        throw BrowserAuthError.createFailedToParseNetworkResponseError(url);
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Fetch Client for REST endpoints - Post request
+     * @param url
+     * @param headers
+     * @param body
+     */
+    FetchClient.prototype.sendPostRequestAsync = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var reqBody, response, e_3, _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        reqBody = (options && options.body) || "";
+                        _b.label = 1;
+                    case 1:
+                        _b.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, fetch(url, {
+                                method: HTTP_REQUEST_TYPE.POST,
+                                headers: this.getFetchHeaders(options),
+                                body: reqBody
+                            })];
+                    case 2:
+                        response = _b.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_3 = _b.sent();
+                        if (window.navigator.onLine) {
+                            throw BrowserAuthError.createPostRequestFailedError(e_3, url);
+                        }
+                        else {
+                            throw BrowserAuthError.createNoNetworkConnectivityError();
+                        }
+                    case 4:
+                        _b.trys.push([4, 6, , 7]);
+                        _a = {
+                            headers: this.getHeaderDict(response.headers)
+                        };
+                        return [4 /*yield*/, response.json()];
+                    case 5: return [2 /*return*/, (_a.body = (_b.sent()),
+                            _a.status = response.status,
+                            _a)];
+                    case 6:
+                        _b.sent();
+                        throw BrowserAuthError.createFailedToParseNetworkResponseError(url);
+                    case 7: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Get Fetch API Headers object from string map
+     * @param inputHeaders
+     */
+    FetchClient.prototype.getFetchHeaders = function (options) {
+        var headers = new Headers();
+        if (!(options && options.headers)) {
+            return headers;
+        }
+        var optionsHeaders = options.headers;
+        Object.keys(optionsHeaders).forEach(function (key) {
+            headers.append(key, optionsHeaders[key]);
+        });
+        return headers;
+    };
+    FetchClient.prototype.getHeaderDict = function (headers) {
+        var headerDict = {};
+        headers.forEach(function (value, key) {
+            headerDict[key] = value;
+        });
+        return headerDict;
+    };
+    return FetchClient;
+}());
+
+
+//# sourceMappingURL=FetchClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/network/XhrClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This client implements the XMLHttpRequest class to send GET and POST requests.
+ */
+var XhrClient = /** @class */ (function () {
+    function XhrClient() {
+    }
+    /**
+     * XhrClient for REST endpoints - Get request
+     * @param url
+     * @param headers
+     * @param body
+     */
+    XhrClient.prototype.sendGetRequestAsync = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.sendRequestAsync(url, HTTP_REQUEST_TYPE.GET, options)];
+            });
+        });
+    };
+    /**
+     * XhrClient for REST endpoints - Post request
+     * @param url
+     * @param headers
+     * @param body
+     */
+    XhrClient.prototype.sendPostRequestAsync = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.sendRequestAsync(url, HTTP_REQUEST_TYPE.POST, options)];
+            });
+        });
+    };
+    /**
+     * Helper for XhrClient requests.
+     * @param url
+     * @param method
+     * @param options
+     */
+    XhrClient.prototype.sendRequestAsync = function (url, method, options) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url, /* async: */ true);
+            _this.setXhrHeaders(xhr, options);
+            xhr.onload = function () {
+                if (xhr.status < 200 || xhr.status >= 300) {
+                    if (method === HTTP_REQUEST_TYPE.POST) {
+                        reject(BrowserAuthError.createPostRequestFailedError("Failed with status " + xhr.status, url));
+                    }
+                    else {
+                        reject(BrowserAuthError.createGetRequestFailedError("Failed with status " + xhr.status, url));
+                    }
+                }
+                try {
+                    var jsonResponse = JSON.parse(xhr.responseText);
+                    var networkResponse = {
+                        headers: _this.getHeaderDict(xhr),
+                        body: jsonResponse,
+                        status: xhr.status
+                    };
+                    resolve(networkResponse);
+                }
+                catch (e) {
+                    reject(BrowserAuthError.createFailedToParseNetworkResponseError(url));
+                }
+            };
+            xhr.onerror = function () {
+                if (window.navigator.onLine) {
+                    if (method === HTTP_REQUEST_TYPE.POST) {
+                        reject(BrowserAuthError.createPostRequestFailedError("Failed with status " + xhr.status, url));
+                    }
+                    else {
+                        reject(BrowserAuthError.createGetRequestFailedError("Failed with status " + xhr.status, url));
+                    }
+                }
+                else {
+                    reject(BrowserAuthError.createNoNetworkConnectivityError());
+                }
+            };
+            if (method === HTTP_REQUEST_TYPE.POST && options && options.body) {
+                xhr.send(options.body);
+            }
+            else if (method === HTTP_REQUEST_TYPE.GET) {
+                xhr.send();
+            }
+            else {
+                throw BrowserAuthError.createHttpMethodNotImplementedError(method);
+            }
+        });
+    };
+    /**
+     * Helper to set XHR headers for request.
+     * @param xhr
+     * @param options
+     */
+    XhrClient.prototype.setXhrHeaders = function (xhr, options) {
+        if (options && options.headers) {
+            var headers_1 = options.headers;
+            Object.keys(headers_1).forEach(function (key) {
+                xhr.setRequestHeader(key, headers_1[key]);
+            });
+        }
+    };
+    /**
+     * Gets a string map of the headers received in the response.
+     *
+     * Algorithm comes from https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+     * @param xhr
+     */
+    XhrClient.prototype.getHeaderDict = function (xhr) {
+        var headerString = xhr.getAllResponseHeaders();
+        var headerArr = headerString.trim().split(/[\r\n]+/);
+        var headerDict = {};
+        headerArr.forEach(function (value) {
+            var parts = value.split(": ");
+            var headerName = parts.shift();
+            var headerVal = parts.join(": ");
+            if (headerName && headerVal) {
+                headerDict[headerName] = headerVal;
+            }
+        });
+        return headerDict;
+    };
+    return XhrClient;
+}());
+
+
+//# sourceMappingURL=XhrClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Utility class for browser specific functions
+ */
+var BrowserUtils = /** @class */ (function () {
+    function BrowserUtils() {
+    }
+    // #region Window Navigation and URL management
+    /**
+     * Clears hash from window url.
+     */
+    BrowserUtils.clearHash = function (contentWindow) {
+        // Office.js sets history.replaceState to null
+        contentWindow.location.hash = Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+        if (typeof contentWindow.history.replaceState === "function") {
+            // Full removes "#" from url
+            contentWindow.history.replaceState(null, Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, "" + contentWindow.location.origin + contentWindow.location.pathname + contentWindow.location.search);
+        }
+    };
+    /**
+     * Replaces current hash with hash from provided url
+     */
+    BrowserUtils.replaceHash = function (url) {
+        var urlParts = url.split("#");
+        urlParts.shift(); // Remove part before the hash
+        window.location.hash = urlParts.length > 0 ? urlParts.join("#") : "";
+    };
+    /**
+     * Returns boolean of whether the current window is in an iframe or not.
+     */
+    BrowserUtils.isInIframe = function () {
+        return window.parent !== window;
+    };
+    /**
+     * Returns boolean of whether or not the current window is a popup opened by msal
+     */
+    BrowserUtils.isInPopup = function () {
+        return typeof window !== "undefined" && !!window.opener &&
+            window.opener !== window &&
+            typeof window.name === "string" &&
+            window.name.indexOf(BrowserConstants.POPUP_NAME_PREFIX + ".") === 0;
+    };
+    // #endregion
+    /**
+     * Returns current window URL as redirect uri
+     */
+    BrowserUtils.getCurrentUri = function () {
+        return window.location.href.split("?")[0].split("#")[0];
+    };
+    /**
+     * Gets the homepage url for the current window location.
+     */
+    BrowserUtils.getHomepage = function () {
+        var currentUrl = new UrlString/* UrlString */.G(window.location.href);
+        var urlComponents = currentUrl.getUrlComponents();
+        return urlComponents.Protocol + "//" + urlComponents.HostNameAndPort + "/";
+    };
+    /**
+     * Returns best compatible network client object.
+     */
+    BrowserUtils.getBrowserNetworkClient = function () {
+        if (window.fetch && window.Headers) {
+            return new FetchClient();
+        }
+        else {
+            return new XhrClient();
+        }
+    };
+    /**
+     * Throws error if we have completed an auth and are
+     * attempting another auth request inside an iframe.
+     */
+    BrowserUtils.blockReloadInHiddenIframes = function () {
+        var isResponseHash = UrlString/* UrlString.hashContainsKnownProperties */.G.hashContainsKnownProperties(window.location.hash);
+        // return an error if called from the hidden iframe created by the msal js silent calls
+        if (isResponseHash && BrowserUtils.isInIframe()) {
+            throw BrowserAuthError.createBlockReloadInHiddenIframeError();
+        }
+    };
+    /**
+     * Block redirect operations in iframes unless explicitly allowed
+     * @param interactionType Interaction type for the request
+     * @param allowRedirectInIframe Config value to allow redirects when app is inside an iframe
+     */
+    BrowserUtils.blockRedirectInIframe = function (interactionType, allowRedirectInIframe) {
+        var isIframedApp = BrowserUtils.isInIframe();
+        if (interactionType === InteractionType.Redirect && isIframedApp && !allowRedirectInIframe) {
+            // If we are not in top frame, we shouldn't redirect. This is also handled by the service.
+            throw BrowserAuthError.createRedirectInIframeError(isIframedApp);
+        }
+    };
+    /**
+     * Block redirectUri loaded in popup from calling AcquireToken APIs
+     */
+    BrowserUtils.blockAcquireTokenInPopups = function () {
+        // Popups opened by msal popup APIs are given a name that starts with "msal."
+        if (BrowserUtils.isInPopup()) {
+            throw BrowserAuthError.createBlockAcquireTokenInPopupsError();
+        }
+    };
+    /**
+     * Throws error if token requests are made in non-browser environment
+     * @param isBrowserEnvironment Flag indicating if environment is a browser.
+     */
+    BrowserUtils.blockNonBrowserEnvironment = function (isBrowserEnvironment) {
+        if (!isBrowserEnvironment) {
+            throw BrowserAuthError.createNonBrowserEnvironmentError();
+        }
+    };
+    /**
+     * Returns boolean of whether current browser is an Internet Explorer or Edge browser.
+     */
+    BrowserUtils.detectIEOrEdge = function () {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        var msie11 = ua.indexOf("Trident/");
+        var msedge = ua.indexOf("Edge/");
+        var isIE = msie > 0 || msie11 > 0;
+        var isEdge = msedge > 0;
+        return isIE || isEdge;
+    };
+    return BrowserUtils;
+}());
+
+
+//# sourceMappingURL=BrowserUtils.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/navigation/NavigationClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var NavigationClient = /** @class */ (function () {
+    function NavigationClient() {
+    }
+    /**
+     * Navigates to other pages within the same web application
+     * @param url
+     * @param options
+     */
+    NavigationClient.prototype.navigateInternal = function (url, options) {
+        return NavigationClient.defaultNavigateWindow(url, options);
+    };
+    /**
+     * Navigates to other pages outside the web application i.e. the Identity Provider
+     * @param url
+     * @param options
+     */
+    NavigationClient.prototype.navigateExternal = function (url, options) {
+        return NavigationClient.defaultNavigateWindow(url, options);
+    };
+    /**
+     * Default navigation implementation invoked by the internal and external functions
+     * @param url
+     * @param options
+     */
+    NavigationClient.defaultNavigateWindow = function (url, options) {
+        if (options.noHistory) {
+            window.location.replace(url);
+        }
+        else {
+            window.location.assign(url);
+        }
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve(true);
+            }, options.timeout);
+        });
+    };
+    return NavigationClient;
+}());
+
+
+//# sourceMappingURL=NavigationClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/config/Configuration.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+// Default timeout for popup windows and iframes in milliseconds
+var DEFAULT_POPUP_TIMEOUT_MS = 60000;
+var DEFAULT_IFRAME_TIMEOUT_MS = 6000;
+var DEFAULT_REDIRECT_TIMEOUT_MS = 30000;
+/**
+ * MSAL function that sets the default options when not explicitly configured from app developer
+ *
+ * @param auth
+ * @param cache
+ * @param system
+ *
+ * @returns Configuration object
+ */
+function buildConfiguration(_a, isBrowserEnvironment) {
+    var userInputAuth = _a.auth, userInputCache = _a.cache, userInputSystem = _a.system;
+    // Default auth options for browser
+    var DEFAULT_AUTH_OPTIONS = {
+        clientId: "",
+        authority: "" + Constants/* Constants.DEFAULT_AUTHORITY */.gT.DEFAULT_AUTHORITY,
+        knownAuthorities: [],
+        cloudDiscoveryMetadata: "",
+        authorityMetadata: "",
+        redirectUri: "",
+        postLogoutRedirectUri: "",
+        navigateToLoginRequestUrl: true,
+        clientCapabilities: [],
+        protocolMode: ProtocolMode/* ProtocolMode.AAD */.A.AAD
+    };
+    // Default cache options for browser
+    var DEFAULT_CACHE_OPTIONS = {
+        cacheLocation: BrowserCacheLocation.SessionStorage,
+        storeAuthStateInCookie: false,
+        secureCookies: false
+    };
+    // Default logger options for browser
+    var DEFAULT_LOGGER_OPTIONS = {
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        loggerCallback: function () { },
+        logLevel: Logger/* LogLevel.Info */.i.Info,
+        piiLoggingEnabled: false
+    };
+    // Default system options for browser
+    var DEFAULT_BROWSER_SYSTEM_OPTIONS = __assign(__assign({}, ClientConfiguration/* DEFAULT_SYSTEM_OPTIONS */.z), { loggerOptions: DEFAULT_LOGGER_OPTIONS, networkClient: isBrowserEnvironment ? BrowserUtils.getBrowserNetworkClient() : INetworkModule/* StubbedNetworkModule */.y, navigationClient: new NavigationClient(), loadFrameTimeout: 0, 
+        // If loadFrameTimeout is provided, use that as default.
+        windowHashTimeout: (userInputSystem && userInputSystem.loadFrameTimeout) || DEFAULT_POPUP_TIMEOUT_MS, iframeHashTimeout: (userInputSystem && userInputSystem.loadFrameTimeout) || DEFAULT_IFRAME_TIMEOUT_MS, navigateFrameWait: isBrowserEnvironment && BrowserUtils.detectIEOrEdge() ? 500 : 0, redirectNavigationTimeout: DEFAULT_REDIRECT_TIMEOUT_MS, asyncPopups: false, allowRedirectInIframe: false });
+    var overlayedConfig = {
+        auth: __assign(__assign({}, DEFAULT_AUTH_OPTIONS), userInputAuth),
+        cache: __assign(__assign({}, DEFAULT_CACHE_OPTIONS), userInputCache),
+        system: __assign(__assign({}, DEFAULT_BROWSER_SYSTEM_OPTIONS), userInputSystem)
+    };
+    return overlayedConfig;
+}
+
+
+//# sourceMappingURL=Configuration.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/packageMetadata.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/* eslint-disable header/header */
+var packageMetadata_name = "@azure/msal-browser";
+var version = "2.21.0";
+
+
+//# sourceMappingURL=packageMetadata.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/event/EventType.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var EventType;
+(function (EventType) {
+    EventType["ACCOUNT_ADDED"] = "msal:accountAdded";
+    EventType["ACCOUNT_REMOVED"] = "msal:accountRemoved";
+    EventType["LOGIN_START"] = "msal:loginStart";
+    EventType["LOGIN_SUCCESS"] = "msal:loginSuccess";
+    EventType["LOGIN_FAILURE"] = "msal:loginFailure";
+    EventType["ACQUIRE_TOKEN_START"] = "msal:acquireTokenStart";
+    EventType["ACQUIRE_TOKEN_SUCCESS"] = "msal:acquireTokenSuccess";
+    EventType["ACQUIRE_TOKEN_FAILURE"] = "msal:acquireTokenFailure";
+    EventType["ACQUIRE_TOKEN_NETWORK_START"] = "msal:acquireTokenFromNetworkStart";
+    EventType["SSO_SILENT_START"] = "msal:ssoSilentStart";
+    EventType["SSO_SILENT_SUCCESS"] = "msal:ssoSilentSuccess";
+    EventType["SSO_SILENT_FAILURE"] = "msal:ssoSilentFailure";
+    EventType["ACQUIRE_TOKEN_BY_CODE_START"] = "msal:acquireTokenByCodeStart";
+    EventType["ACQUIRE_TOKEN_BY_CODE_SUCCESS"] = "msal:acquireTokenByCodeSuccess";
+    EventType["ACQUIRE_TOKEN_BY_CODE_FAILURE"] = "msal:acquireTokenByCodeFailure";
+    EventType["HANDLE_REDIRECT_START"] = "msal:handleRedirectStart";
+    EventType["HANDLE_REDIRECT_END"] = "msal:handleRedirectEnd";
+    EventType["POPUP_OPENED"] = "msal:popupOpened";
+    EventType["LOGOUT_START"] = "msal:logoutStart";
+    EventType["LOGOUT_SUCCESS"] = "msal:logoutSuccess";
+    EventType["LOGOUT_FAILURE"] = "msal:logoutFailure";
+    EventType["LOGOUT_END"] = "msal:logoutEnd";
+})(EventType || (EventType = {}));
+
+
+//# sourceMappingURL=EventType.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/event/EventHandler.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var EventHandler = /** @class */ (function () {
+    function EventHandler(logger, browserCrypto) {
+        this.eventCallbacks = new Map();
+        this.logger = logger;
+        this.browserCrypto = browserCrypto;
+        this.listeningToStorageEvents = false;
+        this.handleAccountCacheChange = this.handleAccountCacheChange.bind(this);
+    }
+    /**
+     * Adds event callbacks to array
+     * @param callback
+     */
+    EventHandler.prototype.addEventCallback = function (callback) {
+        if (typeof window !== "undefined") {
+            var callbackId = this.browserCrypto.createNewGuid();
+            this.eventCallbacks.set(callbackId, callback);
+            this.logger.verbose("Event callback registered with id: " + callbackId);
+            return callbackId;
+        }
+        return null;
+    };
+    /**
+     * Removes callback with provided id from callback array
+     * @param callbackId
+     */
+    EventHandler.prototype.removeEventCallback = function (callbackId) {
+        this.eventCallbacks.delete(callbackId);
+        this.logger.verbose("Event callback " + callbackId + " removed.");
+    };
+    /**
+     * Adds event listener that emits an event when a user account is added or removed from localstorage in a different browser tab or window
+     */
+    EventHandler.prototype.enableAccountStorageEvents = function () {
+        if (typeof window === "undefined") {
+            return;
+        }
+        if (!this.listeningToStorageEvents) {
+            this.logger.verbose("Adding account storage listener.");
+            this.listeningToStorageEvents = true;
+            window.addEventListener("storage", this.handleAccountCacheChange);
+        }
+        else {
+            this.logger.verbose("Account storage listener already registered.");
+        }
+    };
+    /**
+     * Removes event listener that emits an event when a user account is added or removed from localstorage in a different browser tab or window
+     */
+    EventHandler.prototype.disableAccountStorageEvents = function () {
+        if (typeof window === "undefined") {
+            return;
+        }
+        if (this.listeningToStorageEvents) {
+            this.logger.verbose("Removing account storage listener.");
+            window.removeEventListener("storage", this.handleAccountCacheChange);
+            this.listeningToStorageEvents = false;
+        }
+        else {
+            this.logger.verbose("No account storage listener registered.");
+        }
+    };
+    /**
+     * Emits events by calling callback with event message
+     * @param eventType
+     * @param interactionType
+     * @param payload
+     * @param error
+     */
+    EventHandler.prototype.emitEvent = function (eventType, interactionType, payload, error) {
+        var _this = this;
+        if (typeof window !== "undefined") {
+            var message_1 = {
+                eventType: eventType,
+                interactionType: interactionType || null,
+                payload: payload || null,
+                error: error || null,
+                timestamp: Date.now()
+            };
+            this.logger.info("Emitting event: " + eventType);
+            this.eventCallbacks.forEach(function (callback, callbackId) {
+                _this.logger.verbose("Emitting event to callback " + callbackId + ": " + eventType);
+                callback.apply(null, [message_1]);
+            });
+        }
+    };
+    /**
+     * Emit account added/removed events when cached accounts are changed in a different tab or frame
+     */
+    EventHandler.prototype.handleAccountCacheChange = function (e) {
+        try {
+            var cacheValue = e.newValue || e.oldValue;
+            if (!cacheValue) {
+                return;
+            }
+            var parsedValue = JSON.parse(cacheValue);
+            if (typeof parsedValue !== "object" || !AccountEntity/* AccountEntity.isAccountEntity */.r.isAccountEntity(parsedValue)) {
+                return;
+            }
+            var accountEntity = CacheManager/* CacheManager.toObject */.L.toObject(new AccountEntity/* AccountEntity */.r(), parsedValue);
+            var accountInfo = accountEntity.getAccountInfo();
+            if (!e.oldValue && e.newValue) {
+                this.logger.info("Account was added to cache in a different window");
+                this.emitEvent(EventType.ACCOUNT_ADDED, undefined, accountInfo);
+            }
+            else if (!e.newValue && e.oldValue) {
+                this.logger.info("Account was removed from cache in a different window");
+                this.emitEvent(EventType.ACCOUNT_REMOVED, undefined, accountInfo);
+            }
+        }
+        catch (e) {
+            return;
+        }
+    };
+    return EventHandler;
+}());
+
+
+//# sourceMappingURL=EventHandler.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/network/ThrottlingUtils.js
+var ThrottlingUtils = __webpack_require__(47282);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/client/AuthorizationCodeClient.js
+var AuthorizationCodeClient = __webpack_require__(29046);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/AuthorityFactory.js
+var AuthorityFactory = __webpack_require__(65676);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ClientConfigurationError.js
+var ClientConfigurationError = __webpack_require__(47181);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/telemetry/server/ServerTelemetryManager.js
+var ServerTelemetryManager = __webpack_require__(31093);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/BaseInteractionClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var BaseInteractionClient = /** @class */ (function () {
+    function BaseInteractionClient(config, storageImpl, browserCrypto, logger, eventHandler, correlationId) {
+        this.config = config;
+        this.browserStorage = storageImpl;
+        this.browserCrypto = browserCrypto;
+        this.networkClient = this.config.system.networkClient;
+        this.eventHandler = eventHandler;
+        this.correlationId = correlationId || this.browserCrypto.createNewGuid();
+        this.logger = logger.clone(BrowserConstants.MSAL_SKU, version, this.correlationId);
+    }
+    BaseInteractionClient.prototype.clearCacheOnLogout = function (account) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!account) return [3 /*break*/, 5];
+                        if (AccountEntity/* AccountEntity.accountInfoIsEqual */.r.accountInfoIsEqual(account, this.browserStorage.getActiveAccount(), false)) {
+                            this.logger.verbose("Setting active account to null");
+                            this.browserStorage.setActiveAccount(null);
+                        }
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.browserStorage.removeAccount(AccountEntity/* AccountEntity.generateAccountCacheKey */.r.generateAccountCacheKey(account))];
+                    case 2:
+                        _a.sent();
+                        this.logger.verbose("Cleared cache items belonging to the account provided in the logout request.");
+                        return [3 /*break*/, 4];
+                    case 3:
+                        _a.sent();
+                        this.logger.error("Account provided in logout request was not found. Local cache unchanged.");
+                        return [3 /*break*/, 4];
+                    case 4: return [3 /*break*/, 9];
+                    case 5:
+                        _a.trys.push([5, 8, , 9]);
+                        // Clear all accounts and tokens
+                        return [4 /*yield*/, this.browserStorage.clear()];
+                    case 6:
+                        // Clear all accounts and tokens
+                        _a.sent();
+                        // Clear any stray keys from IndexedDB
+                        return [4 /*yield*/, this.browserCrypto.clearKeystore()];
+                    case 7:
+                        // Clear any stray keys from IndexedDB
+                        _a.sent();
+                        this.logger.verbose("No account provided in logout request, clearing all cache items.");
+                        return [3 /*break*/, 9];
+                    case 8:
+                        _a.sent();
+                        this.logger.error("Attempted to clear all MSAL cache items and failed. Local cache unchanged.");
+                        return [3 /*break*/, 9];
+                    case 9: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Initializer function for all request APIs
+     * @param request
+     */
+    BaseInteractionClient.prototype.initializeBaseRequest = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var authority, scopes, _a, validatedRequest;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        this.logger.verbose("Initializing BaseAuthRequest");
+                        authority = request.authority || this.config.auth.authority;
+                        scopes = __spread(((request && request.scopes) || []));
+                        // Set authenticationScheme to BEARER if not explicitly set in the request
+                        if (!request.authenticationScheme) {
+                            request.authenticationScheme = Constants/* AuthenticationScheme.BEARER */.hO.BEARER;
+                            this.logger.verbose("Authentication Scheme wasn't explicitly set in request, defaulting to \"Bearer\" request");
+                        }
+                        else {
+                            if (request.authenticationScheme === Constants/* AuthenticationScheme.SSH */.hO.SSH) {
+                                if (!request.sshJwk) {
+                                    throw ClientConfigurationError/* ClientConfigurationError.createMissingSshJwkError */.r.createMissingSshJwkError();
+                                }
+                                if (!request.sshKid) {
+                                    throw ClientConfigurationError/* ClientConfigurationError.createMissingSshKidError */.r.createMissingSshKidError();
+                                }
+                            }
+                            this.logger.verbose("Authentication Scheme set to \"" + request.authenticationScheme + "\" as configured in Auth request");
+                        }
+                        if (!(request.claims && !StringUtils/* StringUtils.isEmpty */.x.isEmpty(request.claims))) return [3 /*break*/, 2];
+                        _a = request;
+                        return [4 /*yield*/, this.browserCrypto.hashString(request.claims)];
+                    case 1:
+                        _a.requestedClaimsHash = _b.sent();
+                        _b.label = 2;
+                    case 2:
+                        validatedRequest = __assign(__assign({}, request), { correlationId: this.correlationId, authority: authority,
+                            scopes: scopes });
+                        return [2 /*return*/, validatedRequest];
+                }
+            });
+        });
+    };
+    /**
+     *
+     * Use to get the redirect uri configured in MSAL or null.
+     * @param requestRedirectUri
+     * @returns Redirect URL
+     *
+     */
+    BaseInteractionClient.prototype.getRedirectUri = function (requestRedirectUri) {
+        this.logger.verbose("getRedirectUri called");
+        var redirectUri = requestRedirectUri || this.config.auth.redirectUri || BrowserUtils.getCurrentUri();
+        return UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(redirectUri, BrowserUtils.getCurrentUri());
+    };
+    /**
+     *
+     * @param apiId
+     * @param correlationId
+     * @param forceRefresh
+     */
+    BaseInteractionClient.prototype.initializeServerTelemetryManager = function (apiId, forceRefresh) {
+        this.logger.verbose("initializeServerTelemetryManager called");
+        var telemetryPayload = {
+            clientId: this.config.auth.clientId,
+            correlationId: this.correlationId,
+            apiId: apiId,
+            forceRefresh: forceRefresh || false,
+            wrapperSKU: this.browserStorage.getWrapperMetadata()[0],
+            wrapperVer: this.browserStorage.getWrapperMetadata()[1]
+        };
+        return new ServerTelemetryManager/* ServerTelemetryManager */.d(telemetryPayload, this.browserStorage);
+    };
+    return BaseInteractionClient;
+}());
+
+
+//# sourceMappingURL=BaseInteractionClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/StandardInteractionClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Defines the class structure and helper functions used by the "standard", non-brokered auth flows (popup, redirect, silent (RT), silent (iframe))
+ */
+var StandardInteractionClient = /** @class */ (function (_super) {
+    __extends(StandardInteractionClient, _super);
+    function StandardInteractionClient(config, storageImpl, browserCrypto, logger, eventHandler, navigationClient, correlationId) {
+        var _this = _super.call(this, config, storageImpl, browserCrypto, logger, eventHandler, correlationId) || this;
+        _this.navigationClient = navigationClient;
+        return _this;
+    }
+    /**
+     * Generates an auth code request tied to the url request.
+     * @param request
+     */
+    StandardInteractionClient.prototype.initializeAuthorizationCodeRequest = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var generatedPkceParams, authCodeRequest;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("initializeAuthorizationRequest called", request.correlationId);
+                        return [4 /*yield*/, this.browserCrypto.generatePkceCodes()];
+                    case 1:
+                        generatedPkceParams = _a.sent();
+                        authCodeRequest = __assign(__assign({}, request), { redirectUri: request.redirectUri, code: "", codeVerifier: generatedPkceParams.verifier });
+                        request.codeChallenge = generatedPkceParams.challenge;
+                        request.codeChallengeMethod = Constants/* Constants.S256_CODE_CHALLENGE_METHOD */.gT.S256_CODE_CHALLENGE_METHOD;
+                        return [2 /*return*/, authCodeRequest];
+                }
+            });
+        });
+    };
+    /**
+     * Initializer for the logout request.
+     * @param logoutRequest
+     */
+    StandardInteractionClient.prototype.initializeLogoutRequest = function (logoutRequest) {
+        this.logger.verbose("initializeLogoutRequest called", logoutRequest === null || logoutRequest === void 0 ? void 0 : logoutRequest.correlationId);
+        // Check if interaction is in progress. Throw error if true.
+        if (this.browserStorage.isInteractionInProgress()) {
+            throw BrowserAuthError.createInteractionInProgressError();
+        }
+        var validLogoutRequest = __assign({ correlationId: this.browserCrypto.createNewGuid() }, logoutRequest);
+        /*
+         * Only set redirect uri if logout request isn't provided or the set uri isn't null.
+         * Otherwise, use passed uri, config, or current page.
+         */
+        if (!logoutRequest || logoutRequest.postLogoutRedirectUri !== null) {
+            if (logoutRequest && logoutRequest.postLogoutRedirectUri) {
+                this.logger.verbose("Setting postLogoutRedirectUri to uri set on logout request", validLogoutRequest.correlationId);
+                validLogoutRequest.postLogoutRedirectUri = UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(logoutRequest.postLogoutRedirectUri, BrowserUtils.getCurrentUri());
+            }
+            else if (this.config.auth.postLogoutRedirectUri === null) {
+                this.logger.verbose("postLogoutRedirectUri configured as null and no uri set on request, not passing post logout redirect", validLogoutRequest.correlationId);
+            }
+            else if (this.config.auth.postLogoutRedirectUri) {
+                this.logger.verbose("Setting postLogoutRedirectUri to configured uri", validLogoutRequest.correlationId);
+                validLogoutRequest.postLogoutRedirectUri = UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(this.config.auth.postLogoutRedirectUri, BrowserUtils.getCurrentUri());
+            }
+            else {
+                this.logger.verbose("Setting postLogoutRedirectUri to current page", validLogoutRequest.correlationId);
+                validLogoutRequest.postLogoutRedirectUri = UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(BrowserUtils.getCurrentUri(), BrowserUtils.getCurrentUri());
+            }
+        }
+        else {
+            this.logger.verbose("postLogoutRedirectUri passed as null, not setting post logout redirect uri", validLogoutRequest.correlationId);
+        }
+        return validLogoutRequest;
+    };
+    /**
+     * Creates an Authorization Code Client with the given authority, or the default authority.
+     * @param serverTelemetryManager
+     * @param authorityUrl
+     */
+    StandardInteractionClient.prototype.createAuthCodeClient = function (serverTelemetryManager, authorityUrl) {
+        return __awaiter(this, void 0, void 0, function () {
+            var clientConfig;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getClientConfiguration(serverTelemetryManager, authorityUrl)];
+                    case 1:
+                        clientConfig = _a.sent();
+                        return [2 /*return*/, new AuthorizationCodeClient/* AuthorizationCodeClient */.U(clientConfig)];
+                }
+            });
+        });
+    };
+    /**
+     * Creates a Client Configuration object with the given request authority, or the default authority.
+     * @param serverTelemetryManager
+     * @param requestAuthority
+     * @param requestCorrelationId
+     */
+    StandardInteractionClient.prototype.getClientConfiguration = function (serverTelemetryManager, requestAuthority) {
+        return __awaiter(this, void 0, void 0, function () {
+            var discoveredAuthority;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("getClientConfiguration called");
+                        return [4 /*yield*/, this.getDiscoveredAuthority(requestAuthority)];
+                    case 1:
+                        discoveredAuthority = _a.sent();
+                        return [2 /*return*/, {
+                                authOptions: {
+                                    clientId: this.config.auth.clientId,
+                                    authority: discoveredAuthority,
+                                    clientCapabilities: this.config.auth.clientCapabilities
+                                },
+                                systemOptions: {
+                                    tokenRenewalOffsetSeconds: this.config.system.tokenRenewalOffsetSeconds,
+                                    preventCorsPreflight: true
+                                },
+                                loggerOptions: {
+                                    loggerCallback: this.config.system.loggerOptions.loggerCallback,
+                                    piiLoggingEnabled: this.config.system.loggerOptions.piiLoggingEnabled,
+                                    logLevel: this.config.system.loggerOptions.logLevel,
+                                    correlationId: this.correlationId
+                                },
+                                cryptoInterface: this.browserCrypto,
+                                networkInterface: this.networkClient,
+                                storageInterface: this.browserStorage,
+                                serverTelemetryManager: serverTelemetryManager,
+                                libraryInfo: {
+                                    sku: BrowserConstants.MSAL_SKU,
+                                    version: version,
+                                    cpu: "",
+                                    os: ""
+                                }
+                            }];
+                }
+            });
+        });
+    };
+    /**
+     * @param hash
+     * @param interactionType
+     */
+    StandardInteractionClient.prototype.validateAndExtractStateFromHash = function (hash, interactionType, requestCorrelationId) {
+        this.logger.verbose("validateAndExtractStateFromHash called", requestCorrelationId);
+        // Deserialize hash fragment response parameters.
+        var serverParams = UrlString/* UrlString.getDeserializedHash */.G.getDeserializedHash(hash);
+        if (!serverParams.state) {
+            throw BrowserAuthError.createHashDoesNotContainStateError();
+        }
+        var platformStateObj = BrowserProtocolUtils.extractBrowserRequestState(this.browserCrypto, serverParams.state);
+        if (!platformStateObj) {
+            throw BrowserAuthError.createUnableToParseStateError();
+        }
+        if (platformStateObj.interactionType !== interactionType) {
+            throw BrowserAuthError.createStateInteractionTypeMismatchError();
+        }
+        this.logger.verbose("Returning state from hash", requestCorrelationId);
+        return serverParams.state;
+    };
+    /**
+     * Used to get a discovered version of the default authority.
+     * @param requestAuthority
+     * @param requestCorrelationId
+     */
+    StandardInteractionClient.prototype.getDiscoveredAuthority = function (requestAuthority) {
+        return __awaiter(this, void 0, void 0, function () {
+            var authorityOptions;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("getDiscoveredAuthority called");
+                        authorityOptions = {
+                            protocolMode: this.config.auth.protocolMode,
+                            knownAuthorities: this.config.auth.knownAuthorities,
+                            cloudDiscoveryMetadata: this.config.auth.cloudDiscoveryMetadata,
+                            authorityMetadata: this.config.auth.authorityMetadata
+                        };
+                        if (!requestAuthority) return [3 /*break*/, 2];
+                        this.logger.verbose("Creating discovered authority with request authority");
+                        return [4 /*yield*/, AuthorityFactory/* AuthorityFactory.createDiscoveredInstance */.A.createDiscoveredInstance(requestAuthority, this.config.system.networkClient, this.browserStorage, authorityOptions)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        this.logger.verbose("Creating discovered authority with configured authority");
+                        return [4 /*yield*/, AuthorityFactory/* AuthorityFactory.createDiscoveredInstance */.A.createDiscoveredInstance(this.config.auth.authority, this.config.system.networkClient, this.browserStorage, authorityOptions)];
+                    case 3: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+     * Helper to validate app environment before making a request.
+     * @param request
+     * @param interactionType
+     */
+    StandardInteractionClient.prototype.preflightInteractiveRequest = function (request, interactionType) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("preflightInteractiveRequest called, validating app environment", request === null || request === void 0 ? void 0 : request.correlationId);
+                        // block the reload if it occurred inside a hidden iframe
+                        BrowserUtils.blockReloadInHiddenIframes();
+                        // Check if interaction is in progress. Throw error if true.
+                        if (this.browserStorage.isInteractionInProgress(false)) {
+                            throw BrowserAuthError.createInteractionInProgressError();
+                        }
+                        return [4 /*yield*/, this.initializeAuthorizationRequest(request, interactionType)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+     * Helper to initialize required request parameters for interactive APIs and ssoSilent()
+     * @param request
+     * @param interactionType
+     */
+    StandardInteractionClient.prototype.initializeAuthorizationRequest = function (request, interactionType) {
+        return __awaiter(this, void 0, void 0, function () {
+            var redirectUri, browserState, state, validatedRequest, _a, account, legacyLoginHint;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        this.logger.verbose("initializeAuthorizationRequest called");
+                        redirectUri = this.getRedirectUri(request.redirectUri);
+                        browserState = {
+                            interactionType: interactionType
+                        };
+                        state = ProtocolUtils/* ProtocolUtils.setRequestState */.C.setRequestState(this.browserCrypto, (request && request.state) || "", browserState);
+                        _a = [{}];
+                        return [4 /*yield*/, this.initializeBaseRequest(request)];
+                    case 1:
+                        validatedRequest = __assign.apply(void 0, [__assign.apply(void 0, _a.concat([_b.sent()])), { redirectUri: redirectUri, state: state, nonce: request.nonce || this.browserCrypto.createNewGuid(), responseMode: Constants/* ResponseMode.FRAGMENT */.vw.FRAGMENT }]);
+                        account = request.account || this.browserStorage.getActiveAccount();
+                        if (account) {
+                            this.logger.verbose("Setting validated request account");
+                            this.logger.verbosePii("Setting validated request account: " + account);
+                            validatedRequest.account = account;
+                        }
+                        // Check for ADAL/MSAL v1 SSO
+                        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(validatedRequest.loginHint) && !account) {
+                            legacyLoginHint = this.browserStorage.getLegacyLoginHint();
+                            if (legacyLoginHint) {
+                                validatedRequest.loginHint = legacyLoginHint;
+                            }
+                        }
+                        this.browserStorage.updateCacheEntries(validatedRequest.state, validatedRequest.nonce, validatedRequest.authority, validatedRequest.loginHint || "", validatedRequest.account || null);
+                        return [2 /*return*/, validatedRequest];
+                }
+            });
+        });
+    };
+    return StandardInteractionClient;
+}(BaseInteractionClient));
+
+
+//# sourceMappingURL=StandardInteractionClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/utils/PopupUtils.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var PopupUtils = /** @class */ (function () {
+    function PopupUtils(storageImpl, logger) {
+        this.browserStorage = storageImpl;
+        this.logger = logger;
+        // Properly sets this reference for the unload event.
+        this.unloadWindow = this.unloadWindow.bind(this);
+    }
+    /**
+     * @hidden
+     *
+     * Configures popup window for login.
+     *
+     * @param urlNavigate
+     * @param title
+     * @param popUpWidth
+     * @param popUpHeight
+     * @param popupWindowAttributes
+     * @ignore
+     * @hidden
+     */
+    PopupUtils.prototype.openPopup = function (urlNavigate, popupParams) {
+        try {
+            var popupWindow = void 0;
+            // Popup window passed in, setting url to navigate to
+            if (popupParams.popup) {
+                popupWindow = popupParams.popup;
+                this.logger.verbosePii("Navigating popup window to: " + urlNavigate);
+                popupWindow.location.assign(urlNavigate);
+            }
+            else if (typeof popupParams.popup === "undefined") {
+                // Popup will be undefined if it was not passed in
+                this.logger.verbosePii("Opening popup window to: " + urlNavigate);
+                popupWindow = PopupUtils.openSizedPopup(urlNavigate, popupParams.popupName, popupParams.popupWindowAttributes, this.logger);
+            }
+            // Popup will be null if popups are blocked
+            if (!popupWindow) {
+                throw BrowserAuthError.createEmptyWindowCreatedError();
+            }
+            if (popupWindow.focus) {
+                popupWindow.focus();
+            }
+            this.currentWindow = popupWindow;
+            window.addEventListener("beforeunload", this.unloadWindow);
+            return popupWindow;
+        }
+        catch (e) {
+            this.logger.error("error opening popup " + e.message);
+            this.browserStorage.setInteractionInProgress(false);
+            throw BrowserAuthError.createPopupWindowError(e.toString());
+        }
+    };
+    /**
+     * Helper function to set popup window dimensions and position
+     * @param urlNavigate
+     * @param popupName
+     * @param popupWindowAttributes
+     * @returns
+     */
+    PopupUtils.openSizedPopup = function (urlNavigate, popupName, popupWindowAttributes, logger) {
+        var _a, _b, _c, _d;
+        /**
+         * adding winLeft and winTop to account for dual monitor
+         * using screenLeft and screenTop for IE8 and earlier
+         */
+        var winLeft = window.screenLeft ? window.screenLeft : window.screenX;
+        var winTop = window.screenTop ? window.screenTop : window.screenY;
+        /**
+         * window.innerWidth displays browser window"s height and width excluding toolbars
+         * using document.documentElement.clientWidth for IE8 and earlier
+         */
+        var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var width = (_a = popupWindowAttributes.popupSize) === null || _a === void 0 ? void 0 : _a.width;
+        var height = (_b = popupWindowAttributes.popupSize) === null || _b === void 0 ? void 0 : _b.height;
+        var top = (_c = popupWindowAttributes.popupPosition) === null || _c === void 0 ? void 0 : _c.top;
+        var left = (_d = popupWindowAttributes.popupPosition) === null || _d === void 0 ? void 0 : _d.left;
+        if (!width || width < 0 || width > winWidth) {
+            logger.verbose("Default popup window width used. Window width not configured or invalid.");
+            width = BrowserConstants.POPUP_WIDTH;
+        }
+        if (!height || height < 0 || height > winHeight) {
+            logger.verbose("Default popup window height used. Window height not configured or invalid.");
+            height = BrowserConstants.POPUP_HEIGHT;
+        }
+        if (!top || top < 0 || top > winHeight) {
+            logger.verbose("Default popup window top position used. Window top not configured or invalid.");
+            top = Math.max(0, ((winHeight / 2) - (BrowserConstants.POPUP_HEIGHT / 2)) + winTop);
+        }
+        if (!left || left < 0 || left > winWidth) {
+            logger.verbose("Default popup window left position used. Window left not configured or invalid.");
+            left = Math.max(0, ((winWidth / 2) - (BrowserConstants.POPUP_WIDTH / 2)) + winLeft);
+        }
+        return window.open(urlNavigate, popupName, "width=" + width + ", height=" + height + ", top=" + top + ", left=" + left + ", scrollbars=yes");
+    };
+    /**
+     * Event callback to unload main window.
+     */
+    PopupUtils.prototype.unloadWindow = function (e) {
+        this.browserStorage.cleanRequestByInteractionType(InteractionType.Popup);
+        if (this.currentWindow) {
+            this.currentWindow.close();
+        }
+        // Guarantees browser unload will happen, so no other errors will be thrown.
+        e.preventDefault();
+    };
+    /**
+     * Closes popup, removes any state vars created during popup calls.
+     * @param popupWindow
+     */
+    PopupUtils.prototype.cleanPopup = function (popupWindow) {
+        if (popupWindow) {
+            // Close window.
+            popupWindow.close();
+        }
+        // Remove window unload function
+        window.removeEventListener("beforeunload", this.unloadWindow);
+        // Interaction is completed - remove interaction status.
+        this.browserStorage.setInteractionInProgress(false);
+    };
+    /**
+     * Monitors a window until it loads a url with the same origin.
+     * @param popupWindow - window that is being monitored
+     */
+    PopupUtils.prototype.monitorPopupForSameOrigin = function (popupWindow) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var intervalId = setInterval(function () {
+                if (popupWindow.closed) {
+                    // Window is closed
+                    _this.cleanPopup();
+                    clearInterval(intervalId);
+                    reject(BrowserAuthError.createUserCancelledError());
+                    return;
+                }
+                var href = Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                try {
+                    /*
+                     * Will throw if cross origin,
+                     * which should be caught and ignored
+                     * since we need the interval to keep running while on STS UI.
+                     */
+                    href = popupWindow.location.href;
+                }
+                catch (e) { }
+                // Don't process blank pages or cross domain
+                if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(href) || href === "about:blank") {
+                    return;
+                }
+                clearInterval(intervalId);
+                resolve();
+            }, BrowserConstants.POLL_INTERVAL_MS);
+        });
+    };
+    /**
+     * Generates the name for the popup based on the client id and request
+     * @param clientId
+     * @param request
+     */
+    PopupUtils.generatePopupName = function (clientId, request) {
+        return BrowserConstants.POPUP_NAME_PREFIX + "." + clientId + "." + request.scopes.join("-") + "." + request.authority + "." + request.correlationId;
+    };
+    /**
+     * Generates the name for the popup based on the client id and request for logouts
+     * @param clientId
+     * @param request
+     */
+    PopupUtils.generateLogoutPopupName = function (clientId, request) {
+        var homeAccountId = request.account && request.account.homeAccountId;
+        return BrowserConstants.POPUP_NAME_PREFIX + "." + clientId + "." + homeAccountId + "." + request.correlationId;
+    };
+    return PopupUtils;
+}());
+
+
+//# sourceMappingURL=PopupUtils.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_handler/InteractionHandler.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Abstract class which defines operations for a browser interaction handling class.
+ */
+var InteractionHandler = /** @class */ (function () {
+    function InteractionHandler(authCodeModule, storageImpl, authCodeRequest, browserRequestLogger) {
+        this.authModule = authCodeModule;
+        this.browserStorage = storageImpl;
+        this.authCodeRequest = authCodeRequest;
+        this.browserRequestLogger = browserRequestLogger;
+    }
+    /**
+     * Function to handle response parameters from hash.
+     * @param locationHash
+     */
+    InteractionHandler.prototype.handleCodeResponseFromHash = function (locationHash, state, authority, networkModule) {
+        return __awaiter(this, void 0, void 0, function () {
+            var stateKey, requestState, authCodeResponse;
+            return __generator(this, function (_a) {
+                this.browserRequestLogger.verbose("InteractionHandler.handleCodeResponse called");
+                // Check that location hash isn't empty.
+                if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(locationHash)) {
+                    throw BrowserAuthError.createEmptyHashError(locationHash);
+                }
+                stateKey = this.browserStorage.generateStateKey(state);
+                requestState = this.browserStorage.getTemporaryCache(stateKey);
+                if (!requestState) {
+                    throw ClientAuthError/* ClientAuthError.createStateNotFoundError */.e.createStateNotFoundError("Cached State");
+                }
+                authCodeResponse = this.authModule.handleFragmentResponse(locationHash, requestState);
+                return [2 /*return*/, this.handleCodeResponseFromServer(authCodeResponse, state, authority, networkModule)];
+            });
+        });
+    };
+    /**
+     * Process auth code response from AAD
+     * @param authCodeResponse
+     * @param state
+     * @param authority
+     * @param networkModule
+     * @returns
+     */
+    InteractionHandler.prototype.handleCodeResponseFromServer = function (authCodeResponse, state, authority, networkModule, validateNonce) {
+        if (validateNonce === void 0) { validateNonce = true; }
+        return __awaiter(this, void 0, void 0, function () {
+            var stateKey, requestState, nonceKey, cachedNonce, cachedCcsCred, tokenResponse;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.browserRequestLogger.trace("InteractionHandler.handleCodeResponseFromServer called");
+                        stateKey = this.browserStorage.generateStateKey(state);
+                        requestState = this.browserStorage.getTemporaryCache(stateKey);
+                        if (!requestState) {
+                            throw ClientAuthError/* ClientAuthError.createStateNotFoundError */.e.createStateNotFoundError("Cached State");
+                        }
+                        nonceKey = this.browserStorage.generateNonceKey(requestState);
+                        cachedNonce = this.browserStorage.getTemporaryCache(nonceKey);
+                        // Assign code to request
+                        this.authCodeRequest.code = authCodeResponse.code;
+                        if (!authCodeResponse.cloud_instance_host_name) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.updateTokenEndpointAuthority(authCodeResponse.cloud_instance_host_name, authority, networkModule)];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2:
+                        // Nonce validation not needed when redirect not involved (e.g. hybrid spa, renewing token via rt)
+                        if (validateNonce) {
+                            authCodeResponse.nonce = cachedNonce || undefined;
+                        }
+                        authCodeResponse.state = requestState;
+                        // Add CCS parameters if available
+                        if (authCodeResponse.client_info) {
+                            this.authCodeRequest.clientInfo = authCodeResponse.client_info;
+                        }
+                        else {
+                            cachedCcsCred = this.checkCcsCredentials();
+                            if (cachedCcsCred) {
+                                this.authCodeRequest.ccsCredential = cachedCcsCred;
+                            }
+                        }
+                        return [4 /*yield*/, this.authModule.acquireToken(this.authCodeRequest, authCodeResponse)];
+                    case 3:
+                        tokenResponse = _a.sent();
+                        this.browserStorage.cleanRequestByState(state);
+                        return [2 /*return*/, tokenResponse];
+                }
+            });
+        });
+    };
+    /**
+     * Updates authority based on cloudInstanceHostname
+     * @param cloudInstanceHostname
+     * @param authority
+     * @param networkModule
+     */
+    InteractionHandler.prototype.updateTokenEndpointAuthority = function (cloudInstanceHostname, authority, networkModule) {
+        return __awaiter(this, void 0, void 0, function () {
+            var cloudInstanceAuthorityUri, cloudInstanceAuthority;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        cloudInstanceAuthorityUri = "https://" + cloudInstanceHostname + "/" + authority.tenant + "/";
+                        return [4 /*yield*/, AuthorityFactory/* AuthorityFactory.createDiscoveredInstance */.A.createDiscoveredInstance(cloudInstanceAuthorityUri, networkModule, this.browserStorage, authority.options)];
+                    case 1:
+                        cloudInstanceAuthority = _a.sent();
+                        this.authModule.updateAuthority(cloudInstanceAuthority);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Looks up ccs creds in the cache
+     */
+    InteractionHandler.prototype.checkCcsCredentials = function () {
+        // Look up ccs credential in temp cache
+        var cachedCcsCred = this.browserStorage.getTemporaryCache(TemporaryCacheKeys.CCS_CREDENTIAL, true);
+        if (cachedCcsCred) {
+            try {
+                return JSON.parse(cachedCcsCred);
+            }
+            catch (e) {
+                this.authModule.logger.error("Cache credential could not be parsed");
+                this.authModule.logger.errorPii("Cache credential could not be parsed: " + cachedCcsCred);
+            }
+        }
+        return null;
+    };
+    return InteractionHandler;
+}());
+
+
+//# sourceMappingURL=InteractionHandler.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_handler/PopupHandler.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class implements the interaction handler base class for browsers. It is written specifically for handling
+ * popup window scenarios. It includes functions for monitoring the popup window for a hash.
+ */
+var PopupHandler = /** @class */ (function (_super) {
+    __extends(PopupHandler, _super);
+    function PopupHandler(authCodeModule, storageImpl, authCodeRequest, browserRequestLogger) {
+        var _this = _super.call(this, authCodeModule, storageImpl, authCodeRequest, browserRequestLogger) || this;
+        // Properly sets this reference for the unload event.
+        _this.popupUtils = new PopupUtils(storageImpl, browserRequestLogger);
+        return _this;
+    }
+    /**
+     * Opens a popup window with given request Url.
+     * @param requestUrl
+     */
+    PopupHandler.prototype.initiateAuthRequest = function (requestUrl, params) {
+        // Check that request url is not empty.
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(requestUrl)) {
+            // Set interaction status in the library.
+            this.browserStorage.setInteractionInProgress(true);
+            this.browserRequestLogger.infoPii("Navigate to: " + requestUrl);
+            // Open the popup window to requestUrl.
+            return this.popupUtils.openPopup(requestUrl, params);
+        }
+        else {
+            // Throw error if request URL is empty.
+            this.browserRequestLogger.error("Navigate url is empty");
+            throw BrowserAuthError.createEmptyNavigationUriError();
+        }
+    };
+    /**
+     * Monitors a window until it loads a url with a known hash, or hits a specified timeout.
+     * @param popupWindow - window that is being monitored
+     * @param timeout - milliseconds until timeout
+     */
+    PopupHandler.prototype.monitorPopupForHash = function (popupWindow) {
+        var _this = this;
+        return this.popupUtils.monitorPopupForSameOrigin(popupWindow).then(function () {
+            var contentHash = popupWindow.location.hash;
+            BrowserUtils.clearHash(popupWindow);
+            _this.popupUtils.cleanPopup(popupWindow);
+            if (!contentHash) {
+                throw BrowserAuthError.createEmptyHashError(popupWindow.location.href);
+            }
+            if (UrlString/* UrlString.hashContainsKnownProperties */.G.hashContainsKnownProperties(contentHash)) {
+                return contentHash;
+            }
+            else {
+                throw BrowserAuthError.createHashDoesNotContainKnownPropertiesError();
+            }
+        });
+    };
+    return PopupHandler;
+}(InteractionHandler));
+
+
+//# sourceMappingURL=PopupHandler.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/PopupClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var PopupClient = /** @class */ (function (_super) {
+    __extends(PopupClient, _super);
+    function PopupClient() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Acquires tokens by opening a popup window to the /authorize endpoint of the authority
+     * @param request
+     */
+    PopupClient.prototype.acquireToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var validRequest, popupName, popupWindowAttributes, popup, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.preflightInteractiveRequest(request, InteractionType.Popup)];
+                    case 1:
+                        validRequest = _a.sent();
+                        popupName = PopupUtils.generatePopupName(this.config.auth.clientId, validRequest);
+                        popupWindowAttributes = request.popupWindowAttributes || {};
+                        // asyncPopups flag is true. Acquires token without first opening popup. Popup will be opened later asynchronously.
+                        if (this.config.system.asyncPopups) {
+                            this.logger.verbose("asyncPopups set to true, acquiring token");
+                            // Passes on popup position and dimensions if in request
+                            return [2 /*return*/, this.acquireTokenPopupAsync(validRequest, popupName, popupWindowAttributes)];
+                        }
+                        else {
+                            // asyncPopups flag is set to false. Opens popup before acquiring token.
+                            this.logger.verbose("asyncPopup set to false, opening popup before acquiring token");
+                            popup = PopupUtils.openSizedPopup("about:blank", popupName, popupWindowAttributes, this.logger);
+                            return [2 /*return*/, this.acquireTokenPopupAsync(validRequest, popupName, popupWindowAttributes, popup)];
+                        }
+                    case 2:
+                        e_1 = _a.sent();
+                        return [2 /*return*/, Promise.reject(e_1)];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Clears local cache for the current user then opens a popup window prompting the user to sign-out of the server
+     * @param logoutRequest
+     */
+    PopupClient.prototype.logout = function (logoutRequest) {
+        try {
+            this.logger.verbose("logoutPopup called");
+            var validLogoutRequest = this.initializeLogoutRequest(logoutRequest);
+            var popupName = PopupUtils.generateLogoutPopupName(this.config.auth.clientId, validLogoutRequest);
+            var authority = logoutRequest && logoutRequest.authority;
+            var mainWindowRedirectUri = logoutRequest && logoutRequest.mainWindowRedirectUri;
+            var popupWindowAttributes = (logoutRequest === null || logoutRequest === void 0 ? void 0 : logoutRequest.popupWindowAttributes) || {};
+            // asyncPopups flag is true. Acquires token without first opening popup. Popup will be opened later asynchronously.
+            if (this.config.system.asyncPopups) {
+                this.logger.verbose("asyncPopups set to true");
+                // Passes on popup position and dimensions if in request
+                return this.logoutPopupAsync(validLogoutRequest, popupName, popupWindowAttributes, authority, undefined, mainWindowRedirectUri);
+            }
+            else {
+                // asyncPopups flag is set to false. Opens popup before logging out.
+                this.logger.verbose("asyncPopup set to false, opening popup");
+                var popup = PopupUtils.openSizedPopup("about:blank", popupName, popupWindowAttributes, this.logger);
+                return this.logoutPopupAsync(validLogoutRequest, popupName, popupWindowAttributes, authority, popup, mainWindowRedirectUri);
+            }
+        }
+        catch (e) {
+            // Since this function is synchronous we need to reject
+            return Promise.reject(e);
+        }
+    };
+    /**
+     * Helper which obtains an access_token for your API via opening a popup window in the user's browser
+     * @param validRequest
+     * @param popupName
+     * @param popup
+     * @param popupWindowAttributes
+     *
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    PopupClient.prototype.acquireTokenPopupAsync = function (validRequest, popupName, popupWindowAttributes, popup) {
+        return __awaiter(this, void 0, void 0, function () {
+            var serverTelemetryManager, authCodeRequest, authClient, navigateUrl, interactionHandler, popupParameters, popupWindow, hash, state, result, e_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("acquireTokenPopupAsync called");
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.acquireTokenPopup);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 7, , 8]);
+                        return [4 /*yield*/, this.initializeAuthorizationCodeRequest(validRequest)];
+                    case 2:
+                        authCodeRequest = _a.sent();
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, validRequest.authority)];
+                    case 3:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        return [4 /*yield*/, authClient.getAuthCodeUrl(validRequest)];
+                    case 4:
+                        navigateUrl = _a.sent();
+                        interactionHandler = new PopupHandler(authClient, this.browserStorage, authCodeRequest, this.logger);
+                        popupParameters = {
+                            popup: popup,
+                            popupName: popupName,
+                            popupWindowAttributes: popupWindowAttributes
+                        };
+                        popupWindow = interactionHandler.initiateAuthRequest(navigateUrl, popupParameters);
+                        this.eventHandler.emitEvent(EventType.POPUP_OPENED, InteractionType.Popup, { popupWindow: popupWindow }, null);
+                        return [4 /*yield*/, interactionHandler.monitorPopupForHash(popupWindow)];
+                    case 5:
+                        hash = _a.sent();
+                        state = this.validateAndExtractStateFromHash(hash, InteractionType.Popup, validRequest.correlationId);
+                        // Remove throttle if it exists
+                        ThrottlingUtils/* ThrottlingUtils.removeThrottle */.v.removeThrottle(this.browserStorage, this.config.auth.clientId, authCodeRequest);
+                        return [4 /*yield*/, interactionHandler.handleCodeResponseFromHash(hash, state, authClient.authority, this.networkClient)];
+                    case 6:
+                        result = _a.sent();
+                        return [2 /*return*/, result];
+                    case 7:
+                        e_2 = _a.sent();
+                        if (popup) {
+                            // Close the synchronous popup if an error is thrown before the window unload event is registered
+                            popup.close();
+                        }
+                        if (e_2 instanceof AuthError/* AuthError */.l) {
+                            e_2.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_2);
+                        this.browserStorage.cleanRequestByState(validRequest.state);
+                        throw e_2;
+                    case 8: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     *
+     * @param validRequest
+     * @param popupName
+     * @param requestAuthority
+     * @param popup
+     * @param mainWindowRedirectUri
+     * @param popupWindowAttributes
+     */
+    PopupClient.prototype.logoutPopupAsync = function (validRequest, popupName, popupWindowAttributes, requestAuthority, popup, mainWindowRedirectUri) {
+        return __awaiter(this, void 0, void 0, function () {
+            var serverTelemetryManager, authClient, logoutUri, popupUtils, popupWindow, e_3, navigationOptions, absoluteUrl, e_4;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("logoutPopupAsync called");
+                        this.eventHandler.emitEvent(EventType.LOGOUT_START, InteractionType.Popup, validRequest);
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.logoutPopup);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 8, , 9]);
+                        // Clear cache on logout
+                        return [4 /*yield*/, this.clearCacheOnLogout(validRequest.account)];
+                    case 2:
+                        // Clear cache on logout
+                        _a.sent();
+                        this.browserStorage.setInteractionInProgress(true);
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, requestAuthority)];
+                    case 3:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        logoutUri = authClient.getLogoutUri(validRequest);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_SUCCESS, InteractionType.Popup, validRequest);
+                        popupUtils = new PopupUtils(this.browserStorage, this.logger);
+                        popupWindow = popupUtils.openPopup(logoutUri, { popupName: popupName, popupWindowAttributes: popupWindowAttributes, popup: popup });
+                        this.eventHandler.emitEvent(EventType.POPUP_OPENED, InteractionType.Popup, { popupWindow: popupWindow }, null);
+                        _a.label = 4;
+                    case 4:
+                        _a.trys.push([4, 6, , 7]);
+                        // Don't care if this throws an error (User Cancelled)
+                        return [4 /*yield*/, popupUtils.monitorPopupForSameOrigin(popupWindow)];
+                    case 5:
+                        // Don't care if this throws an error (User Cancelled)
+                        _a.sent();
+                        this.logger.verbose("Popup successfully redirected to postLogoutRedirectUri");
+                        return [3 /*break*/, 7];
+                    case 6:
+                        e_3 = _a.sent();
+                        this.logger.verbose("Error occurred while monitoring popup for same origin. Session on server may remain active. Error: " + e_3);
+                        return [3 /*break*/, 7];
+                    case 7:
+                        popupUtils.cleanPopup(popupWindow);
+                        if (mainWindowRedirectUri) {
+                            navigationOptions = {
+                                apiId: ApiId.logoutPopup,
+                                timeout: this.config.system.redirectNavigationTimeout,
+                                noHistory: false
+                            };
+                            absoluteUrl = UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(mainWindowRedirectUri, BrowserUtils.getCurrentUri());
+                            this.logger.verbose("Redirecting main window to url specified in the request");
+                            this.logger.verbosePii("Redirecing main window to: " + absoluteUrl);
+                            this.navigationClient.navigateInternal(absoluteUrl, navigationOptions);
+                        }
+                        else {
+                            this.logger.verbose("No main window navigation requested");
+                        }
+                        return [3 /*break*/, 9];
+                    case 8:
+                        e_4 = _a.sent();
+                        if (popup) {
+                            // Close the synchronous popup if an error is thrown before the window unload event is registered
+                            popup.close();
+                        }
+                        if (e_4 instanceof AuthError/* AuthError */.l) {
+                            e_4.setCorrelationId(this.correlationId);
+                        }
+                        this.browserStorage.setInteractionInProgress(false);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_FAILURE, InteractionType.Popup, null, e_4);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_END, InteractionType.Popup);
+                        serverTelemetryManager.cacheFailedRequest(e_4);
+                        throw e_4;
+                    case 9:
+                        this.eventHandler.emitEvent(EventType.LOGOUT_END, InteractionType.Popup);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return PopupClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=PopupClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_handler/RedirectHandler.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var RedirectHandler = /** @class */ (function (_super) {
+    __extends(RedirectHandler, _super);
+    function RedirectHandler(authCodeModule, storageImpl, authCodeRequest, browserRequestLogger, browserCrypto) {
+        var _this = _super.call(this, authCodeModule, storageImpl, authCodeRequest, browserRequestLogger) || this;
+        _this.browserCrypto = browserCrypto;
+        return _this;
+    }
+    /**
+     * Redirects window to given URL.
+     * @param urlNavigate
+     */
+    RedirectHandler.prototype.initiateAuthRequest = function (requestUrl, params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var navigationOptions, navigate;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest called");
+                        if (!!StringUtils/* StringUtils.isEmpty */.x.isEmpty(requestUrl)) return [3 /*break*/, 7];
+                        // Cache start page, returns to this page after redirectUri if navigateToLoginRequestUrl is true
+                        if (params.redirectStartPage) {
+                            this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: redirectStartPage set, caching start page");
+                            this.browserStorage.setTemporaryCache(TemporaryCacheKeys.ORIGIN_URI, params.redirectStartPage, true);
+                        }
+                        // Set interaction status in the library.
+                        this.browserStorage.setInteractionInProgress(true);
+                        this.browserStorage.setTemporaryCache(TemporaryCacheKeys.CORRELATION_ID, this.authCodeRequest.correlationId, true);
+                        this.browserStorage.cacheCodeRequest(this.authCodeRequest, this.browserCrypto);
+                        this.browserRequestLogger.infoPii("RedirectHandler.initiateAuthRequest: Navigate to: " + requestUrl);
+                        navigationOptions = {
+                            apiId: ApiId.acquireTokenRedirect,
+                            timeout: params.redirectTimeout,
+                            noHistory: false
+                        };
+                        if (!(typeof params.onRedirectNavigate === "function")) return [3 /*break*/, 4];
+                        this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: Invoking onRedirectNavigate callback");
+                        navigate = params.onRedirectNavigate(requestUrl);
+                        if (!(navigate !== false)) return [3 /*break*/, 2];
+                        this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: onRedirectNavigate did not return false, navigating");
+                        return [4 /*yield*/, params.navigationClient.navigateExternal(requestUrl, navigationOptions)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                    case 2:
+                        this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: onRedirectNavigate returned false, stopping navigation");
+                        return [2 /*return*/];
+                    case 3: return [3 /*break*/, 6];
+                    case 4:
+                        // Navigate window to request URL
+                        this.browserRequestLogger.verbose("RedirectHandler.initiateAuthRequest: Navigating window to navigate url");
+                        return [4 /*yield*/, params.navigationClient.navigateExternal(requestUrl, navigationOptions)];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/];
+                    case 6: return [3 /*break*/, 8];
+                    case 7:
+                        // Throw error if request URL is empty.
+                        this.browserRequestLogger.info("RedirectHandler.initiateAuthRequest: Navigate url is empty");
+                        throw BrowserAuthError.createEmptyNavigationUriError();
+                    case 8: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Handle authorization code response in the window.
+     * @param hash
+     */
+    RedirectHandler.prototype.handleCodeResponseFromHash = function (locationHash, state, authority, networkModule, clientId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var stateKey, requestState, authCodeResponse, nonceKey, cachedNonce, cachedCcsCred, tokenResponse;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.browserRequestLogger.verbose("RedirectHandler.handleCodeResponse called");
+                        // Check that location hash isn't empty.
+                        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(locationHash)) {
+                            throw BrowserAuthError.createEmptyHashError(locationHash);
+                        }
+                        // Interaction is completed - remove interaction status.
+                        this.browserStorage.setInteractionInProgress(false);
+                        stateKey = this.browserStorage.generateStateKey(state);
+                        requestState = this.browserStorage.getTemporaryCache(stateKey);
+                        if (!requestState) {
+                            throw ClientAuthError/* ClientAuthError.createStateNotFoundError */.e.createStateNotFoundError("Cached State");
+                        }
+                        authCodeResponse = this.authModule.handleFragmentResponse(locationHash, requestState);
+                        nonceKey = this.browserStorage.generateNonceKey(requestState);
+                        cachedNonce = this.browserStorage.getTemporaryCache(nonceKey);
+                        // Assign code to request
+                        this.authCodeRequest.code = authCodeResponse.code;
+                        if (!authCodeResponse.cloud_instance_host_name) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.updateTokenEndpointAuthority(authCodeResponse.cloud_instance_host_name, authority, networkModule)];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2:
+                        authCodeResponse.nonce = cachedNonce || undefined;
+                        authCodeResponse.state = requestState;
+                        // Add CCS parameters if available
+                        if (authCodeResponse.client_info) {
+                            this.authCodeRequest.clientInfo = authCodeResponse.client_info;
+                        }
+                        else {
+                            cachedCcsCred = this.checkCcsCredentials();
+                            if (cachedCcsCred) {
+                                this.authCodeRequest.ccsCredential = cachedCcsCred;
+                            }
+                        }
+                        // Remove throttle if it exists
+                        if (clientId) {
+                            ThrottlingUtils/* ThrottlingUtils.removeThrottle */.v.removeThrottle(this.browserStorage, clientId, this.authCodeRequest);
+                        }
+                        return [4 /*yield*/, this.authModule.acquireToken(this.authCodeRequest, authCodeResponse)];
+                    case 3:
+                        tokenResponse = _a.sent();
+                        this.browserStorage.cleanRequestByState(state);
+                        return [2 /*return*/, tokenResponse];
+                }
+            });
+        });
+    };
+    return RedirectHandler;
+}(InteractionHandler));
+
+
+//# sourceMappingURL=RedirectHandler.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/RedirectClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var RedirectClient = /** @class */ (function (_super) {
+    __extends(RedirectClient, _super);
+    function RedirectClient() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Redirects the page to the /authorize endpoint of the IDP
+     * @param request
+     */
+    RedirectClient.prototype.acquireToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var validRequest, serverTelemetryManager, authCodeRequest, authClient, interactionHandler, navigateUrl, redirectStartPage, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.preflightInteractiveRequest(request, InteractionType.Redirect)];
+                    case 1:
+                        validRequest = _a.sent();
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.acquireTokenRedirect);
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 7, , 8]);
+                        return [4 /*yield*/, this.initializeAuthorizationCodeRequest(validRequest)];
+                    case 3:
+                        authCodeRequest = _a.sent();
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, validRequest.authority)];
+                    case 4:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        interactionHandler = new RedirectHandler(authClient, this.browserStorage, authCodeRequest, this.logger, this.browserCrypto);
+                        return [4 /*yield*/, authClient.getAuthCodeUrl(validRequest)];
+                    case 5:
+                        navigateUrl = _a.sent();
+                        redirectStartPage = this.getRedirectStartPage(request.redirectStartPage);
+                        this.logger.verbosePii("Redirect start page: " + redirectStartPage);
+                        return [4 /*yield*/, interactionHandler.initiateAuthRequest(navigateUrl, {
+                                navigationClient: this.navigationClient,
+                                redirectTimeout: this.config.system.redirectNavigationTimeout,
+                                redirectStartPage: redirectStartPage,
+                                onRedirectNavigate: request.onRedirectNavigate
+                            })];
+                    case 6: 
+                    // Show the UI once the url has been created. Response will come back in the hash, which will be handled in the handleRedirectCallback function.
+                    return [2 /*return*/, _a.sent()];
+                    case 7:
+                        e_1 = _a.sent();
+                        if (e_1 instanceof AuthError/* AuthError */.l) {
+                            e_1.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_1);
+                        this.browserStorage.cleanRequestByState(validRequest.state);
+                        throw e_1;
+                    case 8: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Checks if navigateToLoginRequestUrl is set, and:
+     * - if true, performs logic to cache and navigate
+     * - if false, handles hash string and parses response
+     * @param hash
+     */
+    RedirectClient.prototype.handleRedirectPromise = function (hash) {
+        return __awaiter(this, void 0, void 0, function () {
+            var serverTelemetryManager, responseHash, state, loginRequestUrl, loginRequestUrlNormalized, currentUrlNormalized, handleHashResult, navigationOptions, processHashOnRedirect, homepage, e_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.handleRedirectPromise);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 10, , 11]);
+                        if (!this.browserStorage.isInteractionInProgress(true)) {
+                            this.logger.info("handleRedirectPromise called but there is no interaction in progress, returning null.");
+                            return [2 /*return*/, null];
+                        }
+                        responseHash = this.getRedirectResponseHash(hash || window.location.hash);
+                        if (!responseHash) {
+                            // Not a recognized server response hash or hash not associated with a redirect request
+                            this.logger.info("handleRedirectPromise did not detect a response hash as a result of a redirect. Cleaning temporary cache.");
+                            this.browserStorage.cleanRequestByInteractionType(InteractionType.Redirect);
+                            return [2 /*return*/, null];
+                        }
+                        state = void 0;
+                        try {
+                            state = this.validateAndExtractStateFromHash(responseHash, InteractionType.Redirect);
+                            BrowserUtils.clearHash(window);
+                            this.logger.verbose("State extracted from hash");
+                        }
+                        catch (e) {
+                            this.logger.info("handleRedirectPromise was unable to extract state due to: " + e);
+                            this.browserStorage.cleanRequestByInteractionType(InteractionType.Redirect);
+                            return [2 /*return*/, null];
+                        }
+                        loginRequestUrl = this.browserStorage.getTemporaryCache(TemporaryCacheKeys.ORIGIN_URI, true) || "";
+                        loginRequestUrlNormalized = UrlString/* UrlString.removeHashFromUrl */.G.removeHashFromUrl(loginRequestUrl);
+                        currentUrlNormalized = UrlString/* UrlString.removeHashFromUrl */.G.removeHashFromUrl(window.location.href);
+                        if (!(loginRequestUrlNormalized === currentUrlNormalized && this.config.auth.navigateToLoginRequestUrl)) return [3 /*break*/, 3];
+                        // We are on the page we need to navigate to - handle hash
+                        this.logger.verbose("Current page is loginRequestUrl, handling hash");
+                        return [4 /*yield*/, this.handleHash(responseHash, state, serverTelemetryManager)];
+                    case 2:
+                        handleHashResult = _a.sent();
+                        if (loginRequestUrl.indexOf("#") > -1) {
+                            // Replace current hash with non-msal hash, if present
+                            BrowserUtils.replaceHash(loginRequestUrl);
+                        }
+                        return [2 /*return*/, handleHashResult];
+                    case 3:
+                        if (!!this.config.auth.navigateToLoginRequestUrl) return [3 /*break*/, 4];
+                        this.logger.verbose("NavigateToLoginRequestUrl set to false, handling hash");
+                        return [2 /*return*/, this.handleHash(responseHash, state, serverTelemetryManager)];
+                    case 4:
+                        if (!(!BrowserUtils.isInIframe() || this.config.system.allowRedirectInIframe)) return [3 /*break*/, 9];
+                        /*
+                         * Returned from authority using redirect - need to perform navigation before processing response
+                         * Cache the hash to be retrieved after the next redirect
+                         */
+                        this.browserStorage.setTemporaryCache(TemporaryCacheKeys.URL_HASH, responseHash, true);
+                        navigationOptions = {
+                            apiId: ApiId.handleRedirectPromise,
+                            timeout: this.config.system.redirectNavigationTimeout,
+                            noHistory: true
+                        };
+                        processHashOnRedirect = true;
+                        if (!(!loginRequestUrl || loginRequestUrl === "null")) return [3 /*break*/, 6];
+                        homepage = BrowserUtils.getHomepage();
+                        // Cache the homepage under ORIGIN_URI to ensure cached hash is processed on homepage
+                        this.browserStorage.setTemporaryCache(TemporaryCacheKeys.ORIGIN_URI, homepage, true);
+                        this.logger.warning("Unable to get valid login request url from cache, redirecting to home page");
+                        return [4 /*yield*/, this.navigationClient.navigateInternal(homepage, navigationOptions)];
+                    case 5:
+                        processHashOnRedirect = _a.sent();
+                        return [3 /*break*/, 8];
+                    case 6:
+                        // Navigate to page that initiated the redirect request
+                        this.logger.verbose("Navigating to loginRequestUrl: " + loginRequestUrl);
+                        return [4 /*yield*/, this.navigationClient.navigateInternal(loginRequestUrl, navigationOptions)];
+                    case 7:
+                        processHashOnRedirect = _a.sent();
+                        _a.label = 8;
+                    case 8:
+                        // If navigateInternal implementation returns false, handle the hash now
+                        if (!processHashOnRedirect) {
+                            return [2 /*return*/, this.handleHash(responseHash, state, serverTelemetryManager)];
+                        }
+                        _a.label = 9;
+                    case 9: return [2 /*return*/, null];
+                    case 10:
+                        e_2 = _a.sent();
+                        if (e_2 instanceof AuthError/* AuthError */.l) {
+                            e_2.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_2);
+                        this.browserStorage.cleanRequestByInteractionType(InteractionType.Redirect);
+                        throw e_2;
+                    case 11: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Gets the response hash for a redirect request
+     * Returns null if interactionType in the state value is not "redirect" or the hash does not contain known properties
+     * @param hash
+     */
+    RedirectClient.prototype.getRedirectResponseHash = function (hash) {
+        this.logger.verbose("getRedirectResponseHash called");
+        // Get current location hash from window or cache.
+        var isResponseHash = UrlString/* UrlString.hashContainsKnownProperties */.G.hashContainsKnownProperties(hash);
+        var cachedHash = this.browserStorage.getTemporaryCache(TemporaryCacheKeys.URL_HASH, true);
+        this.browserStorage.removeItem(this.browserStorage.generateCacheKey(TemporaryCacheKeys.URL_HASH));
+        if (isResponseHash) {
+            this.logger.verbose("Hash contains known properties, returning response hash");
+            return hash;
+        }
+        this.logger.verbose("Hash does not contain known properties, returning cached hash");
+        return cachedHash;
+    };
+    /**
+     * Checks if hash exists and handles in window.
+     * @param hash
+     * @param state
+     */
+    RedirectClient.prototype.handleHash = function (hash, state, serverTelemetryManager) {
+        return __awaiter(this, void 0, void 0, function () {
+            var cachedRequest, currentAuthority, authClient, interactionHandler;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        cachedRequest = this.browserStorage.getCachedRequest(state, this.browserCrypto);
+                        this.logger.verbose("handleHash called, retrieved cached request");
+                        currentAuthority = this.browserStorage.getCachedAuthority(state);
+                        if (!currentAuthority) {
+                            throw BrowserAuthError.createNoCachedAuthorityError();
+                        }
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, currentAuthority)];
+                    case 1:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        interactionHandler = new RedirectHandler(authClient, this.browserStorage, cachedRequest, this.logger, this.browserCrypto);
+                        return [4 /*yield*/, interactionHandler.handleCodeResponseFromHash(hash, state, authClient.authority, this.networkClient, this.config.auth.clientId)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+     * Use to log out the current user, and redirect the user to the postLogoutRedirectUri.
+     * Default behaviour is to redirect the user to `window.location.href`.
+     * @param logoutRequest
+     */
+    RedirectClient.prototype.logout = function (logoutRequest) {
+        return __awaiter(this, void 0, void 0, function () {
+            var validLogoutRequest, serverTelemetryManager, navigationOptions, authClient, logoutUri, navigate, e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("logoutRedirect called");
+                        validLogoutRequest = this.initializeLogoutRequest(logoutRequest);
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.logout);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 10, , 11]);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_START, InteractionType.Redirect, logoutRequest);
+                        // Clear cache on logout
+                        return [4 /*yield*/, this.clearCacheOnLogout(validLogoutRequest.account)];
+                    case 2:
+                        // Clear cache on logout
+                        _a.sent();
+                        navigationOptions = {
+                            apiId: ApiId.logout,
+                            timeout: this.config.system.redirectNavigationTimeout,
+                            noHistory: false
+                        };
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, logoutRequest && logoutRequest.authority)];
+                    case 3:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        logoutUri = authClient.getLogoutUri(validLogoutRequest);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_SUCCESS, InteractionType.Redirect, validLogoutRequest);
+                        if (!(logoutRequest && typeof logoutRequest.onRedirectNavigate === "function")) return [3 /*break*/, 7];
+                        navigate = logoutRequest.onRedirectNavigate(logoutUri);
+                        if (!(navigate !== false)) return [3 /*break*/, 5];
+                        this.logger.verbose("Logout onRedirectNavigate did not return false, navigating");
+                        return [4 /*yield*/, this.navigationClient.navigateExternal(logoutUri, navigationOptions)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/];
+                    case 5:
+                        this.logger.verbose("Logout onRedirectNavigate returned false, stopping navigation");
+                        _a.label = 6;
+                    case 6: return [3 /*break*/, 9];
+                    case 7: return [4 /*yield*/, this.navigationClient.navigateExternal(logoutUri, navigationOptions)];
+                    case 8:
+                        _a.sent();
+                        return [2 /*return*/];
+                    case 9: return [3 /*break*/, 11];
+                    case 10:
+                        e_3 = _a.sent();
+                        if (e_3 instanceof AuthError/* AuthError */.l) {
+                            e_3.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_3);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_FAILURE, InteractionType.Redirect, null, e_3);
+                        this.eventHandler.emitEvent(EventType.LOGOUT_END, InteractionType.Redirect);
+                        throw e_3;
+                    case 11:
+                        this.eventHandler.emitEvent(EventType.LOGOUT_END, InteractionType.Redirect);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Use to get the redirectStartPage either from request or use current window
+     * @param requestStartPage
+     */
+    RedirectClient.prototype.getRedirectStartPage = function (requestStartPage) {
+        var redirectStartPage = requestStartPage || window.location.href;
+        return UrlString/* UrlString.getAbsoluteUrl */.G.getAbsoluteUrl(redirectStartPage, BrowserUtils.getCurrentUri());
+    };
+    return RedirectClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=RedirectClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_handler/SilentHandler.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentHandler = /** @class */ (function (_super) {
+    __extends(SilentHandler, _super);
+    function SilentHandler(authCodeModule, storageImpl, authCodeRequest, browserRequestLogger, navigateFrameWait) {
+        var _this = _super.call(this, authCodeModule, storageImpl, authCodeRequest, browserRequestLogger) || this;
+        _this.navigateFrameWait = navigateFrameWait;
+        return _this;
+    }
+    /**
+     * Creates a hidden iframe to given URL using user-requested scopes as an id.
+     * @param urlNavigate
+     * @param userRequestScopes
+     */
+    SilentHandler.prototype.initiateAuthRequest = function (requestUrl) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(requestUrl)) {
+                            // Throw error if request URL is empty.
+                            this.browserRequestLogger.info("Navigate url is empty");
+                            throw BrowserAuthError.createEmptyNavigationUriError();
+                        }
+                        if (!this.navigateFrameWait) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.loadFrame(requestUrl)];
+                    case 1:
+                        _a = _b.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        _a = this.loadFrameSync(requestUrl);
+                        _b.label = 3;
+                    case 3: return [2 /*return*/, _a];
+                }
+            });
+        });
+    };
+    /**
+     * Monitors an iframe content window until it loads a url with a known hash, or hits a specified timeout.
+     * @param iframe
+     * @param timeout
+     */
+    SilentHandler.prototype.monitorIframeForHash = function (iframe, timeout) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            if (timeout < DEFAULT_IFRAME_TIMEOUT_MS) {
+                _this.browserRequestLogger.warning("system.loadFrameTimeout or system.iframeHashTimeout set to lower (" + timeout + "ms) than the default (" + DEFAULT_IFRAME_TIMEOUT_MS + "ms). This may result in timeouts.");
+            }
+            /*
+             * Polling for iframes can be purely timing based,
+             * since we don't need to account for interaction.
+             */
+            var nowMark = window.performance.now();
+            var timeoutMark = nowMark + timeout;
+            var intervalId = setInterval(function () {
+                if (window.performance.now() > timeoutMark) {
+                    _this.removeHiddenIframe(iframe);
+                    clearInterval(intervalId);
+                    reject(BrowserAuthError.createMonitorIframeTimeoutError());
+                    return;
+                }
+                var href = Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                var contentWindow = iframe.contentWindow;
+                try {
+                    /*
+                     * Will throw if cross origin,
+                     * which should be caught and ignored
+                     * since we need the interval to keep running while on STS UI.
+                     */
+                    href = contentWindow ? contentWindow.location.href : Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                }
+                catch (e) { }
+                if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(href)) {
+                    return;
+                }
+                var contentHash = contentWindow ? contentWindow.location.hash : Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                if (UrlString/* UrlString.hashContainsKnownProperties */.G.hashContainsKnownProperties(contentHash)) {
+                    // Success case
+                    _this.removeHiddenIframe(iframe);
+                    clearInterval(intervalId);
+                    resolve(contentHash);
+                    return;
+                }
+            }, BrowserConstants.POLL_INTERVAL_MS);
+        });
+    };
+    /**
+     * @hidden
+     * Loads iframe with authorization endpoint URL
+     * @ignore
+     */
+    SilentHandler.prototype.loadFrame = function (urlNavigate) {
+        /*
+         * This trick overcomes iframe navigation in IE
+         * IE does not load the page consistently in iframe
+         */
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var frameHandle = _this.createHiddenIframe();
+            setTimeout(function () {
+                if (!frameHandle) {
+                    reject("Unable to load iframe");
+                    return;
+                }
+                frameHandle.src = urlNavigate;
+                resolve(frameHandle);
+            }, _this.navigateFrameWait);
+        });
+    };
+    /**
+     * @hidden
+     * Loads the iframe synchronously when the navigateTimeFrame is set to `0`
+     * @param urlNavigate
+     * @param frameName
+     * @param logger
+     */
+    SilentHandler.prototype.loadFrameSync = function (urlNavigate) {
+        var frameHandle = this.createHiddenIframe();
+        frameHandle.src = urlNavigate;
+        return frameHandle;
+    };
+    /**
+     * @hidden
+     * Creates a new hidden iframe or gets an existing one for silent token renewal.
+     * @ignore
+     */
+    SilentHandler.prototype.createHiddenIframe = function () {
+        var authFrame = document.createElement("iframe");
+        authFrame.style.visibility = "hidden";
+        authFrame.style.position = "absolute";
+        authFrame.style.width = authFrame.style.height = "0";
+        authFrame.style.border = "0";
+        authFrame.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms");
+        document.getElementsByTagName("body")[0].appendChild(authFrame);
+        return authFrame;
+    };
+    /**
+     * @hidden
+     * Removes a hidden iframe from the page.
+     * @ignore
+     */
+    SilentHandler.prototype.removeHiddenIframe = function (iframe) {
+        if (document.body === iframe.parentNode) {
+            document.body.removeChild(iframe);
+        }
+    };
+    return SilentHandler;
+}(InteractionHandler));
+
+
+//# sourceMappingURL=SilentHandler.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/SilentIframeClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentIframeClient = /** @class */ (function (_super) {
+    __extends(SilentIframeClient, _super);
+    function SilentIframeClient(config, storageImpl, browserCrypto, logger, eventHandler, navigationClient, apiId, correlationId) {
+        var _this = _super.call(this, config, storageImpl, browserCrypto, logger, eventHandler, navigationClient, correlationId) || this;
+        _this.apiId = apiId;
+        return _this;
+    }
+    /**
+     * Acquires a token silently by opening a hidden iframe to the /authorize endpoint with prompt=none
+     * @param request
+     */
+    SilentIframeClient.prototype.acquireToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentRequest, serverTelemetryManager, authCodeRequest, authClient, navigateUrl, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.verbose("acquireTokenByIframe called");
+                        // Check that we have some SSO data
+                        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(request.loginHint) && StringUtils/* StringUtils.isEmpty */.x.isEmpty(request.sid) && (!request.account || StringUtils/* StringUtils.isEmpty */.x.isEmpty(request.account.username))) {
+                            this.logger.warning("No user hint provided. The authorization server may need more information to complete this request.");
+                        }
+                        // Check that prompt is set to none, throw error if it is set to anything else.
+                        if (request.prompt && request.prompt !== Constants/* PromptValue.NONE */.NJ.NONE) {
+                            throw BrowserAuthError.createSilentPromptValueError(request.prompt);
+                        }
+                        return [4 /*yield*/, this.initializeAuthorizationRequest(__assign(__assign({}, request), { prompt: Constants/* PromptValue.NONE */.NJ.NONE }), InteractionType.Silent)];
+                    case 1:
+                        silentRequest = _a.sent();
+                        serverTelemetryManager = this.initializeServerTelemetryManager(this.apiId);
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 7, , 8]);
+                        return [4 /*yield*/, this.initializeAuthorizationCodeRequest(silentRequest)];
+                    case 3:
+                        authCodeRequest = _a.sent();
+                        return [4 /*yield*/, this.createAuthCodeClient(serverTelemetryManager, silentRequest.authority)];
+                    case 4:
+                        authClient = _a.sent();
+                        this.logger.verbose("Auth code client created");
+                        return [4 /*yield*/, authClient.getAuthCodeUrl(silentRequest)];
+                    case 5:
+                        navigateUrl = _a.sent();
+                        return [4 /*yield*/, this.silentTokenHelper(navigateUrl, authCodeRequest, authClient, this.logger)];
+                    case 6: return [2 /*return*/, _a.sent()];
+                    case 7:
+                        e_1 = _a.sent();
+                        if (e_1 instanceof AuthError/* AuthError */.l) {
+                            e_1.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_1);
+                        this.browserStorage.cleanRequestByState(silentRequest.state);
+                        throw e_1;
+                    case 8: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Currently Unsupported
+     */
+    SilentIframeClient.prototype.logout = function () {
+        // Synchronous so we must reject
+        return Promise.reject(BrowserAuthError.createSilentLogoutUnsupportedError());
+    };
+    /**
+     * Helper which acquires an authorization code silently using a hidden iframe from given url
+     * using the scopes requested as part of the id, and exchanges the code for a set of OAuth tokens.
+     * @param navigateUrl
+     * @param userRequestScopes
+     */
+    SilentIframeClient.prototype.silentTokenHelper = function (navigateUrl, authCodeRequest, authClient, browserRequestLogger) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentHandler, msalFrame, hash, state;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        silentHandler = new SilentHandler(authClient, this.browserStorage, authCodeRequest, browserRequestLogger, this.config.system.navigateFrameWait);
+                        return [4 /*yield*/, silentHandler.initiateAuthRequest(navigateUrl)];
+                    case 1:
+                        msalFrame = _a.sent();
+                        return [4 /*yield*/, silentHandler.monitorIframeForHash(msalFrame, this.config.system.iframeHashTimeout)];
+                    case 2:
+                        hash = _a.sent();
+                        state = this.validateAndExtractStateFromHash(hash, InteractionType.Silent, authCodeRequest.correlationId);
+                        // Handle response from hash string
+                        return [2 /*return*/, silentHandler.handleCodeResponseFromHash(hash, state, authClient.authority, this.networkClient)];
+                }
+            });
+        });
+    };
+    return SilentIframeClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=SilentIframeClient.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/client/RefreshTokenClient.js
+var RefreshTokenClient = __webpack_require__(28508);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/SilentRefreshClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentRefreshClient = /** @class */ (function (_super) {
+    __extends(SilentRefreshClient, _super);
+    function SilentRefreshClient() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Exchanges the refresh token for new tokens
+     * @param request
+     */
+    SilentRefreshClient.prototype.acquireToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentRequest, _a, serverTelemetryManager, refreshTokenClient;
+            var _this = this;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = [__assign({}, request)];
+                        return [4 /*yield*/, this.initializeBaseRequest(request)];
+                    case 1:
+                        silentRequest = __assign.apply(void 0, _a.concat([_b.sent()]));
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.acquireTokenSilent_silentFlow);
+                        return [4 /*yield*/, this.createRefreshTokenClient(serverTelemetryManager, silentRequest.authority)];
+                    case 2:
+                        refreshTokenClient = _b.sent();
+                        this.logger.verbose("Refresh token client created");
+                        // Send request to renew token. Auth module will throw errors if token cannot be renewed.
+                        return [2 /*return*/, refreshTokenClient.acquireTokenByRefreshToken(silentRequest).catch(function (e) {
+                                if (e instanceof AuthError/* AuthError */.l) {
+                                    e.setCorrelationId(_this.correlationId);
+                                }
+                                serverTelemetryManager.cacheFailedRequest(e);
+                                throw e;
+                            })];
+                }
+            });
+        });
+    };
+    /**
+     * Currently Unsupported
+     */
+    SilentRefreshClient.prototype.logout = function () {
+        // Synchronous so we must reject
+        return Promise.reject(BrowserAuthError.createSilentLogoutUnsupportedError());
+    };
+    /**
+     * Creates a Refresh Client with the given authority, or the default authority.
+     * @param serverTelemetryManager
+     * @param authorityUrl
+     */
+    SilentRefreshClient.prototype.createRefreshTokenClient = function (serverTelemetryManager, authorityUrl) {
+        return __awaiter(this, void 0, void 0, function () {
+            var clientConfig;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getClientConfiguration(serverTelemetryManager, authorityUrl)];
+                    case 1:
+                        clientConfig = _a.sent();
+                        return [2 /*return*/, new RefreshTokenClient/* RefreshTokenClient */.Y(clientConfig)];
+                }
+            });
+        });
+    };
+    return SilentRefreshClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=SilentRefreshClient.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/Authority.js + 3 modules
+var Authority = __webpack_require__(95622);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/request/ScopeSet.js
+var ScopeSet = __webpack_require__(92613);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/cache/TokenCache.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Token cache manager
+ */
+var TokenCache = /** @class */ (function () {
+    function TokenCache(configuration, storage, logger, cryptoObj) {
+        this.isBrowserEnvironment = typeof window !== "undefined";
+        this.config = configuration;
+        this.storage = storage;
+        this.logger = logger;
+        this.cryptoObj = cryptoObj;
+    }
+    // Move getAllAccounts here and cache utility APIs
+    /**
+     * API to load tokens to msal-browser cache.
+     * @param request
+     * @param response
+     * @param options
+     */
+    TokenCache.prototype.loadExternalTokens = function (request, response, options) {
+        this.logger.info("TokenCache - loadExternalTokens called");
+        if (!response.id_token) {
+            throw BrowserAuthError.createUnableToLoadTokenError("Please ensure server response includes id token.");
+        }
+        if (request.account) {
+            this.loadIdToken(response.id_token, request.account.homeAccountId, request.account.environment, request.account.tenantId, options);
+            this.loadAccessToken(request, response, request.account.homeAccountId, request.account.environment, request.account.tenantId, options);
+        }
+        else if (request.authority) {
+            var authorityOptions = {
+                protocolMode: this.config.auth.protocolMode,
+                knownAuthorities: this.config.auth.knownAuthorities,
+                cloudDiscoveryMetadata: this.config.auth.cloudDiscoveryMetadata,
+                authorityMetadata: this.config.auth.authorityMetadata
+            };
+            var authority = new Authority/* Authority */.W(request.authority, this.config.system.networkClient, this.storage, authorityOptions);
+            // "clientInfo" from options takes precedence over "clientInfo" in response
+            if (options.clientInfo) {
+                this.logger.trace("TokenCache - homeAccountId from options");
+                this.loadIdToken(response.id_token, options.clientInfo, authority.hostnameAndPort, authority.tenant, options);
+                this.loadAccessToken(request, response, options.clientInfo, authority.hostnameAndPort, authority.tenant, options);
+            }
+            else if (response.client_info) {
+                this.logger.trace("TokenCache - homeAccountId from response");
+                this.loadIdToken(response.id_token, response.client_info, authority.hostnameAndPort, authority.tenant, options);
+                this.loadAccessToken(request, response, response.client_info, authority.hostnameAndPort, authority.tenant, options);
+            }
+            else {
+                throw BrowserAuthError.createUnableToLoadTokenError("Please provide clientInfo in the response or options.");
+            }
+        }
+        else {
+            throw BrowserAuthError.createUnableToLoadTokenError("Please provide a request with an account or a request with authority.");
+        }
+    };
+    /**
+     * Helper function to load id tokens to msal-browser cache
+     * @param idToken
+     * @param homeAccountId
+     * @param environment
+     * @param tenantId
+     * @param options
+     */
+    TokenCache.prototype.loadIdToken = function (idToken, homeAccountId, environment, tenantId, options) {
+        var idTokenEntity = IdTokenEntity/* IdTokenEntity.createIdTokenEntity */.w.createIdTokenEntity(homeAccountId, environment, idToken, this.config.auth.clientId, tenantId);
+        var idAuthToken = new AuthToken/* AuthToken */.H(idToken, this.cryptoObj);
+        var accountEntity = options.clientInfo ?
+            AccountEntity/* AccountEntity.createAccount */.r.createAccount(options.clientInfo, homeAccountId, idAuthToken, undefined, undefined, undefined, undefined, environment) :
+            AccountEntity/* AccountEntity.createGenericAccount */.r.createGenericAccount(homeAccountId, idAuthToken, undefined, undefined, undefined, undefined, environment);
+        if (this.isBrowserEnvironment) {
+            this.logger.verbose("TokenCache - loading id token");
+            this.storage.setAccount(accountEntity);
+            this.storage.setIdTokenCredential(idTokenEntity);
+        }
+        else {
+            throw BrowserAuthError.createUnableToLoadTokenError("loadExternalTokens is designed to work in browser environments only.");
+        }
+    };
+    /**
+     * Helper function to load access tokens to msal-browser cache
+     * @param request
+     * @param response
+     * @param options
+     * @param homeAccountId
+     * @param environment
+     * @param tenantId
+     * @returns
+     */
+    TokenCache.prototype.loadAccessToken = function (request, response, homeAccountId, environment, tenantId, options) {
+        if (!response.access_token) {
+            this.logger.verbose("TokenCache - No access token provided for caching");
+            return;
+        }
+        if (!response.expires_in) {
+            throw BrowserAuthError.createUnableToLoadTokenError("Please ensure server response includes expires_in value.");
+        }
+        if (!options.extendedExpiresOn) {
+            throw BrowserAuthError.createUnableToLoadTokenError("Please provide an extendedExpiresOn value in the options.");
+        }
+        var scopes = new ScopeSet/* ScopeSet */.i(request.scopes).printScopes();
+        var expiresOn = response.expires_in;
+        var extendedExpiresOn = options.extendedExpiresOn;
+        var accessTokenEntity = AccessTokenEntity/* AccessTokenEntity.createAccessTokenEntity */._.createAccessTokenEntity(homeAccountId, environment, response.access_token, this.config.auth.clientId, tenantId, scopes, expiresOn, extendedExpiresOn, this.cryptoObj);
+        if (this.isBrowserEnvironment) {
+            this.logger.verbose("TokenCache - loading access token");
+            this.storage.setAccessTokenCredential(accessTokenEntity);
+        }
+        else {
+            throw BrowserAuthError.createUnableToLoadTokenError("loadExternalTokens is designed to work in browser environments only.");
+        }
+    };
+    return TokenCache;
+}());
+
+
+//# sourceMappingURL=TokenCache.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/HybridSpaAuthorizationCodeClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var HybridSpaAuthorizationCodeClient = /** @class */ (function (_super) {
+    __extends(HybridSpaAuthorizationCodeClient, _super);
+    function HybridSpaAuthorizationCodeClient(config) {
+        var _this = _super.call(this, config) || this;
+        _this.includeRedirectUri = false;
+        return _this;
+    }
+    return HybridSpaAuthorizationCodeClient;
+}(AuthorizationCodeClient/* AuthorizationCodeClient */.U));
+
+
+//# sourceMappingURL=HybridSpaAuthorizationCodeClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/SilentAuthCodeClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentAuthCodeClient = /** @class */ (function (_super) {
+    __extends(SilentAuthCodeClient, _super);
+    function SilentAuthCodeClient(config, storageImpl, browserCrypto, logger, eventHandler, navigationClient, apiId, correlationId) {
+        var _this = _super.call(this, config, storageImpl, browserCrypto, logger, eventHandler, navigationClient, correlationId) || this;
+        _this.apiId = apiId;
+        return _this;
+    }
+    /**
+     * Acquires a token silently by redeeming an authorization code against the /token endpoint
+     * @param request
+     */
+    SilentAuthCodeClient.prototype.acquireToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentRequest, serverTelemetryManager, authCodeRequest, clientConfig, authClient, silentHandler, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.trace("SilentAuthCodeClient.acquireToken called");
+                        // Auth code payload is required
+                        if (!request.code) {
+                            throw BrowserAuthError.createAuthCodeRequiredError();
+                        }
+                        return [4 /*yield*/, this.initializeAuthorizationRequest(request, InteractionType.Silent)];
+                    case 1:
+                        silentRequest = _a.sent();
+                        serverTelemetryManager = this.initializeServerTelemetryManager(this.apiId);
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 4, , 5]);
+                        authCodeRequest = __assign(__assign({}, silentRequest), { code: request.code });
+                        return [4 /*yield*/, this.getClientConfiguration(serverTelemetryManager, silentRequest.authority)];
+                    case 3:
+                        clientConfig = _a.sent();
+                        authClient = new HybridSpaAuthorizationCodeClient(clientConfig);
+                        this.logger.verbose("Auth code client created");
+                        silentHandler = new SilentHandler(authClient, this.browserStorage, authCodeRequest, this.logger, this.config.system.navigateFrameWait);
+                        // Handle auth code parameters from request
+                        return [2 /*return*/, silentHandler.handleCodeResponseFromServer({
+                                code: request.code,
+                                msgraph_host: request.msGraphHost,
+                                cloud_graph_host_name: request.cloudGraphHostName,
+                                cloud_instance_host_name: request.cloudInstanceHostName
+                            }, silentRequest.state, authClient.authority, this.networkClient, false)];
+                    case 4:
+                        e_1 = _a.sent();
+                        if (e_1 instanceof AuthError/* AuthError */.l) {
+                            e_1.setCorrelationId(this.correlationId);
+                        }
+                        serverTelemetryManager.cacheFailedRequest(e_1);
+                        this.browserStorage.cleanRequestByState(silentRequest.state);
+                        throw e_1;
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Currently Unsupported
+     */
+    SilentAuthCodeClient.prototype.logout = function () {
+        // Synchronous so we must reject
+        return Promise.reject(BrowserAuthError.createSilentLogoutUnsupportedError());
+    };
+    return SilentAuthCodeClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=SilentAuthCodeClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/app/ClientApplication.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var ClientApplication = /** @class */ (function () {
+    /**
+     * @constructor
+     * Constructor for the PublicClientApplication used to instantiate the PublicClientApplication object
+     *
+     * Important attributes in the Configuration object for auth are:
+     * - clientID: the application ID of your application. You can obtain one by registering your application with our Application registration portal : https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
+     * - authority: the authority URL for your application.
+     * - redirect_uri: the uri of your application registered in the portal.
+     *
+     * In Azure AD, authority is a URL indicating the Azure active directory that MSAL uses to obtain tokens.
+     * It is of the form https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}
+     * If your application supports Accounts in one organizational directory, replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
+     * If your application supports Accounts in any organizational directory, replace "Enter_the_Tenant_Info_Here" value with organizations.
+     * If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace "Enter_the_Tenant_Info_Here" value with common.
+     * To restrict support to Personal Microsoft accounts only, replace "Enter_the_Tenant_Info_Here" value with consumers.
+     *
+     * In Azure B2C, authority is of the form https://{instance}/tfp/{tenant}/{policyName}/
+     * Full B2C functionality will be available in this library in future versions.
+     *
+     * @param configuration Object for the MSAL PublicClientApplication instance
+     */
+    function ClientApplication(configuration) {
+        /*
+         * If loaded in an environment where window is not available,
+         * set internal flag to false so that further requests fail.
+         * This is to support server-side rendering environments.
+         */
+        this.isBrowserEnvironment = typeof window !== "undefined";
+        // Set the configuration.
+        this.config = buildConfiguration(configuration, this.isBrowserEnvironment);
+        // Initialize logger
+        this.logger = new Logger/* Logger */.Y(this.config.system.loggerOptions, packageMetadata_name, version);
+        // Initialize the network module class.
+        this.networkClient = this.config.system.networkClient;
+        // Initialize the navigation client class.
+        this.navigationClient = this.config.system.navigationClient;
+        // Initialize redirectResponse Map
+        this.redirectResponse = new Map();
+        // Initial hybrid spa map
+        this.hybridAuthCodeResponses = new Map();
+        // Initialize the crypto class.
+        this.browserCrypto = this.isBrowserEnvironment ? new CryptoOps(this.logger) : ICrypto/* DEFAULT_CRYPTO_IMPLEMENTATION */.d;
+        this.eventHandler = new EventHandler(this.logger, this.browserCrypto);
+        // Initialize the browser storage class.
+        this.browserStorage = this.isBrowserEnvironment ?
+            new BrowserCacheManager(this.config.auth.clientId, this.config.cache, this.browserCrypto, this.logger) :
+            DEFAULT_BROWSER_CACHE_MANAGER(this.config.auth.clientId, this.logger);
+        // Initialize the token cache
+        this.tokenCache = new TokenCache(this.config, this.browserStorage, this.logger, this.browserCrypto);
+    }
+    // #region Redirect Flow
+    /**
+     * Event handler function which allows users to fire events after the PublicClientApplication object
+     * has loaded during redirect flows. This should be invoked on all page loads involved in redirect
+     * auth flows.
+     * @param hash Hash to process. Defaults to the current value of window.location.hash. Only needs to be provided explicitly if the response to be handled is not contained in the current value.
+     * @returns Token response or null. If the return value is null, then no auth redirect was detected.
+     */
+    ClientApplication.prototype.handleRedirectPromise = function (hash) {
+        return __awaiter(this, void 0, void 0, function () {
+            var loggedInAccounts, redirectResponseKey, response, correlationId, redirectClient;
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.logger.verbose("handleRedirectPromise called");
+                loggedInAccounts = this.getAllAccounts();
+                if (this.isBrowserEnvironment) {
+                    redirectResponseKey = hash || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                    response = this.redirectResponse.get(redirectResponseKey);
+                    if (typeof response === "undefined") {
+                        this.eventHandler.emitEvent(EventType.HANDLE_REDIRECT_START, InteractionType.Redirect);
+                        this.logger.verbose("handleRedirectPromise has been called for the first time, storing the promise");
+                        correlationId = this.browserStorage.getTemporaryCache(TemporaryCacheKeys.CORRELATION_ID, true) || "";
+                        redirectClient = new RedirectClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, correlationId);
+                        response = redirectClient.handleRedirectPromise(hash)
+                            .then(function (result) {
+                            if (result) {
+                                // Emit login event if number of accounts change
+                                var isLoggingIn = loggedInAccounts.length < _this.getAllAccounts().length;
+                                if (isLoggingIn) {
+                                    _this.eventHandler.emitEvent(EventType.LOGIN_SUCCESS, InteractionType.Redirect, result);
+                                    _this.logger.verbose("handleRedirectResponse returned result, login success");
+                                }
+                                else {
+                                    _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_SUCCESS, InteractionType.Redirect, result);
+                                    _this.logger.verbose("handleRedirectResponse returned result, acquire token success");
+                                }
+                            }
+                            _this.eventHandler.emitEvent(EventType.HANDLE_REDIRECT_END, InteractionType.Redirect);
+                            return result;
+                        })
+                            .catch(function (e) {
+                            // Emit login event if there is an account
+                            if (loggedInAccounts.length > 0) {
+                                _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_FAILURE, InteractionType.Redirect, null, e);
+                            }
+                            else {
+                                _this.eventHandler.emitEvent(EventType.LOGIN_FAILURE, InteractionType.Redirect, null, e);
+                            }
+                            _this.eventHandler.emitEvent(EventType.HANDLE_REDIRECT_END, InteractionType.Redirect);
+                            throw e;
+                        });
+                        this.redirectResponse.set(redirectResponseKey, response);
+                    }
+                    else {
+                        this.logger.verbose("handleRedirectPromise has been called previously, returning the result from the first call");
+                    }
+                    return [2 /*return*/, response];
+                }
+                this.logger.verbose("handleRedirectPromise returns null, not browser environment");
+                return [2 /*return*/, null];
+            });
+        });
+    };
+    /**
+     * Use when you want to obtain an access_token for your API by redirecting the user's browser window to the authorization endpoint. This function redirects
+     * the page, so any code that follows this function will not execute.
+     *
+     * IMPORTANT: It is NOT recommended to have code that is dependent on the resolution of the Promise. This function will navigate away from the current
+     * browser window. It currently returns a Promise in order to reflect the asynchronous nature of the code running in this function.
+     *
+     * @param request
+     */
+    ClientApplication.prototype.acquireTokenRedirect = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var isLoggedIn, redirectClient;
+            var _this = this;
+            return __generator(this, function (_a) {
+                // Preflight request
+                this.preflightBrowserEnvironmentCheck(InteractionType.Redirect);
+                this.logger.verbose("acquireTokenRedirect called");
+                isLoggedIn = this.getAllAccounts().length > 0;
+                if (isLoggedIn) {
+                    this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_START, InteractionType.Redirect, request);
+                }
+                else {
+                    this.eventHandler.emitEvent(EventType.LOGIN_START, InteractionType.Redirect, request);
+                }
+                redirectClient = new RedirectClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, request.correlationId);
+                return [2 /*return*/, redirectClient.acquireToken(request).catch(function (e) {
+                        // If logged in, emit acquire token events
+                        if (isLoggedIn) {
+                            _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_FAILURE, InteractionType.Redirect, null, e);
+                        }
+                        else {
+                            _this.eventHandler.emitEvent(EventType.LOGIN_FAILURE, InteractionType.Redirect, null, e);
+                        }
+                        throw e;
+                    })];
+            });
+        });
+    };
+    // #endregion
+    // #region Popup Flow
+    /**
+     * Use when you want to obtain an access_token for your API via opening a popup window in the user's browser
+     *
+     * @param request
+     *
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    ClientApplication.prototype.acquireTokenPopup = function (request) {
+        var _this = this;
+        try {
+            this.preflightBrowserEnvironmentCheck(InteractionType.Popup);
+            this.logger.verbose("acquireTokenPopup called", request.correlationId);
+        }
+        catch (e) {
+            // Since this function is syncronous we need to reject
+            return Promise.reject(e);
+        }
+        // If logged in, emit acquire token events
+        var loggedInAccounts = this.getAllAccounts();
+        if (loggedInAccounts.length > 0) {
+            this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_START, InteractionType.Popup, request);
+        }
+        else {
+            this.eventHandler.emitEvent(EventType.LOGIN_START, InteractionType.Popup, request);
+        }
+        var popupClient = new PopupClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, request.correlationId);
+        return popupClient.acquireToken(request).then(function (result) {
+            // If logged in, emit acquire token events
+            var isLoggingIn = loggedInAccounts.length < _this.getAllAccounts().length;
+            if (isLoggingIn) {
+                _this.eventHandler.emitEvent(EventType.LOGIN_SUCCESS, InteractionType.Popup, result);
+            }
+            else {
+                _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_SUCCESS, InteractionType.Popup, result);
+            }
+            return result;
+        }).catch(function (e) {
+            if (loggedInAccounts.length > 0) {
+                _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_FAILURE, InteractionType.Popup, null, e);
+            }
+            else {
+                _this.eventHandler.emitEvent(EventType.LOGIN_FAILURE, InteractionType.Popup, null, e);
+            }
+            // Since this function is syncronous we need to reject
+            return Promise.reject(e);
+        });
+    };
+    // #endregion
+    // #region Silent Flow
+    /**
+     * This function uses a hidden iframe to fetch an authorization code from the eSTS. There are cases where this may not work:
+     * - Any browser using a form of Intelligent Tracking Prevention
+     * - If there is not an established session with the service
+     *
+     * In these cases, the request must be done inside a popup or full frame redirect.
+     *
+     * For the cases where interaction is required, you cannot send a request with prompt=none.
+     *
+     * If your refresh token has expired, you can use this function to fetch a new set of tokens silently as long as
+     * you session on the server still exists.
+     * @param request {@link SsoSilentRequest}
+     *
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    ClientApplication.prototype.ssoSilent = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentIframeClient, silentTokenResult, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.preflightBrowserEnvironmentCheck(InteractionType.Silent);
+                        this.logger.verbose("ssoSilent called", request.correlationId);
+                        this.eventHandler.emitEvent(EventType.SSO_SILENT_START, InteractionType.Silent, request);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        silentIframeClient = new SilentIframeClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, ApiId.ssoSilent, request.correlationId);
+                        return [4 /*yield*/, silentIframeClient.acquireToken(request)];
+                    case 2:
+                        silentTokenResult = _a.sent();
+                        this.eventHandler.emitEvent(EventType.SSO_SILENT_SUCCESS, InteractionType.Silent, silentTokenResult);
+                        return [2 /*return*/, silentTokenResult];
+                    case 3:
+                        e_1 = _a.sent();
+                        this.eventHandler.emitEvent(EventType.SSO_SILENT_FAILURE, InteractionType.Silent, null, e_1);
+                        throw e_1;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * This function redeems an authorization code (passed as code) from the eSTS token endpoint.
+     * This authorization code should be acquired server-side using a confidential client to acquire a spa_code.
+     * This API is not indended for normal authorization code acquisition and redemption.
+     *
+     * Redemption of this authorization code will not require PKCE, as it was acquired by a confidential client.
+     *
+     * @param request {@link AuthorizationCodeRequest}
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    ClientApplication.prototype.acquireTokenByCode = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response;
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.preflightBrowserEnvironmentCheck(InteractionType.Silent);
+                this.logger.trace("acquireTokenByCode called", request.correlationId);
+                this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_BY_CODE_START, InteractionType.Silent, request);
+                try {
+                    if (!request.code) {
+                        throw BrowserAuthError.createAuthCodeRequiredError();
+                    }
+                    response = this.hybridAuthCodeResponses.get(request.code);
+                    if (!response) {
+                        this.logger.verbose("Initiating new acquireTokenByCode request", request.correlationId);
+                        response = this.acquireTokenByCodeAsync(request)
+                            .then(function (result) {
+                            _this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_BY_CODE_SUCCESS, InteractionType.Silent, result);
+                            _this.hybridAuthCodeResponses.delete(request.code);
+                            return result;
+                        })
+                            .catch(function (error) {
+                            _this.hybridAuthCodeResponses.delete(request.code);
+                            throw error;
+                        });
+                        this.hybridAuthCodeResponses.set(request.code, response);
+                    }
+                    else {
+                        this.logger.verbose("Existing acquireTokenByCode request found", request.correlationId);
+                    }
+                    return [2 /*return*/, response];
+                }
+                catch (e) {
+                    this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_BY_CODE_FAILURE, InteractionType.Silent, null, e);
+                    throw e;
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    /**
+     * Creates a SilentAuthCodeClient to redeem an authorization code.
+     * @param request
+     * @returns Result of the operation to redeem the authorization code
+     */
+    ClientApplication.prototype.acquireTokenByCodeAsync = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentAuthCodeClient, silentTokenResult;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.trace("acquireTokenByCodeAsync called", request.correlationId);
+                        silentAuthCodeClient = new SilentAuthCodeClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, ApiId.acquireTokenByCode, request.correlationId);
+                        return [4 /*yield*/, silentAuthCodeClient.acquireToken(request)];
+                    case 1:
+                        silentTokenResult = _a.sent();
+                        return [2 /*return*/, silentTokenResult];
+                }
+            });
+        });
+    };
+    /**
+     * Use this function to obtain a token before every call to the API / resource provider
+     *
+     * MSAL return's a cached token when available
+     * Or it send's a request to the STS to obtain a new token using a refresh token.
+     *
+     * @param {@link SilentRequest}
+     *
+     * To renew idToken, please pass clientId as the only scope in the Authentication Parameters
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    ClientApplication.prototype.acquireTokenByRefreshToken = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentRefreshClient;
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_NETWORK_START, InteractionType.Silent, request);
+                // block the reload if it occurred inside a hidden iframe
+                BrowserUtils.blockReloadInHiddenIframes();
+                silentRefreshClient = new SilentRefreshClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, request.correlationId);
+                return [2 /*return*/, silentRefreshClient.acquireToken(request).catch(function (e) {
+                        var isServerError = e instanceof ServerError/* ServerError */.n;
+                        var isInteractionRequiredError = e instanceof InteractionRequiredAuthError/* InteractionRequiredAuthError */.Yo;
+                        var isInvalidGrantError = (e.errorCode === BrowserConstants.INVALID_GRANT_ERROR);
+                        if (isServerError && isInvalidGrantError && !isInteractionRequiredError) {
+                            _this.logger.verbose("Refresh token expired or invalid, attempting acquire token by iframe", request.correlationId);
+                            var silentIframeClient = new SilentIframeClient(_this.config, _this.browserStorage, _this.browserCrypto, _this.logger, _this.eventHandler, _this.navigationClient, ApiId.acquireTokenSilent_authCode, request.correlationId);
+                            return silentIframeClient.acquireToken(request);
+                        }
+                        throw e;
+                    })];
+            });
+        });
+    };
+    // #endregion
+    // #region Logout
+    /**
+     * Deprecated logout function. Use logoutRedirect or logoutPopup instead
+     * @param logoutRequest
+     * @deprecated
+     */
+    ClientApplication.prototype.logout = function (logoutRequest) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.logger.warning("logout API is deprecated and will be removed in msal-browser v3.0.0. Use logoutRedirect instead.");
+                return [2 /*return*/, this.logoutRedirect(logoutRequest)];
+            });
+        });
+    };
+    /**
+     * Use to log out the current user, and redirect the user to the postLogoutRedirectUri.
+     * Default behaviour is to redirect the user to `window.location.href`.
+     * @param logoutRequest
+     */
+    ClientApplication.prototype.logoutRedirect = function (logoutRequest) {
+        return __awaiter(this, void 0, void 0, function () {
+            var redirectClient;
+            return __generator(this, function (_a) {
+                this.preflightBrowserEnvironmentCheck(InteractionType.Redirect);
+                redirectClient = new RedirectClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, logoutRequest === null || logoutRequest === void 0 ? void 0 : logoutRequest.correlationId);
+                return [2 /*return*/, redirectClient.logout(logoutRequest)];
+            });
+        });
+    };
+    /**
+     * Clears local cache for the current user then opens a popup window prompting the user to sign-out of the server
+     * @param logoutRequest
+     */
+    ClientApplication.prototype.logoutPopup = function (logoutRequest) {
+        try {
+            this.preflightBrowserEnvironmentCheck(InteractionType.Popup);
+            var popupClient = new PopupClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, logoutRequest === null || logoutRequest === void 0 ? void 0 : logoutRequest.correlationId);
+            return popupClient.logout(logoutRequest);
+        }
+        catch (e) {
+            // Since this function is syncronous we need to reject
+            return Promise.reject(e);
+        }
+    };
+    // #endregion
+    // #region Account APIs
+    /**
+     * Returns all accounts that MSAL currently has data for.
+     * (the account object is created at the time of successful login)
+     * or empty array when no accounts are found
+     * @returns Array of account objects in cache
+     */
+    ClientApplication.prototype.getAllAccounts = function () {
+        this.logger.verbose("getAllAccounts called");
+        return this.isBrowserEnvironment ? this.browserStorage.getAllAccounts() : [];
+    };
+    /**
+     * Returns the signed in account matching username.
+     * (the account object is created at the time of successful login)
+     * or null when no matching account is found.
+     * This API is provided for convenience but getAccountById should be used for best reliability
+     * @param userName
+     * @returns The account object stored in MSAL
+     */
+    ClientApplication.prototype.getAccountByUsername = function (userName) {
+        var allAccounts = this.getAllAccounts();
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(userName) && allAccounts && allAccounts.length) {
+            this.logger.verbose("Account matching username found, returning");
+            this.logger.verbosePii("Returning signed-in accounts matching username: " + userName);
+            return allAccounts.filter(function (accountObj) { return accountObj.username.toLowerCase() === userName.toLowerCase(); })[0] || null;
+        }
+        else {
+            this.logger.verbose("getAccountByUsername: No matching account found, returning null");
+            return null;
+        }
+    };
+    /**
+     * Returns the signed in account matching homeAccountId.
+     * (the account object is created at the time of successful login)
+     * or null when no matching account is found
+     * @param homeAccountId
+     * @returns The account object stored in MSAL
+     */
+    ClientApplication.prototype.getAccountByHomeId = function (homeAccountId) {
+        var allAccounts = this.getAllAccounts();
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(homeAccountId) && allAccounts && allAccounts.length) {
+            this.logger.verbose("Account matching homeAccountId found, returning");
+            this.logger.verbosePii("Returning signed-in accounts matching homeAccountId: " + homeAccountId);
+            return allAccounts.filter(function (accountObj) { return accountObj.homeAccountId === homeAccountId; })[0] || null;
+        }
+        else {
+            this.logger.verbose("getAccountByHomeId: No matching account found, returning null");
+            return null;
+        }
+    };
+    /**
+     * Returns the signed in account matching localAccountId.
+     * (the account object is created at the time of successful login)
+     * or null when no matching account is found
+     * @param localAccountId
+     * @returns The account object stored in MSAL
+     */
+    ClientApplication.prototype.getAccountByLocalId = function (localAccountId) {
+        var allAccounts = this.getAllAccounts();
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(localAccountId) && allAccounts && allAccounts.length) {
+            this.logger.verbose("Account matching localAccountId found, returning");
+            this.logger.verbosePii("Returning signed-in accounts matching localAccountId: " + localAccountId);
+            return allAccounts.filter(function (accountObj) { return accountObj.localAccountId === localAccountId; })[0] || null;
+        }
+        else {
+            this.logger.verbose("getAccountByLocalId: No matching account found, returning null");
+            return null;
+        }
+    };
+    /**
+     * Sets the account to use as the active account. If no account is passed to the acquireToken APIs, then MSAL will use this active account.
+     * @param account
+     */
+    ClientApplication.prototype.setActiveAccount = function (account) {
+        this.browserStorage.setActiveAccount(account);
+    };
+    /**
+     * Gets the currently active account
+     */
+    ClientApplication.prototype.getActiveAccount = function () {
+        return this.browserStorage.getActiveAccount();
+    };
+    // #endregion
+    // #region Helpers
+    /**
+     * Helper to validate app environment before making an auth request
+     * * @param interactionType
+     */
+    ClientApplication.prototype.preflightBrowserEnvironmentCheck = function (interactionType) {
+        this.logger.verbose("preflightBrowserEnvironmentCheck started");
+        // Block request if not in browser environment
+        BrowserUtils.blockNonBrowserEnvironment(this.isBrowserEnvironment);
+        // Block redirects if in an iframe
+        BrowserUtils.blockRedirectInIframe(interactionType, this.config.system.allowRedirectInIframe);
+        // Block auth requests inside a hidden iframe
+        BrowserUtils.blockReloadInHiddenIframes();
+        // Block redirectUri opened in a popup from calling MSAL APIs
+        BrowserUtils.blockAcquireTokenInPopups();
+        // Block redirects if memory storage is enabled but storeAuthStateInCookie is not
+        if (interactionType === InteractionType.Redirect &&
+            this.config.cache.cacheLocation === BrowserCacheLocation.MemoryStorage &&
+            !this.config.cache.storeAuthStateInCookie) {
+            throw BrowserConfigurationAuthError.createInMemoryRedirectUnavailableError();
+        }
+    };
+    /**
+     * Adds event callbacks to array
+     * @param callback
+     */
+    ClientApplication.prototype.addEventCallback = function (callback) {
+        return this.eventHandler.addEventCallback(callback);
+    };
+    /**
+     * Removes callback with provided id from callback array
+     * @param callbackId
+     */
+    ClientApplication.prototype.removeEventCallback = function (callbackId) {
+        this.eventHandler.removeEventCallback(callbackId);
+    };
+    /**
+     * Adds event listener that emits an event when a user account is added or removed from localstorage in a different browser tab or window
+     */
+    ClientApplication.prototype.enableAccountStorageEvents = function () {
+        this.eventHandler.enableAccountStorageEvents();
+    };
+    /**
+     * Removes event listener that emits an event when a user account is added or removed from localstorage in a different browser tab or window
+     */
+    ClientApplication.prototype.disableAccountStorageEvents = function () {
+        this.eventHandler.disableAccountStorageEvents();
+    };
+    /**
+     * Gets the token cache for the application.
+     */
+    ClientApplication.prototype.getTokenCache = function () {
+        return this.tokenCache;
+    };
+    /**
+     * Returns the logger instance
+     */
+    ClientApplication.prototype.getLogger = function () {
+        return this.logger;
+    };
+    /**
+     * Replaces the default logger set in configurations with new Logger with new configurations
+     * @param logger Logger instance
+     */
+    ClientApplication.prototype.setLogger = function (logger) {
+        this.logger = logger;
+    };
+    /**
+     * Called by wrapper libraries (Angular & React) to set SKU and Version passed down to telemetry, logger, etc.
+     * @param sku
+     * @param version
+     */
+    ClientApplication.prototype.initializeWrapperLibrary = function (sku, version) {
+        // Validate the SKU passed in is one we expect
+        this.browserStorage.setWrapperMetadata(sku, version);
+    };
+    /**
+     * Sets navigation client
+     * @param navigationClient
+     */
+    ClientApplication.prototype.setNavigationClient = function (navigationClient) {
+        this.navigationClient = navigationClient;
+    };
+    /**
+     * Returns the configuration object
+     */
+    ClientApplication.prototype.getConfiguration = function () {
+        return this.config;
+    };
+    return ClientApplication;
+}());
+
+
+//# sourceMappingURL=ClientApplication.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/client/SilentFlowClient.js
+var SilentFlowClient = __webpack_require__(43387);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/interaction_client/SilentCacheClient.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentCacheClient = /** @class */ (function (_super) {
+    __extends(SilentCacheClient, _super);
+    function SilentCacheClient() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Returns unexpired tokens from the cache, if available
+     * @param silentRequest
+     */
+    SilentCacheClient.prototype.acquireToken = function (silentRequest) {
+        return __awaiter(this, void 0, void 0, function () {
+            var serverTelemetryManager, silentAuthClient, cachedToken, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        serverTelemetryManager = this.initializeServerTelemetryManager(ApiId.acquireTokenSilent_silentFlow);
+                        return [4 /*yield*/, this.createSilentFlowClient(serverTelemetryManager, silentRequest.authority)];
+                    case 1:
+                        silentAuthClient = _a.sent();
+                        this.logger.verbose("Silent auth client created");
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 4, , 5]);
+                        return [4 /*yield*/, silentAuthClient.acquireCachedToken(silentRequest)];
+                    case 3:
+                        cachedToken = _a.sent();
+                        this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_SUCCESS, InteractionType.Silent, cachedToken);
+                        return [2 /*return*/, cachedToken];
+                    case 4:
+                        error_1 = _a.sent();
+                        if (error_1 instanceof BrowserAuthError && error_1.errorCode === BrowserAuthErrorMessage.signingKeyNotFoundInStorage.code) {
+                            this.logger.verbose("Signing keypair for bound access token not found. Refreshing bound access token and generating a new crypto keypair.");
+                        }
+                        throw error_1;
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Currently Unsupported
+     */
+    SilentCacheClient.prototype.logout = function () {
+        // Synchronous so we must reject
+        return Promise.reject(BrowserAuthError.createSilentLogoutUnsupportedError());
+    };
+    /**
+     * Creates an Silent Flow Client with the given authority, or the default authority.
+     * @param serverTelemetryManager
+     * @param authorityUrl
+     */
+    SilentCacheClient.prototype.createSilentFlowClient = function (serverTelemetryManager, authorityUrl) {
+        return __awaiter(this, void 0, void 0, function () {
+            var clientConfig;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getClientConfiguration(serverTelemetryManager, authorityUrl)];
+                    case 1:
+                        clientConfig = _a.sent();
+                        return [2 /*return*/, new SilentFlowClient/* SilentFlowClient */.g(clientConfig)];
+                }
+            });
+        });
+    };
+    SilentCacheClient.prototype.initializeSilentRequest = function (request, account) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = [__assign({}, request)];
+                        return [4 /*yield*/, this.initializeBaseRequest(request)];
+                    case 1: return [2 /*return*/, __assign.apply(void 0, [__assign.apply(void 0, _a.concat([_b.sent()])), { account: account, forceRefresh: request.forceRefresh || false }])];
+                }
+            });
+        });
+    };
+    return SilentCacheClient;
+}(StandardInteractionClient));
+
+
+//# sourceMappingURL=SilentCacheClient.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/app/PublicClientApplication.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * The PublicClientApplication class is the object exposed by the library to perform authentication and authorization functions in Single Page Applications
+ * to obtain JWT tokens as described in the OAuth 2.0 Authorization Code Flow with PKCE specification.
+ */
+var PublicClientApplication = /** @class */ (function (_super) {
+    __extends(PublicClientApplication, _super);
+    /**
+     * @constructor
+     * Constructor for the PublicClientApplication used to instantiate the PublicClientApplication object
+     *
+     * Important attributes in the Configuration object for auth are:
+     * - clientID: the application ID of your application. You can obtain one by registering your application with our Application registration portal : https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
+     * - authority: the authority URL for your application.
+     * - redirect_uri: the uri of your application registered in the portal.
+     *
+     * In Azure AD, authority is a URL indicating the Azure active directory that MSAL uses to obtain tokens.
+     * It is of the form https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}
+     * If your application supports Accounts in one organizational directory, replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
+     * If your application supports Accounts in any organizational directory, replace "Enter_the_Tenant_Info_Here" value with organizations.
+     * If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace "Enter_the_Tenant_Info_Here" value with common.
+     * To restrict support to Personal Microsoft accounts only, replace "Enter_the_Tenant_Info_Here" value with consumers.
+     *
+     * In Azure B2C, authority is of the form https://{instance}/tfp/{tenant}/{policyName}/
+     * Full B2C functionality will be available in this library in future versions.
+     *
+     * @param configuration object for the MSAL PublicClientApplication instance
+     */
+    function PublicClientApplication(configuration) {
+        var _this = _super.call(this, configuration) || this;
+        _this.activeSilentTokenRequests = new Map();
+        return _this;
+    }
+    /**
+     * Use when initiating the login process by redirecting the user's browser to the authorization endpoint. This function redirects the page, so
+     * any code that follows this function will not execute.
+     *
+     * IMPORTANT: It is NOT recommended to have code that is dependent on the resolution of the Promise. This function will navigate away from the current
+     * browser window. It currently returns a Promise in order to reflect the asynchronous nature of the code running in this function.
+     *
+     * @param request
+     */
+    PublicClientApplication.prototype.loginRedirect = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.logger.verbose("loginRedirect called");
+                return [2 /*return*/, this.acquireTokenRedirect(request || DEFAULT_REQUEST)];
+            });
+        });
+    };
+    /**
+     * Use when initiating the login process via opening a popup window in the user's browser
+     *
+     * @param request
+     *
+     * @returns A promise that is fulfilled when this function has completed, or rejected if an error was raised.
+     */
+    PublicClientApplication.prototype.loginPopup = function (request) {
+        this.logger.verbose("loginPopup called");
+        return this.acquireTokenPopup(request || DEFAULT_REQUEST);
+    };
+    /**
+     * Silently acquire an access token for a given set of scopes. Returns currently processing promise if parallel requests are made.
+     *
+     * @param {@link (SilentRequest:type)}
+     * @returns {Promise.<AuthenticationResult>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthResponse} object
+     */
+    PublicClientApplication.prototype.acquireTokenSilent = function (request) {
+        return __awaiter(this, void 0, void 0, function () {
+            var account, thumbprint, silentRequestKey, cachedResponse, response;
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.preflightBrowserEnvironmentCheck(InteractionType.Silent);
+                this.logger.verbose("acquireTokenSilent called", request.correlationId);
+                account = request.account || this.getActiveAccount();
+                if (!account) {
+                    throw BrowserAuthError.createNoAccountError();
+                }
+                thumbprint = {
+                    clientId: this.config.auth.clientId,
+                    authority: request.authority || "",
+                    scopes: request.scopes,
+                    homeAccountIdentifier: account.homeAccountId,
+                    claims: request.claims,
+                    authenticationScheme: request.authenticationScheme,
+                    resourceRequestMethod: request.resourceRequestMethod,
+                    resourceRequestUri: request.resourceRequestUri,
+                    shrClaims: request.shrClaims,
+                    sshKid: request.sshKid
+                };
+                silentRequestKey = JSON.stringify(thumbprint);
+                cachedResponse = this.activeSilentTokenRequests.get(silentRequestKey);
+                if (typeof cachedResponse === "undefined") {
+                    this.logger.verbose("acquireTokenSilent called for the first time, storing active request", request.correlationId);
+                    response = this.acquireTokenSilentAsync(request, account)
+                        .then(function (result) {
+                        _this.activeSilentTokenRequests.delete(silentRequestKey);
+                        return result;
+                    })
+                        .catch(function (error) {
+                        _this.activeSilentTokenRequests.delete(silentRequestKey);
+                        throw error;
+                    });
+                    this.activeSilentTokenRequests.set(silentRequestKey, response);
+                    return [2 /*return*/, response];
+                }
+                else {
+                    this.logger.verbose("acquireTokenSilent has been called previously, returning the result from the first call", request.correlationId);
+                    return [2 /*return*/, cachedResponse];
+                }
+            });
+        });
+    };
+    /**
+     * Silently acquire an access token for a given set of scopes. Will use cached token if available, otherwise will attempt to acquire a new token from the network via refresh token.
+     * @param {@link (SilentRequest:type)}
+     * @param {@link (AccountInfo:type)}
+     * @returns {Promise.<AuthenticationResult>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthResponse}
+     */
+    PublicClientApplication.prototype.acquireTokenSilentAsync = function (request, account) {
+        return __awaiter(this, void 0, void 0, function () {
+            var silentCacheClient, silentRequest;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        silentCacheClient = new SilentCacheClient(this.config, this.browserStorage, this.browserCrypto, this.logger, this.eventHandler, this.navigationClient, request.correlationId);
+                        return [4 /*yield*/, silentCacheClient.initializeSilentRequest(request, account)];
+                    case 1:
+                        silentRequest = _a.sent();
+                        this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_START, InteractionType.Silent, request);
+                        return [2 /*return*/, silentCacheClient.acquireToken(silentRequest).catch(function () { return __awaiter(_this, void 0, void 0, function () {
+                                var tokenRenewalResult, tokenRenewalError_1;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            _a.trys.push([0, 2, , 3]);
+                                            return [4 /*yield*/, this.acquireTokenByRefreshToken(silentRequest)];
+                                        case 1:
+                                            tokenRenewalResult = _a.sent();
+                                            this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_SUCCESS, InteractionType.Silent, tokenRenewalResult);
+                                            return [2 /*return*/, tokenRenewalResult];
+                                        case 2:
+                                            tokenRenewalError_1 = _a.sent();
+                                            this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_FAILURE, InteractionType.Silent, null, tokenRenewalError_1);
+                                            throw tokenRenewalError_1;
+                                        case 3: return [2 /*return*/];
+                                    }
+                                });
+                            }); })];
+                }
+            });
+        });
+    };
+    return PublicClientApplication;
+}(ClientApplication));
+
+
+//# sourceMappingURL=PublicClientApplication.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/app/IPublicClientApplication.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var stubbedPublicClientApplication = {
+    acquireTokenPopup: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    acquireTokenRedirect: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    acquireTokenSilent: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    acquireTokenByCode: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    getAllAccounts: function () {
+        return [];
+    },
+    getAccountByHomeId: function () {
+        return null;
+    },
+    getAccountByUsername: function () {
+        return null;
+    },
+    getAccountByLocalId: function () {
+        return null;
+    },
+    handleRedirectPromise: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    loginPopup: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    loginRedirect: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    logout: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    logoutRedirect: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    logoutPopup: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    ssoSilent: function () {
+        return Promise.reject(BrowserConfigurationAuthError.createStubPcaInstanceCalledError());
+    },
+    addEventCallback: function () {
+        return null;
+    },
+    removeEventCallback: function () {
+        return;
+    },
+    enableAccountStorageEvents: function () {
+        return;
+    },
+    disableAccountStorageEvents: function () {
+        return;
+    },
+    getTokenCache: function () {
+        throw BrowserConfigurationAuthError.createStubPcaInstanceCalledError();
+    },
+    getLogger: function () {
+        throw BrowserConfigurationAuthError.createStubPcaInstanceCalledError();
+    },
+    setLogger: function () {
+        return;
+    },
+    setActiveAccount: function () {
+        return;
+    },
+    getActiveAccount: function () {
+        return null;
+    },
+    initializeWrapperLibrary: function () {
+        return;
+    },
+    setNavigationClient: function () {
+        return;
+    },
+    getConfiguration: function () {
+        throw BrowserConfigurationAuthError.createStubPcaInstanceCalledError();
+    }
+};
+
+
+//# sourceMappingURL=IPublicClientApplication.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/event/EventMessage.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var EventMessageUtils = /** @class */ (function () {
+    function EventMessageUtils() {
+    }
+    /**
+     * Gets interaction status from event message
+     * @param message
+     * @param currentStatus
+     */
+    EventMessageUtils.getInteractionStatusFromEvent = function (message, currentStatus) {
+        switch (message.eventType) {
+            case EventType.LOGIN_START:
+                return InteractionStatus.Login;
+            case EventType.SSO_SILENT_START:
+                return InteractionStatus.SsoSilent;
+            case EventType.ACQUIRE_TOKEN_START:
+                if (message.interactionType === InteractionType.Redirect || message.interactionType === InteractionType.Popup) {
+                    return InteractionStatus.AcquireToken;
+                }
+                break;
+            case EventType.HANDLE_REDIRECT_START:
+                return InteractionStatus.HandleRedirect;
+            case EventType.LOGOUT_START:
+                return InteractionStatus.Logout;
+            case EventType.SSO_SILENT_SUCCESS:
+            case EventType.SSO_SILENT_FAILURE:
+                if (currentStatus && currentStatus !== InteractionStatus.SsoSilent) {
+                    // Prevent this event from clearing any status other than ssoSilent
+                    break;
+                }
+                return InteractionStatus.None;
+            case EventType.LOGOUT_END:
+                if (currentStatus && currentStatus !== InteractionStatus.Logout) {
+                    // Prevent this event from clearing any status other than logout
+                    break;
+                }
+                return InteractionStatus.None;
+            case EventType.HANDLE_REDIRECT_END:
+                if (currentStatus && currentStatus !== InteractionStatus.HandleRedirect) {
+                    // Prevent this event from clearing any status other than handleRedirect
+                    break;
+                }
+                return InteractionStatus.None;
+            case EventType.LOGIN_SUCCESS:
+            case EventType.LOGIN_FAILURE:
+            case EventType.ACQUIRE_TOKEN_SUCCESS:
+            case EventType.ACQUIRE_TOKEN_FAILURE:
+                if (message.interactionType === InteractionType.Redirect || message.interactionType === InteractionType.Popup) {
+                    if (currentStatus && currentStatus !== InteractionStatus.Login && currentStatus !== InteractionStatus.AcquireToken) {
+                        // Prevent this event from clearing any status other than login or acquireToken
+                        break;
+                    }
+                    return InteractionStatus.None;
+                }
+                break;
+        }
+        return null;
+    };
+    return EventMessageUtils;
+}());
+
+
+//# sourceMappingURL=EventMessage.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/crypto/PopTokenGenerator.js
+var PopTokenGenerator = __webpack_require__(17650);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/crypto/SignedHttpRequest.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SignedHttpRequest = /** @class */ (function () {
+    function SignedHttpRequest(shrParameters, shrOptions) {
+        var loggerOptions = (shrOptions && shrOptions.loggerOptions) || {};
+        this.logger = new Logger/* Logger */.Y(loggerOptions, packageMetadata_name, version);
+        this.cryptoOps = new CryptoOps(this.logger);
+        this.popTokenGenerator = new PopTokenGenerator/* PopTokenGenerator */.$(this.cryptoOps);
+        this.shrParameters = shrParameters;
+    }
+    /**
+     * Generates and caches a keypair for the given request options.
+     * @returns Public key digest, which should be sent to the token issuer.
+     */
+    SignedHttpRequest.prototype.generatePublicKeyThumbprint = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var kid;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.popTokenGenerator.generateKid(this.shrParameters)];
+                    case 1:
+                        kid = (_a.sent()).kid;
+                        return [2 /*return*/, kid];
+                }
+            });
+        });
+    };
+    /**
+     * Generates a signed http request for the given payload with the given key.
+     * @param payload Payload to sign (e.g. access token)
+     * @param publicKeyThumbprint Public key digest (from generatePublicKeyThumbprint API)
+     * @param claims Additional claims to include/override in the signed JWT
+     * @returns Pop token signed with the corresponding private key
+     */
+    SignedHttpRequest.prototype.signRequest = function (payload, publicKeyThumbprint, claims) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.popTokenGenerator.signPayload(payload, publicKeyThumbprint, this.shrParameters, claims)];
+            });
+        });
+    };
+    /**
+     * Removes cached keys from browser for given public key thumbprint
+     * @param publicKeyThumbprint Public key digest (from generatePublicKeyThumbprint API)
+     * @returns If keys are properly deleted
+     */
+    SignedHttpRequest.prototype.removeKeys = function (publicKeyThumbprint) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.cryptoOps.removeTokenBindingKey(publicKeyThumbprint)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return SignedHttpRequest;
+}());
+
+
+//# sourceMappingURL=SignedHttpRequest.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/request/AuthenticationHeaderParser.js
+var AuthenticationHeaderParser = __webpack_require__(32030);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-browser/dist/index.js
+/*! @azure/msal-browser v2.21.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 5096:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "pi": () => (/* binding */ __assign),
+/* harmony export */   "mG": () => (/* binding */ __awaiter),
+/* harmony export */   "ZT": () => (/* binding */ __extends),
+/* harmony export */   "Jh": () => (/* binding */ __generator),
+/* harmony export */   "pr": () => (/* binding */ __spreadArrays)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+}
+
+
+//# sourceMappingURL=_tslib.js.map
+
+
+/***/ }),
+
+/***/ 70591:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "H": () => (/* binding */ AuthToken)
+/* harmony export */ });
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * JWT Token representation class. Parses token string and generates claims object.
+ */
+var AuthToken = /** @class */ (function () {
+    function AuthToken(rawToken, crypto) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(rawToken)) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createTokenNullOrEmptyError */ .e.createTokenNullOrEmptyError(rawToken);
+        }
+        this.rawToken = rawToken;
+        this.claims = AuthToken.extractTokenClaims(rawToken, crypto);
+    }
+    /**
+     * Extract token by decoding the rawToken
+     *
+     * @param encodedToken
+     */
+    AuthToken.extractTokenClaims = function (encodedToken, crypto) {
+        var decodedToken = _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.decodeAuthToken */ .x.decodeAuthToken(encodedToken);
+        // token will be decoded to get the username
+        try {
+            var base64TokenPayload = decodedToken.JWSPayload;
+            // base64Decode() should throw an error if there is an issue
+            var base64Decoded = crypto.base64Decode(base64TokenPayload);
+            return JSON.parse(base64Decoded);
+        }
+        catch (err) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createTokenParsingError */ .e.createTokenParsingError(err);
+        }
+    };
+    return AuthToken;
+}());
+
+
+//# sourceMappingURL=AuthToken.js.map
+
+
+/***/ }),
+
+/***/ 34726:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ CcsCredentialType)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var CcsCredentialType;
+(function (CcsCredentialType) {
+    CcsCredentialType["HOME_ACCOUNT_ID"] = "home_account_id";
+    CcsCredentialType["UPN"] = "UPN";
+})(CcsCredentialType || (CcsCredentialType = {}));
+
+
+//# sourceMappingURL=CcsCredential.js.map
+
+
+/***/ }),
+
+/***/ 11520:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "B": () => (/* binding */ buildClientInfo),
+/* harmony export */   "j": () => (/* binding */ buildClientInfoFromHomeAccountId)
+/* harmony export */ });
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Function to build a client info object from server clientInfo string
+ * @param rawClientInfo
+ * @param crypto
+ */
+function buildClientInfo(rawClientInfo, crypto) {
+    if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(rawClientInfo)) {
+        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createClientInfoEmptyError */ .e.createClientInfoEmptyError();
+    }
+    try {
+        var decodedClientInfo = crypto.base64Decode(rawClientInfo);
+        return JSON.parse(decodedClientInfo);
+    }
+    catch (e) {
+        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createClientInfoDecodingError */ .e.createClientInfoDecodingError(e);
+    }
+}
+/**
+ * Function to build a client info object from cached homeAccountId string
+ * @param homeAccountId
+ */
+function buildClientInfoFromHomeAccountId(homeAccountId) {
+    if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(homeAccountId)) {
+        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createClientInfoDecodingError */ .e.createClientInfoDecodingError("Home account ID was empty.");
+    }
+    var clientInfoParts = homeAccountId.split(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .Separators.CLIENT_INFO_SEPARATOR */ .Bv.CLIENT_INFO_SEPARATOR, 2);
+    return {
+        uid: clientInfoParts[0],
+        utid: clientInfoParts.length < 2 ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING : clientInfoParts[1]
+    };
+}
+
+
+//# sourceMappingURL=ClientInfo.js.map
+
+
+/***/ }),
+
+/***/ 95622:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "W": () => (/* binding */ Authority)
+});
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/_virtual/_tslib.js
+var _tslib = __webpack_require__(5096);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/AuthorityType.js
+var AuthorityType = __webpack_require__(52944);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/authority/OpenIdConfigResponse.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+function isOpenIdConfigResponse(response) {
+    return (response.hasOwnProperty("authorization_endpoint") &&
+        response.hasOwnProperty("token_endpoint") &&
+        response.hasOwnProperty("issuer"));
+}
+
+
+//# sourceMappingURL=OpenIdConfigResponse.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/url/UrlString.js
+var UrlString = __webpack_require__(99860);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ClientAuthError.js
+var ClientAuthError = __webpack_require__(60742);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/Constants.js
+var Constants = __webpack_require__(77891);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ClientConfigurationError.js
+var ClientConfigurationError = __webpack_require__(47181);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/ProtocolMode.js
+var ProtocolMode = __webpack_require__(82617);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AuthorityMetadataEntity.js
+var AuthorityMetadataEntity = __webpack_require__(1713);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/authority/CloudInstanceDiscoveryResponse.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+function isCloudInstanceDiscoveryResponse(response) {
+    return (response.hasOwnProperty("tenant_discovery_endpoint") &&
+        response.hasOwnProperty("metadata"));
+}
+
+
+//# sourceMappingURL=CloudInstanceDiscoveryResponse.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/authority/RegionDiscovery.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var RegionDiscovery = /** @class */ (function () {
+    function RegionDiscovery(networkInterface) {
+        this.networkInterface = networkInterface;
+    }
+    /**
+     * Detect the region from the application's environment.
+     *
+     * @returns Promise<string | null>
+     */
+    RegionDiscovery.prototype.detectRegion = function (environmentRegion, regionDiscoveryMetadata) {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var autodetectedRegionName, localIMDSVersionResponse, currentIMDSVersion, currentIMDSVersionResponse;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        autodetectedRegionName = environmentRegion;
+                        if (!!autodetectedRegionName) return [3 /*break*/, 8];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 6, , 7]);
+                        return [4 /*yield*/, this.getRegionFromIMDS(Constants/* Constants.IMDS_VERSION */.gT.IMDS_VERSION)];
+                    case 2:
+                        localIMDSVersionResponse = _a.sent();
+                        if (localIMDSVersionResponse.status === Constants/* ResponseCodes.httpSuccess */.YY.httpSuccess) {
+                            autodetectedRegionName = localIMDSVersionResponse.body;
+                            regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.IMDS */.W.IMDS;
+                        }
+                        if (!(localIMDSVersionResponse.status === Constants/* ResponseCodes.httpBadRequest */.YY.httpBadRequest)) return [3 /*break*/, 5];
+                        return [4 /*yield*/, this.getCurrentVersion()];
+                    case 3:
+                        currentIMDSVersion = _a.sent();
+                        if (!currentIMDSVersion) {
+                            regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.FAILED_AUTO_DETECTION */.W.FAILED_AUTO_DETECTION;
+                            return [2 /*return*/, null];
+                        }
+                        return [4 /*yield*/, this.getRegionFromIMDS(currentIMDSVersion)];
+                    case 4:
+                        currentIMDSVersionResponse = _a.sent();
+                        if (currentIMDSVersionResponse.status === Constants/* ResponseCodes.httpSuccess */.YY.httpSuccess) {
+                            autodetectedRegionName = currentIMDSVersionResponse.body;
+                            regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.IMDS */.W.IMDS;
+                        }
+                        _a.label = 5;
+                    case 5: return [3 /*break*/, 7];
+                    case 6:
+                        _a.sent();
+                        regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.FAILED_AUTO_DETECTION */.W.FAILED_AUTO_DETECTION;
+                        return [2 /*return*/, null];
+                    case 7: return [3 /*break*/, 9];
+                    case 8:
+                        regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.ENVIRONMENT_VARIABLE */.W.ENVIRONMENT_VARIABLE;
+                        _a.label = 9;
+                    case 9:
+                        // If no region was auto detected from the environment or from the IMDS endpoint, mark the attempt as a FAILED_AUTO_DETECTION
+                        if (!autodetectedRegionName) {
+                            regionDiscoveryMetadata.region_source = Constants/* RegionDiscoverySources.FAILED_AUTO_DETECTION */.W.FAILED_AUTO_DETECTION;
+                        }
+                        return [2 /*return*/, autodetectedRegionName || null];
+                }
+            });
+        });
+    };
+    /**
+     * Make the call to the IMDS endpoint
+     *
+     * @param imdsEndpointUrl
+     * @returns Promise<NetworkResponse<string>>
+     */
+    RegionDiscovery.prototype.getRegionFromIMDS = function (version) {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                return [2 /*return*/, this.networkInterface.sendGetRequestAsync(Constants/* Constants.IMDS_ENDPOINT */.gT.IMDS_ENDPOINT + "?api-version=" + version + "&format=text", RegionDiscovery.IMDS_OPTIONS, Constants/* Constants.IMDS_TIMEOUT */.gT.IMDS_TIMEOUT)];
+            });
+        });
+    };
+    /**
+     * Get the most recent version of the IMDS endpoint available
+     *
+     * @returns Promise<string | null>
+     */
+    RegionDiscovery.prototype.getCurrentVersion = function () {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var response;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.networkInterface.sendGetRequestAsync(Constants/* Constants.IMDS_ENDPOINT */.gT.IMDS_ENDPOINT + "?format=json", RegionDiscovery.IMDS_OPTIONS)];
+                    case 1:
+                        response = _a.sent();
+                        // When IMDS endpoint is called without the api version query param, bad request response comes back with latest version.
+                        if (response.status === Constants/* ResponseCodes.httpBadRequest */.YY.httpBadRequest && response.body && response.body["newest-versions"] && response.body["newest-versions"].length > 0) {
+                            return [2 /*return*/, response.body["newest-versions"][0]];
+                        }
+                        return [2 /*return*/, null];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, null];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    // Options for the IMDS endpoint request
+    RegionDiscovery.IMDS_OPTIONS = { headers: { "Metadata": "true" } };
+    return RegionDiscovery;
+}());
+
+
+//# sourceMappingURL=RegionDiscovery.js.map
+
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/authority/Authority.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * The authority class validates the authority URIs used by the user, and retrieves the OpenID Configuration Data from the
+ * endpoint. It will store the pertinent config data in this object for use during token calls.
+ */
+var Authority = /** @class */ (function () {
+    function Authority(authority, networkInterface, cacheManager, authorityOptions) {
+        this.canonicalAuthority = authority;
+        this._canonicalAuthority.validateAsUri();
+        this.networkInterface = networkInterface;
+        this.cacheManager = cacheManager;
+        this.authorityOptions = authorityOptions;
+        this.regionDiscovery = new RegionDiscovery(networkInterface);
+        this.regionDiscoveryMetadata = { region_used: undefined, region_source: undefined, region_outcome: undefined };
+    }
+    Object.defineProperty(Authority.prototype, "authorityType", {
+        // See above for AuthorityType
+        get: function () {
+            var pathSegments = this.canonicalAuthorityUrlComponents.PathSegments;
+            if (pathSegments.length && pathSegments[0].toLowerCase() === Constants/* Constants.ADFS */.gT.ADFS) {
+                return AuthorityType/* AuthorityType.Adfs */.a.Adfs;
+            }
+            return AuthorityType/* AuthorityType.Default */.a.Default;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "protocolMode", {
+        /**
+         * ProtocolMode enum representing the way endpoints are constructed.
+         */
+        get: function () {
+            return this.authorityOptions.protocolMode;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "options", {
+        /**
+         * Returns authorityOptions which can be used to reinstantiate a new authority instance
+         */
+        get: function () {
+            return this.authorityOptions;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "canonicalAuthority", {
+        /**
+         * A URL that is the authority set by the developer
+         */
+        get: function () {
+            return this._canonicalAuthority.urlString;
+        },
+        /**
+         * Sets canonical authority.
+         */
+        set: function (url) {
+            this._canonicalAuthority = new UrlString/* UrlString */.G(url);
+            this._canonicalAuthority.validateAsUri();
+            this._canonicalAuthorityUrlComponents = null;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "canonicalAuthorityUrlComponents", {
+        /**
+         * Get authority components.
+         */
+        get: function () {
+            if (!this._canonicalAuthorityUrlComponents) {
+                this._canonicalAuthorityUrlComponents = this._canonicalAuthority.getUrlComponents();
+            }
+            return this._canonicalAuthorityUrlComponents;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "hostnameAndPort", {
+        /**
+         * Get hostname and port i.e. login.microsoftonline.com
+         */
+        get: function () {
+            return this.canonicalAuthorityUrlComponents.HostNameAndPort.toLowerCase();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "tenant", {
+        /**
+         * Get tenant for authority.
+         */
+        get: function () {
+            return this.canonicalAuthorityUrlComponents.PathSegments[0];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "authorizationEndpoint", {
+        /**
+         * OAuth /authorize endpoint for requests
+         */
+        get: function () {
+            if (this.discoveryComplete()) {
+                var endpoint = this.replacePath(this.metadata.authorization_endpoint);
+                return this.replaceTenant(endpoint);
+            }
+            else {
+                throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "tokenEndpoint", {
+        /**
+         * OAuth /token endpoint for requests
+         */
+        get: function () {
+            if (this.discoveryComplete()) {
+                var endpoint = this.replacePath(this.metadata.token_endpoint);
+                return this.replaceTenant(endpoint);
+            }
+            else {
+                throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "deviceCodeEndpoint", {
+        get: function () {
+            if (this.discoveryComplete()) {
+                var endpoint = this.replacePath(this.metadata.token_endpoint.replace("/token", "/devicecode"));
+                return this.replaceTenant(endpoint);
+            }
+            else {
+                throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "endSessionEndpoint", {
+        /**
+         * OAuth logout endpoint for requests
+         */
+        get: function () {
+            if (this.discoveryComplete()) {
+                // ROPC policies may not have end_session_endpoint set
+                if (!this.metadata.end_session_endpoint) {
+                    throw ClientAuthError/* ClientAuthError.createLogoutNotSupportedError */.e.createLogoutNotSupportedError();
+                }
+                var endpoint = this.replacePath(this.metadata.end_session_endpoint);
+                return this.replaceTenant(endpoint);
+            }
+            else {
+                throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Authority.prototype, "selfSignedJwtAudience", {
+        /**
+         * OAuth issuer for requests
+         */
+        get: function () {
+            if (this.discoveryComplete()) {
+                var endpoint = this.replacePath(this.metadata.issuer);
+                return this.replaceTenant(endpoint);
+            }
+            else {
+                throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Replaces tenant in url path with current tenant. Defaults to common.
+     * @param urlString
+     */
+    Authority.prototype.replaceTenant = function (urlString) {
+        return urlString.replace(/{tenant}|{tenantid}/g, this.tenant);
+    };
+    /**
+     * Replaces path such as tenant or policy with the current tenant or policy.
+     * @param urlString
+     */
+    Authority.prototype.replacePath = function (urlString) {
+        var endpoint = urlString;
+        var cachedAuthorityUrl = new UrlString/* UrlString */.G(this.metadata.canonical_authority);
+        var cachedAuthorityParts = cachedAuthorityUrl.getUrlComponents().PathSegments;
+        var currentAuthorityParts = this.canonicalAuthorityUrlComponents.PathSegments;
+        currentAuthorityParts.forEach(function (currentPart, index) {
+            var cachedPart = cachedAuthorityParts[index];
+            if (currentPart !== cachedPart) {
+                endpoint = endpoint.replace("/" + cachedPart + "/", "/" + currentPart + "/");
+            }
+        });
+        return endpoint;
+    };
+    Object.defineProperty(Authority.prototype, "defaultOpenIdConfigurationEndpoint", {
+        /**
+         * The default open id configuration endpoint for any canonical authority.
+         */
+        get: function () {
+            if (this.authorityType === AuthorityType/* AuthorityType.Adfs */.a.Adfs || this.protocolMode === ProtocolMode/* ProtocolMode.OIDC */.A.OIDC) {
+                return this.canonicalAuthority + ".well-known/openid-configuration";
+            }
+            return this.canonicalAuthority + "v2.0/.well-known/openid-configuration";
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Boolean that returns whethr or not tenant discovery has been completed.
+     */
+    Authority.prototype.discoveryComplete = function () {
+        return !!this.metadata;
+    };
+    /**
+     * Perform endpoint discovery to discover aliases, preferred_cache, preferred_network
+     * and the /authorize, /token and logout endpoints.
+     */
+    Authority.prototype.resolveEndpointsAsync = function () {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var metadataEntity, cloudDiscoverySource, endpointSource, cacheKey;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        metadataEntity = this.cacheManager.getAuthorityMetadataByAlias(this.hostnameAndPort);
+                        if (!metadataEntity) {
+                            metadataEntity = new AuthorityMetadataEntity/* AuthorityMetadataEntity */.l();
+                            metadataEntity.updateCanonicalAuthority(this.canonicalAuthority);
+                        }
+                        return [4 /*yield*/, this.updateCloudDiscoveryMetadata(metadataEntity)];
+                    case 1:
+                        cloudDiscoverySource = _a.sent();
+                        this.canonicalAuthority = this.canonicalAuthority.replace(this.hostnameAndPort, metadataEntity.preferred_network);
+                        return [4 /*yield*/, this.updateEndpointMetadata(metadataEntity)];
+                    case 2:
+                        endpointSource = _a.sent();
+                        if (cloudDiscoverySource !== Constants/* AuthorityMetadataSource.CACHE */.pQ.CACHE && endpointSource !== Constants/* AuthorityMetadataSource.CACHE */.pQ.CACHE) {
+                            // Reset the expiration time unless both values came from a successful cache lookup
+                            metadataEntity.resetExpiresAt();
+                            metadataEntity.updateCanonicalAuthority(this.canonicalAuthority);
+                        }
+                        cacheKey = this.cacheManager.generateAuthorityMetadataCacheKey(metadataEntity.preferred_cache);
+                        this.cacheManager.setAuthorityMetadata(cacheKey, metadataEntity);
+                        this.metadata = metadataEntity;
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Update AuthorityMetadataEntity with new endpoints and return where the information came from
+     * @param metadataEntity
+     */
+    Authority.prototype.updateEndpointMetadata = function (metadataEntity) {
+        var _a;
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var metadata, autodetectedRegionName, azureRegion;
+            return (0,_tslib/* __generator */.Jh)(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        metadata = this.getEndpointMetadataFromConfig();
+                        if (metadata) {
+                            metadataEntity.updateEndpointMetadata(metadata, false);
+                            return [2 /*return*/, Constants/* AuthorityMetadataSource.CONFIG */.pQ.CONFIG];
+                        }
+                        if (this.isAuthoritySameType(metadataEntity) && metadataEntity.endpointsFromNetwork && !metadataEntity.isExpired()) {
+                            // No need to update
+                            return [2 /*return*/, Constants/* AuthorityMetadataSource.CACHE */.pQ.CACHE];
+                        }
+                        return [4 /*yield*/, this.getEndpointMetadataFromNetwork()];
+                    case 1:
+                        metadata = _b.sent();
+                        if (!metadata) return [3 /*break*/, 4];
+                        if (!((_a = this.authorityOptions.azureRegionConfiguration) === null || _a === void 0 ? void 0 : _a.azureRegion)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.regionDiscovery.detectRegion(this.authorityOptions.azureRegionConfiguration.environmentRegion, this.regionDiscoveryMetadata)];
+                    case 2:
+                        autodetectedRegionName = _b.sent();
+                        azureRegion = this.authorityOptions.azureRegionConfiguration.azureRegion === Constants/* Constants.AZURE_REGION_AUTO_DISCOVER_FLAG */.gT.AZURE_REGION_AUTO_DISCOVER_FLAG
+                            ? autodetectedRegionName
+                            : this.authorityOptions.azureRegionConfiguration.azureRegion;
+                        if (this.authorityOptions.azureRegionConfiguration.azureRegion === Constants/* Constants.AZURE_REGION_AUTO_DISCOVER_FLAG */.gT.AZURE_REGION_AUTO_DISCOVER_FLAG) {
+                            this.regionDiscoveryMetadata.region_outcome = autodetectedRegionName ?
+                                Constants/* RegionDiscoveryOutcomes.AUTO_DETECTION_REQUESTED_SUCCESSFUL */.ki.AUTO_DETECTION_REQUESTED_SUCCESSFUL :
+                                Constants/* RegionDiscoveryOutcomes.AUTO_DETECTION_REQUESTED_FAILED */.ki.AUTO_DETECTION_REQUESTED_FAILED;
+                        }
+                        else {
+                            if (autodetectedRegionName) {
+                                this.regionDiscoveryMetadata.region_outcome = (this.authorityOptions.azureRegionConfiguration.azureRegion === autodetectedRegionName) ?
+                                    Constants/* RegionDiscoveryOutcomes.CONFIGURED_MATCHES_DETECTED */.ki.CONFIGURED_MATCHES_DETECTED :
+                                    Constants/* RegionDiscoveryOutcomes.CONFIGURED_NOT_DETECTED */.ki.CONFIGURED_NOT_DETECTED;
+                            }
+                            else {
+                                this.regionDiscoveryMetadata.region_outcome = Constants/* RegionDiscoveryOutcomes.CONFIGURED_NO_AUTO_DETECTION */.ki.CONFIGURED_NO_AUTO_DETECTION;
+                            }
+                        }
+                        if (azureRegion) {
+                            this.regionDiscoveryMetadata.region_used = azureRegion;
+                            metadata = Authority.replaceWithRegionalInformation(metadata, azureRegion);
+                        }
+                        _b.label = 3;
+                    case 3:
+                        metadataEntity.updateEndpointMetadata(metadata, true);
+                        return [2 /*return*/, Constants/* AuthorityMetadataSource.NETWORK */.pQ.NETWORK];
+                    case 4: throw ClientAuthError/* ClientAuthError.createUnableToGetOpenidConfigError */.e.createUnableToGetOpenidConfigError(this.defaultOpenIdConfigurationEndpoint);
+                }
+            });
+        });
+    };
+    /**
+     * Compares the number of url components after the domain to determine if the cached authority metadata can be used for the requested authority
+     * Protects against same domain different authority such as login.microsoftonline.com/tenant and login.microsoftonline.com/tfp/tenant/policy
+     * @param metadataEntity
+     */
+    Authority.prototype.isAuthoritySameType = function (metadataEntity) {
+        var cachedAuthorityUrl = new UrlString/* UrlString */.G(metadataEntity.canonical_authority);
+        var cachedParts = cachedAuthorityUrl.getUrlComponents().PathSegments;
+        return cachedParts.length === this.canonicalAuthorityUrlComponents.PathSegments.length;
+    };
+    /**
+     * Parse authorityMetadata config option
+     */
+    Authority.prototype.getEndpointMetadataFromConfig = function () {
+        if (this.authorityOptions.authorityMetadata) {
+            try {
+                return JSON.parse(this.authorityOptions.authorityMetadata);
+            }
+            catch (e) {
+                throw ClientConfigurationError/* ClientConfigurationError.createInvalidAuthorityMetadataError */.r.createInvalidAuthorityMetadataError();
+            }
+        }
+        return null;
+    };
+    /**
+     * Gets OAuth endpoints from the given OpenID configuration endpoint.
+     */
+    Authority.prototype.getEndpointMetadataFromNetwork = function () {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var response;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.networkInterface.sendGetRequestAsync(this.defaultOpenIdConfigurationEndpoint)];
+                    case 1:
+                        response = _a.sent();
+                        return [2 /*return*/, isOpenIdConfigResponse(response.body) ? response.body : null];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, null];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Updates the AuthorityMetadataEntity with new aliases, preferred_network and preferred_cache and returns where the information was retrived from
+     * @param cachedMetadata
+     * @param newMetadata
+     */
+    Authority.prototype.updateCloudDiscoveryMetadata = function (metadataEntity) {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var metadata;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        metadata = this.getCloudDiscoveryMetadataFromConfig();
+                        if (metadata) {
+                            metadataEntity.updateCloudDiscoveryMetadata(metadata, false);
+                            return [2 /*return*/, Constants/* AuthorityMetadataSource.CONFIG */.pQ.CONFIG];
+                        }
+                        // If The cached metadata came from config but that config was not passed to this instance, we must go to the network
+                        if (this.isAuthoritySameType(metadataEntity) && metadataEntity.aliasesFromNetwork && !metadataEntity.isExpired()) {
+                            // No need to update
+                            return [2 /*return*/, Constants/* AuthorityMetadataSource.CACHE */.pQ.CACHE];
+                        }
+                        return [4 /*yield*/, this.getCloudDiscoveryMetadataFromNetwork()];
+                    case 1:
+                        metadata = _a.sent();
+                        if (metadata) {
+                            metadataEntity.updateCloudDiscoveryMetadata(metadata, true);
+                            return [2 /*return*/, Constants/* AuthorityMetadataSource.NETWORK */.pQ.NETWORK];
+                        }
+                        else {
+                            // Metadata could not be obtained from config, cache or network
+                            throw ClientConfigurationError/* ClientConfigurationError.createUntrustedAuthorityError */.r.createUntrustedAuthorityError();
+                        }
+                }
+            });
+        });
+    };
+    /**
+     * Parse cloudDiscoveryMetadata config or check knownAuthorities
+     */
+    Authority.prototype.getCloudDiscoveryMetadataFromConfig = function () {
+        // Check if network response was provided in config
+        if (this.authorityOptions.cloudDiscoveryMetadata) {
+            try {
+                var parsedResponse = JSON.parse(this.authorityOptions.cloudDiscoveryMetadata);
+                var metadata = Authority.getCloudDiscoveryMetadataFromNetworkResponse(parsedResponse.metadata, this.hostnameAndPort);
+                if (metadata) {
+                    return metadata;
+                }
+            }
+            catch (e) {
+                throw ClientConfigurationError/* ClientConfigurationError.createInvalidCloudDiscoveryMetadataError */.r.createInvalidCloudDiscoveryMetadataError();
+            }
+        }
+        // If cloudDiscoveryMetadata is empty or does not contain the host, check knownAuthorities
+        if (this.isInKnownAuthorities()) {
+            return Authority.createCloudDiscoveryMetadataFromHost(this.hostnameAndPort);
+        }
+        return null;
+    };
+    /**
+     * Called to get metadata from network if CloudDiscoveryMetadata was not populated by config
+     * @param networkInterface
+     */
+    Authority.prototype.getCloudDiscoveryMetadataFromNetwork = function () {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var instanceDiscoveryEndpoint, match, response, metadata;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        instanceDiscoveryEndpoint = "" + Constants/* Constants.AAD_INSTANCE_DISCOVERY_ENDPT */.gT.AAD_INSTANCE_DISCOVERY_ENDPT + this.canonicalAuthority + "oauth2/v2.0/authorize";
+                        match = null;
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.networkInterface.sendGetRequestAsync(instanceDiscoveryEndpoint)];
+                    case 2:
+                        response = _a.sent();
+                        metadata = isCloudInstanceDiscoveryResponse(response.body) ? response.body.metadata : [];
+                        if (metadata.length === 0) {
+                            // If no metadata is returned, authority is untrusted
+                            return [2 /*return*/, null];
+                        }
+                        match = Authority.getCloudDiscoveryMetadataFromNetworkResponse(metadata, this.hostnameAndPort);
+                        return [3 /*break*/, 4];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/, null];
+                    case 4:
+                        if (!match) {
+                            // Custom Domain scenario, host is trusted because Instance Discovery call succeeded 
+                            match = Authority.createCloudDiscoveryMetadataFromHost(this.hostnameAndPort);
+                        }
+                        return [2 /*return*/, match];
+                }
+            });
+        });
+    };
+    /**
+     * Helper function to determine if this host is included in the knownAuthorities config option
+     */
+    Authority.prototype.isInKnownAuthorities = function () {
+        var _this = this;
+        var matches = this.authorityOptions.knownAuthorities.filter(function (authority) {
+            return UrlString/* UrlString.getDomainFromUrl */.G.getDomainFromUrl(authority).toLowerCase() === _this.hostnameAndPort;
+        });
+        return matches.length > 0;
+    };
+    /**
+     * Creates cloud discovery metadata object from a given host
+     * @param host
+     */
+    Authority.createCloudDiscoveryMetadataFromHost = function (host) {
+        return {
+            preferred_network: host,
+            preferred_cache: host,
+            aliases: [host]
+        };
+    };
+    /**
+     * Searches instance discovery network response for the entry that contains the host in the aliases list
+     * @param response
+     * @param authority
+     */
+    Authority.getCloudDiscoveryMetadataFromNetworkResponse = function (response, authority) {
+        for (var i = 0; i < response.length; i++) {
+            var metadata = response[i];
+            if (metadata.aliases.indexOf(authority) > -1) {
+                return metadata;
+            }
+        }
+        return null;
+    };
+    /**
+     * helper function to generate environment from authority object
+     */
+    Authority.prototype.getPreferredCache = function () {
+        if (this.discoveryComplete()) {
+            return this.metadata.preferred_cache;
+        }
+        else {
+            throw ClientAuthError/* ClientAuthError.createEndpointDiscoveryIncompleteError */.e.createEndpointDiscoveryIncompleteError("Discovery incomplete.");
+        }
+    };
+    /**
+     * Returns whether or not the provided host is an alias of this authority instance
+     * @param host
+     */
+    Authority.prototype.isAlias = function (host) {
+        return this.metadata.aliases.indexOf(host) > -1;
+    };
+    /**
+     * Checks whether the provided host is that of a public cloud authority
+     *
+     * @param authority string
+     * @returns bool
+     */
+    Authority.isPublicCloudAuthority = function (host) {
+        return Constants/* Constants.KNOWN_PUBLIC_CLOUDS.indexOf */.gT.KNOWN_PUBLIC_CLOUDS.indexOf(host) >= 0;
+    };
+    /**
+     * Rebuild the authority string with the region
+     *
+     * @param host string
+     * @param region string
+     */
+    Authority.buildRegionalAuthorityString = function (host, region, queryString) {
+        // Create and validate a Url string object with the initial authority string
+        var authorityUrlInstance = new UrlString/* UrlString */.G(host);
+        authorityUrlInstance.validateAsUri();
+        var authorityUrlParts = authorityUrlInstance.getUrlComponents();
+        var hostNameAndPort = region + "." + authorityUrlParts.HostNameAndPort;
+        if (this.isPublicCloudAuthority(authorityUrlParts.HostNameAndPort)) {
+            hostNameAndPort = region + "." + Constants/* Constants.REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX */.gT.REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX;
+        }
+        // Include the query string portion of the url
+        var url = UrlString/* UrlString.constructAuthorityUriFromObject */.G.constructAuthorityUriFromObject((0,_tslib/* __assign */.pi)((0,_tslib/* __assign */.pi)({}, authorityUrlInstance.getUrlComponents()), { HostNameAndPort: hostNameAndPort })).urlString;
+        // Add the query string if a query string was provided
+        if (queryString)
+            return url + "?" + queryString;
+        return url;
+    };
+    /**
+     * Replace the endpoints in the metadata object with their regional equivalents.
+     *
+     * @param metadata OpenIdConfigResponse
+     * @param azureRegion string
+     */
+    Authority.replaceWithRegionalInformation = function (metadata, azureRegion) {
+        metadata.authorization_endpoint = Authority.buildRegionalAuthorityString(metadata.authorization_endpoint, azureRegion);
+        // TODO: Enquire on whether we should leave the query string or remove it before releasing the feature
+        metadata.token_endpoint = Authority.buildRegionalAuthorityString(metadata.token_endpoint, azureRegion, "allowestsrnonmsi=true");
+        if (metadata.end_session_endpoint) {
+            metadata.end_session_endpoint = Authority.buildRegionalAuthorityString(metadata.end_session_endpoint, azureRegion);
+        }
+        return metadata;
+    };
+    return Authority;
+}());
+
+
+//# sourceMappingURL=Authority.js.map
+
+
+/***/ }),
+
+/***/ 65676:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "A": () => (/* binding */ AuthorityFactory)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _Authority_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(95622);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47181);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var AuthorityFactory = /** @class */ (function () {
+    function AuthorityFactory() {
+    }
+    /**
+     * Create an authority object of the correct type based on the url
+     * Performs basic authority validation - checks to see if the authority is of a valid type (i.e. aad, b2c, adfs)
+     *
+     * Also performs endpoint discovery.
+     *
+     * @param authorityUri
+     * @param networkClient
+     * @param protocolMode
+     */
+    AuthorityFactory.createDiscoveredInstance = function (authorityUri, networkClient, cacheManager, authorityOptions) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var acquireTokenAuthority, e_1;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        acquireTokenAuthority = AuthorityFactory.createInstance(authorityUri, networkClient, cacheManager, authorityOptions);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, acquireTokenAuthority.resolveEndpointsAsync()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, acquireTokenAuthority];
+                    case 3:
+                        e_1 = _a.sent();
+                        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createEndpointDiscoveryIncompleteError */ .e.createEndpointDiscoveryIncompleteError(e_1);
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Create an authority object of the correct type based on the url
+     * Performs basic authority validation - checks to see if the authority is of a valid type (i.e. aad, b2c, adfs)
+     *
+     * Does not perform endpoint discovery.
+     *
+     * @param authorityUrl
+     * @param networkInterface
+     * @param protocolMode
+     */
+    AuthorityFactory.createInstance = function (authorityUrl, networkInterface, cacheManager, authorityOptions) {
+        // Throw error if authority url is empty
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .StringUtils.isEmpty */ .x.isEmpty(authorityUrl)) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientConfigurationError.createUrlEmptyError */ .r.createUrlEmptyError();
+        }
+        return new _Authority_js__WEBPACK_IMPORTED_MODULE_4__/* .Authority */ .W(authorityUrl, networkInterface, cacheManager, authorityOptions);
+    };
+    return AuthorityFactory;
+}());
+
+
+//# sourceMappingURL=AuthorityFactory.js.map
+
+
+/***/ }),
+
+/***/ 52944:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "a": () => (/* binding */ AuthorityType)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Authority types supported by MSAL.
+ */
+var AuthorityType;
+(function (AuthorityType) {
+    AuthorityType[AuthorityType["Default"] = 0] = "Default";
+    AuthorityType[AuthorityType["Adfs"] = 1] = "Adfs";
+})(AuthorityType || (AuthorityType = {}));
+
+
+//# sourceMappingURL=AuthorityType.js.map
+
+
+/***/ }),
+
+/***/ 82617:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "A": () => (/* binding */ ProtocolMode)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Protocol modes supported by MSAL.
+ */
+var ProtocolMode;
+(function (ProtocolMode) {
+    ProtocolMode["AAD"] = "AAD";
+    ProtocolMode["OIDC"] = "OIDC";
+})(ProtocolMode || (ProtocolMode = {}));
+
+
+//# sourceMappingURL=ProtocolMode.js.map
+
+
+/***/ }),
+
+/***/ 67656:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "L": () => (/* binding */ CacheManager),
+/* harmony export */   "w": () => (/* binding */ DefaultStorageClass)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5096);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(77891);
+/* harmony import */ var _entities_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(10521);
+/* harmony import */ var _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(92613);
+/* harmony import */ var _entities_AccountEntity_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43640);
+/* harmony import */ var _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(87342);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(60742);
+/* harmony import */ var _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(70591);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Interface class which implement cache storage functions used by MSAL to perform validity checks, and store tokens.
+ */
+var CacheManager = /** @class */ (function () {
+    function CacheManager(clientId, cryptoImpl) {
+        this.clientId = clientId;
+        this.cryptoImpl = cryptoImpl;
+    }
+    /**
+     * Returns all accounts in cache
+     */
+    CacheManager.prototype.getAllAccounts = function () {
+        var _this = this;
+        var currentAccounts = this.getAccountsFilteredBy();
+        var accountValues = Object.keys(currentAccounts).map(function (accountKey) { return currentAccounts[accountKey]; });
+        var numAccounts = accountValues.length;
+        if (numAccounts < 1) {
+            return [];
+        }
+        else {
+            var allAccounts = accountValues.map(function (value) {
+                var accountEntity = CacheManager.toObject(new _entities_AccountEntity_js__WEBPACK_IMPORTED_MODULE_0__/* .AccountEntity */ .r(), value);
+                var accountInfo = accountEntity.getAccountInfo();
+                var idToken = _this.readIdTokenFromCache(_this.clientId, accountInfo);
+                if (idToken && !accountInfo.idTokenClaims) {
+                    accountInfo.idTokenClaims = new _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthToken */ .H(idToken.secret, _this.cryptoImpl).claims;
+                }
+                return accountInfo;
+            });
+            return allAccounts;
+        }
+    };
+    /**
+     * saves a cache record
+     * @param cacheRecord
+     */
+    CacheManager.prototype.saveCacheRecord = function (cacheRecord) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!cacheRecord) {
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createNullOrUndefinedCacheRecord */ .e.createNullOrUndefinedCacheRecord();
+                        }
+                        if (!!cacheRecord.account) {
+                            this.setAccount(cacheRecord.account);
+                        }
+                        if (!!cacheRecord.idToken) {
+                            this.setIdTokenCredential(cacheRecord.idToken);
+                        }
+                        if (!!!cacheRecord.accessToken) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.saveAccessToken(cacheRecord.accessToken)];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2:
+                        if (!!cacheRecord.refreshToken) {
+                            this.setRefreshTokenCredential(cacheRecord.refreshToken);
+                        }
+                        if (!!cacheRecord.appMetadata) {
+                            this.setAppMetadata(cacheRecord.appMetadata);
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * saves access token credential
+     * @param credential
+     */
+    CacheManager.prototype.saveAccessToken = function (credential) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var currentTokenCache, currentScopes, currentAccessTokens, removedAccessTokens_1;
+            var _this = this;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        currentTokenCache = this.getCredentialsFilteredBy({
+                            clientId: credential.clientId,
+                            credentialType: credential.credentialType,
+                            environment: credential.environment,
+                            homeAccountId: credential.homeAccountId,
+                            realm: credential.realm,
+                            tokenType: credential.tokenType,
+                            requestedClaimsHash: credential.requestedClaimsHash
+                        });
+                        currentScopes = _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__/* .ScopeSet.fromString */ .i.fromString(credential.target);
+                        currentAccessTokens = Object.keys(currentTokenCache.accessTokens).map(function (key) { return currentTokenCache.accessTokens[key]; });
+                        if (!currentAccessTokens) return [3 /*break*/, 2];
+                        removedAccessTokens_1 = [];
+                        currentAccessTokens.forEach(function (tokenEntity) {
+                            var tokenScopeSet = _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__/* .ScopeSet.fromString */ .i.fromString(tokenEntity.target);
+                            if (tokenScopeSet.intersectingScopeSets(currentScopes)) {
+                                removedAccessTokens_1.push(_this.removeCredential(tokenEntity));
+                            }
+                        });
+                        return [4 /*yield*/, Promise.all(removedAccessTokens_1)];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2:
+                        this.setAccessTokenCredential(credential);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * retrieve accounts matching all provided filters; if no filter is set, get all accounts
+     * not checking for casing as keys are all generated in lower case, remember to convert to lower case if object properties are compared
+     * @param homeAccountId
+     * @param environment
+     * @param realm
+     */
+    CacheManager.prototype.getAccountsFilteredBy = function (accountFilter) {
+        return this.getAccountsFilteredByInternal(accountFilter ? accountFilter.homeAccountId : "", accountFilter ? accountFilter.environment : "", accountFilter ? accountFilter.realm : "");
+    };
+    /**
+     * retrieve accounts matching all provided filters; if no filter is set, get all accounts
+     * not checking for casing as keys are all generated in lower case, remember to convert to lower case if object properties are compared
+     * @param homeAccountId
+     * @param environment
+     * @param realm
+     */
+    CacheManager.prototype.getAccountsFilteredByInternal = function (homeAccountId, environment, realm) {
+        var _this = this;
+        var allCacheKeys = this.getKeys();
+        var matchingAccounts = {};
+        allCacheKeys.forEach(function (cacheKey) {
+            var entity = _this.getAccount(cacheKey);
+            if (!entity) {
+                return;
+            }
+            if (!!homeAccountId && !_this.matchHomeAccountId(entity, homeAccountId)) {
+                return;
+            }
+            if (!!environment && !_this.matchEnvironment(entity, environment)) {
+                return;
+            }
+            if (!!realm && !_this.matchRealm(entity, realm)) {
+                return;
+            }
+            matchingAccounts[cacheKey] = entity;
+        });
+        return matchingAccounts;
+    };
+    /**
+     * retrieve credentails matching all provided filters; if no filter is set, get all credentials
+     * @param homeAccountId
+     * @param environment
+     * @param credentialType
+     * @param clientId
+     * @param realm
+     * @param target
+     */
+    CacheManager.prototype.getCredentialsFilteredBy = function (filter) {
+        return this.getCredentialsFilteredByInternal(filter.homeAccountId, filter.environment, filter.credentialType, filter.clientId, filter.familyId, filter.realm, filter.target, filter.oboAssertion, filter.tokenType, filter.keyId, filter.requestedClaimsHash);
+    };
+    /**
+     * Support function to help match credentials
+     * @param homeAccountId
+     * @param environment
+     * @param credentialType
+     * @param clientId
+     * @param realm
+     * @param target
+     * @param oboAssertion
+     * @param tokenType
+     */
+    CacheManager.prototype.getCredentialsFilteredByInternal = function (homeAccountId, environment, credentialType, clientId, familyId, realm, target, oboAssertion, tokenType, keyId, requestedClaimsHash) {
+        var _this = this;
+        var allCacheKeys = this.getKeys();
+        var matchingCredentials = {
+            idTokens: {},
+            accessTokens: {},
+            refreshTokens: {},
+        };
+        allCacheKeys.forEach(function (cacheKey) {
+            // don't parse any non-credential type cache entities
+            var credType = _entities_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_5__/* .CredentialEntity.getCredentialType */ .m.getCredentialType(cacheKey);
+            if (credType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .Constants.NOT_DEFINED */ .gT.NOT_DEFINED) {
+                return;
+            }
+            // Attempt retrieval
+            var entity = _this.getSpecificCredential(cacheKey, credType);
+            if (!entity) {
+                return;
+            }
+            if (!!oboAssertion && !_this.matchOboAssertion(entity, oboAssertion)) {
+                return;
+            }
+            if (!!homeAccountId && !_this.matchHomeAccountId(entity, homeAccountId)) {
+                return;
+            }
+            if (!!environment && !_this.matchEnvironment(entity, environment)) {
+                return;
+            }
+            if (!!realm && !_this.matchRealm(entity, realm)) {
+                return;
+            }
+            if (!!credentialType && !_this.matchCredentialType(entity, credentialType)) {
+                return;
+            }
+            if (!!clientId && !_this.matchClientId(entity, clientId)) {
+                return;
+            }
+            if (!!familyId && !_this.matchFamilyId(entity, familyId)) {
+                return;
+            }
+            /*
+             * idTokens do not have "target", target specific refreshTokens do exist for some types of authentication
+             * Resource specific refresh tokens case will be added when the support is deemed necessary
+             */
+            if (!!target && !_this.matchTarget(entity, target)) {
+                return;
+            }
+            // If request OR cached entity has requested Claims Hash, check if they match
+            if (requestedClaimsHash || entity.requestedClaimsHash) {
+                // Don't match if either is undefined or they are different
+                if (entity.requestedClaimsHash !== requestedClaimsHash) {
+                    return;
+                }
+            }
+            // Access Token with Auth Scheme specific matching
+            if (credentialType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME) {
+                if (!!tokenType && !_this.matchTokenType(entity, tokenType)) {
+                    return;
+                }
+                // KeyId (sshKid) in request must match cached SSH certificate keyId because SSH cert is bound to a specific key
+                if (tokenType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AuthenticationScheme.SSH */ .hO.SSH) {
+                    if (keyId && !_this.matchKeyId(entity, keyId)) {
+                        return;
+                    }
+                }
+            }
+            // At this point, the entity matches the request, update cache key if key schema has changed
+            var updatedCacheKey = _this.updateCredentialCacheKey(cacheKey, entity);
+            switch (credType) {
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN:
+                    matchingCredentials.idTokens[updatedCacheKey] = entity;
+                    break;
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN:
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:
+                    matchingCredentials.accessTokens[updatedCacheKey] = entity;
+                    break;
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN:
+                    matchingCredentials.refreshTokens[updatedCacheKey] = entity;
+                    break;
+            }
+        });
+        return matchingCredentials;
+    };
+    /**
+     * retrieve appMetadata matching all provided filters; if no filter is set, get all appMetadata
+     * @param filter
+     */
+    CacheManager.prototype.getAppMetadataFilteredBy = function (filter) {
+        return this.getAppMetadataFilteredByInternal(filter.environment, filter.clientId);
+    };
+    /**
+     * Support function to help match appMetadata
+     * @param environment
+     * @param clientId
+     */
+    CacheManager.prototype.getAppMetadataFilteredByInternal = function (environment, clientId) {
+        var _this = this;
+        var allCacheKeys = this.getKeys();
+        var matchingAppMetadata = {};
+        allCacheKeys.forEach(function (cacheKey) {
+            // don't parse any non-appMetadata type cache entities
+            if (!_this.isAppMetadata(cacheKey)) {
+                return;
+            }
+            // Attempt retrieval
+            var entity = _this.getAppMetadata(cacheKey);
+            if (!entity) {
+                return;
+            }
+            if (!!environment && !_this.matchEnvironment(entity, environment)) {
+                return;
+            }
+            if (!!clientId && !_this.matchClientId(entity, clientId)) {
+                return;
+            }
+            matchingAppMetadata[cacheKey] = entity;
+        });
+        return matchingAppMetadata;
+    };
+    /**
+     * retrieve authorityMetadata that contains a matching alias
+     * @param filter
+     */
+    CacheManager.prototype.getAuthorityMetadataByAlias = function (host) {
+        var _this = this;
+        var allCacheKeys = this.getAuthorityMetadataKeys();
+        var matchedEntity = null;
+        allCacheKeys.forEach(function (cacheKey) {
+            // don't parse any non-authorityMetadata type cache entities
+            if (!_this.isAuthorityMetadata(cacheKey) || cacheKey.indexOf(_this.clientId) === -1) {
+                return;
+            }
+            // Attempt retrieval
+            var entity = _this.getAuthorityMetadata(cacheKey);
+            if (!entity) {
+                return;
+            }
+            if (entity.aliases.indexOf(host) === -1) {
+                return;
+            }
+            matchedEntity = entity;
+        });
+        return matchedEntity;
+    };
+    /**
+     * Removes all accounts and related tokens from cache.
+     */
+    CacheManager.prototype.removeAllAccounts = function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var allCacheKeys, removedAccounts;
+            var _this = this;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        allCacheKeys = this.getKeys();
+                        removedAccounts = [];
+                        allCacheKeys.forEach(function (cacheKey) {
+                            var entity = _this.getAccount(cacheKey);
+                            if (!entity) {
+                                return;
+                            }
+                            removedAccounts.push(_this.removeAccount(cacheKey));
+                        });
+                        return [4 /*yield*/, Promise.all(removedAccounts)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                }
+            });
+        });
+    };
+    /**
+     * returns a boolean if the given account is removed
+     * @param account
+     */
+    CacheManager.prototype.removeAccount = function (accountKey) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var account;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        account = this.getAccount(accountKey);
+                        if (!account) {
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createNoAccountFoundError */ .e.createNoAccountFoundError();
+                        }
+                        return [4 /*yield*/, this.removeAccountContext(account)];
+                    case 1: return [2 /*return*/, ((_a.sent()) && this.removeItem(accountKey, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CacheSchemaType.ACCOUNT */ .Xj.ACCOUNT))];
+                }
+            });
+        });
+    };
+    /**
+     * returns a boolean if the given account is removed
+     * @param account
+     */
+    CacheManager.prototype.removeAccountContext = function (account) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var allCacheKeys, accountId, removedCredentials;
+            var _this = this;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        allCacheKeys = this.getKeys();
+                        accountId = account.generateAccountId();
+                        removedCredentials = [];
+                        allCacheKeys.forEach(function (cacheKey) {
+                            // don't parse any non-credential type cache entities
+                            var credType = _entities_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_5__/* .CredentialEntity.getCredentialType */ .m.getCredentialType(cacheKey);
+                            if (credType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .Constants.NOT_DEFINED */ .gT.NOT_DEFINED) {
+                                return;
+                            }
+                            var cacheEntity = _this.getSpecificCredential(cacheKey, credType);
+                            if (!!cacheEntity && accountId === cacheEntity.generateAccountId()) {
+                                removedCredentials.push(_this.removeCredential(cacheEntity));
+                            }
+                        });
+                        return [4 /*yield*/, Promise.all(removedCredentials)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                }
+            });
+        });
+    };
+    /**
+     * returns a boolean if the given credential is removed
+     * @param credential
+     */
+    CacheManager.prototype.removeCredential = function (credential) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var key, accessTokenWithAuthSchemeEntity, kid;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        key = credential.generateCredentialKey();
+                        if (!(credential.credentialType.toLowerCase() === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase())) return [3 /*break*/, 4];
+                        if (!(credential.tokenType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AuthenticationScheme.POP */ .hO.POP)) return [3 /*break*/, 4];
+                        accessTokenWithAuthSchemeEntity = credential;
+                        kid = accessTokenWithAuthSchemeEntity.keyId;
+                        if (!kid) return [3 /*break*/, 4];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.cryptoImpl.removeTokenBindingKey(kid)];
+                    case 2:
+                        _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        _a.sent();
+                        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createBindingKeyNotRemovedError */ .e.createBindingKeyNotRemovedError();
+                    case 4: return [2 /*return*/, this.removeItem(key, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CacheSchemaType.CREDENTIAL */ .Xj.CREDENTIAL)];
+                }
+            });
+        });
+    };
+    /**
+     * Removes all app metadata objects from cache.
+     */
+    CacheManager.prototype.removeAppMetadata = function () {
+        var _this = this;
+        var allCacheKeys = this.getKeys();
+        allCacheKeys.forEach(function (cacheKey) {
+            if (_this.isAppMetadata(cacheKey)) {
+                _this.removeItem(cacheKey, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CacheSchemaType.APP_METADATA */ .Xj.APP_METADATA);
+            }
+        });
+        return true;
+    };
+    /**
+     * Retrieve the cached credentials into a cacherecord
+     * @param account
+     * @param clientId
+     * @param scopes
+     * @param environment
+     * @param authScheme
+     */
+    CacheManager.prototype.readCacheRecord = function (account, clientId, request, environment) {
+        var cachedAccount = this.readAccountFromCache(account);
+        var cachedIdToken = this.readIdTokenFromCache(clientId, account);
+        var cachedAccessToken = this.readAccessTokenFromCache(clientId, account, request);
+        var cachedRefreshToken = this.readRefreshTokenFromCache(clientId, account, false);
+        var cachedAppMetadata = this.readAppMetadataFromCache(environment, clientId);
+        if (cachedAccount && cachedIdToken) {
+            cachedAccount.idTokenClaims = new _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthToken */ .H(cachedIdToken.secret, this.cryptoImpl).claims;
+        }
+        return {
+            account: cachedAccount,
+            idToken: cachedIdToken,
+            accessToken: cachedAccessToken,
+            refreshToken: cachedRefreshToken,
+            appMetadata: cachedAppMetadata,
+        };
+    };
+    /**
+     * Retrieve AccountEntity from cache
+     * @param account
+     */
+    CacheManager.prototype.readAccountFromCache = function (account) {
+        var accountKey = _entities_AccountEntity_js__WEBPACK_IMPORTED_MODULE_0__/* .AccountEntity.generateAccountCacheKey */ .r.generateAccountCacheKey(account);
+        return this.getAccount(accountKey);
+    };
+    /**
+     * Retrieve IdTokenEntity from cache
+     * @param clientId
+     * @param account
+     * @param inputRealm
+     */
+    CacheManager.prototype.readIdTokenFromCache = function (clientId, account) {
+        var idTokenFilter = {
+            homeAccountId: account.homeAccountId,
+            environment: account.environment,
+            credentialType: _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN,
+            clientId: clientId,
+            realm: account.tenantId,
+        };
+        var credentialCache = this.getCredentialsFilteredBy(idTokenFilter);
+        var idTokens = Object.keys(credentialCache.idTokens).map(function (key) { return credentialCache.idTokens[key]; });
+        var numIdTokens = idTokens.length;
+        if (numIdTokens < 1) {
+            return null;
+        }
+        else if (numIdTokens > 1) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createMultipleMatchingTokensInCacheError */ .e.createMultipleMatchingTokensInCacheError();
+        }
+        return idTokens[0];
+    };
+    /**
+     * Retrieve AccessTokenEntity from cache
+     * @param clientId
+     * @param account
+     * @param scopes
+     * @param authScheme
+     */
+    CacheManager.prototype.readAccessTokenFromCache = function (clientId, account, request) {
+        var scopes = new _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__/* .ScopeSet */ .i(request.scopes || []);
+        var authScheme = request.authenticationScheme || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AuthenticationScheme.BEARER */ .hO.BEARER;
+        /*
+         * Distinguish between Bearer and PoP/SSH token cache types
+         * Cast to lowercase to handle "bearer" from ADFS
+         */
+        var credentialType = (authScheme && authScheme.toLowerCase() !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AuthenticationScheme.BEARER.toLowerCase */ .hO.BEARER.toLowerCase()) ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME : _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN;
+        var accessTokenFilter = {
+            homeAccountId: account.homeAccountId,
+            environment: account.environment,
+            credentialType: credentialType,
+            clientId: clientId,
+            realm: account.tenantId,
+            target: scopes.printScopesLowerCase(),
+            tokenType: authScheme,
+            keyId: request.sshKid,
+            requestedClaimsHash: request.requestedClaimsHash
+        };
+        var credentialCache = this.getCredentialsFilteredBy(accessTokenFilter);
+        var accessTokens = Object.keys(credentialCache.accessTokens).map(function (key) { return credentialCache.accessTokens[key]; });
+        var numAccessTokens = accessTokens.length;
+        if (numAccessTokens < 1) {
+            return null;
+        }
+        else if (numAccessTokens > 1) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createMultipleMatchingTokensInCacheError */ .e.createMultipleMatchingTokensInCacheError();
+        }
+        return accessTokens[0];
+    };
+    /**
+     * Helper to retrieve the appropriate refresh token from cache
+     * @param clientId
+     * @param account
+     * @param familyRT
+     */
+    CacheManager.prototype.readRefreshTokenFromCache = function (clientId, account, familyRT) {
+        var id = familyRT ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .THE_FAMILY_ID */ .ch : undefined;
+        var refreshTokenFilter = {
+            homeAccountId: account.homeAccountId,
+            environment: account.environment,
+            credentialType: _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN,
+            clientId: clientId,
+            familyId: id
+        };
+        var credentialCache = this.getCredentialsFilteredBy(refreshTokenFilter);
+        var refreshTokens = Object.keys(credentialCache.refreshTokens).map(function (key) { return credentialCache.refreshTokens[key]; });
+        var numRefreshTokens = refreshTokens.length;
+        if (numRefreshTokens < 1) {
+            return null;
+        }
+        // address the else case after remove functions address environment aliases
+        return refreshTokens[0];
+    };
+    /**
+     * Retrieve AppMetadataEntity from cache
+     */
+    CacheManager.prototype.readAppMetadataFromCache = function (environment, clientId) {
+        var appMetadataFilter = {
+            environment: environment,
+            clientId: clientId,
+        };
+        var appMetadata = this.getAppMetadataFilteredBy(appMetadataFilter);
+        var appMetadataEntries = Object.keys(appMetadata).map(function (key) { return appMetadata[key]; });
+        var numAppMetadata = appMetadataEntries.length;
+        if (numAppMetadata < 1) {
+            return null;
+        }
+        else if (numAppMetadata > 1) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createMultipleMatchingAppMetadataInCacheError */ .e.createMultipleMatchingAppMetadataInCacheError();
+        }
+        return appMetadataEntries[0];
+    };
+    /**
+     * Return the family_id value associated  with FOCI
+     * @param environment
+     * @param clientId
+     */
+    CacheManager.prototype.isAppMetadataFOCI = function (environment, clientId) {
+        var appMetadata = this.readAppMetadataFromCache(environment, clientId);
+        return !!(appMetadata && appMetadata.familyId === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .THE_FAMILY_ID */ .ch);
+    };
+    /**
+     * helper to match account ids
+     * @param value
+     * @param homeAccountId
+     */
+    CacheManager.prototype.matchHomeAccountId = function (entity, homeAccountId) {
+        return !!(entity.homeAccountId && homeAccountId === entity.homeAccountId);
+    };
+    /**
+     * helper to match assertion
+     * @param value
+     * @param oboAssertion
+     */
+    CacheManager.prototype.matchOboAssertion = function (entity, oboAssertion) {
+        return !!(entity.oboAssertion && oboAssertion === entity.oboAssertion);
+    };
+    /**
+     * helper to match environment
+     * @param value
+     * @param environment
+     */
+    CacheManager.prototype.matchEnvironment = function (entity, environment) {
+        var cloudMetadata = this.getAuthorityMetadataByAlias(environment);
+        if (cloudMetadata && cloudMetadata.aliases.indexOf(entity.environment) > -1) {
+            return true;
+        }
+        return false;
+    };
+    /**
+     * helper to match credential type
+     * @param entity
+     * @param credentialType
+     */
+    CacheManager.prototype.matchCredentialType = function (entity, credentialType) {
+        return (entity.credentialType && credentialType.toLowerCase() === entity.credentialType.toLowerCase());
+    };
+    /**
+     * helper to match client ids
+     * @param entity
+     * @param clientId
+     */
+    CacheManager.prototype.matchClientId = function (entity, clientId) {
+        return !!(entity.clientId && clientId === entity.clientId);
+    };
+    /**
+     * helper to match family ids
+     * @param entity
+     * @param familyId
+     */
+    CacheManager.prototype.matchFamilyId = function (entity, familyId) {
+        return !!(entity.familyId && familyId === entity.familyId);
+    };
+    /**
+     * helper to match realm
+     * @param entity
+     * @param realm
+     */
+    CacheManager.prototype.matchRealm = function (entity, realm) {
+        return !!(entity.realm && realm === entity.realm);
+    };
+    /**
+     * Returns true if the target scopes are a subset of the current entity's scopes, false otherwise.
+     * @param entity
+     * @param target
+     */
+    CacheManager.prototype.matchTarget = function (entity, target) {
+        var isNotAccessTokenCredential = (entity.credentialType !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN && entity.credentialType !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME);
+        if (isNotAccessTokenCredential || !entity.target) {
+            return false;
+        }
+        var entityScopeSet = _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__/* .ScopeSet.fromString */ .i.fromString(entity.target);
+        var requestTargetScopeSet = _request_ScopeSet_js__WEBPACK_IMPORTED_MODULE_4__/* .ScopeSet.fromString */ .i.fromString(target);
+        if (!requestTargetScopeSet.containsOnlyOIDCScopes()) {
+            requestTargetScopeSet.removeOIDCScopes(); // ignore OIDC scopes
+        }
+        else {
+            requestTargetScopeSet.removeScope(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .Constants.OFFLINE_ACCESS_SCOPE */ .gT.OFFLINE_ACCESS_SCOPE);
+        }
+        return entityScopeSet.containsScopeSet(requestTargetScopeSet);
+    };
+    /**
+     * Returns true if the credential's tokenType or Authentication Scheme matches the one in the request, false otherwise
+     * @param entity
+     * @param tokenType
+     */
+    CacheManager.prototype.matchTokenType = function (entity, tokenType) {
+        return !!(entity.tokenType && entity.tokenType === tokenType);
+    };
+    /**
+     * Returns true if the credential's keyId matches the one in the request, false otherwise
+     * @param entity
+     * @param tokenType
+     */
+    CacheManager.prototype.matchKeyId = function (entity, keyId) {
+        return !!(entity.keyId && entity.keyId === keyId);
+    };
+    /**
+     * returns if a given cache entity is of the type appmetadata
+     * @param key
+     */
+    CacheManager.prototype.isAppMetadata = function (key) {
+        return key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .APP_METADATA */ .dg) !== -1;
+    };
+    /**
+     * returns if a given cache entity is of the type authoritymetadata
+     * @param key
+     */
+    CacheManager.prototype.isAuthorityMetadata = function (key) {
+        return key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AUTHORITY_METADATA_CONSTANTS.CACHE_KEY */ .QU.CACHE_KEY) !== -1;
+    };
+    /**
+     * returns cache key used for cloud instance metadata
+     */
+    CacheManager.prototype.generateAuthorityMetadataCacheKey = function (authority) {
+        return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .AUTHORITY_METADATA_CONSTANTS.CACHE_KEY */ .QU.CACHE_KEY + "-" + this.clientId + "-" + authority;
+    };
+    /**
+     * Returns the specific credential (IdToken/AccessToken/RefreshToken) from the cache
+     * @param key
+     * @param credType
+     */
+    CacheManager.prototype.getSpecificCredential = function (key, credType) {
+        switch (credType) {
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN: {
+                return this.getIdTokenCredential(key);
+            }
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN:
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME: {
+                return this.getAccessTokenCredential(key);
+            }
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN: {
+                return this.getRefreshTokenCredential(key);
+            }
+            default:
+                return null;
+        }
+    };
+    /**
+     * Helper to convert serialized data to object
+     * @param obj
+     * @param json
+     */
+    CacheManager.toObject = function (obj, json) {
+        for (var propertyName in json) {
+            obj[propertyName] = json[propertyName];
+        }
+        return obj;
+    };
+    return CacheManager;
+}());
+var DefaultStorageClass = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__extends */ .ZT)(DefaultStorageClass, _super);
+    function DefaultStorageClass() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DefaultStorageClass.prototype.setAccount = function () {
+        var notImplErr = "Storage interface - setAccount() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getAccount = function () {
+        var notImplErr = "Storage interface - getAccount() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setIdTokenCredential = function () {
+        var notImplErr = "Storage interface - setIdTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getIdTokenCredential = function () {
+        var notImplErr = "Storage interface - getIdTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setAccessTokenCredential = function () {
+        var notImplErr = "Storage interface - setAccessTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getAccessTokenCredential = function () {
+        var notImplErr = "Storage interface - getAccessTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setRefreshTokenCredential = function () {
+        var notImplErr = "Storage interface - setRefreshTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getRefreshTokenCredential = function () {
+        var notImplErr = "Storage interface - getRefreshTokenCredential() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setAppMetadata = function () {
+        var notImplErr = "Storage interface - setAppMetadata() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getAppMetadata = function () {
+        var notImplErr = "Storage interface - getAppMetadata() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setServerTelemetry = function () {
+        var notImplErr = "Storage interface - setServerTelemetry() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getServerTelemetry = function () {
+        var notImplErr = "Storage interface - getServerTelemetry() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setAuthorityMetadata = function () {
+        var notImplErr = "Storage interface - setAuthorityMetadata() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getAuthorityMetadata = function () {
+        var notImplErr = "Storage interface - getAuthorityMetadata() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getAuthorityMetadataKeys = function () {
+        var notImplErr = "Storage interface - getAuthorityMetadataKeys() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.setThrottlingCache = function () {
+        var notImplErr = "Storage interface - setThrottlingCache() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getThrottlingCache = function () {
+        var notImplErr = "Storage interface - getThrottlingCache() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.removeItem = function () {
+        var notImplErr = "Storage interface - removeItem() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.containsKey = function () {
+        var notImplErr = "Storage interface - containsKey() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.getKeys = function () {
+        var notImplErr = "Storage interface - getKeys() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    DefaultStorageClass.prototype.clear = function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Storage interface - clear() has not been implemented for the cacheStorage interface.";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    };
+    DefaultStorageClass.prototype.updateCredentialCacheKey = function () {
+        var notImplErr = "Storage interface - updateCredentialCacheKey() has not been implemented for the cacheStorage interface.";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    };
+    return DefaultStorageClass;
+}(CacheManager));
+
+
+//# sourceMappingURL=CacheManager.js.map
+
+
+/***/ }),
+
+/***/ 85907:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "_": () => (/* binding */ AccessTokenEntity)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _CredentialEntity_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10521);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33848);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(61653);
+/* harmony import */ var _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(70591);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * ACCESS_TOKEN Credential Type
+ *
+ * Key:Value Schema:
+ *
+ * Key Example: uid.utid-login.microsoftonline.com-accesstoken-clientId-contoso.com-user.read
+ *
+ * Value Schema:
+ * {
+ *      homeAccountId: home account identifier for the auth scheme,
+ *      environment: entity that issued the token, represented as a full host
+ *      credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
+ *      clientId: client ID of the application
+ *      secret: Actual credential as a string
+ *      familyId: Family ID identifier, usually only used for refresh tokens
+ *      realm: Full tenant or organizational identifier that the account belongs to
+ *      target: Permissions that are included in the token, or for refresh tokens, the resource identifier.
+ *      cachedAt: Absolute device time when entry was created in the cache.
+ *      expiresOn: Token expiry time, calculated based on current UTC time in seconds. Represented as a string.
+ *      extendedExpiresOn: Additional extended expiry time until when token is valid in case of server-side outage. Represented as string in UTC seconds.
+ *      keyId: used for POP and SSH tokenTypes
+ *      tokenType: Type of the token issued. Usually "Bearer"
+ * }
+ */
+var AccessTokenEntity = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(AccessTokenEntity, _super);
+    function AccessTokenEntity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Create AccessTokenEntity
+     * @param homeAccountId
+     * @param environment
+     * @param accessToken
+     * @param clientId
+     * @param tenantId
+     * @param scopes
+     * @param expiresOn
+     * @param extExpiresOn
+     */
+    AccessTokenEntity.createAccessTokenEntity = function (homeAccountId, environment, accessToken, clientId, tenantId, scopes, expiresOn, extExpiresOn, cryptoUtils, refreshOn, tokenType, oboAssertion, keyId, requestedClaims, requestedClaimsHash) {
+        var _a, _b;
+        var atEntity = new AccessTokenEntity();
+        atEntity.homeAccountId = homeAccountId;
+        atEntity.credentialType = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN;
+        atEntity.secret = accessToken;
+        var currentTime = _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .TimeUtils.nowSeconds */ .I.nowSeconds();
+        atEntity.cachedAt = currentTime.toString();
+        /*
+         * Token expiry time.
+         * This value should be  calculated based on the current UTC time measured locally and the value  expires_in Represented as a string in JSON.
+         */
+        atEntity.expiresOn = expiresOn.toString();
+        atEntity.extendedExpiresOn = extExpiresOn.toString();
+        if (refreshOn) {
+            atEntity.refreshOn = refreshOn.toString();
+        }
+        atEntity.environment = environment;
+        atEntity.clientId = clientId;
+        atEntity.realm = tenantId;
+        atEntity.target = scopes;
+        atEntity.oboAssertion = oboAssertion;
+        atEntity.tokenType = _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_3__/* .StringUtils.isEmpty */ .x.isEmpty(tokenType) ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthenticationScheme.BEARER */ .hO.BEARER : tokenType;
+        if (requestedClaims) {
+            atEntity.requestedClaims = requestedClaims;
+            atEntity.requestedClaimsHash = requestedClaimsHash;
+        }
+        /*
+         * Create Access Token With Auth Scheme instead of regular access token
+         * Cast to lower to handle "bearer" from ADFS
+         */
+        if (((_a = atEntity.tokenType) === null || _a === void 0 ? void 0 : _a.toLowerCase()) !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthenticationScheme.BEARER.toLowerCase */ .hO.BEARER.toLowerCase()) {
+            atEntity.credentialType = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME;
+            switch (atEntity.tokenType) {
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthenticationScheme.POP */ .hO.POP:
+                    // Make sure keyId is present and add it to credential
+                    var tokenClaims = _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_4__/* .AuthToken.extractTokenClaims */ .H.extractTokenClaims(accessToken, cryptoUtils);
+                    if (!((_b = tokenClaims === null || tokenClaims === void 0 ? void 0 : tokenClaims.cnf) === null || _b === void 0 ? void 0 : _b.kid)) {
+                        throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_5__/* .ClientAuthError.createTokenClaimsRequiredError */ .e.createTokenClaimsRequiredError();
+                    }
+                    atEntity.keyId = tokenClaims.cnf.kid;
+                    break;
+                case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthenticationScheme.SSH */ .hO.SSH:
+                    atEntity.keyId = keyId;
+            }
+        }
+        return atEntity;
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    AccessTokenEntity.isAccessTokenEntity = function (entity) {
+        if (!entity) {
+            return false;
+        }
+        return (entity.hasOwnProperty("homeAccountId") &&
+            entity.hasOwnProperty("environment") &&
+            entity.hasOwnProperty("credentialType") &&
+            entity.hasOwnProperty("realm") &&
+            entity.hasOwnProperty("clientId") &&
+            entity.hasOwnProperty("secret") &&
+            entity.hasOwnProperty("target") &&
+            (entity["credentialType"] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN || entity["credentialType"] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME));
+    };
+    return AccessTokenEntity;
+}(_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_6__/* .CredentialEntity */ .m));
+
+
+//# sourceMappingURL=AccessTokenEntity.js.map
+
+
+/***/ }),
+
+/***/ 43640:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "r": () => (/* binding */ AccountEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/* harmony import */ var _account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11520);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/* harmony import */ var _authority_AuthorityType_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(52944);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Type that defines required and optional parameters for an Account field (based on universal cache schema implemented by all MSALs).
+ *
+ * Key : Value Schema
+ *
+ * Key: <home_account_id>-<environment>-<realm*>
+ *
+ * Value Schema:
+ * {
+ *      homeAccountId: home account identifier for the auth scheme,
+ *      environment: entity that issued the token, represented as a full host
+ *      realm: Full tenant or organizational identifier that the account belongs to
+ *      localAccountId: Original tenant-specific accountID, usually used for legacy cases
+ *      username: primary username that represents the user, usually corresponds to preferred_username in the v2 endpt
+ *      authorityType: Accounts authority type as a string
+ *      name: Full name for the account, including given name and family name,
+ *      clientInfo: Full base64 encoded client info received from ESTS
+ *      lastModificationTime: last time this entity was modified in the cache
+ *      lastModificationApp:
+ *      oboAssertion: access token passed in as part of OBO request
+ *      idTokenClaims: Object containing claims parsed from ID token
+ * }
+ */
+var AccountEntity = /** @class */ (function () {
+    function AccountEntity() {
+    }
+    /**
+     * Generate Account Id key component as per the schema: <home_account_id>-<environment>
+     */
+    AccountEntity.prototype.generateAccountId = function () {
+        var accountId = [this.homeAccountId, this.environment];
+        return accountId.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * Generate Account Cache Key as per the schema: <home_account_id>-<environment>-<realm*>
+     */
+    AccountEntity.prototype.generateAccountKey = function () {
+        return AccountEntity.generateAccountCacheKey({
+            homeAccountId: this.homeAccountId,
+            environment: this.environment,
+            tenantId: this.realm,
+            username: this.username,
+            localAccountId: this.localAccountId
+        });
+    };
+    /**
+     * returns the type of the cache (in this case account)
+     */
+    AccountEntity.prototype.generateType = function () {
+        switch (this.authorityType) {
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.ADFS_ACCOUNT_TYPE */ .iR.ADFS_ACCOUNT_TYPE:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.ADFS */ .LL.ADFS;
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.MSAV1_ACCOUNT_TYPE */ .iR.MSAV1_ACCOUNT_TYPE:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.MSA */ .LL.MSA;
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.MSSTS_ACCOUNT_TYPE */ .iR.MSSTS_ACCOUNT_TYPE:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.MSSTS */ .LL.MSSTS;
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.GENERIC_ACCOUNT_TYPE */ .iR.GENERIC_ACCOUNT_TYPE:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.GENERIC */ .LL.GENERIC;
+            default: {
+                throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createUnexpectedAccountTypeError */ .e.createUnexpectedAccountTypeError();
+            }
+        }
+    };
+    /**
+     * Returns the AccountInfo interface for this account.
+     */
+    AccountEntity.prototype.getAccountInfo = function () {
+        return {
+            homeAccountId: this.homeAccountId,
+            environment: this.environment,
+            tenantId: this.realm,
+            username: this.username,
+            localAccountId: this.localAccountId,
+            name: this.name,
+            idTokenClaims: this.idTokenClaims
+        };
+    };
+    /**
+     * Generates account key from interface
+     * @param accountInterface
+     */
+    AccountEntity.generateAccountCacheKey = function (accountInterface) {
+        var accountKey = [
+            accountInterface.homeAccountId,
+            accountInterface.environment || "",
+            accountInterface.tenantId || "",
+        ];
+        return accountKey.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * Build Account cache from IdToken, clientInfo and authority/policy. Associated with AAD.
+     * @param clientInfo
+     * @param authority
+     * @param idToken
+     * @param policy
+     */
+    AccountEntity.createAccount = function (clientInfo, homeAccountId, idToken, authority, oboAssertion, cloudGraphHostName, msGraphHost, environment) {
+        var _a, _b, _c, _d, _e, _f;
+        var account = new AccountEntity();
+        account.authorityType = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.MSSTS_ACCOUNT_TYPE */ .iR.MSSTS_ACCOUNT_TYPE;
+        account.clientInfo = clientInfo;
+        account.homeAccountId = homeAccountId;
+        var env = environment || (authority && authority.getPreferredCache());
+        if (!env) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createInvalidCacheEnvironmentError */ .e.createInvalidCacheEnvironmentError();
+        }
+        account.environment = env;
+        // non AAD scenarios can have empty realm
+        account.realm = ((_a = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _a === void 0 ? void 0 : _a.tid) || "";
+        account.oboAssertion = oboAssertion;
+        if (idToken) {
+            account.idTokenClaims = idToken.claims;
+            // How do you account for MSA CID here?
+            account.localAccountId = ((_b = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _b === void 0 ? void 0 : _b.oid) || ((_c = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _c === void 0 ? void 0 : _c.sub) || "";
+            /*
+             * In B2C scenarios the emails claim is used instead of preferred_username and it is an array. In most cases it will contain a single email.
+             * This field should not be relied upon if a custom policy is configured to return more than 1 email.
+             */
+            account.username = ((_d = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _d === void 0 ? void 0 : _d.preferred_username) || (((_e = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _e === void 0 ? void 0 : _e.emails) ? idToken.claims.emails[0] : "");
+            account.name = (_f = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _f === void 0 ? void 0 : _f.name;
+        }
+        account.cloudGraphHostName = cloudGraphHostName;
+        account.msGraphHost = msGraphHost;
+        return account;
+    };
+    /**
+     * Builds non-AAD/ADFS account.
+     * @param authority
+     * @param idToken
+     */
+    AccountEntity.createGenericAccount = function (homeAccountId, idToken, authority, oboAssertion, cloudGraphHostName, msGraphHost, environment) {
+        var _a, _b, _c, _d;
+        var account = new AccountEntity();
+        account.authorityType = (authority && authority.authorityType === _authority_AuthorityType_js__WEBPACK_IMPORTED_MODULE_2__/* .AuthorityType.Adfs */ .a.Adfs) ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.ADFS_ACCOUNT_TYPE */ .iR.ADFS_ACCOUNT_TYPE : _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheAccountType.GENERIC_ACCOUNT_TYPE */ .iR.GENERIC_ACCOUNT_TYPE;
+        account.homeAccountId = homeAccountId;
+        // non AAD scenarios can have empty realm
+        account.realm = "";
+        account.oboAssertion = oboAssertion;
+        var env = environment || authority && authority.getPreferredCache();
+        if (!env) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createInvalidCacheEnvironmentError */ .e.createInvalidCacheEnvironmentError();
+        }
+        if (idToken) {
+            // How do you account for MSA CID here?
+            account.localAccountId = ((_a = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _a === void 0 ? void 0 : _a.oid) || ((_b = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _b === void 0 ? void 0 : _b.sub) || "";
+            // upn claim for most ADFS scenarios
+            account.username = ((_c = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _c === void 0 ? void 0 : _c.upn) || "";
+            account.name = ((_d = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _d === void 0 ? void 0 : _d.name) || "";
+            account.idTokenClaims = idToken === null || idToken === void 0 ? void 0 : idToken.claims;
+        }
+        account.environment = env;
+        account.cloudGraphHostName = cloudGraphHostName;
+        account.msGraphHost = msGraphHost;
+        /*
+         * add uniqueName to claims
+         * account.name = idToken.claims.uniqueName;
+         */
+        return account;
+    };
+    /**
+     * Generate HomeAccountId from server response
+     * @param serverClientInfo
+     * @param authType
+     */
+    AccountEntity.generateHomeAccountId = function (serverClientInfo, authType, logger, cryptoObj, idToken) {
+        var _a;
+        var accountId = ((_a = idToken === null || idToken === void 0 ? void 0 : idToken.claims) === null || _a === void 0 ? void 0 : _a.sub) ? idToken.claims.sub : _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+        // since ADFS does not have tid and does not set client_info
+        if (authType === _authority_AuthorityType_js__WEBPACK_IMPORTED_MODULE_2__/* .AuthorityType.Adfs */ .a.Adfs) {
+            return accountId;
+        }
+        // for cases where there is clientInfo
+        if (serverClientInfo) {
+            try {
+                var clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_3__/* .buildClientInfo */ .B)(serverClientInfo, cryptoObj);
+                if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .StringUtils.isEmpty */ .x.isEmpty(clientInfo.uid) && !_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .StringUtils.isEmpty */ .x.isEmpty(clientInfo.utid)) {
+                    return "" + clientInfo.uid + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CLIENT_INFO_SEPARATOR */ .Bv.CLIENT_INFO_SEPARATOR + clientInfo.utid;
+                }
+            }
+            catch (e) { }
+        }
+        // default to "sub" claim
+        logger.verbose("No client info in response");
+        return accountId;
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    AccountEntity.isAccountEntity = function (entity) {
+        if (!entity) {
+            return false;
+        }
+        return (entity.hasOwnProperty("homeAccountId") &&
+            entity.hasOwnProperty("environment") &&
+            entity.hasOwnProperty("realm") &&
+            entity.hasOwnProperty("localAccountId") &&
+            entity.hasOwnProperty("username") &&
+            entity.hasOwnProperty("authorityType"));
+    };
+    /**
+     * Helper function to determine whether 2 accountInfo objects represent the same account
+     * @param accountA
+     * @param accountB
+     * @param compareClaims - If set to true idTokenClaims will also be compared to determine account equality
+     */
+    AccountEntity.accountInfoIsEqual = function (accountA, accountB, compareClaims) {
+        if (!accountA || !accountB) {
+            return false;
+        }
+        var claimsMatch = true; // default to true so as to not fail comparison below if compareClaims: false
+        if (compareClaims) {
+            var accountAClaims = (accountA.idTokenClaims || {});
+            var accountBClaims = (accountB.idTokenClaims || {});
+            // issued at timestamp and nonce are expected to change each time a new id token is acquired
+            claimsMatch = (accountAClaims.iat === accountBClaims.iat) &&
+                (accountAClaims.nonce === accountBClaims.nonce);
+        }
+        return (accountA.homeAccountId === accountB.homeAccountId) &&
+            (accountA.localAccountId === accountB.localAccountId) &&
+            (accountA.username === accountB.username) &&
+            (accountA.tenantId === accountB.tenantId) &&
+            (accountA.environment === accountB.environment) &&
+            claimsMatch;
+    };
+    return AccountEntity;
+}());
+
+
+//# sourceMappingURL=AccountEntity.js.map
+
+
+/***/ }),
+
+/***/ 59993:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "T": () => (/* binding */ AppMetadataEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * APP_METADATA Cache
+ *
+ * Key:Value Schema:
+ *
+ * Key: appmetadata-<environment>-<client_id>
+ *
+ * Value:
+ * {
+ *      clientId: client ID of the application
+ *      environment: entity that issued the token, represented as a full host
+ *      familyId: Family ID identifier, '1' represents Microsoft Family
+ * }
+ */
+var AppMetadataEntity = /** @class */ (function () {
+    function AppMetadataEntity() {
+    }
+    /**
+     * Generate AppMetadata Cache Key as per the schema: appmetadata-<environment>-<client_id>
+     */
+    AppMetadataEntity.prototype.generateAppMetadataKey = function () {
+        return AppMetadataEntity.generateAppMetadataCacheKey(this.environment, this.clientId);
+    };
+    /**
+     * Generate AppMetadata Cache Key
+     */
+    AppMetadataEntity.generateAppMetadataCacheKey = function (environment, clientId) {
+        var appMetaDataKeyArray = [
+            _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .APP_METADATA */ .dg,
+            environment,
+            clientId,
+        ];
+        return appMetaDataKeyArray.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * Creates AppMetadataEntity
+     * @param clientId
+     * @param environment
+     * @param familyId
+     */
+    AppMetadataEntity.createAppMetadataEntity = function (clientId, environment, familyId) {
+        var appMetadata = new AppMetadataEntity();
+        appMetadata.clientId = clientId;
+        appMetadata.environment = environment;
+        if (familyId) {
+            appMetadata.familyId = familyId;
+        }
+        return appMetadata;
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    AppMetadataEntity.isAppMetadataEntity = function (key, entity) {
+        if (!entity) {
+            return false;
+        }
+        return (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .APP_METADATA */ .dg) === 0 &&
+            entity.hasOwnProperty("clientId") &&
+            entity.hasOwnProperty("environment"));
+    };
+    return AppMetadataEntity;
+}());
+
+
+//# sourceMappingURL=AppMetadataEntity.js.map
+
+
+/***/ }),
+
+/***/ 1713:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "l": () => (/* binding */ AuthorityMetadataEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33848);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var AuthorityMetadataEntity = /** @class */ (function () {
+    function AuthorityMetadataEntity() {
+        this.expiresAt = _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .TimeUtils.nowSeconds */ .I.nowSeconds() + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AUTHORITY_METADATA_CONSTANTS.REFRESH_TIME_SECONDS */ .QU.REFRESH_TIME_SECONDS;
+    }
+    /**
+     * Update the entity with new aliases, preferred_cache and preferred_network values
+     * @param metadata
+     * @param fromNetwork
+     */
+    AuthorityMetadataEntity.prototype.updateCloudDiscoveryMetadata = function (metadata, fromNetwork) {
+        this.aliases = metadata.aliases;
+        this.preferred_cache = metadata.preferred_cache;
+        this.preferred_network = metadata.preferred_network;
+        this.aliasesFromNetwork = fromNetwork;
+    };
+    /**
+     * Update the entity with new endpoints
+     * @param metadata
+     * @param fromNetwork
+     */
+    AuthorityMetadataEntity.prototype.updateEndpointMetadata = function (metadata, fromNetwork) {
+        this.authorization_endpoint = metadata.authorization_endpoint;
+        this.token_endpoint = metadata.token_endpoint;
+        this.end_session_endpoint = metadata.end_session_endpoint;
+        this.issuer = metadata.issuer;
+        this.endpointsFromNetwork = fromNetwork;
+    };
+    /**
+     * Save the authority that was used to create this cache entry
+     * @param authority
+     */
+    AuthorityMetadataEntity.prototype.updateCanonicalAuthority = function (authority) {
+        this.canonical_authority = authority;
+    };
+    /**
+     * Reset the exiresAt value
+     */
+    AuthorityMetadataEntity.prototype.resetExpiresAt = function () {
+        this.expiresAt = _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .TimeUtils.nowSeconds */ .I.nowSeconds() + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AUTHORITY_METADATA_CONSTANTS.REFRESH_TIME_SECONDS */ .QU.REFRESH_TIME_SECONDS;
+    };
+    /**
+     * Returns whether or not the data needs to be refreshed
+     */
+    AuthorityMetadataEntity.prototype.isExpired = function () {
+        return this.expiresAt <= _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .TimeUtils.nowSeconds */ .I.nowSeconds();
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    AuthorityMetadataEntity.isAuthorityMetadataEntity = function (key, entity) {
+        if (!entity) {
+            return false;
+        }
+        return (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .AUTHORITY_METADATA_CONSTANTS.CACHE_KEY */ .QU.CACHE_KEY) === 0 &&
+            entity.hasOwnProperty("aliases") &&
+            entity.hasOwnProperty("preferred_cache") &&
+            entity.hasOwnProperty("preferred_network") &&
+            entity.hasOwnProperty("canonical_authority") &&
+            entity.hasOwnProperty("authorization_endpoint") &&
+            entity.hasOwnProperty("token_endpoint") &&
+            entity.hasOwnProperty("issuer") &&
+            entity.hasOwnProperty("aliasesFromNetwork") &&
+            entity.hasOwnProperty("endpointsFromNetwork") &&
+            entity.hasOwnProperty("expiresAt"));
+    };
+    return AuthorityMetadataEntity;
+}());
+
+
+//# sourceMappingURL=AuthorityMetadataEntity.js.map
+
+
+/***/ }),
+
+/***/ 10521:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "m": () => (/* binding */ CredentialEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Base type for credentials to be stored in the cache: eg: ACCESS_TOKEN, ID_TOKEN etc
+ *
+ * Key:Value Schema:
+ *
+ * Key: <home_account_id*>-<environment>-<credential_type>-<client_id>-<realm*>-<target*>-<requestedClaims*>-<scheme*>
+ *
+ * Value Schema:
+ * {
+ *      homeAccountId: home account identifier for the auth scheme,
+ *      environment: entity that issued the token, represented as a full host
+ *      credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
+ *      clientId: client ID of the application
+ *      secret: Actual credential as a string
+ *      familyId: Family ID identifier, usually only used for refresh tokens
+ *      realm: Full tenant or organizational identifier that the account belongs to
+ *      target: Permissions that are included in the token, or for refresh tokens, the resource identifier.
+ *      oboAssertion: access token passed in as part of OBO request
+ *      tokenType: Matches the authentication scheme for which the token was issued (i.e. Bearer or pop)
+ *      requestedClaimsHash: Matches the SHA 256 hash of the claims object included in the token request
+ * }
+ */
+var CredentialEntity = /** @class */ (function () {
+    function CredentialEntity() {
+    }
+    /**
+     * Generate Account Id key component as per the schema: <home_account_id>-<environment>
+     */
+    CredentialEntity.prototype.generateAccountId = function () {
+        return CredentialEntity.generateAccountIdForCacheKey(this.homeAccountId, this.environment);
+    };
+    /**
+     * Generate Credential Id key component as per the schema: <credential_type>-<client_id>-<realm>
+     */
+    CredentialEntity.prototype.generateCredentialId = function () {
+        return CredentialEntity.generateCredentialIdForCacheKey(this.credentialType, this.clientId, this.realm, this.familyId);
+    };
+    /**
+     * Generate target key component as per schema: <target>
+     */
+    CredentialEntity.prototype.generateTarget = function () {
+        return CredentialEntity.generateTargetForCacheKey(this.target);
+    };
+    /**
+     * generates credential key
+     */
+    CredentialEntity.prototype.generateCredentialKey = function () {
+        return CredentialEntity.generateCredentialCacheKey(this.homeAccountId, this.environment, this.credentialType, this.clientId, this.realm, this.target, this.familyId, this.tokenType, this.requestedClaimsHash);
+    };
+    /**
+     * returns the type of the cache (in this case credential)
+     */
+    CredentialEntity.prototype.generateType = function () {
+        switch (this.credentialType) {
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.ID_TOKEN */ .LL.ID_TOKEN;
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN:
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.ACCESS_TOKEN */ .LL.ACCESS_TOKEN;
+            case _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN:
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheType.REFRESH_TOKEN */ .LL.REFRESH_TOKEN;
+            default: {
+                throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createUnexpectedCredentialTypeError */ .e.createUnexpectedCredentialTypeError();
+            }
+        }
+    };
+    /**
+     * helper function to return `CredentialType`
+     * @param key
+     */
+    CredentialEntity.getCredentialType = function (key) {
+        // First keyword search will match all "AccessToken" and "AccessToken_With_AuthScheme" credentials
+        if (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN.toLowerCase */ .d3.ACCESS_TOKEN.toLowerCase()) !== -1) {
+            // Perform second search to differentiate between "AccessToken" and "AccessToken_With_AuthScheme" credential types
+            if (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME.toLowerCase()) !== -1) {
+                return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN_WITH_AUTH_SCHEME */ .d3.ACCESS_TOKEN_WITH_AUTH_SCHEME;
+            }
+            return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ACCESS_TOKEN */ .d3.ACCESS_TOKEN;
+        }
+        else if (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ID_TOKEN.toLowerCase */ .d3.ID_TOKEN.toLowerCase()) !== -1) {
+            return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN;
+        }
+        else if (key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.REFRESH_TOKEN.toLowerCase */ .d3.REFRESH_TOKEN.toLowerCase()) !== -1) {
+            return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN;
+        }
+        return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.NOT_DEFINED */ .gT.NOT_DEFINED;
+    };
+    /**
+     * generates credential key
+     * <home_account_id*>-\<environment>-<credential_type>-<client_id>-<realm\*>-<target\*>-<scheme\*>
+     */
+    CredentialEntity.generateCredentialCacheKey = function (homeAccountId, environment, credentialType, clientId, realm, target, familyId, tokenType, requestedClaimsHash) {
+        var credentialKey = [
+            this.generateAccountIdForCacheKey(homeAccountId, environment),
+            this.generateCredentialIdForCacheKey(credentialType, clientId, realm, familyId),
+            this.generateTargetForCacheKey(target),
+            this.generateClaimsHashForCacheKey(requestedClaimsHash),
+            this.generateSchemeForCacheKey(tokenType)
+        ];
+        return credentialKey.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * generates Account Id for keys
+     * @param homeAccountId
+     * @param environment
+     */
+    CredentialEntity.generateAccountIdForCacheKey = function (homeAccountId, environment) {
+        var accountId = [homeAccountId, environment];
+        return accountId.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * Generates Credential Id for keys
+     * @param credentialType
+     * @param realm
+     * @param clientId
+     * @param familyId
+     */
+    CredentialEntity.generateCredentialIdForCacheKey = function (credentialType, clientId, realm, familyId) {
+        var clientOrFamilyId = credentialType === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN
+            ? familyId || clientId
+            : clientId;
+        var credentialId = [
+            credentialType,
+            clientOrFamilyId,
+            realm || "",
+        ];
+        return credentialId.join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR).toLowerCase();
+    };
+    /**
+     * Generate target key component as per schema: <target>
+     */
+    CredentialEntity.generateTargetForCacheKey = function (scopes) {
+        return (scopes || "").toLowerCase();
+    };
+    /**
+     * Generate requested claims key component as per schema: <requestedClaims>
+     */
+    CredentialEntity.generateClaimsHashForCacheKey = function (requestedClaimsHash) {
+        return (requestedClaimsHash || "").toLowerCase();
+    };
+    /**
+     * Generate scheme key componenet as per schema: <scheme>
+     */
+    CredentialEntity.generateSchemeForCacheKey = function (tokenType) {
+        /*
+         * PoP Tokens and SSH certs include scheme in cache key
+         * Cast to lowercase to handle "bearer" from ADFS
+         */
+        return (tokenType && tokenType.toLowerCase() !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthenticationScheme.BEARER.toLowerCase */ .hO.BEARER.toLowerCase()) ? tokenType.toLowerCase() : "";
+    };
+    return CredentialEntity;
+}());
+
+
+//# sourceMappingURL=CredentialEntity.js.map
+
+
+/***/ }),
+
+/***/ 70979:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "w": () => (/* binding */ IdTokenEntity)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _CredentialEntity_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10521);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * ID_TOKEN Cache
+ *
+ * Key:Value Schema:
+ *
+ * Key Example: uid.utid-login.microsoftonline.com-idtoken-clientId-contoso.com-
+ *
+ * Value Schema:
+ * {
+ *      homeAccountId: home account identifier for the auth scheme,
+ *      environment: entity that issued the token, represented as a full host
+ *      credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
+ *      clientId: client ID of the application
+ *      secret: Actual credential as a string
+ *      realm: Full tenant or organizational identifier that the account belongs to
+ * }
+ */
+var IdTokenEntity = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(IdTokenEntity, _super);
+    function IdTokenEntity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Create IdTokenEntity
+     * @param homeAccountId
+     * @param authenticationResult
+     * @param clientId
+     * @param authority
+     */
+    IdTokenEntity.createIdTokenEntity = function (homeAccountId, environment, idToken, clientId, tenantId, oboAssertion) {
+        var idTokenEntity = new IdTokenEntity();
+        idTokenEntity.credentialType = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN;
+        idTokenEntity.homeAccountId = homeAccountId;
+        idTokenEntity.environment = environment;
+        idTokenEntity.clientId = clientId;
+        idTokenEntity.secret = idToken;
+        idTokenEntity.realm = tenantId;
+        idTokenEntity.oboAssertion = oboAssertion;
+        return idTokenEntity;
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    IdTokenEntity.isIdTokenEntity = function (entity) {
+        if (!entity) {
+            return false;
+        }
+        return (entity.hasOwnProperty("homeAccountId") &&
+            entity.hasOwnProperty("environment") &&
+            entity.hasOwnProperty("credentialType") &&
+            entity.hasOwnProperty("realm") &&
+            entity.hasOwnProperty("clientId") &&
+            entity.hasOwnProperty("secret") &&
+            entity["credentialType"] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.ID_TOKEN */ .d3.ID_TOKEN);
+    };
+    return IdTokenEntity;
+}(_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_2__/* .CredentialEntity */ .m));
+
+
+//# sourceMappingURL=IdTokenEntity.js.map
+
+
+/***/ }),
+
+/***/ 11429:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "e": () => (/* binding */ RefreshTokenEntity)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _CredentialEntity_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10521);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * REFRESH_TOKEN Cache
+ *
+ * Key:Value Schema:
+ *
+ * Key Example: uid.utid-login.microsoftonline.com-refreshtoken-clientId--
+ *
+ * Value:
+ * {
+ *      homeAccountId: home account identifier for the auth scheme,
+ *      environment: entity that issued the token, represented as a full host
+ *      credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
+ *      clientId: client ID of the application
+ *      secret: Actual credential as a string
+ *      familyId: Family ID identifier, '1' represents Microsoft Family
+ *      realm: Full tenant or organizational identifier that the account belongs to
+ *      target: Permissions that are included in the token, or for refresh tokens, the resource identifier.
+ * }
+ */
+var RefreshTokenEntity = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(RefreshTokenEntity, _super);
+    function RefreshTokenEntity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Create RefreshTokenEntity
+     * @param homeAccountId
+     * @param authenticationResult
+     * @param clientId
+     * @param authority
+     */
+    RefreshTokenEntity.createRefreshTokenEntity = function (homeAccountId, environment, refreshToken, clientId, familyId, oboAssertion) {
+        var rtEntity = new RefreshTokenEntity();
+        rtEntity.clientId = clientId;
+        rtEntity.credentialType = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN;
+        rtEntity.environment = environment;
+        rtEntity.homeAccountId = homeAccountId;
+        rtEntity.secret = refreshToken;
+        rtEntity.oboAssertion = oboAssertion;
+        if (familyId)
+            rtEntity.familyId = familyId;
+        return rtEntity;
+    };
+    /**
+     * Validates an entity: checks for all expected params
+     * @param entity
+     */
+    RefreshTokenEntity.isRefreshTokenEntity = function (entity) {
+        if (!entity) {
+            return false;
+        }
+        return (entity.hasOwnProperty("homeAccountId") &&
+            entity.hasOwnProperty("environment") &&
+            entity.hasOwnProperty("credentialType") &&
+            entity.hasOwnProperty("clientId") &&
+            entity.hasOwnProperty("secret") &&
+            entity["credentialType"] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .CredentialType.REFRESH_TOKEN */ .d3.REFRESH_TOKEN);
+    };
+    return RefreshTokenEntity;
+}(_CredentialEntity_js__WEBPACK_IMPORTED_MODULE_2__/* .CredentialEntity */ .m));
+
+
+//# sourceMappingURL=RefreshTokenEntity.js.map
+
+
+/***/ }),
+
+/***/ 44612:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "d": () => (/* binding */ ServerTelemetryEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var ServerTelemetryEntity = /** @class */ (function () {
+    function ServerTelemetryEntity() {
+        this.failedRequests = [];
+        this.errors = [];
+        this.cacheHits = 0;
+    }
+    /**
+     * validates if a given cache entry is "Telemetry", parses <key,value>
+     * @param key
+     * @param entity
+     */
+    ServerTelemetryEntity.isServerTelemetryEntity = function (key, entity) {
+        var validateKey = key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.CACHE_KEY */ .HN.CACHE_KEY) === 0;
+        var validateEntity = true;
+        if (entity) {
+            validateEntity =
+                entity.hasOwnProperty("failedRequests") &&
+                    entity.hasOwnProperty("errors") &&
+                    entity.hasOwnProperty("cacheHits");
+        }
+        return validateKey && validateEntity;
+    };
+    return ServerTelemetryEntity;
+}());
+
+
+//# sourceMappingURL=ServerTelemetryEntity.js.map
+
+
+/***/ }),
+
+/***/ 4184:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "A": () => (/* binding */ ThrottlingEntity)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var ThrottlingEntity = /** @class */ (function () {
+    function ThrottlingEntity() {
+    }
+    /**
+     * validates if a given cache entry is "Throttling", parses <key,value>
+     * @param key
+     * @param entity
+     */
+    ThrottlingEntity.isThrottlingEntity = function (key, entity) {
+        var validateKey = false;
+        if (key) {
+            validateKey = key.indexOf(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ThrottlingConstants.THROTTLING_PREFIX */ .bb.THROTTLING_PREFIX) === 0;
+        }
+        var validateEntity = true;
+        if (entity) {
+            validateEntity = entity.hasOwnProperty("throttleTime");
+        }
+        return validateKey && validateEntity;
+    };
+    return ThrottlingEntity;
+}());
+
+
+//# sourceMappingURL=ThrottlingEntity.js.map
+
+
+/***/ }),
+
+/***/ 59665:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "C": () => (/* binding */ TokenCacheContext)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This class instance helps track the memory changes facilitating
+ * decisions to read from and write to the persistent cache
+ */ var TokenCacheContext = /** @class */ (function () {
+    function TokenCacheContext(tokenCache, hasChanged) {
+        this.cache = tokenCache;
+        this.hasChanged = hasChanged;
+    }
+    Object.defineProperty(TokenCacheContext.prototype, "cacheHasChanged", {
+        /**
+         * boolean which indicates the changes in cache
+         */
+        get: function () {
+            return this.hasChanged;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TokenCacheContext.prototype, "tokenCache", {
+        /**
+         * function to retrieve the token cache
+         */
+        get: function () {
+            return this.cache;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return TokenCacheContext;
+}());
+
+
+//# sourceMappingURL=TokenCacheContext.js.map
+
+
+/***/ }),
+
+/***/ 29046:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "U": () => (/* binding */ AuthorizationCodeClient)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _BaseClient_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(13761);
+/* harmony import */ var _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(87479);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(77891);
+/* harmony import */ var _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(32105);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(60742);
+/* harmony import */ var _url_UrlString_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(99860);
+/* harmony import */ var _crypto_PopTokenGenerator_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(17650);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33848);
+/* harmony import */ var _account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11520);
+/* harmony import */ var _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(34726);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47181);
+/* harmony import */ var _request_RequestValidator_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(5035);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Oauth2.0 Authorization Code client
+ */
+var AuthorizationCodeClient = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(AuthorizationCodeClient, _super);
+    function AuthorizationCodeClient(configuration) {
+        var _this = _super.call(this, configuration) || this;
+        // Flag to indicate if client is for hybrid spa auth code redemption
+        _this.includeRedirectUri = true;
+        return _this;
+    }
+    /**
+     * Creates the URL of the authorization request letting the user input credentials and consent to the
+     * application. The URL target the /authorize endpoint of the authority configured in the
+     * application object.
+     *
+     * Once the user inputs their credentials and consents, the authority will send a response to the redirect URI
+     * sent in the request and should contain an authorization code, which can then be used to acquire tokens via
+     * acquireToken(AuthorizationCodeRequest)
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.getAuthCodeUrl = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var queryString;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                queryString = this.createAuthCodeUrlQueryString(request);
+                return [2 /*return*/, _url_UrlString_js__WEBPACK_IMPORTED_MODULE_1__/* .UrlString.appendQueryString */ .G.appendQueryString(this.authority.authorizationEndpoint, queryString)];
+            });
+        });
+    };
+    /**
+     * API to acquire a token in exchange of 'authorization_code` acquired by the user in the first leg of the
+     * authorization_code_grant
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.acquireToken = function (request, authCodePayload) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var reqTimestamp, response, responseHandler;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.logger.info("in acquireToken call");
+                        if (!request || _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .StringUtils.isEmpty */ .x.isEmpty(request.code)) {
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createTokenRequestCannotBeMadeError */ .e.createTokenRequestCannotBeMadeError();
+                        }
+                        reqTimestamp = _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .TimeUtils.nowSeconds */ .I.nowSeconds();
+                        return [4 /*yield*/, this.executeTokenRequest(this.authority, request)];
+                    case 1:
+                        response = _a.sent();
+                        responseHandler = new _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_5__/* .ResponseHandler */ .s(this.config.authOptions.clientId, this.cacheManager, this.cryptoUtils, this.logger, this.config.serializableCache, this.config.persistencePlugin);
+                        // Validate response. This function throws a server error if an error is returned by the server.
+                        responseHandler.validateTokenResponse(response.body);
+                        return [4 /*yield*/, responseHandler.handleServerTokenResponse(response.body, this.authority, reqTimestamp, request, authCodePayload)];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
+     * Handles the hash fragment response from public client code request. Returns a code response used by
+     * the client to exchange for a token in acquireToken.
+     * @param hashFragment
+     */
+    AuthorizationCodeClient.prototype.handleFragmentResponse = function (hashFragment, cachedState) {
+        // Handle responses.
+        var responseHandler = new _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_5__/* .ResponseHandler */ .s(this.config.authOptions.clientId, this.cacheManager, this.cryptoUtils, this.logger, null, null);
+        // Deserialize hash fragment response parameters.
+        var hashUrlString = new _url_UrlString_js__WEBPACK_IMPORTED_MODULE_1__/* .UrlString */ .G(hashFragment);
+        // Deserialize hash fragment response parameters.
+        var serverParams = _url_UrlString_js__WEBPACK_IMPORTED_MODULE_1__/* .UrlString.getDeserializedHash */ .G.getDeserializedHash(hashUrlString.getHash());
+        // Get code response
+        responseHandler.validateServerAuthorizationCodeResponse(serverParams, cachedState, this.cryptoUtils);
+        // throw when there is no auth code in the response
+        if (!serverParams.code) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createNoAuthCodeInServerResponseError */ .e.createNoAuthCodeInServerResponseError();
+        }
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__assign */ .pi)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__assign */ .pi)({}, serverParams), { 
+            // Code param is optional in ServerAuthorizationCodeResponse but required in AuthorizationCodePaylod
+            code: serverParams.code });
+    };
+    /**
+     * Used to log out the current user, and redirect the user to the postLogoutRedirectUri.
+     * Default behaviour is to redirect the user to `window.location.href`.
+     * @param authorityUri
+     */
+    AuthorizationCodeClient.prototype.getLogoutUri = function (logoutRequest) {
+        // Throw error if logoutRequest is null/undefined
+        if (!logoutRequest) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_6__/* .ClientConfigurationError.createEmptyLogoutRequestError */ .r.createEmptyLogoutRequestError();
+        }
+        var queryString = this.createLogoutUrlQueryString(logoutRequest);
+        // Construct logout URI.
+        return _url_UrlString_js__WEBPACK_IMPORTED_MODULE_1__/* .UrlString.appendQueryString */ .G.appendQueryString(this.authority.endSessionEndpoint, queryString);
+    };
+    /**
+     * Executes POST request to token endpoint
+     * @param authority
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.executeTokenRequest = function (authority, request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var thumbprint, requestBody, queryParameters, ccsCredential, clientInfo, headers, endpoint;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        thumbprint = {
+                            clientId: this.config.authOptions.clientId,
+                            authority: authority.canonicalAuthority,
+                            scopes: request.scopes,
+                            claims: request.claims,
+                            authenticationScheme: request.authenticationScheme,
+                            resourceRequestMethod: request.resourceRequestMethod,
+                            resourceRequestUri: request.resourceRequestUri,
+                            shrClaims: request.shrClaims,
+                            sshKid: request.sshKid
+                        };
+                        return [4 /*yield*/, this.createTokenRequestBody(request)];
+                    case 1:
+                        requestBody = _a.sent();
+                        queryParameters = this.createTokenQueryParameters(request);
+                        ccsCredential = undefined;
+                        if (request.clientInfo) {
+                            try {
+                                clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__/* .buildClientInfo */ .B)(request.clientInfo, this.cryptoUtils);
+                                ccsCredential = {
+                                    credential: "" + clientInfo.uid + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .Separators.CLIENT_INFO_SEPARATOR */ .Bv.CLIENT_INFO_SEPARATOR + clientInfo.utid,
+                                    type: _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_9__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID
+                                };
+                            }
+                            catch (e) {
+                                this.logger.verbose("Could not parse client info for CCS Header: " + e);
+                            }
+                        }
+                        headers = this.createTokenRequestHeaders(ccsCredential || request.ccsCredential);
+                        endpoint = _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .StringUtils.isEmpty */ .x.isEmpty(queryParameters) ? authority.tokenEndpoint : authority.tokenEndpoint + "?" + queryParameters;
+                        return [2 /*return*/, this.executePostToTokenEndpoint(endpoint, requestBody, headers, thumbprint)];
+                }
+            });
+        });
+    };
+    /**
+     * Creates query string for the /token request
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.createTokenQueryParameters = function (request) {
+        var parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+        if (request.tokenQueryParameters) {
+            parameterBuilder.addExtraQueryParameters(request.tokenQueryParameters);
+        }
+        return parameterBuilder.createQueryString();
+    };
+    /**
+     * Generates a map for all the params to be sent to the service
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.createTokenRequestBody = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var parameterBuilder, clientAssertion, popTokenGenerator, cnfString, correlationId, ccsCred, clientInfo, clientInfo;
+            var _a;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+                        parameterBuilder.addClientId(this.config.authOptions.clientId);
+                        /*
+                         * For hybrid spa flow, there will be a code but no verifier
+                         * In this scenario, don't include redirect uri as auth code will not be bound to redirect URI
+                         */
+                        if (!this.includeRedirectUri) {
+                            // Just validate
+                            _request_RequestValidator_js__WEBPACK_IMPORTED_MODULE_11__/* .RequestValidator.validateRedirectUri */ .D.validateRedirectUri(request.redirectUri);
+                        }
+                        else {
+                            // Validate and include redirect uri
+                            parameterBuilder.addRedirectUri(request.redirectUri);
+                        }
+                        // Add scope array, parameter builder will add default scopes and dedupe
+                        parameterBuilder.addScopes(request.scopes);
+                        // add code: user set, not validated
+                        parameterBuilder.addAuthorizationCode(request.code);
+                        // Add library metadata
+                        parameterBuilder.addLibraryInfo(this.config.libraryInfo);
+                        parameterBuilder.addThrottling();
+                        if (this.serverTelemetryManager) {
+                            parameterBuilder.addServerTelemetry(this.serverTelemetryManager);
+                        }
+                        // add code_verifier if passed
+                        if (request.codeVerifier) {
+                            parameterBuilder.addCodeVerifier(request.codeVerifier);
+                        }
+                        if (this.config.clientCredentials.clientSecret) {
+                            parameterBuilder.addClientSecret(this.config.clientCredentials.clientSecret);
+                        }
+                        if (this.config.clientCredentials.clientAssertion) {
+                            clientAssertion = this.config.clientCredentials.clientAssertion;
+                            parameterBuilder.addClientAssertion(clientAssertion.assertion);
+                            parameterBuilder.addClientAssertionType(clientAssertion.assertionType);
+                        }
+                        parameterBuilder.addGrantType(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .GrantType.AUTHORIZATION_CODE_GRANT */ .qJ.AUTHORIZATION_CODE_GRANT);
+                        parameterBuilder.addClientInfo();
+                        if (!(request.authenticationScheme === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .AuthenticationScheme.POP */ .hO.POP)) return [3 /*break*/, 2];
+                        popTokenGenerator = new _crypto_PopTokenGenerator_js__WEBPACK_IMPORTED_MODULE_12__/* .PopTokenGenerator */ .$(this.cryptoUtils);
+                        return [4 /*yield*/, popTokenGenerator.generateCnf(request)];
+                    case 1:
+                        cnfString = _b.sent();
+                        parameterBuilder.addPopToken(cnfString);
+                        return [3 /*break*/, 3];
+                    case 2:
+                        if (request.authenticationScheme === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .AuthenticationScheme.SSH */ .hO.SSH) {
+                            if (request.sshJwk) {
+                                parameterBuilder.addSshJwk(request.sshJwk);
+                            }
+                            else {
+                                throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_6__/* .ClientConfigurationError.createMissingSshJwkError */ .r.createMissingSshJwkError();
+                            }
+                        }
+                        _b.label = 3;
+                    case 3:
+                        correlationId = request.correlationId || this.config.cryptoInterface.createNewGuid();
+                        parameterBuilder.addCorrelationId(correlationId);
+                        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .StringUtils.isEmptyObj */ .x.isEmptyObj(request.claims) || this.config.authOptions.clientCapabilities && this.config.authOptions.clientCapabilities.length > 0) {
+                            parameterBuilder.addClaims(request.claims, this.config.authOptions.clientCapabilities);
+                        }
+                        ccsCred = undefined;
+                        if (request.clientInfo) {
+                            try {
+                                clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__/* .buildClientInfo */ .B)(request.clientInfo, this.cryptoUtils);
+                                ccsCred = {
+                                    credential: "" + clientInfo.uid + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .Separators.CLIENT_INFO_SEPARATOR */ .Bv.CLIENT_INFO_SEPARATOR + clientInfo.utid,
+                                    type: _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_9__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID
+                                };
+                            }
+                            catch (e) {
+                                this.logger.verbose("Could not parse client info for CCS Header: " + e);
+                            }
+                        }
+                        else {
+                            ccsCred = request.ccsCredential;
+                        }
+                        // Adds these as parameters in the request instead of headers to prevent CORS preflight request
+                        if (this.config.systemOptions.preventCorsPreflight && ccsCred) {
+                            switch (ccsCred.type) {
+                                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_9__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID:
+                                    try {
+                                        clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__/* .buildClientInfoFromHomeAccountId */ .j)(ccsCred.credential);
+                                        parameterBuilder.addCcsOid(clientInfo);
+                                    }
+                                    catch (e) {
+                                        this.logger.verbose("Could not parse home account ID for CCS Header: " + e);
+                                    }
+                                    break;
+                                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_9__/* .CcsCredentialType.UPN */ .G.UPN:
+                                    parameterBuilder.addCcsUpn(ccsCred.credential);
+                                    break;
+                            }
+                        }
+                        if (request.tokenBodyParameters) {
+                            parameterBuilder.addExtraQueryParameters(request.tokenBodyParameters);
+                        }
+                        // Add hybrid spa parameters if not already provided
+                        if (request.enableSpaAuthorizationCode && (!request.tokenBodyParameters || !request.tokenBodyParameters[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .AADServerParamKeys.RETURN_SPA_CODE */ .Fo.RETURN_SPA_CODE])) {
+                            parameterBuilder.addExtraQueryParameters((_a = {},
+                                _a[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .AADServerParamKeys.RETURN_SPA_CODE */ .Fo.RETURN_SPA_CODE] = "1",
+                                _a));
+                        }
+                        return [2 /*return*/, parameterBuilder.createQueryString()];
+                }
+            });
+        });
+    };
+    /**
+     * This API validates the `AuthorizationCodeUrlRequest` and creates a URL
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.createAuthCodeUrlQueryString = function (request) {
+        var parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+        parameterBuilder.addClientId(this.config.authOptions.clientId);
+        var requestScopes = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__spreadArrays */ .pr)(request.scopes || [], request.extraScopesToConsent || []);
+        parameterBuilder.addScopes(requestScopes);
+        // validate the redirectUri (to be a non null value)
+        parameterBuilder.addRedirectUri(request.redirectUri);
+        // generate the correlationId if not set by the user and add
+        var correlationId = request.correlationId || this.config.cryptoInterface.createNewGuid();
+        parameterBuilder.addCorrelationId(correlationId);
+        // add response_mode. If not passed in it defaults to query.
+        parameterBuilder.addResponseMode(request.responseMode);
+        // add response_type = code
+        parameterBuilder.addResponseTypeCode();
+        // add library info parameters
+        parameterBuilder.addLibraryInfo(this.config.libraryInfo);
+        // add client_info=1
+        parameterBuilder.addClientInfo();
+        if (request.codeChallenge && request.codeChallengeMethod) {
+            parameterBuilder.addCodeChallengeParams(request.codeChallenge, request.codeChallengeMethod);
+        }
+        if (request.prompt) {
+            parameterBuilder.addPrompt(request.prompt);
+        }
+        if (request.domainHint) {
+            parameterBuilder.addDomainHint(request.domainHint);
+        }
+        // Add sid or loginHint with preference for sid -> loginHint -> username of AccountInfo object
+        if (request.prompt !== _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .PromptValue.SELECT_ACCOUNT */ .NJ.SELECT_ACCOUNT) {
+            // AAD will throw if prompt=select_account is passed with an account hint
+            if (request.sid && request.prompt === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .PromptValue.NONE */ .NJ.NONE) {
+                // SessionID is only used in silent calls
+                this.logger.verbose("createAuthCodeUrlQueryString: Prompt is none, adding sid from request");
+                parameterBuilder.addSid(request.sid);
+            }
+            else if (request.account) {
+                var accountSid = this.extractAccountSid(request.account);
+                // If account and loginHint are provided, we will check account first for sid before adding loginHint
+                if (accountSid && request.prompt === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_8__/* .PromptValue.NONE */ .NJ.NONE) {
+                    // SessionId is only used in silent calls
+                    this.logger.verbose("createAuthCodeUrlQueryString: Prompt is none, adding sid from account");
+                    parameterBuilder.addSid(accountSid);
+                    try {
+                        var clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__/* .buildClientInfoFromHomeAccountId */ .j)(request.account.homeAccountId);
+                        parameterBuilder.addCcsOid(clientInfo);
+                    }
+                    catch (e) {
+                        this.logger.verbose("Could not parse home account ID for CCS Header: " + e);
+                    }
+                }
+                else if (request.loginHint) {
+                    this.logger.verbose("createAuthCodeUrlQueryString: Adding login_hint from request");
+                    parameterBuilder.addLoginHint(request.loginHint);
+                    parameterBuilder.addCcsUpn(request.loginHint);
+                }
+                else if (request.account.username) {
+                    // Fallback to account username if provided
+                    this.logger.verbose("createAuthCodeUrlQueryString: Adding login_hint from account");
+                    parameterBuilder.addLoginHint(request.account.username);
+                    try {
+                        var clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_7__/* .buildClientInfoFromHomeAccountId */ .j)(request.account.homeAccountId);
+                        parameterBuilder.addCcsOid(clientInfo);
+                    }
+                    catch (e) {
+                        this.logger.verbose("Could not parse home account ID for CCS Header: " + e);
+                    }
+                }
+            }
+            else if (request.loginHint) {
+                this.logger.verbose("createAuthCodeUrlQueryString: No account, adding login_hint from request");
+                parameterBuilder.addLoginHint(request.loginHint);
+                parameterBuilder.addCcsUpn(request.loginHint);
+            }
+        }
+        else {
+            this.logger.verbose("createAuthCodeUrlQueryString: Prompt is select_account, ignoring account hints");
+        }
+        if (request.nonce) {
+            parameterBuilder.addNonce(request.nonce);
+        }
+        if (request.state) {
+            parameterBuilder.addState(request.state);
+        }
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_2__/* .StringUtils.isEmpty */ .x.isEmpty(request.claims) || this.config.authOptions.clientCapabilities && this.config.authOptions.clientCapabilities.length > 0) {
+            parameterBuilder.addClaims(request.claims, this.config.authOptions.clientCapabilities);
+        }
+        if (request.extraQueryParameters) {
+            parameterBuilder.addExtraQueryParameters(request.extraQueryParameters);
+        }
+        return parameterBuilder.createQueryString();
+    };
+    /**
+     * This API validates the `EndSessionRequest` and creates a URL
+     * @param request
+     */
+    AuthorizationCodeClient.prototype.createLogoutUrlQueryString = function (request) {
+        var parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+        if (request.postLogoutRedirectUri) {
+            parameterBuilder.addPostLogoutRedirectUri(request.postLogoutRedirectUri);
+        }
+        if (request.correlationId) {
+            parameterBuilder.addCorrelationId(request.correlationId);
+        }
+        if (request.idTokenHint) {
+            parameterBuilder.addIdTokenHint(request.idTokenHint);
+        }
+        if (request.state) {
+            parameterBuilder.addState(request.state);
+        }
+        if (request.extraQueryParameters) {
+            parameterBuilder.addExtraQueryParameters(request.extraQueryParameters);
+        }
+        return parameterBuilder.createQueryString();
+    };
+    /**
+     * Helper to get sid from account. Returns null if idTokenClaims are not present or sid is not present.
+     * @param account
+     */
+    AuthorizationCodeClient.prototype.extractAccountSid = function (account) {
+        if (account.idTokenClaims) {
+            var tokenClaims = account.idTokenClaims;
+            return tokenClaims.sid || null;
+        }
+        return null;
+    };
+    return AuthorizationCodeClient;
+}(_BaseClient_js__WEBPACK_IMPORTED_MODULE_13__/* .BaseClient */ .W));
+
+
+//# sourceMappingURL=AuthorizationCodeClient.js.map
+
+
+/***/ }),
+
+/***/ 13761:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "W": () => (/* binding */ BaseClient)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5096);
+/* harmony import */ var _config_ClientConfiguration_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14854);
+/* harmony import */ var _network_NetworkManager_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97482);
+/* harmony import */ var _logger_Logger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21362);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(77891);
+/* harmony import */ var _packageMetadata_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(26246);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(60742);
+/* harmony import */ var _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(34726);
+/* harmony import */ var _account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11520);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Base application class which will construct requests to send to and handle responses from the Microsoft STS using the authorization code flow.
+ */
+var BaseClient = /** @class */ (function () {
+    function BaseClient(configuration) {
+        // Set the configuration
+        this.config = (0,_config_ClientConfiguration_js__WEBPACK_IMPORTED_MODULE_0__/* .buildClientConfiguration */ .j)(configuration);
+        // Initialize the logger
+        this.logger = new _logger_Logger_js__WEBPACK_IMPORTED_MODULE_1__/* .Logger */ .Y(this.config.loggerOptions, _packageMetadata_js__WEBPACK_IMPORTED_MODULE_2__/* .name */ .u, _packageMetadata_js__WEBPACK_IMPORTED_MODULE_2__/* .version */ .i);
+        // Initialize crypto
+        this.cryptoUtils = this.config.cryptoInterface;
+        // Initialize storage interface
+        this.cacheManager = this.config.storageInterface;
+        // Set the network interface
+        this.networkClient = this.config.networkInterface;
+        // Set the NetworkManager
+        this.networkManager = new _network_NetworkManager_js__WEBPACK_IMPORTED_MODULE_3__/* .NetworkManager */ .r(this.networkClient, this.cacheManager);
+        // Set TelemetryManager
+        this.serverTelemetryManager = this.config.serverTelemetryManager;
+        // set Authority
+        this.authority = this.config.authOptions.authority;
+    }
+    /**
+     * Creates default headers for requests to token endpoint
+     */
+    BaseClient.prototype.createTokenRequestHeaders = function (ccsCred) {
+        var headers = {};
+        headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .HeaderNames.CONTENT_TYPE */ .SZ.CONTENT_TYPE] = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .Constants.URL_FORM_CONTENT_TYPE */ .gT.URL_FORM_CONTENT_TYPE;
+        if (!this.config.systemOptions.preventCorsPreflight && ccsCred) {
+            switch (ccsCred.type) {
+                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_5__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID:
+                    try {
+                        var clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_6__/* .buildClientInfoFromHomeAccountId */ .j)(ccsCred.credential);
+                        headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .HeaderNames.CCS_HEADER */ .SZ.CCS_HEADER] = "Oid:" + clientInfo.uid + "@" + clientInfo.utid;
+                    }
+                    catch (e) {
+                        this.logger.verbose("Could not parse home account ID for CCS Header: " + e);
+                    }
+                    break;
+                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_5__/* .CcsCredentialType.UPN */ .G.UPN:
+                    headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .HeaderNames.CCS_HEADER */ .SZ.CCS_HEADER] = "UPN: " + ccsCred.credential;
+                    break;
+            }
+        }
+        return headers;
+    };
+    /**
+     * Http post to token endpoint
+     * @param tokenEndpoint
+     * @param queryString
+     * @param headers
+     * @param thumbprint
+     */
+    BaseClient.prototype.executePostToTokenEndpoint = function (tokenEndpoint, queryString, headers, thumbprint) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_7__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var response;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_7__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.networkManager.sendPostRequest(thumbprint, tokenEndpoint, { body: queryString, headers: headers })];
+                    case 1:
+                        response = _a.sent();
+                        if (this.config.serverTelemetryManager && response.status < 500 && response.status !== 429) {
+                            // Telemetry data successfully logged by server, clear Telemetry cache
+                            this.config.serverTelemetryManager.clearTelemetryCache();
+                        }
+                        return [2 /*return*/, response];
+                }
+            });
+        });
+    };
+    /**
+     * Updates the authority object of the client. Endpoint discovery must be completed.
+     * @param updatedAuthority
+     */
+    BaseClient.prototype.updateAuthority = function (updatedAuthority) {
+        if (!updatedAuthority.discoveryComplete()) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_8__/* .ClientAuthError.createEndpointDiscoveryIncompleteError */ .e.createEndpointDiscoveryIncompleteError("Updated authority has not completed endpoint discovery.");
+        }
+        this.authority = updatedAuthority;
+    };
+    return BaseClient;
+}());
+
+
+//# sourceMappingURL=BaseClient.js.map
+
+
+/***/ }),
+
+/***/ 28508:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Y": () => (/* binding */ RefreshTokenClient)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _BaseClient_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(13761);
+/* harmony import */ var _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(87479);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(77891);
+/* harmony import */ var _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(32105);
+/* harmony import */ var _crypto_PopTokenGenerator_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(17650);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47181);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(60742);
+/* harmony import */ var _error_ServerError_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(91359);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(33848);
+/* harmony import */ var _url_UrlString_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(99860);
+/* harmony import */ var _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(34726);
+/* harmony import */ var _account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(11520);
+/* harmony import */ var _error_InteractionRequiredAuthError_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(83927);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * OAuth2.0 refresh token client
+ */
+var RefreshTokenClient = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(RefreshTokenClient, _super);
+    function RefreshTokenClient(configuration) {
+        return _super.call(this, configuration) || this;
+    }
+    RefreshTokenClient.prototype.acquireToken = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var reqTimestamp, response, responseHandler;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        reqTimestamp = _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .TimeUtils.nowSeconds */ .I.nowSeconds();
+                        return [4 /*yield*/, this.executeTokenRequest(request, this.authority)];
+                    case 1:
+                        response = _a.sent();
+                        responseHandler = new _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_2__/* .ResponseHandler */ .s(this.config.authOptions.clientId, this.cacheManager, this.cryptoUtils, this.logger, this.config.serializableCache, this.config.persistencePlugin);
+                        responseHandler.validateTokenResponse(response.body);
+                        return [2 /*return*/, responseHandler.handleServerTokenResponse(response.body, this.authority, reqTimestamp, request, undefined, undefined, true)];
+                }
+            });
+        });
+    };
+    /**
+     * Gets cached refresh token and attaches to request, then calls acquireToken API
+     * @param request
+     */
+    RefreshTokenClient.prototype.acquireTokenByRefreshToken = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var isFOCI, noFamilyRTInCache, clientMismatchErrorWithFamilyRT;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                // Cannot renew token if no request object is given.
+                if (!request) {
+                    throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientConfigurationError.createEmptyTokenRequestError */ .r.createEmptyTokenRequestError();
+                }
+                // We currently do not support silent flow for account === null use cases; This will be revisited for confidential flow usecases
+                if (!request.account) {
+                    throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__/* .ClientAuthError.createNoAccountInSilentRequestError */ .e.createNoAccountInSilentRequestError();
+                }
+                isFOCI = this.cacheManager.isAppMetadataFOCI(request.account.environment, this.config.authOptions.clientId);
+                // if the app is part of the family, retrive a Family refresh token if present and make a refreshTokenRequest
+                if (isFOCI) {
+                    try {
+                        return [2 /*return*/, this.acquireTokenWithCachedRefreshToken(request, true)];
+                    }
+                    catch (e) {
+                        noFamilyRTInCache = e instanceof _error_InteractionRequiredAuthError_js__WEBPACK_IMPORTED_MODULE_5__/* .InteractionRequiredAuthError */ .Yo && e.errorCode === _error_InteractionRequiredAuthError_js__WEBPACK_IMPORTED_MODULE_5__/* .InteractionRequiredAuthErrorMessage.noTokensFoundError.code */ .Zy.noTokensFoundError.code;
+                        clientMismatchErrorWithFamilyRT = e instanceof _error_ServerError_js__WEBPACK_IMPORTED_MODULE_6__/* .ServerError */ .n && e.errorCode === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .Errors.INVALID_GRANT_ERROR */ .D1.INVALID_GRANT_ERROR && e.subError === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .Errors.CLIENT_MISMATCH_ERROR */ .D1.CLIENT_MISMATCH_ERROR;
+                        // if family Refresh Token (FRT) cache acquisition fails or if client_mismatch error is seen with FRT, reattempt with application Refresh Token (ART)
+                        if (noFamilyRTInCache || clientMismatchErrorWithFamilyRT) {
+                            return [2 /*return*/, this.acquireTokenWithCachedRefreshToken(request, false)];
+                            // throw in all other cases
+                        }
+                        else {
+                            throw e;
+                        }
+                    }
+                }
+                // fall back to application refresh token acquisition
+                return [2 /*return*/, this.acquireTokenWithCachedRefreshToken(request, false)];
+            });
+        });
+    };
+    /**
+     * makes a network call to acquire tokens by exchanging RefreshToken available in userCache; throws if refresh token is not cached
+     * @param request
+     */
+    RefreshTokenClient.prototype.acquireTokenWithCachedRefreshToken = function (request, foci) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var refreshToken, refreshTokenRequest;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                refreshToken = this.cacheManager.readRefreshTokenFromCache(this.config.authOptions.clientId, request.account, foci);
+                // no refresh Token
+                if (!refreshToken) {
+                    throw _error_InteractionRequiredAuthError_js__WEBPACK_IMPORTED_MODULE_5__/* .InteractionRequiredAuthError.createNoTokensFoundError */ .Yo.createNoTokensFoundError();
+                }
+                refreshTokenRequest = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__assign */ .pi)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__assign */ .pi)({}, request), { refreshToken: refreshToken.secret, authenticationScheme: request.authenticationScheme || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthenticationScheme.BEARER */ .hO.BEARER, ccsCredential: {
+                        credential: request.account.homeAccountId,
+                        type: _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_8__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID
+                    } });
+                return [2 /*return*/, this.acquireToken(refreshTokenRequest)];
+            });
+        });
+    };
+    /**
+     * Constructs the network message and makes a NW call to the underlying secure token service
+     * @param request
+     * @param authority
+     */
+    RefreshTokenClient.prototype.executeTokenRequest = function (request, authority) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var requestBody, queryParameters, headers, thumbprint, endpoint;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.createTokenRequestBody(request)];
+                    case 1:
+                        requestBody = _a.sent();
+                        queryParameters = this.createTokenQueryParameters(request);
+                        headers = this.createTokenRequestHeaders(request.ccsCredential);
+                        thumbprint = {
+                            clientId: this.config.authOptions.clientId,
+                            authority: authority.canonicalAuthority,
+                            scopes: request.scopes,
+                            claims: request.claims,
+                            authenticationScheme: request.authenticationScheme,
+                            resourceRequestMethod: request.resourceRequestMethod,
+                            resourceRequestUri: request.resourceRequestUri,
+                            shrClaims: request.shrClaims,
+                            sshKid: request.sshKid
+                        };
+                        endpoint = _url_UrlString_js__WEBPACK_IMPORTED_MODULE_9__/* .UrlString.appendQueryString */ .G.appendQueryString(authority.tokenEndpoint, queryParameters);
+                        return [2 /*return*/, this.executePostToTokenEndpoint(endpoint, requestBody, headers, thumbprint)];
+                }
+            });
+        });
+    };
+    /**
+     * Creates query string for the /token request
+     * @param request
+     */
+    RefreshTokenClient.prototype.createTokenQueryParameters = function (request) {
+        var parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+        if (request.tokenQueryParameters) {
+            parameterBuilder.addExtraQueryParameters(request.tokenQueryParameters);
+        }
+        return parameterBuilder.createQueryString();
+    };
+    /**
+     * Helper function to create the token request body
+     * @param request
+     */
+    RefreshTokenClient.prototype.createTokenRequestBody = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var parameterBuilder, correlationId, clientAssertion, popTokenGenerator, cnfString, clientInfo;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        parameterBuilder = new _request_RequestParameterBuilder_js__WEBPACK_IMPORTED_MODULE_10__/* .RequestParameterBuilder */ .H();
+                        parameterBuilder.addClientId(this.config.authOptions.clientId);
+                        parameterBuilder.addScopes(request.scopes);
+                        parameterBuilder.addGrantType(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .GrantType.REFRESH_TOKEN_GRANT */ .qJ.REFRESH_TOKEN_GRANT);
+                        parameterBuilder.addClientInfo();
+                        parameterBuilder.addLibraryInfo(this.config.libraryInfo);
+                        parameterBuilder.addThrottling();
+                        if (this.serverTelemetryManager) {
+                            parameterBuilder.addServerTelemetry(this.serverTelemetryManager);
+                        }
+                        correlationId = request.correlationId || this.config.cryptoInterface.createNewGuid();
+                        parameterBuilder.addCorrelationId(correlationId);
+                        parameterBuilder.addRefreshToken(request.refreshToken);
+                        if (this.config.clientCredentials.clientSecret) {
+                            parameterBuilder.addClientSecret(this.config.clientCredentials.clientSecret);
+                        }
+                        if (this.config.clientCredentials.clientAssertion) {
+                            clientAssertion = this.config.clientCredentials.clientAssertion;
+                            parameterBuilder.addClientAssertion(clientAssertion.assertion);
+                            parameterBuilder.addClientAssertionType(clientAssertion.assertionType);
+                        }
+                        if (!(request.authenticationScheme === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthenticationScheme.POP */ .hO.POP)) return [3 /*break*/, 2];
+                        popTokenGenerator = new _crypto_PopTokenGenerator_js__WEBPACK_IMPORTED_MODULE_11__/* .PopTokenGenerator */ .$(this.cryptoUtils);
+                        return [4 /*yield*/, popTokenGenerator.generateCnf(request)];
+                    case 1:
+                        cnfString = _a.sent();
+                        parameterBuilder.addPopToken(cnfString);
+                        return [3 /*break*/, 3];
+                    case 2:
+                        if (request.authenticationScheme === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_7__/* .AuthenticationScheme.SSH */ .hO.SSH) {
+                            if (request.sshJwk) {
+                                parameterBuilder.addSshJwk(request.sshJwk);
+                            }
+                            else {
+                                throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientConfigurationError.createMissingSshJwkError */ .r.createMissingSshJwkError();
+                            }
+                        }
+                        _a.label = 3;
+                    case 3:
+                        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_12__/* .StringUtils.isEmptyObj */ .x.isEmptyObj(request.claims) || this.config.authOptions.clientCapabilities && this.config.authOptions.clientCapabilities.length > 0) {
+                            parameterBuilder.addClaims(request.claims, this.config.authOptions.clientCapabilities);
+                        }
+                        if (this.config.systemOptions.preventCorsPreflight && request.ccsCredential) {
+                            switch (request.ccsCredential.type) {
+                                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_8__/* .CcsCredentialType.HOME_ACCOUNT_ID */ .G.HOME_ACCOUNT_ID:
+                                    try {
+                                        clientInfo = (0,_account_ClientInfo_js__WEBPACK_IMPORTED_MODULE_13__/* .buildClientInfoFromHomeAccountId */ .j)(request.ccsCredential.credential);
+                                        parameterBuilder.addCcsOid(clientInfo);
+                                    }
+                                    catch (e) {
+                                        this.logger.verbose("Could not parse home account ID for CCS Header: " + e);
+                                    }
+                                    break;
+                                case _account_CcsCredential_js__WEBPACK_IMPORTED_MODULE_8__/* .CcsCredentialType.UPN */ .G.UPN:
+                                    parameterBuilder.addCcsUpn(request.ccsCredential.credential);
+                                    break;
+                            }
+                        }
+                        return [2 /*return*/, parameterBuilder.createQueryString()];
+                }
+            });
+        });
+    };
+    return RefreshTokenClient;
+}(_BaseClient_js__WEBPACK_IMPORTED_MODULE_14__/* .BaseClient */ .W));
+
+
+//# sourceMappingURL=RefreshTokenClient.js.map
+
+
+/***/ }),
+
+/***/ 43387:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "g": () => (/* binding */ SilentFlowClient)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _BaseClient_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(13761);
+/* harmony import */ var _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(70591);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(33848);
+/* harmony import */ var _RefreshTokenClient_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28508);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47181);
+/* harmony import */ var _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(32105);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var SilentFlowClient = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(SilentFlowClient, _super);
+    function SilentFlowClient(configuration) {
+        return _super.call(this, configuration) || this;
+    }
+    /**
+     * Retrieves a token from cache if it is still valid, or uses the cached refresh token to renew
+     * the given token and returns the renewed token
+     * @param request
+     */
+    SilentFlowClient.prototype.acquireToken = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var e_1, refreshTokenClient;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.acquireCachedToken(request)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        e_1 = _a.sent();
+                        if (e_1 instanceof _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError */ .e && e_1.errorCode === _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthErrorMessage.tokenRefreshRequired.code */ .A.tokenRefreshRequired.code) {
+                            refreshTokenClient = new _RefreshTokenClient_js__WEBPACK_IMPORTED_MODULE_2__/* .RefreshTokenClient */ .Y(this.config);
+                            return [2 /*return*/, refreshTokenClient.acquireTokenByRefreshToken(request)];
+                        }
+                        else {
+                            throw e_1;
+                        }
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Retrieves token from cache or throws an error if it must be refreshed.
+     * @param request
+     */
+    SilentFlowClient.prototype.acquireCachedToken = function (request) {
+        var _a, _b, _c, _d;
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var environment, cacheRecord;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_e) {
+                switch (_e.label) {
+                    case 0:
+                        // Cannot renew token if no request object is given.
+                        if (!request) {
+                            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientConfigurationError.createEmptyTokenRequestError */ .r.createEmptyTokenRequestError();
+                        }
+                        if (request.forceRefresh) {
+                            // Must refresh due to present force_refresh flag.
+                            (_a = this.serverTelemetryManager) === null || _a === void 0 ? void 0 : _a.setCacheOutcome(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .CacheOutcome.FORCE_REFRESH */ .To.FORCE_REFRESH);
+                            this.logger.info("SilentFlowClient:acquireCachedToken - Skipping cache because forceRefresh is true.");
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createRefreshRequiredError */ .e.createRefreshRequiredError();
+                        }
+                        // We currently do not support silent flow for account === null use cases; This will be revisited for confidential flow usecases
+                        if (!request.account) {
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createNoAccountInSilentRequestError */ .e.createNoAccountInSilentRequestError();
+                        }
+                        environment = request.authority || this.authority.getPreferredCache();
+                        cacheRecord = this.cacheManager.readCacheRecord(request.account, this.config.authOptions.clientId, request, environment);
+                        if (!cacheRecord.accessToken) {
+                            // Must refresh due to non-existent access_token.
+                            (_b = this.serverTelemetryManager) === null || _b === void 0 ? void 0 : _b.setCacheOutcome(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .CacheOutcome.NO_CACHED_ACCESS_TOKEN */ .To.NO_CACHED_ACCESS_TOKEN);
+                            this.logger.info("SilentFlowClient:acquireCachedToken - No access token found in cache for the given properties.");
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createRefreshRequiredError */ .e.createRefreshRequiredError();
+                        }
+                        else if (_utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_5__/* .TimeUtils.wasClockTurnedBack */ .I.wasClockTurnedBack(cacheRecord.accessToken.cachedAt) ||
+                            _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_5__/* .TimeUtils.isTokenExpired */ .I.isTokenExpired(cacheRecord.accessToken.expiresOn, this.config.systemOptions.tokenRenewalOffsetSeconds)) {
+                            // Must refresh due to expired access_token.
+                            (_c = this.serverTelemetryManager) === null || _c === void 0 ? void 0 : _c.setCacheOutcome(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .CacheOutcome.CACHED_ACCESS_TOKEN_EXPIRED */ .To.CACHED_ACCESS_TOKEN_EXPIRED);
+                            this.logger.info("SilentFlowClient:acquireCachedToken - Cached access token is expired or will expire within " + this.config.systemOptions.tokenRenewalOffsetSeconds + " seconds.");
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createRefreshRequiredError */ .e.createRefreshRequiredError();
+                        }
+                        else if (cacheRecord.accessToken.refreshOn && _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_5__/* .TimeUtils.isTokenExpired */ .I.isTokenExpired(cacheRecord.accessToken.refreshOn, 0)) {
+                            // Must refresh due to the refresh_in value.
+                            (_d = this.serverTelemetryManager) === null || _d === void 0 ? void 0 : _d.setCacheOutcome(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_4__/* .CacheOutcome.REFRESH_CACHED_ACCESS_TOKEN */ .To.REFRESH_CACHED_ACCESS_TOKEN);
+                            this.logger.info("SilentFlowClient:acquireCachedToken - Cached access token's refreshOn property has been exceeded'.");
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError.createRefreshRequiredError */ .e.createRefreshRequiredError();
+                        }
+                        if (this.config.serverTelemetryManager) {
+                            this.config.serverTelemetryManager.incrementCacheHits();
+                        }
+                        return [4 /*yield*/, this.generateResultFromCacheRecord(cacheRecord, request)];
+                    case 1: return [2 /*return*/, _e.sent()];
+                }
+            });
+        });
+    };
+    /**
+     * Helper function to build response object from the CacheRecord
+     * @param cacheRecord
+     */
+    SilentFlowClient.prototype.generateResultFromCacheRecord = function (cacheRecord, request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var idTokenObj;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (cacheRecord.idToken) {
+                            idTokenObj = new _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_6__/* .AuthToken */ .H(cacheRecord.idToken.secret, this.config.cryptoInterface);
+                        }
+                        return [4 /*yield*/, _response_ResponseHandler_js__WEBPACK_IMPORTED_MODULE_7__/* .ResponseHandler.generateAuthenticationResult */ .s.generateAuthenticationResult(this.cryptoUtils, this.authority, cacheRecord, true, request, idTokenObj)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return SilentFlowClient;
+}(_BaseClient_js__WEBPACK_IMPORTED_MODULE_8__/* .BaseClient */ .W));
+
+
+//# sourceMappingURL=SilentFlowClient.js.map
+
+
+/***/ }),
+
+/***/ 14854:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "z": () => (/* binding */ DEFAULT_SYSTEM_OPTIONS),
+/* harmony export */   "j": () => (/* binding */ buildClientConfiguration)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5096);
+/* harmony import */ var _crypto_ICrypto_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(66561);
+/* harmony import */ var _error_AuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(87342);
+/* harmony import */ var _logger_Logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21362);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(77891);
+/* harmony import */ var _packageMetadata_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(26246);
+/* harmony import */ var _cache_CacheManager_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(67656);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+// Token renewal offset default in seconds
+var DEFAULT_TOKEN_RENEWAL_OFFSET_SEC = 300;
+var DEFAULT_SYSTEM_OPTIONS = {
+    tokenRenewalOffsetSeconds: DEFAULT_TOKEN_RENEWAL_OFFSET_SEC,
+    preventCorsPreflight: false
+};
+var DEFAULT_LOGGER_IMPLEMENTATION = {
+    loggerCallback: function () {
+        // allow users to not set loggerCallback
+    },
+    piiLoggingEnabled: false,
+    logLevel: _logger_Logger_js__WEBPACK_IMPORTED_MODULE_0__/* .LogLevel.Info */ .i.Info,
+    correlationId: ""
+};
+var DEFAULT_NETWORK_IMPLEMENTATION = {
+    sendGetRequestAsync: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Network interface - sendGetRequestAsync() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    sendPostRequestAsync: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Network interface - sendPostRequestAsync() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    }
+};
+var DEFAULT_LIBRARY_INFO = {
+    sku: _utils_Constants_js__WEBPACK_IMPORTED_MODULE_3__/* .Constants.SKU */ .gT.SKU,
+    version: _packageMetadata_js__WEBPACK_IMPORTED_MODULE_4__/* .version */ .i,
+    cpu: "",
+    os: ""
+};
+var DEFAULT_CLIENT_CREDENTIALS = {
+    clientSecret: "",
+    clientAssertion: undefined
+};
+/**
+ * Function that sets the default options when not explicitly configured from app developer
+ *
+ * @param Configuration
+ *
+ * @returns Configuration
+ */
+function buildClientConfiguration(_a) {
+    var userAuthOptions = _a.authOptions, userSystemOptions = _a.systemOptions, userLoggerOption = _a.loggerOptions, storageImplementation = _a.storageInterface, networkImplementation = _a.networkInterface, cryptoImplementation = _a.cryptoInterface, clientCredentials = _a.clientCredentials, libraryInfo = _a.libraryInfo, serverTelemetryManager = _a.serverTelemetryManager, persistencePlugin = _a.persistencePlugin, serializableCache = _a.serializableCache;
+    var loggerOptions = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)({}, DEFAULT_LOGGER_IMPLEMENTATION), userLoggerOption);
+    return {
+        authOptions: buildAuthOptions(userAuthOptions),
+        systemOptions: (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)({}, DEFAULT_SYSTEM_OPTIONS), userSystemOptions),
+        loggerOptions: loggerOptions,
+        storageInterface: storageImplementation || new _cache_CacheManager_js__WEBPACK_IMPORTED_MODULE_5__/* .DefaultStorageClass */ .w(userAuthOptions.clientId, _crypto_ICrypto_js__WEBPACK_IMPORTED_MODULE_6__/* .DEFAULT_CRYPTO_IMPLEMENTATION */ .d),
+        networkInterface: networkImplementation || DEFAULT_NETWORK_IMPLEMENTATION,
+        cryptoInterface: cryptoImplementation || _crypto_ICrypto_js__WEBPACK_IMPORTED_MODULE_6__/* .DEFAULT_CRYPTO_IMPLEMENTATION */ .d,
+        clientCredentials: clientCredentials || DEFAULT_CLIENT_CREDENTIALS,
+        libraryInfo: (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)({}, DEFAULT_LIBRARY_INFO), libraryInfo),
+        serverTelemetryManager: serverTelemetryManager || null,
+        persistencePlugin: persistencePlugin || null,
+        serializableCache: serializableCache || null
+    };
+}
+/**
+ * Construct authoptions from the client and platform passed values
+ * @param authOptions
+ */
+function buildAuthOptions(authOptions) {
+    return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__assign */ .pi)({ clientCapabilities: [] }, authOptions);
+}
+
+
+//# sourceMappingURL=ClientConfiguration.js.map
+
+
+/***/ }),
+
+/***/ 66561:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "d": () => (/* binding */ DEFAULT_CRYPTO_IMPLEMENTATION)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5096);
+/* harmony import */ var _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var DEFAULT_CRYPTO_IMPLEMENTATION = {
+    createNewGuid: function () {
+        var notImplErr = "Crypto interface - createNewGuid() has not been implemented";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    },
+    base64Decode: function () {
+        var notImplErr = "Crypto interface - base64Decode() has not been implemented";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    },
+    base64Encode: function () {
+        var notImplErr = "Crypto interface - base64Encode() has not been implemented";
+        throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+    },
+    generatePkceCodes: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - generatePkceCodes() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    getPublicKeyThumbprint: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - getPublicKeyThumbprint() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    removeTokenBindingKey: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - removeTokenBindingKey() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    clearKeystore: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - clearKeystore() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    signJwt: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - signJwt() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    },
+    hashString: function () {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var notImplErr;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__generator */ .Jh)(this, function (_a) {
+                notImplErr = "Crypto interface - hashString() has not been implemented";
+                throw _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr);
+            });
+        });
+    }
+};
+
+
+//# sourceMappingURL=ICrypto.js.map
+
+
+/***/ }),
+
+/***/ 17650:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$": () => (/* binding */ PopTokenGenerator)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(70591);
+/* harmony import */ var _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33848);
+/* harmony import */ var _url_UrlString_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(99860);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var KeyLocation;
+(function (KeyLocation) {
+    KeyLocation["SW"] = "sw";
+    KeyLocation["UHW"] = "uhw";
+})(KeyLocation || (KeyLocation = {}));
+var PopTokenGenerator = /** @class */ (function () {
+    function PopTokenGenerator(cryptoUtils) {
+        this.cryptoUtils = cryptoUtils;
+    }
+    PopTokenGenerator.prototype.generateCnf = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var reqCnf;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.generateKid(request)];
+                    case 1:
+                        reqCnf = _a.sent();
+                        return [2 /*return*/, this.cryptoUtils.base64Encode(JSON.stringify(reqCnf))];
+                }
+            });
+        });
+    };
+    PopTokenGenerator.prototype.generateKid = function (request) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var kidThumbprint;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.cryptoUtils.getPublicKeyThumbprint(request)];
+                    case 1:
+                        kidThumbprint = _a.sent();
+                        return [2 /*return*/, {
+                                kid: kidThumbprint,
+                                xms_ksl: KeyLocation.SW
+                            }];
+                }
+            });
+        });
+    };
+    PopTokenGenerator.prototype.signPopToken = function (accessToken, request) {
+        var _a;
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var tokenClaims;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_b) {
+                tokenClaims = _account_AuthToken_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthToken.extractTokenClaims */ .H.extractTokenClaims(accessToken, this.cryptoUtils);
+                if (!((_a = tokenClaims === null || tokenClaims === void 0 ? void 0 : tokenClaims.cnf) === null || _a === void 0 ? void 0 : _a.kid)) {
+                    throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientAuthError.createTokenClaimsRequiredError */ .e.createTokenClaimsRequiredError();
+                }
+                return [2 /*return*/, this.signPayload(accessToken, tokenClaims.cnf.kid, request)];
+            });
+        });
+    };
+    PopTokenGenerator.prototype.signPayload = function (payload, kid, request, claims) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var resourceRequestMethod, resourceRequestUri, shrClaims, shrNonce, resourceUrlString, resourceUrlComponents;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        resourceRequestMethod = request.resourceRequestMethod, resourceRequestUri = request.resourceRequestUri, shrClaims = request.shrClaims, shrNonce = request.shrNonce;
+                        resourceUrlString = (resourceRequestUri) ? new _url_UrlString_js__WEBPACK_IMPORTED_MODULE_3__/* .UrlString */ .G(resourceRequestUri) : undefined;
+                        resourceUrlComponents = resourceUrlString === null || resourceUrlString === void 0 ? void 0 : resourceUrlString.getUrlComponents();
+                        return [4 /*yield*/, this.cryptoUtils.signJwt((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__assign */ .pi)({ at: payload, ts: _utils_TimeUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .TimeUtils.nowSeconds */ .I.nowSeconds(), m: resourceRequestMethod === null || resourceRequestMethod === void 0 ? void 0 : resourceRequestMethod.toUpperCase(), u: resourceUrlComponents === null || resourceUrlComponents === void 0 ? void 0 : resourceUrlComponents.HostNameAndPort, nonce: shrNonce || this.cryptoUtils.createNewGuid(), p: resourceUrlComponents === null || resourceUrlComponents === void 0 ? void 0 : resourceUrlComponents.AbsolutePath, q: (resourceUrlComponents === null || resourceUrlComponents === void 0 ? void 0 : resourceUrlComponents.QueryString) ? [[], resourceUrlComponents.QueryString] : undefined, client_claims: shrClaims || undefined }, claims), kid)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return PopTokenGenerator;
+}());
+
+
+//# sourceMappingURL=PopTokenGenerator.js.map
+
+
+/***/ }),
+
+/***/ 87342:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "l": () => (/* binding */ AuthError),
+/* harmony export */   "Y": () => (/* binding */ AuthErrorMessage)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * AuthErrorMessage class containing string constants used by error codes and messages.
+ */
+var AuthErrorMessage = {
+    unexpectedError: {
+        code: "unexpected_error",
+        desc: "Unexpected error in authentication."
+    }
+};
+/**
+ * General error class thrown by the MSAL.js library.
+ */
+var AuthError = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(AuthError, _super);
+    function AuthError(errorCode, errorMessage, suberror) {
+        var _this = this;
+        var errorString = errorMessage ? errorCode + ": " + errorMessage : errorCode;
+        _this = _super.call(this, errorString) || this;
+        Object.setPrototypeOf(_this, AuthError.prototype);
+        _this.errorCode = errorCode || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+        _this.errorMessage = errorMessage || "";
+        _this.subError = suberror || "";
+        _this.name = "AuthError";
+        return _this;
+    }
+    AuthError.prototype.setCorrelationId = function (correlationId) {
+        this.correlationId = correlationId;
+    };
+    /**
+     * Creates an error that is thrown when something unexpected happens in the library.
+     * @param errDesc
+     */
+    AuthError.createUnexpectedError = function (errDesc) {
+        return new AuthError(AuthErrorMessage.unexpectedError.code, AuthErrorMessage.unexpectedError.desc + ": " + errDesc);
+    };
+    return AuthError;
+}(Error));
+
+
+//# sourceMappingURL=AuthError.js.map
+
+
+/***/ }),
+
+/***/ 60742:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "e": () => (/* binding */ ClientAuthError),
+/* harmony export */   "A": () => (/* binding */ ClientAuthErrorMessage)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _AuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * ClientAuthErrorMessage class containing string constants used by error codes and messages.
+ */
+var ClientAuthErrorMessage = {
+    clientInfoDecodingError: {
+        code: "client_info_decoding_error",
+        desc: "The client info could not be parsed/decoded correctly. Please review the trace to determine the root cause."
+    },
+    clientInfoEmptyError: {
+        code: "client_info_empty_error",
+        desc: "The client info was empty. Please review the trace to determine the root cause."
+    },
+    tokenParsingError: {
+        code: "token_parsing_error",
+        desc: "Token cannot be parsed. Please review stack trace to determine root cause."
+    },
+    nullOrEmptyToken: {
+        code: "null_or_empty_token",
+        desc: "The token is null or empty. Please review the trace to determine the root cause."
+    },
+    endpointResolutionError: {
+        code: "endpoints_resolution_error",
+        desc: "Error: could not resolve endpoints. Please check network and try again."
+    },
+    networkError: {
+        code: "network_error",
+        desc: "Network request failed. Please check network trace to determine root cause."
+    },
+    unableToGetOpenidConfigError: {
+        code: "openid_config_error",
+        desc: "Could not retrieve endpoints. Check your authority and verify the .well-known/openid-configuration endpoint returns the required endpoints."
+    },
+    hashNotDeserialized: {
+        code: "hash_not_deserialized",
+        desc: "The hash parameters could not be deserialized. Please review the trace to determine the root cause."
+    },
+    blankGuidGenerated: {
+        code: "blank_guid_generated",
+        desc: "The guid generated was blank. Please review the trace to determine the root cause."
+    },
+    invalidStateError: {
+        code: "invalid_state",
+        desc: "State was not the expected format. Please check the logs to determine whether the request was sent using ProtocolUtils.setRequestState()."
+    },
+    stateMismatchError: {
+        code: "state_mismatch",
+        desc: "State mismatch error. Please check your network. Continued requests may cause cache overflow."
+    },
+    stateNotFoundError: {
+        code: "state_not_found",
+        desc: "State not found"
+    },
+    nonceMismatchError: {
+        code: "nonce_mismatch",
+        desc: "Nonce mismatch error. This may be caused by a race condition in concurrent requests."
+    },
+    nonceNotFoundError: {
+        code: "nonce_not_found",
+        desc: "nonce not found"
+    },
+    noTokensFoundError: {
+        code: "no_tokens_found",
+        desc: "No tokens were found for the given scopes, and no authorization code was passed to acquireToken. You must retrieve an authorization code before making a call to acquireToken()."
+    },
+    multipleMatchingTokens: {
+        code: "multiple_matching_tokens",
+        desc: "The cache contains multiple tokens satisfying the requirements. " +
+            "Call AcquireToken again providing more requirements such as authority or account."
+    },
+    multipleMatchingAccounts: {
+        code: "multiple_matching_accounts",
+        desc: "The cache contains multiple accounts satisfying the given parameters. Please pass more info to obtain the correct account"
+    },
+    multipleMatchingAppMetadata: {
+        code: "multiple_matching_appMetadata",
+        desc: "The cache contains multiple appMetadata satisfying the given parameters. Please pass more info to obtain the correct appMetadata"
+    },
+    tokenRequestCannotBeMade: {
+        code: "request_cannot_be_made",
+        desc: "Token request cannot be made without authorization code or refresh token."
+    },
+    appendEmptyScopeError: {
+        code: "cannot_append_empty_scope",
+        desc: "Cannot append null or empty scope to ScopeSet. Please check the stack trace for more info."
+    },
+    removeEmptyScopeError: {
+        code: "cannot_remove_empty_scope",
+        desc: "Cannot remove null or empty scope from ScopeSet. Please check the stack trace for more info."
+    },
+    appendScopeSetError: {
+        code: "cannot_append_scopeset",
+        desc: "Cannot append ScopeSet due to error."
+    },
+    emptyInputScopeSetError: {
+        code: "empty_input_scopeset",
+        desc: "Empty input ScopeSet cannot be processed."
+    },
+    DeviceCodePollingCancelled: {
+        code: "device_code_polling_cancelled",
+        desc: "Caller has cancelled token endpoint polling during device code flow by setting DeviceCodeRequest.cancel = true."
+    },
+    DeviceCodeExpired: {
+        code: "device_code_expired",
+        desc: "Device code is expired."
+    },
+    DeviceCodeUnknownError: {
+        code: "device_code_unknown_error",
+        desc: "Device code stopped polling for unknown reasons."
+    },
+    NoAccountInSilentRequest: {
+        code: "no_account_in_silent_request",
+        desc: "Please pass an account object, silent flow is not supported without account information"
+    },
+    invalidCacheRecord: {
+        code: "invalid_cache_record",
+        desc: "Cache record object was null or undefined."
+    },
+    invalidCacheEnvironment: {
+        code: "invalid_cache_environment",
+        desc: "Invalid environment when attempting to create cache entry"
+    },
+    noAccountFound: {
+        code: "no_account_found",
+        desc: "No account found in cache for given key."
+    },
+    CachePluginError: {
+        code: "no cache plugin set on CacheManager",
+        desc: "ICachePlugin needs to be set before using readFromStorage or writeFromStorage"
+    },
+    noCryptoObj: {
+        code: "no_crypto_object",
+        desc: "No crypto object detected. This is required for the following operation: "
+    },
+    invalidCacheType: {
+        code: "invalid_cache_type",
+        desc: "Invalid cache type"
+    },
+    unexpectedAccountType: {
+        code: "unexpected_account_type",
+        desc: "Unexpected account type."
+    },
+    unexpectedCredentialType: {
+        code: "unexpected_credential_type",
+        desc: "Unexpected credential type."
+    },
+    invalidAssertion: {
+        code: "invalid_assertion",
+        desc: "Client assertion must meet requirements described in https://tools.ietf.org/html/rfc7515"
+    },
+    invalidClientCredential: {
+        code: "invalid_client_credential",
+        desc: "Client credential (secret, certificate, or assertion) must not be empty when creating a confidential client. An application should at most have one credential"
+    },
+    tokenRefreshRequired: {
+        code: "token_refresh_required",
+        desc: "Cannot return token from cache because it must be refreshed. This may be due to one of the following reasons: forceRefresh parameter is set to true, claims have been requested, there is no cached access token or it is expired."
+    },
+    userTimeoutReached: {
+        code: "user_timeout_reached",
+        desc: "User defined timeout for device code polling reached",
+    },
+    tokenClaimsRequired: {
+        code: "token_claims_cnf_required_for_signedjwt",
+        desc: "Cannot generate a POP jwt if the token_claims are not populated"
+    },
+    noAuthorizationCodeFromServer: {
+        code: "authorization_code_missing_from_server_response",
+        desc: "Server response does not contain an authorization code to proceed"
+    },
+    noAzureRegionDetected: {
+        code: "no_azure_region_detected",
+        desc: "No azure region was detected and no fallback was made available"
+    },
+    accessTokenEntityNullError: {
+        code: "access_token_entity_null",
+        desc: "Access token entity is null, please check logs and cache to ensure a valid access token is present."
+    },
+    bindingKeyNotRemovedError: {
+        code: "binding_key_not_removed",
+        desc: "Could not remove the credential's binding key from storage."
+    },
+    logoutNotSupported: {
+        code: "end_session_endpoint_not_supported",
+        desc: "Provided authority does not support logout."
+    }
+};
+/**
+ * Error thrown when there is an error in the client code running on the browser.
+ */
+var ClientAuthError = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(ClientAuthError, _super);
+    function ClientAuthError(errorCode, errorMessage) {
+        var _this = _super.call(this, errorCode, errorMessage) || this;
+        _this.name = "ClientAuthError";
+        Object.setPrototypeOf(_this, ClientAuthError.prototype);
+        return _this;
+    }
+    /**
+     * Creates an error thrown when client info object doesn't decode correctly.
+     * @param caughtError
+     */
+    ClientAuthError.createClientInfoDecodingError = function (caughtError) {
+        return new ClientAuthError(ClientAuthErrorMessage.clientInfoDecodingError.code, ClientAuthErrorMessage.clientInfoDecodingError.desc + " Failed with error: " + caughtError);
+    };
+    /**
+     * Creates an error thrown if the client info is empty.
+     * @param rawClientInfo
+     */
+    ClientAuthError.createClientInfoEmptyError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.clientInfoEmptyError.code, "" + ClientAuthErrorMessage.clientInfoEmptyError.desc);
+    };
+    /**
+     * Creates an error thrown when the id token extraction errors out.
+     * @param err
+     */
+    ClientAuthError.createTokenParsingError = function (caughtExtractionError) {
+        return new ClientAuthError(ClientAuthErrorMessage.tokenParsingError.code, ClientAuthErrorMessage.tokenParsingError.desc + " Failed with error: " + caughtExtractionError);
+    };
+    /**
+     * Creates an error thrown when the id token string is null or empty.
+     * @param invalidRawTokenString
+     */
+    ClientAuthError.createTokenNullOrEmptyError = function (invalidRawTokenString) {
+        return new ClientAuthError(ClientAuthErrorMessage.nullOrEmptyToken.code, ClientAuthErrorMessage.nullOrEmptyToken.desc + " Raw Token Value: " + invalidRawTokenString);
+    };
+    /**
+     * Creates an error thrown when the endpoint discovery doesn't complete correctly.
+     */
+    ClientAuthError.createEndpointDiscoveryIncompleteError = function (errDetail) {
+        return new ClientAuthError(ClientAuthErrorMessage.endpointResolutionError.code, ClientAuthErrorMessage.endpointResolutionError.desc + " Detail: " + errDetail);
+    };
+    /**
+     * Creates an error thrown when the fetch client throws
+     */
+    ClientAuthError.createNetworkError = function (endpoint, errDetail) {
+        return new ClientAuthError(ClientAuthErrorMessage.networkError.code, ClientAuthErrorMessage.networkError.desc + " | Fetch client threw: " + errDetail + " | Attempted to reach: " + endpoint.split("?")[0]);
+    };
+    /**
+     * Creates an error thrown when the openid-configuration endpoint cannot be reached or does not contain the required data
+     */
+    ClientAuthError.createUnableToGetOpenidConfigError = function (errDetail) {
+        return new ClientAuthError(ClientAuthErrorMessage.unableToGetOpenidConfigError.code, ClientAuthErrorMessage.unableToGetOpenidConfigError.desc + " Attempted to retrieve endpoints from: " + errDetail);
+    };
+    /**
+     * Creates an error thrown when the hash cannot be deserialized.
+     * @param hashParamObj
+     */
+    ClientAuthError.createHashNotDeserializedError = function (hashParamObj) {
+        return new ClientAuthError(ClientAuthErrorMessage.hashNotDeserialized.code, ClientAuthErrorMessage.hashNotDeserialized.desc + " Given Object: " + hashParamObj);
+    };
+    /**
+     * Creates an error thrown when the state cannot be parsed.
+     * @param invalidState
+     */
+    ClientAuthError.createInvalidStateError = function (invalidState, errorString) {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidStateError.code, ClientAuthErrorMessage.invalidStateError.desc + " Invalid State: " + invalidState + ", Root Err: " + errorString);
+    };
+    /**
+     * Creates an error thrown when two states do not match.
+     */
+    ClientAuthError.createStateMismatchError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.stateMismatchError.code, ClientAuthErrorMessage.stateMismatchError.desc);
+    };
+    /**
+     * Creates an error thrown when the state is not present
+     * @param missingState
+     */
+    ClientAuthError.createStateNotFoundError = function (missingState) {
+        return new ClientAuthError(ClientAuthErrorMessage.stateNotFoundError.code, ClientAuthErrorMessage.stateNotFoundError.desc + ":  " + missingState);
+    };
+    /**
+     * Creates an error thrown when the nonce does not match.
+     */
+    ClientAuthError.createNonceMismatchError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.nonceMismatchError.code, ClientAuthErrorMessage.nonceMismatchError.desc);
+    };
+    /**
+     * Creates an error thrown when the mnonce is not present
+     * @param missingNonce
+     */
+    ClientAuthError.createNonceNotFoundError = function (missingNonce) {
+        return new ClientAuthError(ClientAuthErrorMessage.nonceNotFoundError.code, ClientAuthErrorMessage.nonceNotFoundError.desc + ":  " + missingNonce);
+    };
+    /**
+     * Throws error when multiple tokens are in cache.
+     */
+    ClientAuthError.createMultipleMatchingTokensInCacheError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.multipleMatchingTokens.code, ClientAuthErrorMessage.multipleMatchingTokens.desc + ".");
+    };
+    /**
+     * Throws error when multiple accounts are in cache for the given params
+     */
+    ClientAuthError.createMultipleMatchingAccountsInCacheError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.multipleMatchingAccounts.code, ClientAuthErrorMessage.multipleMatchingAccounts.desc);
+    };
+    /**
+     * Throws error when multiple appMetada are in cache for the given clientId.
+     */
+    ClientAuthError.createMultipleMatchingAppMetadataInCacheError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.multipleMatchingAppMetadata.code, ClientAuthErrorMessage.multipleMatchingAppMetadata.desc);
+    };
+    /**
+     * Throws error when no auth code or refresh token is given to ServerTokenRequestParameters.
+     */
+    ClientAuthError.createTokenRequestCannotBeMadeError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.tokenRequestCannotBeMade.code, ClientAuthErrorMessage.tokenRequestCannotBeMade.desc);
+    };
+    /**
+     * Throws error when attempting to append a null, undefined or empty scope to a set
+     * @param givenScope
+     */
+    ClientAuthError.createAppendEmptyScopeToSetError = function (givenScope) {
+        return new ClientAuthError(ClientAuthErrorMessage.appendEmptyScopeError.code, ClientAuthErrorMessage.appendEmptyScopeError.desc + " Given Scope: " + givenScope);
+    };
+    /**
+     * Throws error when attempting to append a null, undefined or empty scope to a set
+     * @param givenScope
+     */
+    ClientAuthError.createRemoveEmptyScopeFromSetError = function (givenScope) {
+        return new ClientAuthError(ClientAuthErrorMessage.removeEmptyScopeError.code, ClientAuthErrorMessage.removeEmptyScopeError.desc + " Given Scope: " + givenScope);
+    };
+    /**
+     * Throws error when attempting to append null or empty ScopeSet.
+     * @param appendError
+     */
+    ClientAuthError.createAppendScopeSetError = function (appendError) {
+        return new ClientAuthError(ClientAuthErrorMessage.appendScopeSetError.code, ClientAuthErrorMessage.appendScopeSetError.desc + " Detail Error: " + appendError);
+    };
+    /**
+     * Throws error if ScopeSet is null or undefined.
+     * @param givenScopeSet
+     */
+    ClientAuthError.createEmptyInputScopeSetError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.emptyInputScopeSetError.code, "" + ClientAuthErrorMessage.emptyInputScopeSetError.desc);
+    };
+    /**
+     * Throws error if user sets CancellationToken.cancel = true during polling of token endpoint during device code flow
+     */
+    ClientAuthError.createDeviceCodeCancelledError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.DeviceCodePollingCancelled.code, "" + ClientAuthErrorMessage.DeviceCodePollingCancelled.desc);
+    };
+    /**
+     * Throws error if device code is expired
+     */
+    ClientAuthError.createDeviceCodeExpiredError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.DeviceCodeExpired.code, "" + ClientAuthErrorMessage.DeviceCodeExpired.desc);
+    };
+    /**
+     * Throws error if device code is expired
+     */
+    ClientAuthError.createDeviceCodeUnknownError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.DeviceCodeUnknownError.code, "" + ClientAuthErrorMessage.DeviceCodeUnknownError.desc);
+    };
+    /**
+     * Throws error when silent requests are made without an account object
+     */
+    ClientAuthError.createNoAccountInSilentRequestError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.NoAccountInSilentRequest.code, "" + ClientAuthErrorMessage.NoAccountInSilentRequest.desc);
+    };
+    /**
+     * Throws error when cache record is null or undefined.
+     */
+    ClientAuthError.createNullOrUndefinedCacheRecord = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidCacheRecord.code, ClientAuthErrorMessage.invalidCacheRecord.desc);
+    };
+    /**
+     * Throws error when provided environment is not part of the CloudDiscoveryMetadata object
+     */
+    ClientAuthError.createInvalidCacheEnvironmentError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidCacheEnvironment.code, ClientAuthErrorMessage.invalidCacheEnvironment.desc);
+    };
+    /**
+     * Throws error when account is not found in cache.
+     */
+    ClientAuthError.createNoAccountFoundError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.noAccountFound.code, ClientAuthErrorMessage.noAccountFound.desc);
+    };
+    /**
+     * Throws error if ICachePlugin not set on CacheManager.
+     */
+    ClientAuthError.createCachePluginError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.CachePluginError.code, "" + ClientAuthErrorMessage.CachePluginError.desc);
+    };
+    /**
+     * Throws error if crypto object not found.
+     * @param operationName
+     */
+    ClientAuthError.createNoCryptoObjectError = function (operationName) {
+        return new ClientAuthError(ClientAuthErrorMessage.noCryptoObj.code, "" + ClientAuthErrorMessage.noCryptoObj.desc + operationName);
+    };
+    /**
+     * Throws error if cache type is invalid.
+     */
+    ClientAuthError.createInvalidCacheTypeError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidCacheType.code, "" + ClientAuthErrorMessage.invalidCacheType.desc);
+    };
+    /**
+     * Throws error if unexpected account type.
+     */
+    ClientAuthError.createUnexpectedAccountTypeError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.unexpectedAccountType.code, "" + ClientAuthErrorMessage.unexpectedAccountType.desc);
+    };
+    /**
+     * Throws error if unexpected credential type.
+     */
+    ClientAuthError.createUnexpectedCredentialTypeError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.unexpectedCredentialType.code, "" + ClientAuthErrorMessage.unexpectedCredentialType.desc);
+    };
+    /**
+     * Throws error if client assertion is not valid.
+     */
+    ClientAuthError.createInvalidAssertionError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidAssertion.code, "" + ClientAuthErrorMessage.invalidAssertion.desc);
+    };
+    /**
+     * Throws error if client assertion is not valid.
+     */
+    ClientAuthError.createInvalidCredentialError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.invalidClientCredential.code, "" + ClientAuthErrorMessage.invalidClientCredential.desc);
+    };
+    /**
+     * Throws error if token cannot be retrieved from cache due to refresh being required.
+     */
+    ClientAuthError.createRefreshRequiredError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.tokenRefreshRequired.code, ClientAuthErrorMessage.tokenRefreshRequired.desc);
+    };
+    /**
+     * Throws error if the user defined timeout is reached.
+     */
+    ClientAuthError.createUserTimeoutReachedError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.userTimeoutReached.code, ClientAuthErrorMessage.userTimeoutReached.desc);
+    };
+    /*
+     * Throws error if token claims are not populated for a signed jwt generation
+     */
+    ClientAuthError.createTokenClaimsRequiredError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.tokenClaimsRequired.code, ClientAuthErrorMessage.tokenClaimsRequired.desc);
+    };
+    /**
+     * Throws error when the authorization code is missing from the server response
+     */
+    ClientAuthError.createNoAuthCodeInServerResponseError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.noAuthorizationCodeFromServer.code, ClientAuthErrorMessage.noAuthorizationCodeFromServer.desc);
+    };
+    ClientAuthError.createBindingKeyNotRemovedError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.bindingKeyNotRemovedError.code, ClientAuthErrorMessage.bindingKeyNotRemovedError.desc);
+    };
+    /**
+     * Thrown when logout is attempted for an authority that doesnt have an end_session_endpoint
+     */
+    ClientAuthError.createLogoutNotSupportedError = function () {
+        return new ClientAuthError(ClientAuthErrorMessage.logoutNotSupported.code, ClientAuthErrorMessage.logoutNotSupported.desc);
+    };
+    return ClientAuthError;
+}(_AuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthError */ .l));
+
+
+//# sourceMappingURL=ClientAuthError.js.map
+
+
+/***/ }),
+
+/***/ 47181:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "r": () => (/* binding */ ClientConfigurationError),
+/* harmony export */   "L": () => (/* binding */ ClientConfigurationErrorMessage)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * ClientConfigurationErrorMessage class containing string constants used by error codes and messages.
+ */
+var ClientConfigurationErrorMessage = {
+    redirectUriNotSet: {
+        code: "redirect_uri_empty",
+        desc: "A redirect URI is required for all calls, and none has been set."
+    },
+    postLogoutUriNotSet: {
+        code: "post_logout_uri_empty",
+        desc: "A post logout redirect has not been set."
+    },
+    claimsRequestParsingError: {
+        code: "claims_request_parsing_error",
+        desc: "Could not parse the given claims request object."
+    },
+    authorityUriInsecure: {
+        code: "authority_uri_insecure",
+        desc: "Authority URIs must use https.  Please see here for valid authority configuration options: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-js-initializing-client-applications#configuration-options"
+    },
+    urlParseError: {
+        code: "url_parse_error",
+        desc: "URL could not be parsed into appropriate segments."
+    },
+    urlEmptyError: {
+        code: "empty_url_error",
+        desc: "URL was empty or null."
+    },
+    emptyScopesError: {
+        code: "empty_input_scopes_error",
+        desc: "Scopes cannot be passed as null, undefined or empty array because they are required to obtain an access token."
+    },
+    nonArrayScopesError: {
+        code: "nonarray_input_scopes_error",
+        desc: "Scopes cannot be passed as non-array."
+    },
+    clientIdSingleScopeError: {
+        code: "clientid_input_scopes_error",
+        desc: "Client ID can only be provided as a single scope."
+    },
+    invalidPrompt: {
+        code: "invalid_prompt_value",
+        desc: "Supported prompt values are 'login', 'select_account', 'consent', 'create' and 'none'.  Please see here for valid configuration options: https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#commonauthorizationurlrequest",
+    },
+    invalidClaimsRequest: {
+        code: "invalid_claims",
+        desc: "Given claims parameter must be a stringified JSON object."
+    },
+    tokenRequestEmptyError: {
+        code: "token_request_empty",
+        desc: "Token request was empty and not found in cache."
+    },
+    logoutRequestEmptyError: {
+        code: "logout_request_empty",
+        desc: "The logout request was null or undefined."
+    },
+    invalidCodeChallengeMethod: {
+        code: "invalid_code_challenge_method",
+        desc: "code_challenge_method passed is invalid. Valid values are \"plain\" and \"S256\"."
+    },
+    invalidCodeChallengeParams: {
+        code: "pkce_params_missing",
+        desc: "Both params: code_challenge and code_challenge_method are to be passed if to be sent in the request"
+    },
+    invalidCloudDiscoveryMetadata: {
+        code: "invalid_cloud_discovery_metadata",
+        desc: "Invalid cloudDiscoveryMetadata provided. Must be a stringified JSON object containing tenant_discovery_endpoint and metadata fields"
+    },
+    invalidAuthorityMetadata: {
+        code: "invalid_authority_metadata",
+        desc: "Invalid authorityMetadata provided. Must by a stringified JSON object containing authorization_endpoint, token_endpoint, issuer fields."
+    },
+    untrustedAuthority: {
+        code: "untrusted_authority",
+        desc: "The provided authority is not a trusted authority. Please include this authority in the knownAuthorities config parameter."
+    },
+    missingSshJwk: {
+        code: "missing_ssh_jwk",
+        desc: "Missing sshJwk in SSH certificate request. A stringified JSON Web Key is required when using the SSH authentication scheme."
+    },
+    missingSshKid: {
+        code: "missing_ssh_kid",
+        desc: "Missing sshKid in SSH certificate request. A string that uniquely identifies the public SSH key is required when using the SSH authentication scheme."
+    },
+    missingNonceAuthenticationHeader: {
+        code: "missing_nonce_authentication_header",
+        desc: "Unable to find an authentication header containing server nonce. Either the Authentication-Info or WWW-Authenticate headers must be present in order to obtain a server nonce."
+    },
+    invalidAuthenticationHeader: {
+        code: "invalid_authentication_header",
+        desc: "Invalid authentication header provided"
+    }
+};
+/**
+ * Error thrown when there is an error in configuration of the MSAL.js library.
+ */
+var ClientConfigurationError = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(ClientConfigurationError, _super);
+    function ClientConfigurationError(errorCode, errorMessage) {
+        var _this = _super.call(this, errorCode, errorMessage) || this;
+        _this.name = "ClientConfigurationError";
+        Object.setPrototypeOf(_this, ClientConfigurationError.prototype);
+        return _this;
+    }
+    /**
+     * Creates an error thrown when the redirect uri is empty (not set by caller)
+     */
+    ClientConfigurationError.createRedirectUriEmptyError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.redirectUriNotSet.code, ClientConfigurationErrorMessage.redirectUriNotSet.desc);
+    };
+    /**
+     * Creates an error thrown when the post-logout redirect uri is empty (not set by caller)
+     */
+    ClientConfigurationError.createPostLogoutRedirectUriEmptyError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.postLogoutUriNotSet.code, ClientConfigurationErrorMessage.postLogoutUriNotSet.desc);
+    };
+    /**
+     * Creates an error thrown when the claims request could not be successfully parsed
+     */
+    ClientConfigurationError.createClaimsRequestParsingError = function (claimsRequestParseError) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.claimsRequestParsingError.code, ClientConfigurationErrorMessage.claimsRequestParsingError.desc + " Given value: " + claimsRequestParseError);
+    };
+    /**
+     * Creates an error thrown if authority uri is given an insecure protocol.
+     * @param urlString
+     */
+    ClientConfigurationError.createInsecureAuthorityUriError = function (urlString) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.authorityUriInsecure.code, ClientConfigurationErrorMessage.authorityUriInsecure.desc + " Given URI: " + urlString);
+    };
+    /**
+     * Creates an error thrown if URL string does not parse into separate segments.
+     * @param urlString
+     */
+    ClientConfigurationError.createUrlParseError = function (urlParseError) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.urlParseError.code, ClientConfigurationErrorMessage.urlParseError.desc + " Given Error: " + urlParseError);
+    };
+    /**
+     * Creates an error thrown if URL string is empty or null.
+     * @param urlString
+     */
+    ClientConfigurationError.createUrlEmptyError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.urlEmptyError.code, ClientConfigurationErrorMessage.urlEmptyError.desc);
+    };
+    /**
+     * Error thrown when scopes are empty.
+     * @param scopesValue
+     */
+    ClientConfigurationError.createEmptyScopesArrayError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.emptyScopesError.code, "" + ClientConfigurationErrorMessage.emptyScopesError.desc);
+    };
+    /**
+     * Error thrown when client id scope is not provided as single scope.
+     * @param inputScopes
+     */
+    ClientConfigurationError.createClientIdSingleScopeError = function (inputScopes) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.clientIdSingleScopeError.code, ClientConfigurationErrorMessage.clientIdSingleScopeError.desc + " Given Scopes: " + inputScopes);
+    };
+    /**
+     * Error thrown when prompt is not an allowed type.
+     * @param promptValue
+     */
+    ClientConfigurationError.createInvalidPromptError = function (promptValue) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidPrompt.code, ClientConfigurationErrorMessage.invalidPrompt.desc + " Given value: " + promptValue);
+    };
+    /**
+     * Creates error thrown when claims parameter is not a stringified JSON object
+     */
+    ClientConfigurationError.createInvalidClaimsRequestError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidClaimsRequest.code, ClientConfigurationErrorMessage.invalidClaimsRequest.desc);
+    };
+    /**
+     * Throws error when token request is empty and nothing cached in storage.
+     */
+    ClientConfigurationError.createEmptyLogoutRequestError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.logoutRequestEmptyError.code, ClientConfigurationErrorMessage.logoutRequestEmptyError.desc);
+    };
+    /**
+     * Throws error when token request is empty and nothing cached in storage.
+     */
+    ClientConfigurationError.createEmptyTokenRequestError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.tokenRequestEmptyError.code, ClientConfigurationErrorMessage.tokenRequestEmptyError.desc);
+    };
+    /**
+     * Throws error when an invalid code_challenge_method is passed by the user
+     */
+    ClientConfigurationError.createInvalidCodeChallengeMethodError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidCodeChallengeMethod.code, ClientConfigurationErrorMessage.invalidCodeChallengeMethod.desc);
+    };
+    /**
+     * Throws error when both params: code_challenge and code_challenge_method are not passed together
+     */
+    ClientConfigurationError.createInvalidCodeChallengeParamsError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidCodeChallengeParams.code, ClientConfigurationErrorMessage.invalidCodeChallengeParams.desc);
+    };
+    /**
+     * Throws an error when the user passes invalid cloudDiscoveryMetadata
+     */
+    ClientConfigurationError.createInvalidCloudDiscoveryMetadataError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidCloudDiscoveryMetadata.code, ClientConfigurationErrorMessage.invalidCloudDiscoveryMetadata.desc);
+    };
+    /**
+     * Throws an error when the user passes invalid cloudDiscoveryMetadata
+     */
+    ClientConfigurationError.createInvalidAuthorityMetadataError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidAuthorityMetadata.code, ClientConfigurationErrorMessage.invalidAuthorityMetadata.desc);
+    };
+    /**
+     * Throws error when provided authority is not a member of the trusted host list
+     */
+    ClientConfigurationError.createUntrustedAuthorityError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.untrustedAuthority.code, ClientConfigurationErrorMessage.untrustedAuthority.desc);
+    };
+    /*
+     * Throws an error when the authentication scheme is set to SSH but the SSH public key is omitted from the request
+     */
+    ClientConfigurationError.createMissingSshJwkError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.missingSshJwk.code, ClientConfigurationErrorMessage.missingSshJwk.desc);
+    };
+    /**
+     * Throws an error when the authentication scheme is set to SSH but the SSH public key ID is omitted from the request
+     */
+    ClientConfigurationError.createMissingSshKidError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.missingSshKid.code, ClientConfigurationErrorMessage.missingSshKid.desc);
+    };
+    /**
+     * Throws error when provided headers don't contain a header that a server nonce can be extracted from
+     */
+    ClientConfigurationError.createMissingNonceAuthenticationHeadersError = function () {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.missingNonceAuthenticationHeader.code, ClientConfigurationErrorMessage.missingNonceAuthenticationHeader.desc);
+    };
+    /**
+     * Throws error when a provided header is invalid in any way
+     */
+    ClientConfigurationError.createInvalidAuthenticationHeaderError = function (invalidHeaderName, details) {
+        return new ClientConfigurationError(ClientConfigurationErrorMessage.invalidAuthenticationHeader.code, ClientConfigurationErrorMessage.invalidAuthenticationHeader.desc + ". Invalid header: " + invalidHeaderName + ". Details: " + details);
+    };
+    return ClientConfigurationError;
+}(_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientAuthError */ .e));
+
+
+//# sourceMappingURL=ClientConfigurationError.js.map
+
+
+/***/ }),
+
+/***/ 83927:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Yo": () => (/* binding */ InteractionRequiredAuthError),
+/* harmony export */   "Zy": () => (/* binding */ InteractionRequiredAuthErrorMessage)
+/* harmony export */ });
+/* unused harmony exports InteractionRequiredAuthSubErrorMessage, InteractionRequiredServerErrorMessage */
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _AuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * InteractionRequiredServerErrorMessage contains string constants used by error codes and messages returned by the server indicating interaction is required
+ */
+var InteractionRequiredServerErrorMessage = [
+    "interaction_required",
+    "consent_required",
+    "login_required"
+];
+var InteractionRequiredAuthSubErrorMessage = [
+    "message_only",
+    "additional_action",
+    "basic_action",
+    "user_password_expired",
+    "consent_required"
+];
+/**
+ * Interaction required errors defined by the SDK
+ */
+var InteractionRequiredAuthErrorMessage = {
+    noTokensFoundError: {
+        code: "no_tokens_found",
+        desc: "No refresh token found in the cache. Please sign-in."
+    }
+};
+/**
+ * Error thrown when user interaction is required.
+ */
+var InteractionRequiredAuthError = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(InteractionRequiredAuthError, _super);
+    function InteractionRequiredAuthError(errorCode, errorMessage, subError) {
+        var _this = _super.call(this, errorCode, errorMessage, subError) || this;
+        _this.name = "InteractionRequiredAuthError";
+        Object.setPrototypeOf(_this, InteractionRequiredAuthError.prototype);
+        return _this;
+    }
+    /**
+     * Helper function used to determine if an error thrown by the server requires interaction to resolve
+     * @param errorCode
+     * @param errorString
+     * @param subError
+     */
+    InteractionRequiredAuthError.isInteractionRequiredError = function (errorCode, errorString, subError) {
+        var isInteractionRequiredErrorCode = !!errorCode && InteractionRequiredServerErrorMessage.indexOf(errorCode) > -1;
+        var isInteractionRequiredSubError = !!subError && InteractionRequiredAuthSubErrorMessage.indexOf(subError) > -1;
+        var isInteractionRequiredErrorDesc = !!errorString && InteractionRequiredServerErrorMessage.some(function (irErrorCode) {
+            return errorString.indexOf(irErrorCode) > -1;
+        });
+        return isInteractionRequiredErrorCode || isInteractionRequiredErrorDesc || isInteractionRequiredSubError;
+    };
+    /**
+     * Creates an error thrown when the authorization code required for a token request is null or empty.
+     */
+    InteractionRequiredAuthError.createNoTokensFoundError = function () {
+        return new InteractionRequiredAuthError(InteractionRequiredAuthErrorMessage.noTokensFoundError.code, InteractionRequiredAuthErrorMessage.noTokensFoundError.desc);
+    };
+    return InteractionRequiredAuthError;
+}(_AuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthError */ .l));
+
+
+//# sourceMappingURL=InteractionRequiredAuthError.js.map
+
+
+/***/ }),
+
+/***/ 91359:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "n": () => (/* binding */ ServerError)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _AuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Error thrown when there is an error with the server code, for example, unavailability.
+ */
+var ServerError = /** @class */ (function (_super) {
+    (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__extends */ .ZT)(ServerError, _super);
+    function ServerError(errorCode, errorMessage, subError) {
+        var _this = _super.call(this, errorCode, errorMessage, subError) || this;
+        _this.name = "ServerError";
+        Object.setPrototypeOf(_this, ServerError.prototype);
+        return _this;
+    }
+    return ServerError;
+}(_AuthError_js__WEBPACK_IMPORTED_MODULE_1__/* .AuthError */ .l));
+
+
+//# sourceMappingURL=ServerError.js.map
+
+
+/***/ }),
+
+/***/ 21362:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "i": () => (/* binding */ LogLevel),
+/* harmony export */   "Y": () => (/* binding */ Logger)
+/* harmony export */ });
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(61653);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Log message level.
+ */
+var LogLevel;
+(function (LogLevel) {
+    LogLevel[LogLevel["Error"] = 0] = "Error";
+    LogLevel[LogLevel["Warning"] = 1] = "Warning";
+    LogLevel[LogLevel["Info"] = 2] = "Info";
+    LogLevel[LogLevel["Verbose"] = 3] = "Verbose";
+    LogLevel[LogLevel["Trace"] = 4] = "Trace";
+})(LogLevel || (LogLevel = {}));
+/**
+ * Class which facilitates logging of messages to a specific place.
+ */
+var Logger = /** @class */ (function () {
+    function Logger(loggerOptions, packageName, packageVersion) {
+        // Current log level, defaults to info.
+        this.level = LogLevel.Info;
+        var defaultLoggerCallback = function () {
+            return;
+        };
+        this.localCallback = loggerOptions.loggerCallback || defaultLoggerCallback;
+        this.piiLoggingEnabled = loggerOptions.piiLoggingEnabled || false;
+        this.level = typeof (loggerOptions.logLevel) === "number" ? loggerOptions.logLevel : LogLevel.Info;
+        this.correlationId = loggerOptions.correlationId || "";
+        this.packageName = packageName || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+        this.packageVersion = packageVersion || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+    }
+    /**
+     * Create new Logger with existing configurations.
+     */
+    Logger.prototype.clone = function (packageName, packageVersion, correlationId) {
+        return new Logger({ loggerCallback: this.localCallback, piiLoggingEnabled: this.piiLoggingEnabled, logLevel: this.level, correlationId: correlationId || this.correlationId }, packageName, packageVersion);
+    };
+    /**
+     * Log message with required options.
+     */
+    Logger.prototype.logMessage = function (logMessage, options) {
+        if ((options.logLevel > this.level) || (!this.piiLoggingEnabled && options.containsPii)) {
+            return;
+        }
+        var timestamp = new Date().toUTCString();
+        // Add correlationId to logs if set, correlationId provided on log messages take precedence
+        var logHeader;
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .StringUtils.isEmpty */ .x.isEmpty(options.correlationId)) {
+            logHeader = "[" + timestamp + "] : [" + options.correlationId + "]";
+        }
+        else if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .StringUtils.isEmpty */ .x.isEmpty(this.correlationId)) {
+            logHeader = "[" + timestamp + "] : [" + this.correlationId + "]";
+        }
+        else {
+            logHeader = "[" + timestamp + "]";
+        }
+        var log = logHeader + " : " + this.packageName + "@" + this.packageVersion + " : " + LogLevel[options.logLevel] + " - " + logMessage;
+        // debug(`msal:${LogLevel[options.logLevel]}${options.containsPii ? "-Pii": ""}${options.context ? `:${options.context}` : ""}`)(logMessage);
+        this.executeCallback(options.logLevel, log, options.containsPii || false);
+    };
+    /**
+     * Execute callback with message.
+     */
+    Logger.prototype.executeCallback = function (level, message, containsPii) {
+        if (this.localCallback) {
+            this.localCallback(level, message, containsPii);
+        }
+    };
+    /**
+     * Logs error messages.
+     */
+    Logger.prototype.error = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Error,
+            containsPii: false,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs error messages with PII.
+     */
+    Logger.prototype.errorPii = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Error,
+            containsPii: true,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs warning messages.
+     */
+    Logger.prototype.warning = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Warning,
+            containsPii: false,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs warning messages with PII.
+     */
+    Logger.prototype.warningPii = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Warning,
+            containsPii: true,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs info messages.
+     */
+    Logger.prototype.info = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Info,
+            containsPii: false,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs info messages with PII.
+     */
+    Logger.prototype.infoPii = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Info,
+            containsPii: true,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs verbose messages.
+     */
+    Logger.prototype.verbose = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Verbose,
+            containsPii: false,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs verbose messages with PII.
+     */
+    Logger.prototype.verbosePii = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Verbose,
+            containsPii: true,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs trace messages.
+     */
+    Logger.prototype.trace = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Trace,
+            containsPii: false,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Logs trace messages with PII.
+     */
+    Logger.prototype.tracePii = function (message, correlationId) {
+        this.logMessage(message, {
+            logLevel: LogLevel.Trace,
+            containsPii: true,
+            correlationId: correlationId || ""
+        });
+    };
+    /**
+     * Returns whether PII Logging is enabled or not.
+     */
+    Logger.prototype.isPiiLoggingEnabled = function () {
+        return this.piiLoggingEnabled || false;
+    };
+    return Logger;
+}());
+
+
+//# sourceMappingURL=Logger.js.map
+
+
+/***/ }),
+
+/***/ 30658:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "y": () => (/* binding */ StubbedNetworkModule)
+/* harmony export */ });
+/* harmony import */ var _error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var StubbedNetworkModule = {
+    sendGetRequestAsync: function () {
+        var notImplErr = "Network interface - sendGetRequestAsync() has not been implemented for the Network interface.";
+        return Promise.reject(_error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr));
+    },
+    sendPostRequestAsync: function () {
+        var notImplErr = "Network interface - sendPostRequestAsync() has not been implemented for the Network interface.";
+        return Promise.reject(_error_AuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthError.createUnexpectedError */ .l.createUnexpectedError(notImplErr));
+    }
+};
+
+
+//# sourceMappingURL=INetworkModule.js.map
+
+
+/***/ }),
+
+/***/ 97482:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "r": () => (/* binding */ NetworkManager)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/* harmony import */ var _ThrottlingUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47282);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(60742);
+/* harmony import */ var _error_AuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(87342);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var NetworkManager = /** @class */ (function () {
+    function NetworkManager(networkClient, cacheManager) {
+        this.networkClient = networkClient;
+        this.cacheManager = cacheManager;
+    }
+    /**
+     * Wraps sendPostRequestAsync with necessary preflight and postflight logic
+     * @param thumbprint
+     * @param tokenEndpoint
+     * @param options
+     */
+    NetworkManager.prototype.sendPostRequest = function (thumbprint, tokenEndpoint, options) {
+        return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__awaiter */ .mG)(this, void 0, void 0, function () {
+            var response, e_1;
+            return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__generator */ .Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _ThrottlingUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .ThrottlingUtils.preProcess */ .v.preProcess(this.cacheManager, thumbprint);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.networkClient.sendPostRequestAsync(tokenEndpoint, options)];
+                    case 2:
+                        response = _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        if (e_1 instanceof _error_AuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .AuthError */ .l) {
+                            throw e_1;
+                        }
+                        else {
+                            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createNetworkError */ .e.createNetworkError(tokenEndpoint, e_1);
+                        }
+                    case 4:
+                        _ThrottlingUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .ThrottlingUtils.postProcess */ .v.postProcess(this.cacheManager, thumbprint, response);
+                        return [2 /*return*/, response];
+                }
+            });
+        });
+    };
+    return NetworkManager;
+}());
+
+
+//# sourceMappingURL=NetworkManager.js.map
+
+
+/***/ }),
+
+/***/ 47282:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "v": () => (/* binding */ ThrottlingUtils)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/* harmony import */ var _error_ServerError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(91359);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var ThrottlingUtils = /** @class */ (function () {
+    function ThrottlingUtils() {
+    }
+    /**
+     * Prepares a RequestThumbprint to be stored as a key.
+     * @param thumbprint
+     */
+    ThrottlingUtils.generateThrottlingStorageKey = function (thumbprint) {
+        return _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ThrottlingConstants.THROTTLING_PREFIX */ .bb.THROTTLING_PREFIX + "." + JSON.stringify(thumbprint);
+    };
+    /**
+     * Performs necessary throttling checks before a network request.
+     * @param cacheManager
+     * @param thumbprint
+     */
+    ThrottlingUtils.preProcess = function (cacheManager, thumbprint) {
+        var _a;
+        var key = ThrottlingUtils.generateThrottlingStorageKey(thumbprint);
+        var value = cacheManager.getThrottlingCache(key);
+        if (value) {
+            if (value.throttleTime < Date.now()) {
+                cacheManager.removeItem(key, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheSchemaType.THROTTLING */ .Xj.THROTTLING);
+                return;
+            }
+            throw new _error_ServerError_js__WEBPACK_IMPORTED_MODULE_1__/* .ServerError */ .n(((_a = value.errorCodes) === null || _a === void 0 ? void 0 : _a.join(" ")) || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING, value.errorMessage, value.subError);
+        }
+    };
+    /**
+     * Performs necessary throttling checks after a network request.
+     * @param cacheManager
+     * @param thumbprint
+     * @param response
+     */
+    ThrottlingUtils.postProcess = function (cacheManager, thumbprint, response) {
+        if (ThrottlingUtils.checkResponseStatus(response) || ThrottlingUtils.checkResponseForRetryAfter(response)) {
+            var thumbprintValue = {
+                throttleTime: ThrottlingUtils.calculateThrottleTime(parseInt(response.headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.RETRY_AFTER */ .SZ.RETRY_AFTER])),
+                error: response.body.error,
+                errorCodes: response.body.error_codes,
+                errorMessage: response.body.error_description,
+                subError: response.body.suberror
+            };
+            cacheManager.setThrottlingCache(ThrottlingUtils.generateThrottlingStorageKey(thumbprint), thumbprintValue);
+        }
+    };
+    /**
+     * Checks a NetworkResponse object's status codes against 429 or 5xx
+     * @param response
+     */
+    ThrottlingUtils.checkResponseStatus = function (response) {
+        return response.status === 429 || response.status >= 500 && response.status < 600;
+    };
+    /**
+     * Checks a NetworkResponse object's RetryAfter header
+     * @param response
+     */
+    ThrottlingUtils.checkResponseForRetryAfter = function (response) {
+        if (response.headers) {
+            return response.headers.hasOwnProperty(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.RETRY_AFTER */ .SZ.RETRY_AFTER) && (response.status < 200 || response.status >= 300);
+        }
+        return false;
+    };
+    /**
+     * Calculates the Unix-time value for a throttle to expire given throttleTime in seconds.
+     * @param throttleTime
+     */
+    ThrottlingUtils.calculateThrottleTime = function (throttleTime) {
+        var time = throttleTime <= 0 ? 0 : throttleTime;
+        var currentSeconds = Date.now() / 1000;
+        return Math.floor(Math.min(currentSeconds + (time || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ThrottlingConstants.DEFAULT_THROTTLE_TIME_SECONDS */ .bb.DEFAULT_THROTTLE_TIME_SECONDS), currentSeconds + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ThrottlingConstants.DEFAULT_MAX_THROTTLE_TIME_SECONDS */ .bb.DEFAULT_MAX_THROTTLE_TIME_SECONDS) * 1000);
+    };
+    ThrottlingUtils.removeThrottle = function (cacheManager, clientId, request, homeAccountIdentifier) {
+        var thumbprint = {
+            clientId: clientId,
+            authority: request.authority,
+            scopes: request.scopes,
+            homeAccountIdentifier: homeAccountIdentifier,
+            claims: request.claims,
+            authenticationScheme: request.authenticationScheme,
+            resourceRequestMethod: request.resourceRequestMethod,
+            resourceRequestUri: request.resourceRequestUri,
+            shrClaims: request.shrClaims,
+            sshKid: request.sshKid
+        };
+        var key = this.generateThrottlingStorageKey(thumbprint);
+        return cacheManager.removeItem(key, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheSchemaType.THROTTLING */ .Xj.THROTTLING);
+    };
+    return ThrottlingUtils;
+}());
+
+
+//# sourceMappingURL=ThrottlingUtils.js.map
+
+
+/***/ }),
+
+/***/ 26246:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "u": () => (/* binding */ name),
+/* harmony export */   "i": () => (/* binding */ version)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/* eslint-disable header/header */
+var name = "@azure/msal-common";
+var version = "6.0.0";
+
+
+//# sourceMappingURL=packageMetadata.js.map
+
+
+/***/ }),
+
+/***/ 32030:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "d": () => (/* binding */ AuthenticationHeaderParser)
+/* harmony export */ });
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47181);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * This is a helper class that parses supported HTTP response authentication headers to extract and return
+ * header challenge values that can be used outside the basic authorization flows.
+ */
+var AuthenticationHeaderParser = /** @class */ (function () {
+    function AuthenticationHeaderParser(headers) {
+        this.headers = headers;
+    }
+    /**
+     * This method parses the SHR nonce value out of either the Authentication-Info or WWW-Authenticate authentication headers.
+     * @returns
+     */
+    AuthenticationHeaderParser.prototype.getShrNonce = function () {
+        // Attempt to parse nonce from Authentiacation-Info
+        var authenticationInfo = this.headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.AuthenticationInfo */ .SZ.AuthenticationInfo];
+        if (authenticationInfo) {
+            var authenticationInfoChallenges = this.parseChallenges(authenticationInfo);
+            if (authenticationInfoChallenges.nextnonce) {
+                return authenticationInfoChallenges.nextnonce;
+            }
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidAuthenticationHeaderError */ .r.createInvalidAuthenticationHeaderError(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.AuthenticationInfo */ .SZ.AuthenticationInfo, "nextnonce challenge is missing.");
+        }
+        // Attempt to parse nonce from WWW-Authenticate
+        var wwwAuthenticate = this.headers[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.WWWAuthenticate */ .SZ.WWWAuthenticate];
+        if (wwwAuthenticate) {
+            var wwwAuthenticateChallenges = this.parseChallenges(wwwAuthenticate);
+            if (wwwAuthenticateChallenges.nonce) {
+                return wwwAuthenticateChallenges.nonce;
+            }
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidAuthenticationHeaderError */ .r.createInvalidAuthenticationHeaderError(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.WWWAuthenticate */ .SZ.WWWAuthenticate, "nonce challenge is missing.");
+        }
+        // If neither header is present, throw missing headers error
+        throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createMissingNonceAuthenticationHeadersError */ .r.createMissingNonceAuthenticationHeadersError();
+    };
+    /**
+     * Parses an HTTP header's challenge set into a key/value map.
+     * @param header
+     * @returns
+     */
+    AuthenticationHeaderParser.prototype.parseChallenges = function (header) {
+        var schemeSeparator = header.indexOf(" ");
+        var challenges = header.substr(schemeSeparator + 1).split(",");
+        var challengeMap = {};
+        challenges.forEach(function (challenge) {
+            var _a = challenge.split("="), key = _a[0], value = _a[1];
+            // Remove escaped quotation marks (', ") from challenge string to keep only the challenge value
+            challengeMap[key] = unescape(value.replace(/['"]+/g, ""));
+        });
+        return challengeMap;
+    };
+    return AuthenticationHeaderParser;
+}());
+
+
+//# sourceMappingURL=AuthenticationHeaderParser.js.map
+
+
+/***/ }),
+
+/***/ 87479:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "H": () => (/* binding */ RequestParameterBuilder)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5096);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/* harmony import */ var _ScopeSet_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(92613);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(47181);
+/* harmony import */ var _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5035);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61653);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var RequestParameterBuilder = /** @class */ (function () {
+    function RequestParameterBuilder() {
+        this.parameters = new Map();
+    }
+    /**
+     * add response_type = code
+     */
+    RequestParameterBuilder.prototype.addResponseTypeCode = function () {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.RESPONSE_TYPE */ .Fo.RESPONSE_TYPE, encodeURIComponent(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.CODE_RESPONSE_TYPE */ .gT.CODE_RESPONSE_TYPE));
+    };
+    /**
+     * add response_mode. defaults to query.
+     * @param responseMode
+     */
+    RequestParameterBuilder.prototype.addResponseMode = function (responseMode) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.RESPONSE_MODE */ .Fo.RESPONSE_MODE, encodeURIComponent((responseMode) ? responseMode : _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ResponseMode.QUERY */ .vw.QUERY));
+    };
+    /**
+     * add scopes. set addOidcScopes to false to prevent default scopes in non-user scenarios
+     * @param scopeSet
+     * @param addOidcScopes
+     */
+    RequestParameterBuilder.prototype.addScopes = function (scopes, addOidcScopes) {
+        if (addOidcScopes === void 0) { addOidcScopes = true; }
+        var requestScopes = addOidcScopes ? (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__spreadArrays */ .pr)(scopes || [], _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .OIDC_DEFAULT_SCOPES */ .f_) : scopes || [];
+        var scopeSet = new _ScopeSet_js__WEBPACK_IMPORTED_MODULE_2__/* .ScopeSet */ .i(requestScopes);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.SCOPE */ .Fo.SCOPE, encodeURIComponent(scopeSet.printScopes()));
+    };
+    /**
+     * add clientId
+     * @param clientId
+     */
+    RequestParameterBuilder.prototype.addClientId = function (clientId) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLIENT_ID */ .Fo.CLIENT_ID, encodeURIComponent(clientId));
+    };
+    /**
+     * add redirect_uri
+     * @param redirectUri
+     */
+    RequestParameterBuilder.prototype.addRedirectUri = function (redirectUri) {
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.validateRedirectUri */ .D.validateRedirectUri(redirectUri);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.REDIRECT_URI */ .Fo.REDIRECT_URI, encodeURIComponent(redirectUri));
+    };
+    /**
+     * add post logout redirectUri
+     * @param redirectUri
+     */
+    RequestParameterBuilder.prototype.addPostLogoutRedirectUri = function (redirectUri) {
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.validateRedirectUri */ .D.validateRedirectUri(redirectUri);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.POST_LOGOUT_URI */ .Fo.POST_LOGOUT_URI, encodeURIComponent(redirectUri));
+    };
+    /**
+     * add id_token_hint to logout request
+     * @param idTokenHint
+     */
+    RequestParameterBuilder.prototype.addIdTokenHint = function (idTokenHint) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.ID_TOKEN_HINT */ .Fo.ID_TOKEN_HINT, encodeURIComponent(idTokenHint));
+    };
+    /**
+     * add domain_hint
+     * @param domainHint
+     */
+    RequestParameterBuilder.prototype.addDomainHint = function (domainHint) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SSOTypes.DOMAIN_HINT */ .VO.DOMAIN_HINT, encodeURIComponent(domainHint));
+    };
+    /**
+     * add login_hint
+     * @param loginHint
+     */
+    RequestParameterBuilder.prototype.addLoginHint = function (loginHint) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SSOTypes.LOGIN_HINT */ .VO.LOGIN_HINT, encodeURIComponent(loginHint));
+    };
+    /**
+     * Adds the CCS (Cache Credential Service) query parameter for login_hint
+     * @param loginHint
+     */
+    RequestParameterBuilder.prototype.addCcsUpn = function (loginHint) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.CCS_HEADER */ .SZ.CCS_HEADER, encodeURIComponent("UPN:" + loginHint));
+    };
+    /**
+     * Adds the CCS (Cache Credential Service) query parameter for account object
+     * @param loginHint
+     */
+    RequestParameterBuilder.prototype.addCcsOid = function (clientInfo) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .HeaderNames.CCS_HEADER */ .SZ.CCS_HEADER, encodeURIComponent("Oid:" + clientInfo.uid + "@" + clientInfo.utid));
+    };
+    /**
+     * add sid
+     * @param sid
+     */
+    RequestParameterBuilder.prototype.addSid = function (sid) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SSOTypes.SID */ .VO.SID, encodeURIComponent(sid));
+    };
+    /**
+     * add claims
+     * @param claims
+     */
+    RequestParameterBuilder.prototype.addClaims = function (claims, clientCapabilities) {
+        var mergedClaims = this.addClientCapabilitiesToClaims(claims, clientCapabilities);
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.validateClaims */ .D.validateClaims(mergedClaims);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLAIMS */ .Fo.CLAIMS, encodeURIComponent(mergedClaims));
+    };
+    /**
+     * add correlationId
+     * @param correlationId
+     */
+    RequestParameterBuilder.prototype.addCorrelationId = function (correlationId) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLIENT_REQUEST_ID */ .Fo.CLIENT_REQUEST_ID, encodeURIComponent(correlationId));
+    };
+    /**
+     * add library info query params
+     * @param libraryInfo
+     */
+    RequestParameterBuilder.prototype.addLibraryInfo = function (libraryInfo) {
+        // Telemetry Info
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_SKU */ .Fo.X_CLIENT_SKU, libraryInfo.sku);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_VER */ .Fo.X_CLIENT_VER, libraryInfo.version);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_OS */ .Fo.X_CLIENT_OS, libraryInfo.os);
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_CPU */ .Fo.X_CLIENT_CPU, libraryInfo.cpu);
+    };
+    /**
+     * add prompt
+     * @param prompt
+     */
+    RequestParameterBuilder.prototype.addPrompt = function (prompt) {
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.validatePrompt */ .D.validatePrompt(prompt);
+        this.parameters.set("" + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.PROMPT */ .Fo.PROMPT, encodeURIComponent(prompt));
+    };
+    /**
+     * add state
+     * @param state
+     */
+    RequestParameterBuilder.prototype.addState = function (state) {
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .StringUtils.isEmpty */ .x.isEmpty(state)) {
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.STATE */ .Fo.STATE, encodeURIComponent(state));
+        }
+    };
+    /**
+     * add nonce
+     * @param nonce
+     */
+    RequestParameterBuilder.prototype.addNonce = function (nonce) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.NONCE */ .Fo.NONCE, encodeURIComponent(nonce));
+    };
+    /**
+     * add code_challenge and code_challenge_method
+     * - throw if either of them are not passed
+     * @param codeChallenge
+     * @param codeChallengeMethod
+     */
+    RequestParameterBuilder.prototype.addCodeChallengeParams = function (codeChallenge, codeChallengeMethod) {
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.validateCodeChallengeParams */ .D.validateCodeChallengeParams(codeChallenge, codeChallengeMethod);
+        if (codeChallenge && codeChallengeMethod) {
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CODE_CHALLENGE */ .Fo.CODE_CHALLENGE, encodeURIComponent(codeChallenge));
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CODE_CHALLENGE_METHOD */ .Fo.CODE_CHALLENGE_METHOD, encodeURIComponent(codeChallengeMethod));
+        }
+        else {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_5__/* .ClientConfigurationError.createInvalidCodeChallengeParamsError */ .r.createInvalidCodeChallengeParamsError();
+        }
+    };
+    /**
+     * add the `authorization_code` passed by the user to exchange for a token
+     * @param code
+     */
+    RequestParameterBuilder.prototype.addAuthorizationCode = function (code) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CODE */ .Fo.CODE, encodeURIComponent(code));
+    };
+    /**
+     * add the `authorization_code` passed by the user to exchange for a token
+     * @param code
+     */
+    RequestParameterBuilder.prototype.addDeviceCode = function (code) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.DEVICE_CODE */ .Fo.DEVICE_CODE, encodeURIComponent(code));
+    };
+    /**
+     * add the `refreshToken` passed by the user
+     * @param refreshToken
+     */
+    RequestParameterBuilder.prototype.addRefreshToken = function (refreshToken) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.REFRESH_TOKEN */ .Fo.REFRESH_TOKEN, encodeURIComponent(refreshToken));
+    };
+    /**
+     * add the `code_verifier` passed by the user to exchange for a token
+     * @param codeVerifier
+     */
+    RequestParameterBuilder.prototype.addCodeVerifier = function (codeVerifier) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CODE_VERIFIER */ .Fo.CODE_VERIFIER, encodeURIComponent(codeVerifier));
+    };
+    /**
+     * add client_secret
+     * @param clientSecret
+     */
+    RequestParameterBuilder.prototype.addClientSecret = function (clientSecret) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLIENT_SECRET */ .Fo.CLIENT_SECRET, encodeURIComponent(clientSecret));
+    };
+    /**
+     * add clientAssertion for confidential client flows
+     * @param clientAssertion
+     */
+    RequestParameterBuilder.prototype.addClientAssertion = function (clientAssertion) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLIENT_ASSERTION */ .Fo.CLIENT_ASSERTION, encodeURIComponent(clientAssertion));
+    };
+    /**
+     * add clientAssertionType for confidential client flows
+     * @param clientAssertionType
+     */
+    RequestParameterBuilder.prototype.addClientAssertionType = function (clientAssertionType) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.CLIENT_ASSERTION_TYPE */ .Fo.CLIENT_ASSERTION_TYPE, encodeURIComponent(clientAssertionType));
+    };
+    /**
+     * add OBO assertion for confidential client flows
+     * @param clientAssertion
+     */
+    RequestParameterBuilder.prototype.addOboAssertion = function (oboAssertion) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.OBO_ASSERTION */ .Fo.OBO_ASSERTION, encodeURIComponent(oboAssertion));
+    };
+    /**
+     * add grant type
+     * @param grantType
+     */
+    RequestParameterBuilder.prototype.addRequestTokenUse = function (tokenUse) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.REQUESTED_TOKEN_USE */ .Fo.REQUESTED_TOKEN_USE, encodeURIComponent(tokenUse));
+    };
+    /**
+     * add grant type
+     * @param grantType
+     */
+    RequestParameterBuilder.prototype.addGrantType = function (grantType) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.GRANT_TYPE */ .Fo.GRANT_TYPE, encodeURIComponent(grantType));
+    };
+    /**
+     * add client info
+     *
+     */
+    RequestParameterBuilder.prototype.addClientInfo = function () {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CLIENT_INFO */ .sR, "1");
+    };
+    /**
+     * add extraQueryParams
+     * @param eQparams
+     */
+    RequestParameterBuilder.prototype.addExtraQueryParameters = function (eQparams) {
+        var _this = this;
+        _RequestValidator_js__WEBPACK_IMPORTED_MODULE_3__/* .RequestValidator.sanitizeEQParams */ .D.sanitizeEQParams(eQparams, this.parameters);
+        Object.keys(eQparams).forEach(function (key) {
+            _this.parameters.set(key, eQparams[key]);
+        });
+    };
+    RequestParameterBuilder.prototype.addClientCapabilitiesToClaims = function (claims, clientCapabilities) {
+        var mergedClaims;
+        // Parse provided claims into JSON object or initialize empty object
+        if (!claims) {
+            mergedClaims = {};
+        }
+        else {
+            try {
+                mergedClaims = JSON.parse(claims);
+            }
+            catch (e) {
+                throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_5__/* .ClientConfigurationError.createInvalidClaimsRequestError */ .r.createInvalidClaimsRequestError();
+            }
+        }
+        if (clientCapabilities && clientCapabilities.length > 0) {
+            if (!mergedClaims.hasOwnProperty(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ClaimsRequestKeys.ACCESS_TOKEN */ .As.ACCESS_TOKEN)) {
+                // Add access_token key to claims object
+                mergedClaims[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ClaimsRequestKeys.ACCESS_TOKEN */ .As.ACCESS_TOKEN] = {};
+            }
+            // Add xms_cc claim with provided clientCapabilities to access_token key
+            mergedClaims[_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ClaimsRequestKeys.ACCESS_TOKEN */ .As.ACCESS_TOKEN][_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ClaimsRequestKeys.XMS_CC */ .As.XMS_CC] = {
+                values: clientCapabilities
+            };
+        }
+        return JSON.stringify(mergedClaims);
+    };
+    /**
+     * adds `username` for Password Grant flow
+     * @param username
+     */
+    RequestParameterBuilder.prototype.addUsername = function (username) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .PasswordGrantConstants.username */ .Ge.username, username);
+    };
+    /**
+     * adds `password` for Password Grant flow
+     * @param password
+     */
+    RequestParameterBuilder.prototype.addPassword = function (password) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .PasswordGrantConstants.password */ .Ge.password, password);
+    };
+    /**
+     * add pop_jwk to query params
+     * @param cnfString
+     */
+    RequestParameterBuilder.prototype.addPopToken = function (cnfString) {
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .StringUtils.isEmpty */ .x.isEmpty(cnfString)) {
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.TOKEN_TYPE */ .Fo.TOKEN_TYPE, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthenticationScheme.POP */ .hO.POP);
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.REQ_CNF */ .Fo.REQ_CNF, encodeURIComponent(cnfString));
+        }
+    };
+    /**
+     * add SSH JWK and key ID to query params
+     */
+    RequestParameterBuilder.prototype.addSshJwk = function (sshJwkString) {
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_4__/* .StringUtils.isEmpty */ .x.isEmpty(sshJwkString)) {
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.TOKEN_TYPE */ .Fo.TOKEN_TYPE, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AuthenticationScheme.SSH */ .hO.SSH);
+            this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.REQ_CNF */ .Fo.REQ_CNF, encodeURIComponent(sshJwkString));
+        }
+    };
+    /**
+     * add server telemetry fields
+     * @param serverTelemetryManager
+     */
+    RequestParameterBuilder.prototype.addServerTelemetry = function (serverTelemetryManager) {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_CURR_TELEM */ .Fo.X_CLIENT_CURR_TELEM, serverTelemetryManager.generateCurrentRequestHeaderValue());
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_CLIENT_LAST_TELEM */ .Fo.X_CLIENT_LAST_TELEM, serverTelemetryManager.generateLastRequestHeaderValue());
+    };
+    /**
+     * Adds parameter that indicates to the server that throttling is supported
+     */
+    RequestParameterBuilder.prototype.addThrottling = function () {
+        this.parameters.set(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .AADServerParamKeys.X_MS_LIB_CAPABILITY */ .Fo.X_MS_LIB_CAPABILITY, _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .ThrottlingConstants.X_MS_LIB_CAPABILITY_VALUE */ .bb.X_MS_LIB_CAPABILITY_VALUE);
+    };
+    /**
+     * Utility to create a URL from the params map
+     */
+    RequestParameterBuilder.prototype.createQueryString = function () {
+        var queryParameterArray = new Array();
+        this.parameters.forEach(function (value, key) {
+            queryParameterArray.push(key + "=" + value);
+        });
+        return queryParameterArray.join("&");
+    };
+    return RequestParameterBuilder;
+}());
+
+
+//# sourceMappingURL=RequestParameterBuilder.js.map
+
+
+/***/ }),
+
+/***/ 5035:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "D": () => (/* binding */ RequestValidator)
+/* harmony export */ });
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47181);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Validates server consumable params from the "request" objects
+ */
+var RequestValidator = /** @class */ (function () {
+    function RequestValidator() {
+    }
+    /**
+     * Utility to check if the `redirectUri` in the request is a non-null value
+     * @param redirectUri
+     */
+    RequestValidator.validateRedirectUri = function (redirectUri) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(redirectUri)) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createRedirectUriEmptyError */ .r.createRedirectUriEmptyError();
+        }
+    };
+    /**
+     * Utility to validate prompt sent by the user in the request
+     * @param prompt
+     */
+    RequestValidator.validatePrompt = function (prompt) {
+        var promptValues = [];
+        for (var value in _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .PromptValue */ .NJ) {
+            promptValues.push(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .PromptValue */ .NJ[value]);
+        }
+        if (promptValues.indexOf(prompt) < 0) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidPromptError */ .r.createInvalidPromptError(prompt);
+        }
+    };
+    RequestValidator.validateClaims = function (claims) {
+        try {
+            JSON.parse(claims);
+        }
+        catch (e) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidClaimsRequestError */ .r.createInvalidClaimsRequestError();
+        }
+    };
+    /**
+     * Utility to validate code_challenge and code_challenge_method
+     * @param codeChallenge
+     * @param codeChallengeMethod
+     */
+    RequestValidator.validateCodeChallengeParams = function (codeChallenge, codeChallengeMethod) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(codeChallenge) || _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(codeChallengeMethod)) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidCodeChallengeParamsError */ .r.createInvalidCodeChallengeParamsError();
+        }
+        else {
+            this.validateCodeChallengeMethod(codeChallengeMethod);
+        }
+    };
+    /**
+     * Utility to validate code_challenge_method
+     * @param codeChallengeMethod
+     */
+    RequestValidator.validateCodeChallengeMethod = function (codeChallengeMethod) {
+        if ([
+            _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .CodeChallengeMethodValues.PLAIN */ .VX.PLAIN,
+            _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .CodeChallengeMethodValues.S256 */ .VX.S256
+        ].indexOf(codeChallengeMethod) < 0) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInvalidCodeChallengeMethodError */ .r.createInvalidCodeChallengeMethodError();
+        }
+    };
+    /**
+     * Removes unnecessary or duplicate query parameters from extraQueryParameters
+     * @param request
+     */
+    RequestValidator.sanitizeEQParams = function (eQParams, queryParams) {
+        if (!eQParams) {
+            return {};
+        }
+        // Remove any query parameters already included in SSO params
+        queryParams.forEach(function (value, key) {
+            if (eQParams[key]) {
+                delete eQParams[key];
+            }
+        });
+        return eQParams;
+    };
+    return RequestValidator;
+}());
+
+
+//# sourceMappingURL=RequestValidator.js.map
+
+
+/***/ }),
+
+/***/ 92613:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "i": () => (/* binding */ ScopeSet)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5096);
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(47181);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(60742);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * The ScopeSet class creates a set of scopes. Scopes are case-insensitive, unique values, so the Set object in JS makes
+ * the most sense to implement for this class. All scopes are trimmed and converted to lower case strings in intersection and union functions
+ * to ensure uniqueness of strings.
+ */
+var ScopeSet = /** @class */ (function () {
+    function ScopeSet(inputScopes) {
+        var _this = this;
+        // Filter empty string and null/undefined array items
+        var scopeArr = inputScopes ? _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.trimArrayEntries */ .x.trimArrayEntries((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__/* .__spreadArrays */ .pr)(inputScopes)) : [];
+        var filteredInput = scopeArr ? _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.removeEmptyStringsFromArray */ .x.removeEmptyStringsFromArray(scopeArr) : [];
+        // Validate and filter scopes (validate function throws if validation fails)
+        this.validateInputScopes(filteredInput);
+        this.scopes = new Set(); // Iterator in constructor not supported by IE11
+        filteredInput.forEach(function (scope) { return _this.scopes.add(scope); });
+    }
+    /**
+     * Factory method to create ScopeSet from space-delimited string
+     * @param inputScopeString
+     * @param appClientId
+     * @param scopesRequired
+     */
+    ScopeSet.fromString = function (inputScopeString) {
+        var scopeString = inputScopeString || "";
+        var inputScopes = scopeString.split(" ");
+        return new ScopeSet(inputScopes);
+    };
+    /**
+     * Used to validate the scopes input parameter requested  by the developer.
+     * @param {Array<string>} inputScopes - Developer requested permissions. Not all scopes are guaranteed to be included in the access token returned.
+     * @param {boolean} scopesRequired - Boolean indicating whether the scopes array is required or not
+     */
+    ScopeSet.prototype.validateInputScopes = function (inputScopes) {
+        // Check if scopes are required but not given or is an empty array
+        if (!inputScopes || inputScopes.length < 1) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientConfigurationError.createEmptyScopesArrayError */ .r.createEmptyScopesArrayError();
+        }
+    };
+    /**
+     * Check if a given scope is present in this set of scopes.
+     * @param scope
+     */
+    ScopeSet.prototype.containsScope = function (scope) {
+        var lowerCaseScopes = this.printScopesLowerCase().split(" ");
+        var lowerCaseScopesSet = new ScopeSet(lowerCaseScopes);
+        // compare lowercase scopes
+        return !_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(scope) ? lowerCaseScopesSet.scopes.has(scope.toLowerCase()) : false;
+    };
+    /**
+     * Check if a set of scopes is present in this set of scopes.
+     * @param scopeSet
+     */
+    ScopeSet.prototype.containsScopeSet = function (scopeSet) {
+        var _this = this;
+        if (!scopeSet || scopeSet.scopes.size <= 0) {
+            return false;
+        }
+        return (this.scopes.size >= scopeSet.scopes.size && scopeSet.asArray().every(function (scope) { return _this.containsScope(scope); }));
+    };
+    /**
+     * Check if set of scopes contains only the defaults
+     */
+    ScopeSet.prototype.containsOnlyOIDCScopes = function () {
+        var _this = this;
+        var defaultScopeCount = 0;
+        _utils_Constants_js__WEBPACK_IMPORTED_MODULE_3__/* .OIDC_SCOPES.forEach */ .$f.forEach(function (defaultScope) {
+            if (_this.containsScope(defaultScope)) {
+                defaultScopeCount += 1;
+            }
+        });
+        return this.scopes.size === defaultScopeCount;
+    };
+    /**
+     * Appends single scope if passed
+     * @param newScope
+     */
+    ScopeSet.prototype.appendScope = function (newScope) {
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(newScope)) {
+            this.scopes.add(newScope.trim());
+        }
+    };
+    /**
+     * Appends multiple scopes if passed
+     * @param newScopes
+     */
+    ScopeSet.prototype.appendScopes = function (newScopes) {
+        var _this = this;
+        try {
+            newScopes.forEach(function (newScope) { return _this.appendScope(newScope); });
+        }
+        catch (e) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__/* .ClientAuthError.createAppendScopeSetError */ .e.createAppendScopeSetError(e);
+        }
+    };
+    /**
+     * Removes element from set of scopes.
+     * @param scope
+     */
+    ScopeSet.prototype.removeScope = function (scope) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(scope)) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__/* .ClientAuthError.createRemoveEmptyScopeFromSetError */ .e.createRemoveEmptyScopeFromSetError(scope);
+        }
+        this.scopes.delete(scope.trim());
+    };
+    /**
+     * Removes default scopes from set of scopes
+     * Primarily used to prevent cache misses if the default scopes are not returned from the server
+     */
+    ScopeSet.prototype.removeOIDCScopes = function () {
+        var _this = this;
+        _utils_Constants_js__WEBPACK_IMPORTED_MODULE_3__/* .OIDC_SCOPES.forEach */ .$f.forEach(function (defaultScope) {
+            _this.scopes.delete(defaultScope);
+        });
+    };
+    /**
+     * Combines an array of scopes with the current set of scopes.
+     * @param otherScopes
+     */
+    ScopeSet.prototype.unionScopeSets = function (otherScopes) {
+        if (!otherScopes) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__/* .ClientAuthError.createEmptyInputScopeSetError */ .e.createEmptyInputScopeSetError();
+        }
+        var unionScopes = new Set(); // Iterator in constructor not supported in IE11
+        otherScopes.scopes.forEach(function (scope) { return unionScopes.add(scope.toLowerCase()); });
+        this.scopes.forEach(function (scope) { return unionScopes.add(scope.toLowerCase()); });
+        return unionScopes;
+    };
+    /**
+     * Check if scopes intersect between this set and another.
+     * @param otherScopes
+     */
+    ScopeSet.prototype.intersectingScopeSets = function (otherScopes) {
+        if (!otherScopes) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_4__/* .ClientAuthError.createEmptyInputScopeSetError */ .e.createEmptyInputScopeSetError();
+        }
+        // Do not allow OIDC scopes to be the only intersecting scopes
+        if (!otherScopes.containsOnlyOIDCScopes()) {
+            otherScopes.removeOIDCScopes();
+        }
+        var unionScopes = this.unionScopeSets(otherScopes);
+        var sizeOtherScopes = otherScopes.getScopeCount();
+        var sizeThisScopes = this.getScopeCount();
+        var sizeUnionScopes = unionScopes.size;
+        return sizeUnionScopes < (sizeThisScopes + sizeOtherScopes);
+    };
+    /**
+     * Returns size of set of scopes.
+     */
+    ScopeSet.prototype.getScopeCount = function () {
+        return this.scopes.size;
+    };
+    /**
+     * Returns the scopes as an array of string values
+     */
+    ScopeSet.prototype.asArray = function () {
+        var array = [];
+        this.scopes.forEach(function (val) { return array.push(val); });
+        return array;
+    };
+    /**
+     * Prints scopes into a space-delimited string
+     */
+    ScopeSet.prototype.printScopes = function () {
+        if (this.scopes) {
+            var scopeArr = this.asArray();
+            return scopeArr.join(" ");
+        }
+        return "";
+    };
+    /**
+     * Prints scopes into a space-delimited lower-case string (used for caching)
+     */
+    ScopeSet.prototype.printScopesLowerCase = function () {
+        return this.printScopes().toLowerCase();
+    };
+    return ScopeSet;
+}());
+
+
+//# sourceMappingURL=ScopeSet.js.map
+
+
+/***/ }),
+
+/***/ 32105:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "s": () => (/* binding */ ResponseHandler)
+});
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/_virtual/_tslib.js
+var _tslib = __webpack_require__(5096);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/account/ClientInfo.js
+var ClientInfo = __webpack_require__(11520);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ClientAuthError.js
+var ClientAuthError = __webpack_require__(60742);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/StringUtils.js
+var StringUtils = __webpack_require__(61653);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/ServerError.js
+var ServerError = __webpack_require__(91359);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/account/AuthToken.js
+var AuthToken = __webpack_require__(70591);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/request/ScopeSet.js
+var ScopeSet = __webpack_require__(92613);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AccountEntity.js
+var AccountEntity = __webpack_require__(43640);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/authority/AuthorityType.js
+var AuthorityType = __webpack_require__(52944);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/IdTokenEntity.js
+var IdTokenEntity = __webpack_require__(70979);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AccessTokenEntity.js
+var AccessTokenEntity = __webpack_require__(85907);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/RefreshTokenEntity.js
+var RefreshTokenEntity = __webpack_require__(11429);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/error/InteractionRequiredAuthError.js
+var InteractionRequiredAuthError = __webpack_require__(83927);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/CacheRecord.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var CacheRecord = /** @class */ (function () {
+    function CacheRecord(accountEntity, idTokenEntity, accessTokenEntity, refreshTokenEntity, appMetadataEntity) {
+        this.account = accountEntity || null;
+        this.idToken = idTokenEntity || null;
+        this.accessToken = accessTokenEntity || null;
+        this.refreshToken = refreshTokenEntity || null;
+        this.appMetadata = appMetadataEntity || null;
+    }
+    return CacheRecord;
+}());
+
+
+//# sourceMappingURL=CacheRecord.js.map
+
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/ProtocolUtils.js
+var ProtocolUtils = __webpack_require__(3516);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/utils/Constants.js
+var Constants = __webpack_require__(77891);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/crypto/PopTokenGenerator.js
+var PopTokenGenerator = __webpack_require__(17650);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/entities/AppMetadataEntity.js
+var AppMetadataEntity = __webpack_require__(59993);
+// EXTERNAL MODULE: ./node_modules/@azure/msal-common/dist/cache/persistence/TokenCacheContext.js
+var TokenCacheContext = __webpack_require__(59665);
+;// CONCATENATED MODULE: ./node_modules/@azure/msal-common/dist/response/ResponseHandler.js
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Class that handles response parsing.
+ */
+var ResponseHandler = /** @class */ (function () {
+    function ResponseHandler(clientId, cacheStorage, cryptoObj, logger, serializableCache, persistencePlugin) {
+        this.clientId = clientId;
+        this.cacheStorage = cacheStorage;
+        this.cryptoObj = cryptoObj;
+        this.logger = logger;
+        this.serializableCache = serializableCache;
+        this.persistencePlugin = persistencePlugin;
+    }
+    /**
+     * Function which validates server authorization code response.
+     * @param serverResponseHash
+     * @param cachedState
+     * @param cryptoObj
+     */
+    ResponseHandler.prototype.validateServerAuthorizationCodeResponse = function (serverResponseHash, cachedState, cryptoObj) {
+        if (!serverResponseHash.state || !cachedState) {
+            throw !serverResponseHash.state ? ClientAuthError/* ClientAuthError.createStateNotFoundError */.e.createStateNotFoundError("Server State") : ClientAuthError/* ClientAuthError.createStateNotFoundError */.e.createStateNotFoundError("Cached State");
+        }
+        if (decodeURIComponent(serverResponseHash.state) !== decodeURIComponent(cachedState)) {
+            throw ClientAuthError/* ClientAuthError.createStateMismatchError */.e.createStateMismatchError();
+        }
+        // Check for error
+        if (serverResponseHash.error || serverResponseHash.error_description || serverResponseHash.suberror) {
+            if (InteractionRequiredAuthError/* InteractionRequiredAuthError.isInteractionRequiredError */.Yo.isInteractionRequiredError(serverResponseHash.error, serverResponseHash.error_description, serverResponseHash.suberror)) {
+                throw new InteractionRequiredAuthError/* InteractionRequiredAuthError */.Yo(serverResponseHash.error || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, serverResponseHash.error_description, serverResponseHash.suberror);
+            }
+            throw new ServerError/* ServerError */.n(serverResponseHash.error || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, serverResponseHash.error_description, serverResponseHash.suberror);
+        }
+        if (serverResponseHash.client_info) {
+            (0,ClientInfo/* buildClientInfo */.B)(serverResponseHash.client_info, cryptoObj);
+        }
+    };
+    /**
+     * Function which validates server authorization token response.
+     * @param serverResponse
+     */
+    ResponseHandler.prototype.validateTokenResponse = function (serverResponse) {
+        // Check for error
+        if (serverResponse.error || serverResponse.error_description || serverResponse.suberror) {
+            if (InteractionRequiredAuthError/* InteractionRequiredAuthError.isInteractionRequiredError */.Yo.isInteractionRequiredError(serverResponse.error, serverResponse.error_description, serverResponse.suberror)) {
+                throw new InteractionRequiredAuthError/* InteractionRequiredAuthError */.Yo(serverResponse.error, serverResponse.error_description, serverResponse.suberror);
+            }
+            var errString = serverResponse.error_codes + " - [" + serverResponse.timestamp + "]: " + serverResponse.error_description + " - Correlation ID: " + serverResponse.correlation_id + " - Trace ID: " + serverResponse.trace_id;
+            throw new ServerError/* ServerError */.n(serverResponse.error, errString, serverResponse.suberror);
+        }
+    };
+    /**
+     * Returns a constructed token response based on given string. Also manages the cache updates and cleanups.
+     * @param serverTokenResponse
+     * @param authority
+     */
+    ResponseHandler.prototype.handleServerTokenResponse = function (serverTokenResponse, authority, reqTimestamp, request, authCodePayload, oboAssertion, handlingRefreshTokenResponse) {
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var idTokenObj, requestStateObj, cacheRecord, cacheContext, key, account;
+            return (0,_tslib/* __generator */.Jh)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (serverTokenResponse.id_token) {
+                            idTokenObj = new AuthToken/* AuthToken */.H(serverTokenResponse.id_token || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, this.cryptoObj);
+                            // token nonce check (TODO: Add a warning if no nonce is given?)
+                            if (authCodePayload && !StringUtils/* StringUtils.isEmpty */.x.isEmpty(authCodePayload.nonce)) {
+                                if (idTokenObj.claims.nonce !== authCodePayload.nonce) {
+                                    throw ClientAuthError/* ClientAuthError.createNonceMismatchError */.e.createNonceMismatchError();
+                                }
+                            }
+                        }
+                        // generate homeAccountId
+                        this.homeAccountIdentifier = AccountEntity/* AccountEntity.generateHomeAccountId */.r.generateHomeAccountId(serverTokenResponse.client_info || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, authority.authorityType, this.logger, this.cryptoObj, idTokenObj);
+                        if (!!authCodePayload && !!authCodePayload.state) {
+                            requestStateObj = ProtocolUtils/* ProtocolUtils.parseRequestState */.C.parseRequestState(this.cryptoObj, authCodePayload.state);
+                        }
+                        // Add keyId from request to serverTokenResponse if defined
+                        serverTokenResponse.key_id = serverTokenResponse.key_id || request.sshKid || undefined;
+                        cacheRecord = this.generateCacheRecord(serverTokenResponse, authority, reqTimestamp, request, idTokenObj, oboAssertion, authCodePayload);
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, , 5, 8]);
+                        if (!(this.persistencePlugin && this.serializableCache)) return [3 /*break*/, 3];
+                        this.logger.verbose("Persistence enabled, calling beforeCacheAccess");
+                        cacheContext = new TokenCacheContext/* TokenCacheContext */.C(this.serializableCache, true);
+                        return [4 /*yield*/, this.persistencePlugin.beforeCacheAccess(cacheContext)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        /*
+                         * When saving a refreshed tokens to the cache, it is expected that the account that was used is present in the cache.
+                         * If not present, we should return null, as it's the case that another application called removeAccount in between
+                         * the calls to getAllAccounts and acquireTokenSilent. We should not overwrite that removal.
+                         */
+                        if (handlingRefreshTokenResponse && cacheRecord.account) {
+                            key = cacheRecord.account.generateAccountKey();
+                            account = this.cacheStorage.getAccount(key);
+                            if (!account) {
+                                this.logger.warning("Account used to refresh tokens not in persistence, refreshed tokens will not be stored in the cache");
+                                return [2 /*return*/, ResponseHandler.generateAuthenticationResult(this.cryptoObj, authority, cacheRecord, false, request, idTokenObj, requestStateObj)];
+                            }
+                        }
+                        return [4 /*yield*/, this.cacheStorage.saveCacheRecord(cacheRecord)];
+                    case 4:
+                        _a.sent();
+                        return [3 /*break*/, 8];
+                    case 5:
+                        if (!(this.persistencePlugin && this.serializableCache && cacheContext)) return [3 /*break*/, 7];
+                        this.logger.verbose("Persistence enabled, calling afterCacheAccess");
+                        return [4 /*yield*/, this.persistencePlugin.afterCacheAccess(cacheContext)];
+                    case 6:
+                        _a.sent();
+                        _a.label = 7;
+                    case 7: return [7 /*endfinally*/];
+                    case 8: return [2 /*return*/, ResponseHandler.generateAuthenticationResult(this.cryptoObj, authority, cacheRecord, false, request, idTokenObj, requestStateObj, serverTokenResponse.spa_code)];
+                }
+            });
+        });
+    };
+    /**
+     * Generates CacheRecord
+     * @param serverTokenResponse
+     * @param idTokenObj
+     * @param authority
+     */
+    ResponseHandler.prototype.generateCacheRecord = function (serverTokenResponse, authority, reqTimestamp, request, idTokenObj, oboAssertion, authCodePayload) {
+        var env = authority.getPreferredCache();
+        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(env)) {
+            throw ClientAuthError/* ClientAuthError.createInvalidCacheEnvironmentError */.e.createInvalidCacheEnvironmentError();
+        }
+        // IdToken: non AAD scenarios can have empty realm
+        var cachedIdToken;
+        var cachedAccount;
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(serverTokenResponse.id_token) && !!idTokenObj) {
+            cachedIdToken = IdTokenEntity/* IdTokenEntity.createIdTokenEntity */.w.createIdTokenEntity(this.homeAccountIdentifier, env, serverTokenResponse.id_token || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, this.clientId, idTokenObj.claims.tid || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, oboAssertion);
+            cachedAccount = this.generateAccountEntity(serverTokenResponse, idTokenObj, authority, oboAssertion, authCodePayload);
+        }
+        // AccessToken
+        var cachedAccessToken = null;
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(serverTokenResponse.access_token)) {
+            // If scopes not returned in server response, use request scopes
+            var responseScopes = serverTokenResponse.scope ? ScopeSet/* ScopeSet.fromString */.i.fromString(serverTokenResponse.scope) : new ScopeSet/* ScopeSet */.i(request.scopes || []);
+            /*
+             * Use timestamp calculated before request
+             * Server may return timestamps as strings, parse to numbers if so.
+             */
+            var expiresIn = (typeof serverTokenResponse.expires_in === "string" ? parseInt(serverTokenResponse.expires_in, 10) : serverTokenResponse.expires_in) || 0;
+            var extExpiresIn = (typeof serverTokenResponse.ext_expires_in === "string" ? parseInt(serverTokenResponse.ext_expires_in, 10) : serverTokenResponse.ext_expires_in) || 0;
+            var refreshIn = (typeof serverTokenResponse.refresh_in === "string" ? parseInt(serverTokenResponse.refresh_in, 10) : serverTokenResponse.refresh_in) || undefined;
+            var tokenExpirationSeconds = reqTimestamp + expiresIn;
+            var extendedTokenExpirationSeconds = tokenExpirationSeconds + extExpiresIn;
+            var refreshOnSeconds = refreshIn && refreshIn > 0 ? reqTimestamp + refreshIn : undefined;
+            // non AAD scenarios can have empty realm
+            cachedAccessToken = AccessTokenEntity/* AccessTokenEntity.createAccessTokenEntity */._.createAccessTokenEntity(this.homeAccountIdentifier, env, serverTokenResponse.access_token || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, this.clientId, idTokenObj ? idTokenObj.claims.tid || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING : authority.tenant, responseScopes.printScopes(), tokenExpirationSeconds, extendedTokenExpirationSeconds, this.cryptoObj, refreshOnSeconds, serverTokenResponse.token_type, oboAssertion, serverTokenResponse.key_id, request.claims, request.requestedClaimsHash);
+        }
+        // refreshToken
+        var cachedRefreshToken = null;
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(serverTokenResponse.refresh_token)) {
+            cachedRefreshToken = RefreshTokenEntity/* RefreshTokenEntity.createRefreshTokenEntity */.e.createRefreshTokenEntity(this.homeAccountIdentifier, env, serverTokenResponse.refresh_token || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING, this.clientId, serverTokenResponse.foci, oboAssertion);
+        }
+        // appMetadata
+        var cachedAppMetadata = null;
+        if (!StringUtils/* StringUtils.isEmpty */.x.isEmpty(serverTokenResponse.foci)) {
+            cachedAppMetadata = AppMetadataEntity/* AppMetadataEntity.createAppMetadataEntity */.T.createAppMetadataEntity(this.clientId, env, serverTokenResponse.foci);
+        }
+        return new CacheRecord(cachedAccount, cachedIdToken, cachedAccessToken, cachedRefreshToken, cachedAppMetadata);
+    };
+    /**
+     * Generate Account
+     * @param serverTokenResponse
+     * @param idToken
+     * @param authority
+     */
+    ResponseHandler.prototype.generateAccountEntity = function (serverTokenResponse, idToken, authority, oboAssertion, authCodePayload) {
+        var authorityType = authority.authorityType;
+        var cloudGraphHostName = authCodePayload ? authCodePayload.cloud_graph_host_name : "";
+        var msGraphhost = authCodePayload ? authCodePayload.msgraph_host : "";
+        // ADFS does not require client_info in the response
+        if (authorityType === AuthorityType/* AuthorityType.Adfs */.a.Adfs) {
+            this.logger.verbose("Authority type is ADFS, creating ADFS account");
+            return AccountEntity/* AccountEntity.createGenericAccount */.r.createGenericAccount(this.homeAccountIdentifier, idToken, authority, oboAssertion, cloudGraphHostName, msGraphhost);
+        }
+        // This fallback applies to B2C as well as they fall under an AAD account type.
+        if (StringUtils/* StringUtils.isEmpty */.x.isEmpty(serverTokenResponse.client_info) && authority.protocolMode === "AAD") {
+            throw ClientAuthError/* ClientAuthError.createClientInfoEmptyError */.e.createClientInfoEmptyError();
+        }
+        return serverTokenResponse.client_info ?
+            AccountEntity/* AccountEntity.createAccount */.r.createAccount(serverTokenResponse.client_info, this.homeAccountIdentifier, idToken, authority, oboAssertion, cloudGraphHostName, msGraphhost) :
+            AccountEntity/* AccountEntity.createGenericAccount */.r.createGenericAccount(this.homeAccountIdentifier, idToken, authority, oboAssertion, cloudGraphHostName, msGraphhost);
+    };
+    /**
+     * Creates an @AuthenticationResult from @CacheRecord , @IdToken , and a boolean that states whether or not the result is from cache.
+     *
+     * Optionally takes a state string that is set as-is in the response.
+     *
+     * @param cacheRecord
+     * @param idTokenObj
+     * @param fromTokenCache
+     * @param stateString
+     */
+    ResponseHandler.generateAuthenticationResult = function (cryptoObj, authority, cacheRecord, fromTokenCache, request, idTokenObj, requestState, code) {
+        var _a, _b, _c;
+        return (0,_tslib/* __awaiter */.mG)(this, void 0, void 0, function () {
+            var accessToken, responseScopes, expiresOn, extExpiresOn, familyId, popTokenGenerator, uid, tid;
+            return (0,_tslib/* __generator */.Jh)(this, function (_d) {
+                switch (_d.label) {
+                    case 0:
+                        accessToken = "";
+                        responseScopes = [];
+                        expiresOn = null;
+                        familyId = Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                        if (!cacheRecord.accessToken) return [3 /*break*/, 4];
+                        if (!(cacheRecord.accessToken.tokenType === Constants/* AuthenticationScheme.POP */.hO.POP)) return [3 /*break*/, 2];
+                        popTokenGenerator = new PopTokenGenerator/* PopTokenGenerator */.$(cryptoObj);
+                        return [4 /*yield*/, popTokenGenerator.signPopToken(cacheRecord.accessToken.secret, request)];
+                    case 1:
+                        accessToken = _d.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        accessToken = cacheRecord.accessToken.secret;
+                        _d.label = 3;
+                    case 3:
+                        responseScopes = ScopeSet/* ScopeSet.fromString */.i.fromString(cacheRecord.accessToken.target).asArray();
+                        expiresOn = new Date(Number(cacheRecord.accessToken.expiresOn) * 1000);
+                        extExpiresOn = new Date(Number(cacheRecord.accessToken.extendedExpiresOn) * 1000);
+                        _d.label = 4;
+                    case 4:
+                        if (cacheRecord.appMetadata) {
+                            familyId = cacheRecord.appMetadata.familyId === Constants/* THE_FAMILY_ID */.ch ? Constants/* THE_FAMILY_ID */.ch : Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                        }
+                        uid = (idTokenObj === null || idTokenObj === void 0 ? void 0 : idTokenObj.claims.oid) || (idTokenObj === null || idTokenObj === void 0 ? void 0 : idTokenObj.claims.sub) || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                        tid = (idTokenObj === null || idTokenObj === void 0 ? void 0 : idTokenObj.claims.tid) || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING;
+                        return [2 /*return*/, {
+                                authority: authority.canonicalAuthority,
+                                uniqueId: uid,
+                                tenantId: tid,
+                                scopes: responseScopes,
+                                account: cacheRecord.account ? cacheRecord.account.getAccountInfo() : null,
+                                idToken: idTokenObj ? idTokenObj.rawToken : Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING,
+                                idTokenClaims: idTokenObj ? idTokenObj.claims : {},
+                                accessToken: accessToken,
+                                fromCache: fromTokenCache,
+                                expiresOn: expiresOn,
+                                correlationId: request.correlationId,
+                                extExpiresOn: extExpiresOn,
+                                familyId: familyId,
+                                tokenType: ((_a = cacheRecord.accessToken) === null || _a === void 0 ? void 0 : _a.tokenType) || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING,
+                                state: requestState ? requestState.userRequestState : Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING,
+                                cloudGraphHostName: ((_b = cacheRecord.account) === null || _b === void 0 ? void 0 : _b.cloudGraphHostName) || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING,
+                                msGraphHost: ((_c = cacheRecord.account) === null || _c === void 0 ? void 0 : _c.msGraphHost) || Constants/* Constants.EMPTY_STRING */.gT.EMPTY_STRING,
+                                code: code
+                            }];
+                }
+            });
+        });
+    };
+    return ResponseHandler;
+}());
+
+
+//# sourceMappingURL=ResponseHandler.js.map
+
+
+/***/ }),
+
+/***/ 31093:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "d": () => (/* binding */ ServerTelemetryManager)
+/* harmony export */ });
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77891);
+/* harmony import */ var _cache_entities_ServerTelemetryEntity_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(44612);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(61653);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var ServerTelemetryManager = /** @class */ (function () {
+    function ServerTelemetryManager(telemetryRequest, cacheManager) {
+        this.cacheOutcome = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .CacheOutcome.NO_CACHE_HIT */ .To.NO_CACHE_HIT;
+        this.cacheManager = cacheManager;
+        this.apiId = telemetryRequest.apiId;
+        this.correlationId = telemetryRequest.correlationId;
+        this.wrapperSKU = telemetryRequest.wrapperSKU || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+        this.wrapperVer = telemetryRequest.wrapperVer || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+        this.telemetryCacheKey = _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.CACHE_KEY */ .HN.CACHE_KEY + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Separators.CACHE_KEY_SEPARATOR */ .Bv.CACHE_KEY_SEPARATOR + telemetryRequest.clientId;
+    }
+    /**
+     * API to add MSER Telemetry to request
+     */
+    ServerTelemetryManager.prototype.generateCurrentRequestHeaderValue = function () {
+        var request = "" + this.apiId + _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR + this.cacheOutcome;
+        var platformFields = [this.wrapperSKU, this.wrapperVer].join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR);
+        var regionDiscoveryFields = this.getRegionDiscoveryFields();
+        var requestWithRegionDiscoveryFields = [request, regionDiscoveryFields].join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR);
+        return [_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.SCHEMA_VERSION */ .HN.SCHEMA_VERSION, requestWithRegionDiscoveryFields, platformFields].join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.CATEGORY_SEPARATOR */ .HN.CATEGORY_SEPARATOR);
+    };
+    /**
+     * API to add MSER Telemetry for the last failed request
+     */
+    ServerTelemetryManager.prototype.generateLastRequestHeaderValue = function () {
+        var lastRequests = this.getLastRequests();
+        var maxErrors = ServerTelemetryManager.maxErrorsToSend(lastRequests);
+        var failedRequests = lastRequests.failedRequests.slice(0, 2 * maxErrors).join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR);
+        var errors = lastRequests.errors.slice(0, maxErrors).join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR);
+        var errorCount = lastRequests.errors.length;
+        // Indicate whether this header contains all data or partial data
+        var overflow = maxErrors < errorCount ? _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.OVERFLOW_TRUE */ .HN.OVERFLOW_TRUE : _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.OVERFLOW_FALSE */ .HN.OVERFLOW_FALSE;
+        var platformFields = [errorCount, overflow].join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.VALUE_SEPARATOR */ .HN.VALUE_SEPARATOR);
+        return [_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.SCHEMA_VERSION */ .HN.SCHEMA_VERSION, lastRequests.cacheHits, failedRequests, errors, platformFields].join(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.CATEGORY_SEPARATOR */ .HN.CATEGORY_SEPARATOR);
+    };
+    /**
+     * API to cache token failures for MSER data capture
+     * @param error
+     */
+    ServerTelemetryManager.prototype.cacheFailedRequest = function (error) {
+        var lastRequests = this.getLastRequests();
+        if (lastRequests.errors.length >= _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.MAX_CACHED_ERRORS */ .HN.MAX_CACHED_ERRORS) {
+            // Remove a cached error to make room, first in first out
+            lastRequests.failedRequests.shift(); // apiId
+            lastRequests.failedRequests.shift(); // correlationId
+            lastRequests.errors.shift();
+        }
+        lastRequests.failedRequests.push(this.apiId, this.correlationId);
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .StringUtils.isEmpty */ .x.isEmpty(error.subError)) {
+            lastRequests.errors.push(error.subError);
+        }
+        else if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_1__/* .StringUtils.isEmpty */ .x.isEmpty(error.errorCode)) {
+            lastRequests.errors.push(error.errorCode);
+        }
+        else if (!!error && error.toString()) {
+            lastRequests.errors.push(error.toString());
+        }
+        else {
+            lastRequests.errors.push(_utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.UNKNOWN_ERROR */ .HN.UNKNOWN_ERROR);
+        }
+        this.cacheManager.setServerTelemetry(this.telemetryCacheKey, lastRequests);
+        return;
+    };
+    /**
+     * Update server telemetry cache entry by incrementing cache hit counter
+     */
+    ServerTelemetryManager.prototype.incrementCacheHits = function () {
+        var lastRequests = this.getLastRequests();
+        lastRequests.cacheHits += 1;
+        this.cacheManager.setServerTelemetry(this.telemetryCacheKey, lastRequests);
+        return lastRequests.cacheHits;
+    };
+    /**
+     * Get the server telemetry entity from cache or initialize a new one
+     */
+    ServerTelemetryManager.prototype.getLastRequests = function () {
+        var initialValue = new _cache_entities_ServerTelemetryEntity_js__WEBPACK_IMPORTED_MODULE_2__/* .ServerTelemetryEntity */ .d();
+        var lastRequests = this.cacheManager.getServerTelemetry(this.telemetryCacheKey);
+        return lastRequests || initialValue;
+    };
+    /**
+     * Remove server telemetry cache entry
+     */
+    ServerTelemetryManager.prototype.clearTelemetryCache = function () {
+        var lastRequests = this.getLastRequests();
+        var numErrorsFlushed = ServerTelemetryManager.maxErrorsToSend(lastRequests);
+        var errorCount = lastRequests.errors.length;
+        if (numErrorsFlushed === errorCount) {
+            // All errors were sent on last request, clear Telemetry cache
+            this.cacheManager.removeItem(this.telemetryCacheKey);
+        }
+        else {
+            // Partial data was flushed to server, construct a new telemetry cache item with errors that were not flushed
+            var serverTelemEntity = new _cache_entities_ServerTelemetryEntity_js__WEBPACK_IMPORTED_MODULE_2__/* .ServerTelemetryEntity */ .d();
+            serverTelemEntity.failedRequests = lastRequests.failedRequests.slice(numErrorsFlushed * 2); // failedRequests contains 2 items for each error
+            serverTelemEntity.errors = lastRequests.errors.slice(numErrorsFlushed);
+            this.cacheManager.setServerTelemetry(this.telemetryCacheKey, serverTelemEntity);
+        }
+    };
+    /**
+     * Returns the maximum number of errors that can be flushed to the server in the next network request
+     * @param serverTelemetryEntity
+     */
+    ServerTelemetryManager.maxErrorsToSend = function (serverTelemetryEntity) {
+        var i;
+        var maxErrors = 0;
+        var dataSize = 0;
+        var errorCount = serverTelemetryEntity.errors.length;
+        for (i = 0; i < errorCount; i++) {
+            // failedRequests parameter contains pairs of apiId and correlationId, multiply index by 2 to preserve pairs
+            var apiId = serverTelemetryEntity.failedRequests[2 * i] || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+            var correlationId = serverTelemetryEntity.failedRequests[2 * i + 1] || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+            var errorCode = serverTelemetryEntity.errors[i] || _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .Constants.EMPTY_STRING */ .gT.EMPTY_STRING;
+            // Count number of characters that would be added to header, each character is 1 byte. Add 3 at the end to account for separators
+            dataSize += apiId.toString().length + correlationId.toString().length + errorCode.length + 3;
+            if (dataSize < _utils_Constants_js__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_TELEM_CONSTANTS.MAX_LAST_HEADER_BYTES */ .HN.MAX_LAST_HEADER_BYTES) {
+                // Adding this entry to the header would still keep header size below the limit
+                maxErrors += 1;
+            }
+            else {
+                break;
+            }
+        }
+        return maxErrors;
+    };
+    /**
+     * Get the region discovery fields
+     *
+     * @returns string
+     */
+    ServerTelemetryManager.prototype.getRegionDiscoveryFields = function () {
+        var regionDiscoveryFields = [];
+        regionDiscoveryFields.push(this.regionUsed || "");
+        regionDiscoveryFields.push(this.regionSource || "");
+        regionDiscoveryFields.push(this.regionOutcome || "");
+        return regionDiscoveryFields.join(",");
+    };
+    /**
+     * Update the region discovery metadata
+     *
+     * @param regionDiscoveryMetadata
+     * @returns void
+     */
+    ServerTelemetryManager.prototype.updateRegionDiscoveryMetadata = function (regionDiscoveryMetadata) {
+        this.regionUsed = regionDiscoveryMetadata.region_used;
+        this.regionSource = regionDiscoveryMetadata.region_source;
+        this.regionOutcome = regionDiscoveryMetadata.region_outcome;
+    };
+    /**
+     * Set cache outcome
+     */
+    ServerTelemetryManager.prototype.setCacheOutcome = function (cacheOutcome) {
+        this.cacheOutcome = cacheOutcome;
+    };
+    return ServerTelemetryManager;
+}());
+
+
+//# sourceMappingURL=ServerTelemetryManager.js.map
+
+
+/***/ }),
+
+/***/ 99860:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ UrlString)
+/* harmony export */ });
+/* harmony import */ var _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47181);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(60742);
+/* harmony import */ var _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/* harmony import */ var _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(77891);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Url object class which can perform various transformations on url strings.
+ */
+var UrlString = /** @class */ (function () {
+    function UrlString(url) {
+        this._urlString = url;
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(this._urlString)) {
+            // Throws error if url is empty
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createUrlEmptyError */ .r.createUrlEmptyError();
+        }
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(this.getHash())) {
+            this._urlString = UrlString.canonicalizeUri(url);
+        }
+    }
+    Object.defineProperty(UrlString.prototype, "urlString", {
+        get: function () {
+            return this._urlString;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Ensure urls are lower case and end with a / character.
+     * @param url
+     */
+    UrlString.canonicalizeUri = function (url) {
+        if (url) {
+            var lowerCaseUrl = url.toLowerCase();
+            if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.endsWith */ .x.endsWith(lowerCaseUrl, "?")) {
+                lowerCaseUrl = lowerCaseUrl.slice(0, -1);
+            }
+            else if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.endsWith */ .x.endsWith(lowerCaseUrl, "?/")) {
+                lowerCaseUrl = lowerCaseUrl.slice(0, -2);
+            }
+            if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.endsWith */ .x.endsWith(lowerCaseUrl, "/")) {
+                lowerCaseUrl += "/";
+            }
+            return lowerCaseUrl;
+        }
+        return url;
+    };
+    /**
+     * Throws if urlString passed is not a valid authority URI string.
+     */
+    UrlString.prototype.validateAsUri = function () {
+        // Attempts to parse url for uri components
+        var components;
+        try {
+            components = this.getUrlComponents();
+        }
+        catch (e) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createUrlParseError */ .r.createUrlParseError(e);
+        }
+        // Throw error if URI or path segments are not parseable.
+        if (!components.HostNameAndPort || !components.PathSegments) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createUrlParseError */ .r.createUrlParseError("Given url string: " + this.urlString);
+        }
+        // Throw error if uri is insecure.
+        if (!components.Protocol || components.Protocol.toLowerCase() !== "https:") {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createInsecureAuthorityUriError */ .r.createInsecureAuthorityUriError(this.urlString);
+        }
+    };
+    /**
+     * Given a url and a query string return the url with provided query string appended
+     * @param url
+     * @param queryString
+     */
+    UrlString.appendQueryString = function (url, queryString) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(queryString)) {
+            return url;
+        }
+        return url.indexOf("?") < 0 ? url + "?" + queryString : url + "&" + queryString;
+    };
+    /**
+     * Returns a url with the hash removed
+     * @param url
+     */
+    UrlString.removeHashFromUrl = function (url) {
+        return UrlString.canonicalizeUri(url.split("#")[0]);
+    };
+    /**
+     * Given a url like https://a:b/common/d?e=f#g, and a tenantId, returns https://a:b/tenantId/d
+     * @param href The url
+     * @param tenantId The tenant id to replace
+     */
+    UrlString.prototype.replaceTenantPath = function (tenantId) {
+        var urlObject = this.getUrlComponents();
+        var pathArray = urlObject.PathSegments;
+        if (tenantId && (pathArray.length !== 0 && (pathArray[0] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .AADAuthorityConstants.COMMON */ .Nb.COMMON || pathArray[0] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .AADAuthorityConstants.ORGANIZATIONS */ .Nb.ORGANIZATIONS))) {
+            pathArray[0] = tenantId;
+        }
+        return UrlString.constructAuthorityUriFromObject(urlObject);
+    };
+    /**
+     * Returns the anchor part(#) of the URL
+     */
+    UrlString.prototype.getHash = function () {
+        return UrlString.parseHash(this.urlString);
+    };
+    /**
+     * Parses out the components from a url string.
+     * @returns An object with the various components. Please cache this value insted of calling this multiple times on the same url.
+     */
+    UrlString.prototype.getUrlComponents = function () {
+        // https://gist.github.com/curtisz/11139b2cfcaef4a261e0
+        var regEx = RegExp("^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?");
+        // If url string does not match regEx, we throw an error
+        var match = this.urlString.match(regEx);
+        if (!match) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createUrlParseError */ .r.createUrlParseError("Given url string: " + this.urlString);
+        }
+        // Url component object
+        var urlComponents = {
+            Protocol: match[1],
+            HostNameAndPort: match[4],
+            AbsolutePath: match[5],
+            QueryString: match[7]
+        };
+        var pathSegments = urlComponents.AbsolutePath.split("/");
+        pathSegments = pathSegments.filter(function (val) { return val && val.length > 0; }); // remove empty elements
+        urlComponents.PathSegments = pathSegments;
+        if (!_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(urlComponents.QueryString) && urlComponents.QueryString.endsWith("/")) {
+            urlComponents.QueryString = urlComponents.QueryString.substring(0, urlComponents.QueryString.length - 1);
+        }
+        return urlComponents;
+    };
+    UrlString.getDomainFromUrl = function (url) {
+        var regEx = RegExp("^([^:/?#]+://)?([^/?#]*)");
+        var match = url.match(regEx);
+        if (!match) {
+            throw _error_ClientConfigurationError_js__WEBPACK_IMPORTED_MODULE_1__/* .ClientConfigurationError.createUrlParseError */ .r.createUrlParseError("Given url string: " + url);
+        }
+        return match[2];
+    };
+    UrlString.getAbsoluteUrl = function (relativeUrl, baseUrl) {
+        if (relativeUrl[0] === _utils_Constants_js__WEBPACK_IMPORTED_MODULE_2__/* .Constants.FORWARD_SLASH */ .gT.FORWARD_SLASH) {
+            var url = new UrlString(baseUrl);
+            var baseComponents = url.getUrlComponents();
+            return baseComponents.Protocol + "//" + baseComponents.HostNameAndPort + relativeUrl;
+        }
+        return relativeUrl;
+    };
+    /**
+     * Parses hash string from given string. Returns empty string if no hash symbol is found.
+     * @param hashString
+     */
+    UrlString.parseHash = function (hashString) {
+        var hashIndex1 = hashString.indexOf("#");
+        var hashIndex2 = hashString.indexOf("#/");
+        if (hashIndex2 > -1) {
+            return hashString.substring(hashIndex2 + 2);
+        }
+        else if (hashIndex1 > -1) {
+            return hashString.substring(hashIndex1 + 1);
+        }
+        return "";
+    };
+    UrlString.constructAuthorityUriFromObject = function (urlObject) {
+        return new UrlString(urlObject.Protocol + "//" + urlObject.HostNameAndPort + "/" + urlObject.PathSegments.join("/"));
+    };
+    /**
+     * Returns URL hash as server auth code response object.
+     */
+    UrlString.getDeserializedHash = function (hash) {
+        // Check if given hash is empty
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(hash)) {
+            return {};
+        }
+        // Strip the # symbol if present
+        var parsedHash = UrlString.parseHash(hash);
+        // If # symbol was not present, above will return empty string, so give original hash value
+        var deserializedHash = _utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.queryStringToObject */ .x.queryStringToObject(_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(parsedHash) ? hash : parsedHash);
+        // Check if deserialization didn't work
+        if (!deserializedHash) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_3__/* .ClientAuthError.createHashNotDeserializedError */ .e.createHashNotDeserializedError(JSON.stringify(deserializedHash));
+        }
+        return deserializedHash;
+    };
+    /**
+     * Check if the hash of the URL string contains known properties
+     */
+    UrlString.hashContainsKnownProperties = function (hash) {
+        if (_utils_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(hash) || hash.indexOf("=") < 0) {
+            // Hash doesn't contain key/value pairs
+            return false;
+        }
+        var parameters = UrlString.getDeserializedHash(hash);
+        return !!(parameters.code ||
+            parameters.error_description ||
+            parameters.error ||
+            parameters.state);
+    };
+    return UrlString;
+}());
+
+
+//# sourceMappingURL=UrlString.js.map
+
+
+/***/ }),
+
+/***/ 77891:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Nb": () => (/* binding */ AADAuthorityConstants),
+/* harmony export */   "Fo": () => (/* binding */ AADServerParamKeys),
+/* harmony export */   "dg": () => (/* binding */ APP_METADATA),
+/* harmony export */   "QU": () => (/* binding */ AUTHORITY_METADATA_CONSTANTS),
+/* harmony export */   "hO": () => (/* binding */ AuthenticationScheme),
+/* harmony export */   "pQ": () => (/* binding */ AuthorityMetadataSource),
+/* harmony export */   "sR": () => (/* binding */ CLIENT_INFO),
+/* harmony export */   "iR": () => (/* binding */ CacheAccountType),
+/* harmony export */   "To": () => (/* binding */ CacheOutcome),
+/* harmony export */   "Xj": () => (/* binding */ CacheSchemaType),
+/* harmony export */   "LL": () => (/* binding */ CacheType),
+/* harmony export */   "As": () => (/* binding */ ClaimsRequestKeys),
+/* harmony export */   "VX": () => (/* binding */ CodeChallengeMethodValues),
+/* harmony export */   "gT": () => (/* binding */ Constants),
+/* harmony export */   "d3": () => (/* binding */ CredentialType),
+/* harmony export */   "D1": () => (/* binding */ Errors),
+/* harmony export */   "qJ": () => (/* binding */ GrantType),
+/* harmony export */   "SZ": () => (/* binding */ HeaderNames),
+/* harmony export */   "f_": () => (/* binding */ OIDC_DEFAULT_SCOPES),
+/* harmony export */   "$f": () => (/* binding */ OIDC_SCOPES),
+/* harmony export */   "Ge": () => (/* binding */ PasswordGrantConstants),
+/* harmony export */   "Vi": () => (/* binding */ PersistentCacheKeys),
+/* harmony export */   "NJ": () => (/* binding */ PromptValue),
+/* harmony export */   "ki": () => (/* binding */ RegionDiscoveryOutcomes),
+/* harmony export */   "W": () => (/* binding */ RegionDiscoverySources),
+/* harmony export */   "YY": () => (/* binding */ ResponseCodes),
+/* harmony export */   "vw": () => (/* binding */ ResponseMode),
+/* harmony export */   "HN": () => (/* binding */ SERVER_TELEM_CONSTANTS),
+/* harmony export */   "VO": () => (/* binding */ SSOTypes),
+/* harmony export */   "Bv": () => (/* binding */ Separators),
+/* harmony export */   "ch": () => (/* binding */ THE_FAMILY_ID),
+/* harmony export */   "bb": () => (/* binding */ ThrottlingConstants)
+/* harmony export */ });
+/* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5096);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+var Constants = {
+    LIBRARY_NAME: "MSAL.JS",
+    SKU: "msal.js.common",
+    // Prefix for all library cache entries
+    CACHE_PREFIX: "msal",
+    // default authority
+    DEFAULT_AUTHORITY: "https://login.microsoftonline.com/common/",
+    DEFAULT_AUTHORITY_HOST: "login.microsoftonline.com",
+    // ADFS String
+    ADFS: "adfs",
+    // Default AAD Instance Discovery Endpoint
+    AAD_INSTANCE_DISCOVERY_ENDPT: "https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=",
+    // Resource delimiter - used for certain cache entries
+    RESOURCE_DELIM: "|",
+    // Placeholder for non-existent account ids/objects
+    NO_ACCOUNT: "NO_ACCOUNT",
+    // Claims
+    CLAIMS: "claims",
+    // Consumer UTID
+    CONSUMER_UTID: "9188040d-6c67-4c5b-b112-36a304b66dad",
+    // Default scopes
+    OPENID_SCOPE: "openid",
+    PROFILE_SCOPE: "profile",
+    OFFLINE_ACCESS_SCOPE: "offline_access",
+    EMAIL_SCOPE: "email",
+    // Default response type for authorization code flow
+    CODE_RESPONSE_TYPE: "code",
+    CODE_GRANT_TYPE: "authorization_code",
+    RT_GRANT_TYPE: "refresh_token",
+    FRAGMENT_RESPONSE_MODE: "fragment",
+    S256_CODE_CHALLENGE_METHOD: "S256",
+    URL_FORM_CONTENT_TYPE: "application/x-www-form-urlencoded;charset=utf-8",
+    AUTHORIZATION_PENDING: "authorization_pending",
+    NOT_DEFINED: "not_defined",
+    EMPTY_STRING: "",
+    FORWARD_SLASH: "/",
+    IMDS_ENDPOINT: "http://169.254.169.254/metadata/instance/compute/location",
+    IMDS_VERSION: "2020-06-01",
+    IMDS_TIMEOUT: 2000,
+    AZURE_REGION_AUTO_DISCOVER_FLAG: "TryAutoDetect",
+    REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX: "login.microsoft.com",
+    KNOWN_PUBLIC_CLOUDS: ["login.microsoftonline.com", "login.windows.net", "login.microsoft.com", "sts.windows.net"]
+};
+var OIDC_DEFAULT_SCOPES = [
+    Constants.OPENID_SCOPE,
+    Constants.PROFILE_SCOPE,
+    Constants.OFFLINE_ACCESS_SCOPE
+];
+var OIDC_SCOPES = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__/* .__spreadArrays */ .pr)(OIDC_DEFAULT_SCOPES, [
+    Constants.EMAIL_SCOPE
+]);
+/**
+ * Request header names
+ */
+var HeaderNames;
+(function (HeaderNames) {
+    HeaderNames["CONTENT_TYPE"] = "Content-Type";
+    HeaderNames["RETRY_AFTER"] = "Retry-After";
+    HeaderNames["CCS_HEADER"] = "X-AnchorMailbox";
+    HeaderNames["WWWAuthenticate"] = "WWW-Authenticate";
+    HeaderNames["AuthenticationInfo"] = "Authentication-Info";
+})(HeaderNames || (HeaderNames = {}));
+/**
+ * Persistent cache keys MSAL which stay while user is logged in.
+ */
+var PersistentCacheKeys;
+(function (PersistentCacheKeys) {
+    PersistentCacheKeys["ID_TOKEN"] = "idtoken";
+    PersistentCacheKeys["CLIENT_INFO"] = "client.info";
+    PersistentCacheKeys["ADAL_ID_TOKEN"] = "adal.idtoken";
+    PersistentCacheKeys["ERROR"] = "error";
+    PersistentCacheKeys["ERROR_DESC"] = "error.description";
+    PersistentCacheKeys["ACTIVE_ACCOUNT"] = "active-account";
+})(PersistentCacheKeys || (PersistentCacheKeys = {}));
+/**
+ * String constants related to AAD Authority
+ */
+var AADAuthorityConstants;
+(function (AADAuthorityConstants) {
+    AADAuthorityConstants["COMMON"] = "common";
+    AADAuthorityConstants["ORGANIZATIONS"] = "organizations";
+    AADAuthorityConstants["CONSUMERS"] = "consumers";
+})(AADAuthorityConstants || (AADAuthorityConstants = {}));
+/**
+ * Keys in the hashParams sent by AAD Server
+ */
+var AADServerParamKeys;
+(function (AADServerParamKeys) {
+    AADServerParamKeys["CLIENT_ID"] = "client_id";
+    AADServerParamKeys["REDIRECT_URI"] = "redirect_uri";
+    AADServerParamKeys["RESPONSE_TYPE"] = "response_type";
+    AADServerParamKeys["RESPONSE_MODE"] = "response_mode";
+    AADServerParamKeys["GRANT_TYPE"] = "grant_type";
+    AADServerParamKeys["CLAIMS"] = "claims";
+    AADServerParamKeys["SCOPE"] = "scope";
+    AADServerParamKeys["ERROR"] = "error";
+    AADServerParamKeys["ERROR_DESCRIPTION"] = "error_description";
+    AADServerParamKeys["ACCESS_TOKEN"] = "access_token";
+    AADServerParamKeys["ID_TOKEN"] = "id_token";
+    AADServerParamKeys["REFRESH_TOKEN"] = "refresh_token";
+    AADServerParamKeys["EXPIRES_IN"] = "expires_in";
+    AADServerParamKeys["STATE"] = "state";
+    AADServerParamKeys["NONCE"] = "nonce";
+    AADServerParamKeys["PROMPT"] = "prompt";
+    AADServerParamKeys["SESSION_STATE"] = "session_state";
+    AADServerParamKeys["CLIENT_INFO"] = "client_info";
+    AADServerParamKeys["CODE"] = "code";
+    AADServerParamKeys["CODE_CHALLENGE"] = "code_challenge";
+    AADServerParamKeys["CODE_CHALLENGE_METHOD"] = "code_challenge_method";
+    AADServerParamKeys["CODE_VERIFIER"] = "code_verifier";
+    AADServerParamKeys["CLIENT_REQUEST_ID"] = "client-request-id";
+    AADServerParamKeys["X_CLIENT_SKU"] = "x-client-SKU";
+    AADServerParamKeys["X_CLIENT_VER"] = "x-client-VER";
+    AADServerParamKeys["X_CLIENT_OS"] = "x-client-OS";
+    AADServerParamKeys["X_CLIENT_CPU"] = "x-client-CPU";
+    AADServerParamKeys["X_CLIENT_CURR_TELEM"] = "x-client-current-telemetry";
+    AADServerParamKeys["X_CLIENT_LAST_TELEM"] = "x-client-last-telemetry";
+    AADServerParamKeys["X_MS_LIB_CAPABILITY"] = "x-ms-lib-capability";
+    AADServerParamKeys["POST_LOGOUT_URI"] = "post_logout_redirect_uri";
+    AADServerParamKeys["ID_TOKEN_HINT"] = "id_token_hint";
+    AADServerParamKeys["DEVICE_CODE"] = "device_code";
+    AADServerParamKeys["CLIENT_SECRET"] = "client_secret";
+    AADServerParamKeys["CLIENT_ASSERTION"] = "client_assertion";
+    AADServerParamKeys["CLIENT_ASSERTION_TYPE"] = "client_assertion_type";
+    AADServerParamKeys["TOKEN_TYPE"] = "token_type";
+    AADServerParamKeys["REQ_CNF"] = "req_cnf";
+    AADServerParamKeys["OBO_ASSERTION"] = "assertion";
+    AADServerParamKeys["REQUESTED_TOKEN_USE"] = "requested_token_use";
+    AADServerParamKeys["ON_BEHALF_OF"] = "on_behalf_of";
+    AADServerParamKeys["FOCI"] = "foci";
+    AADServerParamKeys["CCS_HEADER"] = "X-AnchorMailbox";
+    AADServerParamKeys["RETURN_SPA_CODE"] = "return_spa_code";
+})(AADServerParamKeys || (AADServerParamKeys = {}));
+/**
+ * Claims request keys
+ */
+var ClaimsRequestKeys;
+(function (ClaimsRequestKeys) {
+    ClaimsRequestKeys["ACCESS_TOKEN"] = "access_token";
+    ClaimsRequestKeys["XMS_CC"] = "xms_cc";
+})(ClaimsRequestKeys || (ClaimsRequestKeys = {}));
+/**
+ * we considered making this "enum" in the request instead of string, however it looks like the allowed list of
+ * prompt values kept changing over past couple of years. There are some undocumented prompt values for some
+ * internal partners too, hence the choice of generic "string" type instead of the "enum"
+ */
+var PromptValue = {
+    LOGIN: "login",
+    SELECT_ACCOUNT: "select_account",
+    CONSENT: "consent",
+    NONE: "none",
+    CREATE: "create"
+};
+/**
+ * SSO Types - generated to populate hints
+ */
+var SSOTypes;
+(function (SSOTypes) {
+    SSOTypes["ACCOUNT"] = "account";
+    SSOTypes["SID"] = "sid";
+    SSOTypes["LOGIN_HINT"] = "login_hint";
+    SSOTypes["ID_TOKEN"] = "id_token";
+    SSOTypes["DOMAIN_HINT"] = "domain_hint";
+    SSOTypes["ORGANIZATIONS"] = "organizations";
+    SSOTypes["CONSUMERS"] = "consumers";
+    SSOTypes["ACCOUNT_ID"] = "accountIdentifier";
+    SSOTypes["HOMEACCOUNT_ID"] = "homeAccountIdentifier";
+})(SSOTypes || (SSOTypes = {}));
+/**
+ * allowed values for codeVerifier
+ */
+var CodeChallengeMethodValues = {
+    PLAIN: "plain",
+    S256: "S256"
+};
+/**
+ * allowed values for response_mode
+ */
+var ResponseMode;
+(function (ResponseMode) {
+    ResponseMode["QUERY"] = "query";
+    ResponseMode["FRAGMENT"] = "fragment";
+    ResponseMode["FORM_POST"] = "form_post";
+})(ResponseMode || (ResponseMode = {}));
+/**
+ * allowed grant_type
+ */
+var GrantType;
+(function (GrantType) {
+    GrantType["IMPLICIT_GRANT"] = "implicit";
+    GrantType["AUTHORIZATION_CODE_GRANT"] = "authorization_code";
+    GrantType["CLIENT_CREDENTIALS_GRANT"] = "client_credentials";
+    GrantType["RESOURCE_OWNER_PASSWORD_GRANT"] = "password";
+    GrantType["REFRESH_TOKEN_GRANT"] = "refresh_token";
+    GrantType["DEVICE_CODE_GRANT"] = "device_code";
+    GrantType["JWT_BEARER"] = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+})(GrantType || (GrantType = {}));
+/**
+ * Account types in Cache
+ */
+var CacheAccountType;
+(function (CacheAccountType) {
+    CacheAccountType["MSSTS_ACCOUNT_TYPE"] = "MSSTS";
+    CacheAccountType["ADFS_ACCOUNT_TYPE"] = "ADFS";
+    CacheAccountType["MSAV1_ACCOUNT_TYPE"] = "MSA";
+    CacheAccountType["GENERIC_ACCOUNT_TYPE"] = "Generic"; // NTLM, Kerberos, FBA, Basic etc
+})(CacheAccountType || (CacheAccountType = {}));
+/**
+ * Separators used in cache
+ */
+var Separators;
+(function (Separators) {
+    Separators["CACHE_KEY_SEPARATOR"] = "-";
+    Separators["CLIENT_INFO_SEPARATOR"] = ".";
+})(Separators || (Separators = {}));
+/**
+ * Credential Type stored in the cache
+ */
+var CredentialType;
+(function (CredentialType) {
+    CredentialType["ID_TOKEN"] = "IdToken";
+    CredentialType["ACCESS_TOKEN"] = "AccessToken";
+    CredentialType["ACCESS_TOKEN_WITH_AUTH_SCHEME"] = "AccessToken_With_AuthScheme";
+    CredentialType["REFRESH_TOKEN"] = "RefreshToken";
+})(CredentialType || (CredentialType = {}));
+/**
+ * Credential Type stored in the cache
+ */
+var CacheSchemaType;
+(function (CacheSchemaType) {
+    CacheSchemaType["ACCOUNT"] = "Account";
+    CacheSchemaType["CREDENTIAL"] = "Credential";
+    CacheSchemaType["ID_TOKEN"] = "IdToken";
+    CacheSchemaType["ACCESS_TOKEN"] = "AccessToken";
+    CacheSchemaType["REFRESH_TOKEN"] = "RefreshToken";
+    CacheSchemaType["APP_METADATA"] = "AppMetadata";
+    CacheSchemaType["TEMPORARY"] = "TempCache";
+    CacheSchemaType["TELEMETRY"] = "Telemetry";
+    CacheSchemaType["UNDEFINED"] = "Undefined";
+    CacheSchemaType["THROTTLING"] = "Throttling";
+})(CacheSchemaType || (CacheSchemaType = {}));
+/**
+ * Combine all cache types
+ */
+var CacheType;
+(function (CacheType) {
+    CacheType[CacheType["ADFS"] = 1001] = "ADFS";
+    CacheType[CacheType["MSA"] = 1002] = "MSA";
+    CacheType[CacheType["MSSTS"] = 1003] = "MSSTS";
+    CacheType[CacheType["GENERIC"] = 1004] = "GENERIC";
+    CacheType[CacheType["ACCESS_TOKEN"] = 2001] = "ACCESS_TOKEN";
+    CacheType[CacheType["REFRESH_TOKEN"] = 2002] = "REFRESH_TOKEN";
+    CacheType[CacheType["ID_TOKEN"] = 2003] = "ID_TOKEN";
+    CacheType[CacheType["APP_METADATA"] = 3001] = "APP_METADATA";
+    CacheType[CacheType["UNDEFINED"] = 9999] = "UNDEFINED";
+})(CacheType || (CacheType = {}));
+/**
+ * More Cache related constants
+ */
+var APP_METADATA = "appmetadata";
+var CLIENT_INFO = "client_info";
+var THE_FAMILY_ID = "1";
+var AUTHORITY_METADATA_CONSTANTS = {
+    CACHE_KEY: "authority-metadata",
+    REFRESH_TIME_SECONDS: 3600 * 24 // 24 Hours
+};
+var AuthorityMetadataSource;
+(function (AuthorityMetadataSource) {
+    AuthorityMetadataSource["CONFIG"] = "config";
+    AuthorityMetadataSource["CACHE"] = "cache";
+    AuthorityMetadataSource["NETWORK"] = "network";
+})(AuthorityMetadataSource || (AuthorityMetadataSource = {}));
+var SERVER_TELEM_CONSTANTS = {
+    SCHEMA_VERSION: 5,
+    MAX_CUR_HEADER_BYTES: 80,
+    MAX_LAST_HEADER_BYTES: 330,
+    MAX_CACHED_ERRORS: 50,
+    CACHE_KEY: "server-telemetry",
+    CATEGORY_SEPARATOR: "|",
+    VALUE_SEPARATOR: ",",
+    OVERFLOW_TRUE: "1",
+    OVERFLOW_FALSE: "0",
+    UNKNOWN_ERROR: "unknown_error"
+};
+/**
+ * Type of the authentication request
+ */
+var AuthenticationScheme;
+(function (AuthenticationScheme) {
+    AuthenticationScheme["BEARER"] = "Bearer";
+    AuthenticationScheme["POP"] = "pop";
+    AuthenticationScheme["SSH"] = "ssh-cert";
+})(AuthenticationScheme || (AuthenticationScheme = {}));
+/**
+ * Constants related to throttling
+ */
+var ThrottlingConstants = {
+    // Default time to throttle RequestThumbprint in seconds
+    DEFAULT_THROTTLE_TIME_SECONDS: 60,
+    // Default maximum time to throttle in seconds, overrides what the server sends back
+    DEFAULT_MAX_THROTTLE_TIME_SECONDS: 3600,
+    // Prefix for storing throttling entries
+    THROTTLING_PREFIX: "throttling",
+    // Value assigned to the x-ms-lib-capability header to indicate to the server the library supports throttling
+    X_MS_LIB_CAPABILITY_VALUE: "retry-after, h429"
+};
+var Errors = {
+    INVALID_GRANT_ERROR: "invalid_grant",
+    CLIENT_MISMATCH_ERROR: "client_mismatch",
+};
+/**
+ * Password grant parameters
+ */
+var PasswordGrantConstants;
+(function (PasswordGrantConstants) {
+    PasswordGrantConstants["username"] = "username";
+    PasswordGrantConstants["password"] = "password";
+})(PasswordGrantConstants || (PasswordGrantConstants = {}));
+/**
+ * Response codes
+ */
+var ResponseCodes;
+(function (ResponseCodes) {
+    ResponseCodes[ResponseCodes["httpSuccess"] = 200] = "httpSuccess";
+    ResponseCodes[ResponseCodes["httpBadRequest"] = 400] = "httpBadRequest";
+})(ResponseCodes || (ResponseCodes = {}));
+/**
+ * Region Discovery Sources
+ */
+var RegionDiscoverySources;
+(function (RegionDiscoverySources) {
+    RegionDiscoverySources["FAILED_AUTO_DETECTION"] = "1";
+    RegionDiscoverySources["INTERNAL_CACHE"] = "2";
+    RegionDiscoverySources["ENVIRONMENT_VARIABLE"] = "3";
+    RegionDiscoverySources["IMDS"] = "4";
+})(RegionDiscoverySources || (RegionDiscoverySources = {}));
+/**
+ * Region Discovery Outcomes
+ */
+var RegionDiscoveryOutcomes;
+(function (RegionDiscoveryOutcomes) {
+    RegionDiscoveryOutcomes["CONFIGURED_MATCHES_DETECTED"] = "1";
+    RegionDiscoveryOutcomes["CONFIGURED_NO_AUTO_DETECTION"] = "2";
+    RegionDiscoveryOutcomes["CONFIGURED_NOT_DETECTED"] = "3";
+    RegionDiscoveryOutcomes["AUTO_DETECTION_REQUESTED_SUCCESSFUL"] = "4";
+    RegionDiscoveryOutcomes["AUTO_DETECTION_REQUESTED_FAILED"] = "5";
+})(RegionDiscoveryOutcomes || (RegionDiscoveryOutcomes = {}));
+var CacheOutcome;
+(function (CacheOutcome) {
+    CacheOutcome["NO_CACHE_HIT"] = "0";
+    CacheOutcome["FORCE_REFRESH"] = "1";
+    CacheOutcome["NO_CACHED_ACCESS_TOKEN"] = "2";
+    CacheOutcome["CACHED_ACCESS_TOKEN_EXPIRED"] = "3";
+    CacheOutcome["REFRESH_CACHED_ACCESS_TOKEN"] = "4";
+})(CacheOutcome || (CacheOutcome = {}));
+
+
+//# sourceMappingURL=Constants.js.map
+
+
+/***/ }),
+
+/***/ 3516:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "C": () => (/* binding */ ProtocolUtils)
+/* harmony export */ });
+/* harmony import */ var _StringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61653);
+/* harmony import */ var _Constants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(77891);
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Class which provides helpers for OAuth 2.0 protocol specific values
+ */
+var ProtocolUtils = /** @class */ (function () {
+    function ProtocolUtils() {
+    }
+    /**
+     * Appends user state with random guid, or returns random guid.
+     * @param userState
+     * @param randomGuid
+     */
+    ProtocolUtils.setRequestState = function (cryptoObj, userState, meta) {
+        var libraryState = ProtocolUtils.generateLibraryState(cryptoObj, meta);
+        return !_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(userState) ? "" + libraryState + _Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .Constants.RESOURCE_DELIM */ .gT.RESOURCE_DELIM + userState : libraryState;
+    };
+    /**
+     * Generates the state value used by the common library.
+     * @param randomGuid
+     * @param cryptoObj
+     */
+    ProtocolUtils.generateLibraryState = function (cryptoObj, meta) {
+        if (!cryptoObj) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientAuthError.createNoCryptoObjectError */ .e.createNoCryptoObjectError("generateLibraryState");
+        }
+        // Create a state object containing a unique id and the timestamp of the request creation
+        var stateObj = {
+            id: cryptoObj.createNewGuid()
+        };
+        if (meta) {
+            stateObj.meta = meta;
+        }
+        var stateString = JSON.stringify(stateObj);
+        return cryptoObj.base64Encode(stateString);
+    };
+    /**
+     * Parses the state into the RequestStateObject, which contains the LibraryState info and the state passed by the user.
+     * @param state
+     * @param cryptoObj
+     */
+    ProtocolUtils.parseRequestState = function (cryptoObj, state) {
+        if (!cryptoObj) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientAuthError.createNoCryptoObjectError */ .e.createNoCryptoObjectError("parseRequestState");
+        }
+        if (_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(state)) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientAuthError.createInvalidStateError */ .e.createInvalidStateError(state, "Null, undefined or empty state");
+        }
+        try {
+            // Split the state between library state and user passed state and decode them separately
+            var splitState = state.split(_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .Constants.RESOURCE_DELIM */ .gT.RESOURCE_DELIM);
+            var libraryState = splitState[0];
+            var userState = splitState.length > 1 ? splitState.slice(1).join(_Constants_js__WEBPACK_IMPORTED_MODULE_1__/* .Constants.RESOURCE_DELIM */ .gT.RESOURCE_DELIM) : "";
+            var libraryStateString = cryptoObj.base64Decode(libraryState);
+            var libraryStateObj = JSON.parse(libraryStateString);
+            return {
+                userRequestState: !_StringUtils_js__WEBPACK_IMPORTED_MODULE_0__/* .StringUtils.isEmpty */ .x.isEmpty(userState) ? userState : "",
+                libraryState: libraryStateObj
+            };
+        }
+        catch (e) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_2__/* .ClientAuthError.createInvalidStateError */ .e.createInvalidStateError(state, e);
+        }
+    };
+    return ProtocolUtils;
+}());
+
+
+//# sourceMappingURL=ProtocolUtils.js.map
+
+
+/***/ }),
+
+/***/ 61653:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ StringUtils)
+/* harmony export */ });
+/* harmony import */ var _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(60742);
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * @hidden
+ */
+var StringUtils = /** @class */ (function () {
+    function StringUtils() {
+    }
+    /**
+     * decode a JWT
+     *
+     * @param authToken
+     */
+    StringUtils.decodeAuthToken = function (authToken) {
+        if (StringUtils.isEmpty(authToken)) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .ClientAuthError.createTokenNullOrEmptyError */ .e.createTokenNullOrEmptyError(authToken);
+        }
+        var tokenPartsRegex = /^([^\.\s]*)\.([^\.\s]+)\.([^\.\s]*)$/;
+        var matches = tokenPartsRegex.exec(authToken);
+        if (!matches || matches.length < 4) {
+            throw _error_ClientAuthError_js__WEBPACK_IMPORTED_MODULE_0__/* .ClientAuthError.createTokenParsingError */ .e.createTokenParsingError("Given token is malformed: " + JSON.stringify(authToken));
+        }
+        var crackedToken = {
+            header: matches[1],
+            JWSPayload: matches[2],
+            JWSSig: matches[3]
+        };
+        return crackedToken;
+    };
+    /**
+     * Check if a string is empty.
+     *
+     * @param str
+     */
+    StringUtils.isEmpty = function (str) {
+        return (typeof str === "undefined" || !str || 0 === str.length);
+    };
+    /**
+     * Check if stringified object is empty
+     * @param strObj
+     */
+    StringUtils.isEmptyObj = function (strObj) {
+        if (strObj && !StringUtils.isEmpty(strObj)) {
+            try {
+                var obj = JSON.parse(strObj);
+                return Object.keys(obj).length === 0;
+            }
+            catch (e) { }
+        }
+        return true;
+    };
+    StringUtils.startsWith = function (str, search) {
+        return str.indexOf(search) === 0;
+    };
+    StringUtils.endsWith = function (str, search) {
+        return (str.length >= search.length) && (str.lastIndexOf(search) === (str.length - search.length));
+    };
+    /**
+     * Parses string into an object.
+     *
+     * @param query
+     */
+    StringUtils.queryStringToObject = function (query) {
+        var obj = {};
+        var params = query.split("&");
+        var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+        params.forEach(function (pair) {
+            if (pair.trim()) {
+                var _a = pair.split(/=(.+)/g, 2), key = _a[0], value = _a[1]; // Split on the first occurence of the '=' character
+                if (key && value) {
+                    obj[decode(key)] = decode(value);
+                }
+            }
+        });
+        return obj;
+    };
+    /**
+     * Trims entries in an array.
+     *
+     * @param arr
+     */
+    StringUtils.trimArrayEntries = function (arr) {
+        return arr.map(function (entry) { return entry.trim(); });
+    };
+    /**
+     * Removes empty strings from array
+     * @param arr
+     */
+    StringUtils.removeEmptyStringsFromArray = function (arr) {
+        return arr.filter(function (entry) {
+            return !StringUtils.isEmpty(entry);
+        });
+    };
+    /**
+     * Attempts to parse a string into JSON
+     * @param str
+     */
+    StringUtils.jsonParseHelper = function (str) {
+        try {
+            return JSON.parse(str);
+        }
+        catch (e) {
+            return null;
+        }
+    };
+    /**
+     * Tests if a given string matches a given pattern, with support for wildcards and queries.
+     * @param pattern Wildcard pattern to string match. Supports "*" for wildcards and "?" for queries
+     * @param input String to match against
+     */
+    StringUtils.matchPattern = function (pattern, input) {
+        /**
+         * Wildcard support: https://stackoverflow.com/a/3117248/4888559
+         * Queries: replaces "?" in string with escaped "\?" for regex test
+         */
+        var regex = new RegExp(pattern.replace(/\\/g, "\\\\").replace(/\*/g, "[^ ]*").replace(/\?/g, "\\\?")); // eslint-disable-line security/detect-non-literal-regexp
+        return regex.test(input);
+    };
+    return StringUtils;
+}());
+
+
+//# sourceMappingURL=StringUtils.js.map
+
+
+/***/ }),
+
+/***/ 33848:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "I": () => (/* binding */ TimeUtils)
+/* harmony export */ });
+/*! @azure/msal-common v6.0.0 2022-01-04 */
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+/**
+ * Utility class which exposes functions for managing date and time operations.
+ */
+var TimeUtils = /** @class */ (function () {
+    function TimeUtils() {
+    }
+    /**
+     * return the current time in Unix time (seconds).
+     */
+    TimeUtils.nowSeconds = function () {
+        // Date.getTime() returns in milliseconds.
+        return Math.round(new Date().getTime() / 1000.0);
+    };
+    /**
+     * check if a token is expired based on given UTC time in seconds.
+     * @param expiresOn
+     */
+    TimeUtils.isTokenExpired = function (expiresOn, offset) {
+        // check for access token expiry
+        var expirationSec = Number(expiresOn) || 0;
+        var offsetCurrentTimeSec = TimeUtils.nowSeconds() + offset;
+        // If current time + offset is greater than token expiration time, then token is expired.
+        return (offsetCurrentTimeSec > expirationSec);
+    };
+    /**
+     * If the current time is earlier than the time that a token was cached at, we must discard the token
+     * i.e. The system clock was turned back after acquiring the cached token
+     * @param cachedAt
+     * @param offset
+     */
+    TimeUtils.wasClockTurnedBack = function (cachedAt) {
+        var cachedAtSec = Number(cachedAt);
+        return cachedAtSec > TimeUtils.nowSeconds();
+    };
+    /**
+     * Waits for t number of milliseconds
+     * @param t number
+     * @param value T
+     */
+    TimeUtils.delay = function (t, value) {
+        return new Promise(function (resolve) { return setTimeout(function () { return resolve(value); }, t); });
+    };
+    return TimeUtils;
+}());
+
+
+//# sourceMappingURL=TimeUtils.js.map
+
+
+/***/ }),
+
+/***/ 98917:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.client = void 0;
+const msal_browser_1 = __webpack_require__(80869);
+const AppConfig_1 = __webpack_require__(48134);
+const appId = AppConfig_1.AppConfig.AuthClient.AppId;
+exports.client = new msal_browser_1.PublicClientApplication({
+    auth: {
+        clientId: appId,
+        authority: "https://login.microsoftonline.com/organizations/",
+        navigateToLoginRequestUrl: false,
+    },
+    cache: { cacheLocation: "localStorage" },
+});
+
+
+/***/ }),
+
+/***/ 48134:
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.AppConfig = void 0;
+const config = () => {
+    var _a, _b, _c, _d, _e, _f;
+    const res = {
+        AppInfo: {
+            name: (_a = "FindMsg") !== null && _a !== void 0 ? _a : "",
+            appName: (_b = "G Message Finder") !== null && _b !== void 0 ? _b : "",
+            logo: (_c = "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product-fluent/svg/teams_48x1.svg") !== null && _c !== void 0 ? _c : "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product-fluent/svg/teams_48x1.svg",
+            host: (_d = "kacomsrd.github.io") !== null && _d !== void 0 ? _d : "",
+        },
+        AuthClient: {
+            AppId: (_e = "67dc74f0-fb8c-47a4-8435-63253a3fc3bb") !== null && _e !== void 0 ? _e : "",
+        },
+        AppInsight: {
+            instrumentationKey: (_f = "474f6161-5de0-419b-baa4-9d57b2abdb37") !== null && _f !== void 0 ? _f : "",
+        },
+    };
+    return res;
+};
+exports.AppConfig = config();
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+var exports = __webpack_exports__;
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const client_1 = __webpack_require__(98917);
+(function login() {
+    var _a;
+    const url = new URL(location.href);
+    const params = JSON.parse((_a = url.searchParams.get("params")) !== null && _a !== void 0 ? _a : JSON.stringify(null));
+    client_1.client.loginRedirect(params);
+})();
+
+})();
+
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
 //# sourceMappingURL=authStart.js.map
