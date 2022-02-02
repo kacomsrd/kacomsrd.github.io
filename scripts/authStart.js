@@ -15328,12 +15328,18 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const client_1 = __webpack_require__(98917);
-(function login() {
+(async function login() {
     var _a;
     const url = new URL(location.href);
     const params = JSON.parse((_a = url.searchParams.get("params")) !== null && _a !== void 0 ? _a : JSON.stringify(null));
+    try {
+        await client_1.client.handleRedirectPromise();
+    }
+    catch (e) {
+        console.warn("", e);
+    }
     client_1.client.loginRedirect(params);
-})();
+})().catch(console.error);
 
 })();
 
