@@ -27611,7 +27611,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.b64toBlob = exports.blob2dataUrl = exports.hashBlob = exports.isGraphHostedContentUrl = exports.storage = exports.isUnknownObject = exports.fixMessageLink = exports.delay = exports.safeStringify = exports.cancellationNoThrow = exports.cancellation = exports.OperationCancelled = exports.nop = exports.filterTruthy = exports.filterNull = exports.assert1 = exports.assertT = exports.assert = void 0;
+exports.b64toBlob = exports.blob2dataUrl = exports.hashBlob = exports.isGraphHostedContentUrl = exports.storage = exports.isUnknownObject = exports.fixMessageLink = exports.delay = exports.safeStringify = exports.cancellationNoThrow = exports.cancellation = exports.OperationCancelled = exports.nop = exports.filterNull = exports.assert1 = exports.assertT = exports.assert = void 0;
 const logger_1 = __webpack_require__(5341);
 const Bowser = __importStar(__webpack_require__(51206));
 function assert(value, name = "value") {
@@ -27641,10 +27641,6 @@ function filterNull(value) {
     return value !== null;
 }
 exports.filterNull = filterNull;
-function filterTruthy(value) {
-    return !!value;
-}
-exports.filterTruthy = filterTruthy;
 function nop() { }
 exports.nop = nop;
 class OperationCancelled extends Error {
