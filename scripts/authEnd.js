@@ -27536,7 +27536,6 @@ const client_1 = __webpack_require__(98917);
 const appInsights_1 = __webpack_require__(22827);
 async function processResponse() {
     try {
-        debugger;
         const response = await client_1.client.handleRedirectPromise();
         if (response === null) {
             teams.authentication.notifyFailure("no redirect resonse");
