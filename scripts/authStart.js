@@ -27485,11 +27485,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.client = void 0;
 const msal_browser_1 = __webpack_require__(80869);
 const AppConfig_1 = __webpack_require__(48134);
-const appId = AppConfig_1.AppConfig.AuthClient.AppId;
 exports.client = new msal_browser_1.PublicClientApplication({
     auth: {
-        clientId: appId,
-        authority: "https://login.microsoftonline.com/organizations/",
+        clientId: AppConfig_1.AppConfig.AuthClient.AppId,
         navigateToLoginRequestUrl: false,
     },
     cache: { cacheLocation: "localStorage" },
