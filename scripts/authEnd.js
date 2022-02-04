@@ -27419,6 +27419,7 @@ exports.AI = void 0;
 const applicationinsights_web_1 = __webpack_require__(96674);
 const AppConfig_1 = __webpack_require__(48134);
 const useApplicationInsights = AppConfig_1.AppConfig.debug && !!AppConfig_1.AppConfig.AppInsight.instrumentationKey;
+const enableTrace = AppConfig_1.AppConfig.trace;
 function initAI() {
     if (useApplicationInsights) {
         const config = {
@@ -27443,30 +27444,41 @@ function initAI() {
 const instance = initAI();
 function custom(callback) {
     instance && callback && callback(instance);
+    return exports.AI;
 }
 function trackException(exception) {
     instance === null || instance === void 0 ? void 0 : instance.trackException(exception);
+    return exports.AI;
 }
 function trackEvent(event, customProperties) {
     instance === null || instance === void 0 ? void 0 : instance.trackEvent(event, customProperties);
+    return exports.AI;
 }
 function trackMetric(metric, customProperties) {
     instance === null || instance === void 0 ? void 0 : instance.trackMetric(metric, customProperties);
+    return exports.AI;
 }
 function trackTrace(trace, customProperties) {
-    instance === null || instance === void 0 ? void 0 : instance.trackTrace(trace, customProperties);
+    if (enableTrace) {
+        instance === null || instance === void 0 ? void 0 : instance.trackTrace(trace, customProperties);
+    }
+    return exports.AI;
 }
 function startTrackEvent(name) {
     instance === null || instance === void 0 ? void 0 : instance.startTrackEvent(name);
+    return exports.AI;
 }
 function stopTrackEvent(name, properties, measurements) {
     instance === null || instance === void 0 ? void 0 : instance.stopTrackEvent(name, properties, measurements);
+    return exports.AI;
 }
 function flushBuffer() {
     instance === null || instance === void 0 ? void 0 : instance.flush();
+    return exports.AI;
 }
 function setAuthenticatedUserContext(userId, accountId) {
     instance === null || instance === void 0 ? void 0 : instance.setAuthenticatedUserContext(userId, accountId, true);
+    return exports.AI;
 }
 exports.AI = Object.freeze({
     custom,
@@ -27540,6 +27552,14 @@ async function processResponse() {
             appInsights_1.AI.trackEvent({ name: "AuthResponseNull" });
         }
         else {
+            appInsights_1.AI.trackTrace({
+                message: "AuthEnd2",
+                properties: {
+                    account: response.account,
+                    scopes: response.scopes,
+                    tokenType: response.tokenType,
+                }
+            }).flushBuffer();
             teams.authentication.notifySuccess(JSON.stringify(response));
         }
     }
@@ -27553,6 +27573,7 @@ async function processResponse() {
         }
     }
 }
+appInsights_1.AI.trackTrace({ message: "AuthEnd1" });
 teams.initialize(processResponse);
 
 
@@ -27942,7 +27963,7 @@ exports.b64toBlob = b64toBlob;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppConfig = void 0;
 const config = () => {
-    var _a, _b, _c, _d, _e, _f, _g;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
     const res = {
         AppInfo: {
             name: (_a = "FindMsg") !== null && _a !== void 0 ? _a : "",
@@ -27957,6 +27978,7 @@ const config = () => {
             instrumentationKey: (_f = "586f96ac-b9a5-461e-8f0b-8d75f6bc88d6") !== null && _f !== void 0 ? _f : "",
         },
         debug: ((_g = "true") === null || _g === void 0 ? void 0 : _g.toLowerCase()) === "true",
+        trace: ((_h = "true") === null || _h === void 0 ? void 0 : _h.toLowerCase()) === "true",
     };
     return res;
 };
