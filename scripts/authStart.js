@@ -27411,7 +27411,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AI = void 0;
 const applicationinsights_web_1 = __webpack_require__(96674);
 const AppConfig_1 = __webpack_require__(48134);
-const useApplicationInsights = false;
+const useApplicationInsights = AppConfig_1.AppConfig.debug && !!AppConfig_1.AppConfig.AppInsight.instrumentationKey;
 function initAI() {
     if (useApplicationInsights) {
         const config = {
@@ -27505,7 +27505,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.traceAsync = exports.trace = exports.error = exports.warn = exports.info = void 0;
 const utils_1 = __webpack_require__(62975);
 const appInsights_1 = __webpack_require__(22827);
-const enableConsoleLogging = true;
+const AppConfig_1 = __webpack_require__(48134);
+const enableConsoleLogging = AppConfig_1.AppConfig.debug;
 function info(...args) {
     if (enableConsoleLogging) {
         console.log(...args);
@@ -27879,7 +27880,7 @@ exports.b64toBlob = b64toBlob;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppConfig = void 0;
 const config = () => {
-    var _a, _b, _c, _d, _e, _f;
+    var _a, _b, _c, _d, _e, _f, _g;
     const res = {
         AppInfo: {
             name: (_a = "FindMsg") !== null && _a !== void 0 ? _a : "",
@@ -27891,8 +27892,9 @@ const config = () => {
             AppId: (_e = "67dc74f0-fb8c-47a4-8435-63253a3fc3bb") !== null && _e !== void 0 ? _e : "",
         },
         AppInsight: {
-            instrumentationKey: (_f = "474f6161-5de0-419b-baa4-9d57b2abdb37") !== null && _f !== void 0 ? _f : "",
+            instrumentationKey: (_f = "586f96ac-b9a5-461e-8f0b-8d75f6bc88d6") !== null && _f !== void 0 ? _f : "",
         },
+        debug: ((_g = "true") === null || _g === void 0 ? void 0 : _g.toLowerCase()) === "true",
     };
     return res;
 };
