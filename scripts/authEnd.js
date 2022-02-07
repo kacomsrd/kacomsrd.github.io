@@ -27978,7 +27978,7 @@ const config = () => {
             instrumentationKey: (_f = "586f96ac-b9a5-461e-8f0b-8d75f6bc88d6") !== null && _f !== void 0 ? _f : "",
         },
         debug: ((_g = "true") === null || _g === void 0 ? void 0 : _g.toLowerCase()) === "true",
-        trace: ((_h = "true") === null || _h === void 0 ? void 0 : _h.toLowerCase()) === "true",
+        trace: ((_h = "false") === null || _h === void 0 ? void 0 : _h.toLowerCase()) === "true",
     };
     return res;
 };
