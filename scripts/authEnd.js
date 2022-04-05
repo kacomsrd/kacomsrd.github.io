@@ -30646,8 +30646,8 @@ async function processResponse() {
     try {
         const response = await client_1.client.handleRedirectPromise();
         if (response === null) {
+            appInsights_1.AI.trackEvent({ name: "AuthResponseNull" }).flushBuffer();
             teams.authentication.notifyFailure("no redirect resonse");
-            appInsights_1.AI.trackEvent({ name: "AuthResponseNull" });
         }
         else {
             appInsights_1.AI.trackTrace({
