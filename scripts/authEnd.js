@@ -31217,7 +31217,7 @@ async function blob2dataUrl(blob) {
 }
 exports.blob2dataUrl = blob2dataUrl;
 function b64toBlob(b64Data, sliceSize = 512) {
-    (0, logger_1.info)(`▼▼▼ b64toBlob START b64Data: [${b64Data}] ▼▼▼`);
+    (0, logger_1.info)(`▼▼▼ b64toBlob START b64Data ▼▼▼`);
     let contentType = "";
     const endpos = b64Data.indexOf(";");
     if (endpos > 0) {
