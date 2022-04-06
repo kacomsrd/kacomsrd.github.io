@@ -7,7 +7,7 @@
 		exports["FindMsg"] = factory();
 	else
 		root["FindMsg"] = factory();
-})(self, function() {
+})(self, () => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "__read": () => (/* binding */ __read),
 /* harmony export */   "__spread": () => (/* binding */ __spread)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -170,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cache_TokenCache_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../cache/TokenCache.js */ "./node_modules/@azure/msal-browser/dist/cache/TokenCache.js");
 /* harmony import */ var _interaction_client_SilentAuthCodeClient_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../interaction_client/SilentAuthCodeClient.js */ "./node_modules/@azure/msal-browser/dist/interaction_client/SilentAuthCodeClient.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -799,7 +799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "stubbedPublicClientApplication": () => (/* binding */ stubbedPublicClientApplication)
 /* harmony export */ });
 /* harmony import */ var _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../error/BrowserConfigurationAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserConfigurationAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -914,7 +914,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _event_EventType_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../event/EventType.js */ "./node_modules/@azure/msal-browser/dist/event/EventType.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _interaction_client_SilentCacheClient_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../interaction_client/SilentCacheClient.js */ "./node_modules/@azure/msal-browser/dist/interaction_client/SilentCacheClient.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -1104,7 +1104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _DatabaseStorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatabaseStorage.js */ "./node_modules/@azure/msal-browser/dist/cache/DatabaseStorage.js");
 /* harmony import */ var _MemoryStorage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MemoryStorage.js */ "./node_modules/@azure/msal-browser/dist/cache/MemoryStorage.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -1336,7 +1336,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BrowserStorage_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BrowserStorage.js */ "./node_modules/@azure/msal-browser/dist/cache/BrowserStorage.js");
 /* harmony import */ var _MemoryStorage_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MemoryStorage.js */ "./node_modules/@azure/msal-browser/dist/cache/MemoryStorage.js");
 /* harmony import */ var _utils_BrowserProtocolUtils_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../utils/BrowserProtocolUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserProtocolUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -2241,7 +2241,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../error/BrowserConfigurationAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserConfigurationAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -2302,7 +2302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -2539,7 +2539,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MemoryStorage": () => (/* binding */ MemoryStorage)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved.
@@ -2598,7 +2598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/request/ScopeSet.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/cache/entities/AccessTokenEntity.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -2751,7 +2751,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _navigation_NavigationClient_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navigation/NavigationClient.js */ "./node_modules/@azure/msal-browser/dist/navigation/NavigationClient.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -2841,7 +2841,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserStringUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/BrowserStringUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserStringUtils.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3147,7 +3147,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _cache_AsyncMemoryStorage_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../cache/AsyncMemoryStorage.js */ "./node_modules/@azure/msal-browser/dist/cache/AsyncMemoryStorage.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3384,7 +3384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "GuidGenerator": () => (/* binding */ GuidGenerator)
 /* harmony export */ });
 /* harmony import */ var _utils_MathUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/MathUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/MathUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3494,7 +3494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _encode_Base64Encode_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encode/Base64Encode.js */ "./node_modules/@azure/msal-browser/dist/encode/Base64Encode.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3601,7 +3601,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/logger/Logger.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/crypto/PopTokenGenerator.js");
 /* harmony import */ var _packageMetadata_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../packageMetadata.js */ "./node_modules/@azure/msal-browser/dist/packageMetadata.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3687,7 +3687,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Base64Decode": () => (/* binding */ Base64Decode)
 /* harmony export */ });
 /* harmony import */ var _utils_BrowserStringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/BrowserStringUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserStringUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3784,7 +3784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Base64Encode": () => (/* binding */ Base64Encode)
 /* harmony export */ });
 /* harmony import */ var _utils_BrowserStringUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/BrowserStringUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserStringUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -3890,7 +3890,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/utils/StringUtils.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/error/AuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4318,7 +4318,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/error/AuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4433,7 +4433,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/cache/entities/AccountEntity.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/cache/CacheManager.js");
 /* harmony import */ var _EventType_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EventType.js */ "./node_modules/@azure/msal-browser/dist/event/EventType.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4577,7 +4577,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _EventType_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EventType.js */ "./node_modules/@azure/msal-browser/dist/event/EventType.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4663,7 +4663,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EventType": () => (/* binding */ EventType)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved.
@@ -4710,54 +4710,54 @@ var EventType;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PublicClientApplication": () => (/* reexport safe */ _app_PublicClientApplication_js__WEBPACK_IMPORTED_MODULE_0__.PublicClientApplication),
-/* harmony export */   "DEFAULT_IFRAME_TIMEOUT_MS": () => (/* reexport safe */ _config_Configuration_js__WEBPACK_IMPORTED_MODULE_1__.DEFAULT_IFRAME_TIMEOUT_MS),
-/* harmony export */   "ApiId": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.ApiId),
-/* harmony export */   "BrowserCacheLocation": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.BrowserCacheLocation),
-/* harmony export */   "BrowserConstants": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.BrowserConstants),
-/* harmony export */   "InteractionStatus": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.InteractionStatus),
-/* harmony export */   "InteractionType": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.InteractionType),
-/* harmony export */   "TemporaryCacheKeys": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.TemporaryCacheKeys),
-/* harmony export */   "WrapperSKU": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.WrapperSKU),
-/* harmony export */   "BrowserUtils": () => (/* reexport safe */ _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_3__.BrowserUtils),
-/* harmony export */   "BrowserAuthError": () => (/* reexport safe */ _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_4__.BrowserAuthError),
-/* harmony export */   "BrowserAuthErrorMessage": () => (/* reexport safe */ _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_4__.BrowserAuthErrorMessage),
-/* harmony export */   "BrowserConfigurationAuthError": () => (/* reexport safe */ _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_5__.BrowserConfigurationAuthError),
-/* harmony export */   "BrowserConfigurationAuthErrorMessage": () => (/* reexport safe */ _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_5__.BrowserConfigurationAuthErrorMessage),
-/* harmony export */   "stubbedPublicClientApplication": () => (/* reexport safe */ _app_IPublicClientApplication_js__WEBPACK_IMPORTED_MODULE_6__.stubbedPublicClientApplication),
-/* harmony export */   "NavigationClient": () => (/* reexport safe */ _navigation_NavigationClient_js__WEBPACK_IMPORTED_MODULE_7__.NavigationClient),
-/* harmony export */   "BrowserCacheManager": () => (/* reexport safe */ _cache_BrowserCacheManager_js__WEBPACK_IMPORTED_MODULE_8__.BrowserCacheManager),
-/* harmony export */   "StandardInteractionClient": () => (/* reexport safe */ _interaction_client_StandardInteractionClient_js__WEBPACK_IMPORTED_MODULE_9__.StandardInteractionClient),
-/* harmony export */   "RedirectClient": () => (/* reexport safe */ _interaction_client_RedirectClient_js__WEBPACK_IMPORTED_MODULE_10__.RedirectClient),
-/* harmony export */   "PopupClient": () => (/* reexport safe */ _interaction_client_PopupClient_js__WEBPACK_IMPORTED_MODULE_11__.PopupClient),
-/* harmony export */   "SilentIframeClient": () => (/* reexport safe */ _interaction_client_SilentIframeClient_js__WEBPACK_IMPORTED_MODULE_12__.SilentIframeClient),
-/* harmony export */   "SilentCacheClient": () => (/* reexport safe */ _interaction_client_SilentCacheClient_js__WEBPACK_IMPORTED_MODULE_13__.SilentCacheClient),
-/* harmony export */   "SilentRefreshClient": () => (/* reexport safe */ _interaction_client_SilentRefreshClient_js__WEBPACK_IMPORTED_MODULE_14__.SilentRefreshClient),
-/* harmony export */   "RedirectHandler": () => (/* reexport safe */ _interaction_handler_RedirectHandler_js__WEBPACK_IMPORTED_MODULE_15__.RedirectHandler),
-/* harmony export */   "EventMessageUtils": () => (/* reexport safe */ _event_EventMessage_js__WEBPACK_IMPORTED_MODULE_16__.EventMessageUtils),
-/* harmony export */   "EventType": () => (/* reexport safe */ _event_EventType_js__WEBPACK_IMPORTED_MODULE_17__.EventType),
-/* harmony export */   "EventHandler": () => (/* reexport safe */ _event_EventHandler_js__WEBPACK_IMPORTED_MODULE_18__.EventHandler),
-/* harmony export */   "SignedHttpRequest": () => (/* reexport safe */ _crypto_SignedHttpRequest_js__WEBPACK_IMPORTED_MODULE_19__.SignedHttpRequest),
-/* harmony export */   "PopupUtils": () => (/* reexport safe */ _utils_PopupUtils_js__WEBPACK_IMPORTED_MODULE_20__.PopupUtils),
 /* harmony export */   "AccountEntity": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_21__.AccountEntity),
+/* harmony export */   "ApiId": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.ApiId),
 /* harmony export */   "AuthError": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_22__.AuthError),
 /* harmony export */   "AuthErrorMessage": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_22__.AuthErrorMessage),
 /* harmony export */   "AuthenticationHeaderParser": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_23__.AuthenticationHeaderParser),
 /* harmony export */   "AuthenticationScheme": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_24__.AuthenticationScheme),
 /* harmony export */   "AzureCloudInstance": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_25__.AzureCloudInstance),
+/* harmony export */   "BrowserAuthError": () => (/* reexport safe */ _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_4__.BrowserAuthError),
+/* harmony export */   "BrowserAuthErrorMessage": () => (/* reexport safe */ _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_4__.BrowserAuthErrorMessage),
+/* harmony export */   "BrowserCacheLocation": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.BrowserCacheLocation),
+/* harmony export */   "BrowserCacheManager": () => (/* reexport safe */ _cache_BrowserCacheManager_js__WEBPACK_IMPORTED_MODULE_8__.BrowserCacheManager),
+/* harmony export */   "BrowserConfigurationAuthError": () => (/* reexport safe */ _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_5__.BrowserConfigurationAuthError),
+/* harmony export */   "BrowserConfigurationAuthErrorMessage": () => (/* reexport safe */ _error_BrowserConfigurationAuthError_js__WEBPACK_IMPORTED_MODULE_5__.BrowserConfigurationAuthErrorMessage),
+/* harmony export */   "BrowserConstants": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.BrowserConstants),
+/* harmony export */   "BrowserUtils": () => (/* reexport safe */ _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_3__.BrowserUtils),
 /* harmony export */   "ClientAuthError": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_26__.ClientAuthError),
 /* harmony export */   "ClientAuthErrorMessage": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_26__.ClientAuthErrorMessage),
 /* harmony export */   "ClientConfigurationError": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_27__.ClientConfigurationError),
 /* harmony export */   "ClientConfigurationErrorMessage": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_27__.ClientConfigurationErrorMessage),
+/* harmony export */   "DEFAULT_IFRAME_TIMEOUT_MS": () => (/* reexport safe */ _config_Configuration_js__WEBPACK_IMPORTED_MODULE_1__.DEFAULT_IFRAME_TIMEOUT_MS),
+/* harmony export */   "EventHandler": () => (/* reexport safe */ _event_EventHandler_js__WEBPACK_IMPORTED_MODULE_18__.EventHandler),
+/* harmony export */   "EventMessageUtils": () => (/* reexport safe */ _event_EventMessage_js__WEBPACK_IMPORTED_MODULE_16__.EventMessageUtils),
+/* harmony export */   "EventType": () => (/* reexport safe */ _event_EventType_js__WEBPACK_IMPORTED_MODULE_17__.EventType),
 /* harmony export */   "InteractionRequiredAuthError": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_28__.InteractionRequiredAuthError),
 /* harmony export */   "InteractionRequiredAuthErrorMessage": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_28__.InteractionRequiredAuthErrorMessage),
+/* harmony export */   "InteractionStatus": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.InteractionStatus),
+/* harmony export */   "InteractionType": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.InteractionType),
 /* harmony export */   "LogLevel": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_29__.LogLevel),
 /* harmony export */   "Logger": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_29__.Logger),
+/* harmony export */   "NavigationClient": () => (/* reexport safe */ _navigation_NavigationClient_js__WEBPACK_IMPORTED_MODULE_7__.NavigationClient),
 /* harmony export */   "OIDC_DEFAULT_SCOPES": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_24__.OIDC_DEFAULT_SCOPES),
+/* harmony export */   "PopupClient": () => (/* reexport safe */ _interaction_client_PopupClient_js__WEBPACK_IMPORTED_MODULE_11__.PopupClient),
+/* harmony export */   "PopupUtils": () => (/* reexport safe */ _utils_PopupUtils_js__WEBPACK_IMPORTED_MODULE_20__.PopupUtils),
 /* harmony export */   "ProtocolMode": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_30__.ProtocolMode),
+/* harmony export */   "PublicClientApplication": () => (/* reexport safe */ _app_PublicClientApplication_js__WEBPACK_IMPORTED_MODULE_0__.PublicClientApplication),
+/* harmony export */   "RedirectClient": () => (/* reexport safe */ _interaction_client_RedirectClient_js__WEBPACK_IMPORTED_MODULE_10__.RedirectClient),
+/* harmony export */   "RedirectHandler": () => (/* reexport safe */ _interaction_handler_RedirectHandler_js__WEBPACK_IMPORTED_MODULE_15__.RedirectHandler),
 /* harmony export */   "ServerError": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_31__.ServerError),
+/* harmony export */   "SignedHttpRequest": () => (/* reexport safe */ _crypto_SignedHttpRequest_js__WEBPACK_IMPORTED_MODULE_19__.SignedHttpRequest),
+/* harmony export */   "SilentCacheClient": () => (/* reexport safe */ _interaction_client_SilentCacheClient_js__WEBPACK_IMPORTED_MODULE_13__.SilentCacheClient),
+/* harmony export */   "SilentIframeClient": () => (/* reexport safe */ _interaction_client_SilentIframeClient_js__WEBPACK_IMPORTED_MODULE_12__.SilentIframeClient),
+/* harmony export */   "SilentRefreshClient": () => (/* reexport safe */ _interaction_client_SilentRefreshClient_js__WEBPACK_IMPORTED_MODULE_14__.SilentRefreshClient),
+/* harmony export */   "StandardInteractionClient": () => (/* reexport safe */ _interaction_client_StandardInteractionClient_js__WEBPACK_IMPORTED_MODULE_9__.StandardInteractionClient),
 /* harmony export */   "StringUtils": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_32__.StringUtils),
+/* harmony export */   "TemporaryCacheKeys": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.TemporaryCacheKeys),
 /* harmony export */   "UrlString": () => (/* reexport safe */ _azure_msal_common__WEBPACK_IMPORTED_MODULE_33__.UrlString),
+/* harmony export */   "WrapperSKU": () => (/* reexport safe */ _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__.WrapperSKU),
+/* harmony export */   "stubbedPublicClientApplication": () => (/* reexport safe */ _app_IPublicClientApplication_js__WEBPACK_IMPORTED_MODULE_6__.stubbedPublicClientApplication),
 /* harmony export */   "version": () => (/* reexport safe */ _packageMetadata_js__WEBPACK_IMPORTED_MODULE_34__.version)
 /* harmony export */ });
 /* harmony import */ var _app_PublicClientApplication_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/PublicClientApplication.js */ "./node_modules/@azure/msal-browser/dist/app/PublicClientApplication.js");
@@ -4795,7 +4795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/utils/StringUtils.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/url/UrlString.js");
 /* harmony import */ var _packageMetadata_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./packageMetadata.js */ "./node_modules/@azure/msal-browser/dist/packageMetadata.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4846,7 +4846,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _packageMetadata_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../packageMetadata.js */ "./node_modules/@azure/msal-browser/dist/packageMetadata.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -4920,20 +4920,22 @@ var BaseInteractionClient = /** @class */ (function () {
      */
     BaseInteractionClient.prototype.initializeBaseRequest = function (request) {
         return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function () {
-            var authority, scopes, _a, validatedRequest;
+            var authority, scopes, validatedRequest, _a;
             return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__generator)(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         this.logger.verbose("Initializing BaseAuthRequest");
                         authority = request.authority || this.config.auth.authority;
                         scopes = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__spread)(((request && request.scopes) || []));
+                        validatedRequest = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, request), { correlationId: this.correlationId, authority: authority,
+                            scopes: scopes });
                         // Set authenticationScheme to BEARER if not explicitly set in the request
-                        if (!request.authenticationScheme) {
-                            request.authenticationScheme = _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__.AuthenticationScheme.BEARER;
+                        if (!validatedRequest.authenticationScheme) {
+                            validatedRequest.authenticationScheme = _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__.AuthenticationScheme.BEARER;
                             this.logger.verbose("Authentication Scheme wasn't explicitly set in request, defaulting to \"Bearer\" request");
                         }
                         else {
-                            if (request.authenticationScheme === _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__.AuthenticationScheme.SSH) {
+                            if (validatedRequest.authenticationScheme === _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__.AuthenticationScheme.SSH) {
                                 if (!request.sshJwk) {
                                     throw _azure_msal_common__WEBPACK_IMPORTED_MODULE_5__.ClientConfigurationError.createMissingSshJwkError();
                                 }
@@ -4941,18 +4943,15 @@ var BaseInteractionClient = /** @class */ (function () {
                                     throw _azure_msal_common__WEBPACK_IMPORTED_MODULE_5__.ClientConfigurationError.createMissingSshKidError();
                                 }
                             }
-                            this.logger.verbose("Authentication Scheme set to \"" + request.authenticationScheme + "\" as configured in Auth request");
+                            this.logger.verbose("Authentication Scheme set to \"" + validatedRequest.authenticationScheme + "\" as configured in Auth request");
                         }
                         if (!(request.claims && !_azure_msal_common__WEBPACK_IMPORTED_MODULE_6__.StringUtils.isEmpty(request.claims))) return [3 /*break*/, 2];
-                        _a = request;
+                        _a = validatedRequest;
                         return [4 /*yield*/, this.browserCrypto.hashString(request.claims)];
                     case 1:
                         _a.requestedClaimsHash = _b.sent();
                         _b.label = 2;
-                    case 2:
-                        validatedRequest = (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, request), { correlationId: this.correlationId, authority: authority,
-                            scopes: scopes });
-                        return [2 /*return*/, validatedRequest];
+                    case 2: return [2 /*return*/, validatedRequest];
                 }
             });
         });
@@ -5009,7 +5008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/client/AuthorizationCodeClient.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5056,7 +5055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _interaction_handler_PopupHandler_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interaction_handler/PopupHandler.js */ "./node_modules/@azure/msal-browser/dist/interaction_handler/PopupHandler.js");
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5316,7 +5315,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
 /* harmony import */ var _event_EventType_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../event/EventType.js */ "./node_modules/@azure/msal-browser/dist/event/EventType.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5342,7 +5341,8 @@ var RedirectClient = /** @class */ (function (_super) {
      */
     RedirectClient.prototype.acquireToken = function (request) {
         return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
-            var validRequest, serverTelemetryManager, authCodeRequest, authClient, interactionHandler, navigateUrl, redirectStartPage, e_1;
+            var validRequest, serverTelemetryManager, handleBackButton, authCodeRequest, authClient, interactionHandler, navigateUrl, redirectStartPage, e_1;
+            var _this = this;
             return (0,_virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.initializeAuthorizationRequest(request, _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__.InteractionType.Redirect)];
@@ -5350,6 +5350,13 @@ var RedirectClient = /** @class */ (function (_super) {
                         validRequest = _a.sent();
                         this.browserStorage.updateCacheEntries(validRequest.state, validRequest.nonce, validRequest.authority, validRequest.loginHint || "", validRequest.account || null);
                         serverTelemetryManager = this.initializeServerTelemetryManager(_utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__.ApiId.acquireTokenRedirect);
+                        handleBackButton = function (event) {
+                            // Clear temporary cache if the back button is clicked during the redirect flow.
+                            if (event.persisted) {
+                                _this.logger.verbose("Page was restored from back/forward cache. Clearing temporary cache.");
+                                _this.browserStorage.cleanRequestByState(validRequest.state);
+                            }
+                        };
                         _a.label = 2;
                     case 2:
                         _a.trys.push([2, 7, , 8]);
@@ -5366,6 +5373,8 @@ var RedirectClient = /** @class */ (function (_super) {
                         navigateUrl = _a.sent();
                         redirectStartPage = this.getRedirectStartPage(request.redirectStartPage);
                         this.logger.verbosePii("Redirect start page: " + redirectStartPage);
+                        // Clear temporary cache if the back button is clicked during the redirect flow.
+                        window.addEventListener("pageshow", handleBackButton);
                         return [4 /*yield*/, interactionHandler.initiateAuthRequest(navigateUrl, {
                                 navigationClient: this.navigationClient,
                                 redirectTimeout: this.config.system.redirectNavigationTimeout,
@@ -5380,6 +5389,7 @@ var RedirectClient = /** @class */ (function (_super) {
                         if (e_1 instanceof _azure_msal_common__WEBPACK_IMPORTED_MODULE_3__.AuthError) {
                             e_1.setCorrelationId(this.correlationId);
                         }
+                        window.removeEventListener("pageshow", handleBackButton);
                         serverTelemetryManager.cacheFailedRequest(e_1);
                         this.browserStorage.cleanRequestByState(validRequest.state);
                         throw e_1;
@@ -5641,7 +5651,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _interaction_handler_SilentHandler_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../interaction_handler/SilentHandler.js */ "./node_modules/@azure/msal-browser/dist/interaction_handler/SilentHandler.js");
 /* harmony import */ var _HybridSpaAuthorizationCodeClient_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HybridSpaAuthorizationCodeClient.js */ "./node_modules/@azure/msal-browser/dist/interaction_client/HybridSpaAuthorizationCodeClient.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5745,7 +5755,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _event_EventType_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../event/EventType.js */ "./node_modules/@azure/msal-browser/dist/event/EventType.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5863,7 +5873,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _interaction_handler_SilentHandler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../interaction_handler/SilentHandler.js */ "./node_modules/@azure/msal-browser/dist/interaction_handler/SilentHandler.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -5994,7 +6004,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/client/RefreshTokenClient.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -6102,7 +6112,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserProtocolUtils_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/BrowserProtocolUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserProtocolUtils.js");
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -6405,7 +6415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/authority/AuthorityFactory.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -6570,7 +6580,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_PopupUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/PopupUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/PopupUtils.js");
 /* harmony import */ var _utils_BrowserUtils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/BrowserUtils.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserUtils.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -6661,7 +6671,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _InteractionHandler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./InteractionHandler.js */ "./node_modules/@azure/msal-browser/dist/interaction_handler/InteractionHandler.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -6822,7 +6832,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _config_Configuration_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/Configuration.js */ "./node_modules/@azure/msal-browser/dist/config/Configuration.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7000,7 +7010,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "NavigationClient": () => (/* binding */ NavigationClient)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved.
@@ -7066,7 +7076,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7221,7 +7231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _virtual_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_virtual/_tslib.js */ "./node_modules/@azure/msal-browser/dist/_virtual/_tslib.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _utils_BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7375,11 +7385,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "name": () => (/* binding */ name),
 /* harmony export */   "version": () => (/* binding */ version)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /* eslint-disable header/header */
 var name = "@azure/msal-browser";
-var version = "2.22.0";
+var version = "2.22.1";
 
 
 //# sourceMappingURL=packageMetadata.js.map
@@ -7412,7 +7422,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "WrapperSKU": () => (/* binding */ WrapperSKU)
 /* harmony export */ });
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/utils/Constants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7596,7 +7606,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/utils/ProtocolUtils.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/error/ClientAuthError.js");
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/url/UrlString.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7655,7 +7665,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BrowserStringUtils": () => (/* binding */ BrowserStringUtils)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved.
@@ -7789,7 +7799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _network_XhrClient_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../network/XhrClient.js */ "./node_modules/@azure/msal-browser/dist/network/XhrClient.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -7941,7 +7951,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MathUtils": () => (/* binding */ MathUtils)
 /* harmony export */ });
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved.
@@ -7989,7 +7999,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _azure_msal_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @azure/msal-common */ "./node_modules/@azure/msal-common/dist/utils/StringUtils.js");
 /* harmony import */ var _error_BrowserAuthError_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../error/BrowserAuthError.js */ "./node_modules/@azure/msal-browser/dist/error/BrowserAuthError.js");
 /* harmony import */ var _BrowserConstants_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BrowserConstants.js */ "./node_modules/@azure/msal-browser/dist/utils/BrowserConstants.js");
-/*! @azure/msal-browser v2.22.0 2022-02-08 */
+/*! @azure/msal-browser v2.22.1 2022-03-07 */
 
 
 
@@ -16491,7 +16501,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Telemetry_PageViewPerformanceManager__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Telemetry/PageViewPerformanceManager */ "./node_modules/@microsoft/applicationinsights-analytics-js/dist-esm/JavaScriptSDK/Telemetry/PageViewPerformanceManager.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Web Analytics, 2.7.3
+ * Application Insights JavaScript SDK - Web Analytics, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 /**
@@ -17062,7 +17072,7 @@ var ApplicationInsights = /** @class */ (function (_super) {
 // Removed Stub for ApplicationInsights.prototype._onerror.
 // Removed Stub for ApplicationInsights.prototype.addTelemetryInitializer.
 // Removed Stub for ApplicationInsights.prototype.initialize.
-    ApplicationInsights.Version = "2.7.3"; // Not currently used anywhere
+    ApplicationInsights.Version = "2.7.4"; // Not currently used anywhere
     return ApplicationInsights;
 }(_microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_26__.BaseTelemetryPlugin));
 
@@ -17116,7 +17126,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Web Analytics, 2.7.3
+ * Application Insights JavaScript SDK - Web Analytics, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -17297,7 +17307,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Web Analytics, 2.7.3
+ * Application Insights JavaScript SDK - Web Analytics, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -17477,14 +17487,14 @@ var PageViewPerformanceManager = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PageVisitTimeManager": () => (/* binding */ PageVisitTimeManager),
-/* harmony export */   "PageVisitData": () => (/* binding */ PageVisitData)
+/* harmony export */   "PageVisitData": () => (/* binding */ PageVisitData),
+/* harmony export */   "PageVisitTimeManager": () => (/* binding */ PageVisitTimeManager)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/StorageHelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Web Analytics, 2.7.3
+ * Application Insights JavaScript SDK - Web Analytics, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -17616,8 +17626,8 @@ var PageVisitData = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "EnvelopeCreator": () => (/* binding */ EnvelopeCreator),
 /* harmony export */   "DependencyEnvelopeCreator": () => (/* binding */ DependencyEnvelopeCreator),
+/* harmony export */   "EnvelopeCreator": () => (/* binding */ EnvelopeCreator),
 /* harmony export */   "EventEnvelopeCreator": () => (/* binding */ EventEnvelopeCreator),
 /* harmony export */   "ExceptionEnvelopeCreator": () => (/* binding */ ExceptionEnvelopeCreator),
 /* harmony export */   "MetricEnvelopeCreator": () => (/* binding */ MetricEnvelopeCreator),
@@ -17642,7 +17652,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -17784,7 +17794,7 @@ function EnvelopeCreatorInit(logger, telemetryItem) {
     }
 }
 var EnvelopeCreator = {
-    Version: "2.7.3"
+    Version: "2.7.4"
 };
 function DependencyEnvelopeCreator(logger, telemetryItem, customUndefinedValue) {
     EnvelopeCreatorInit(logger, telemetryItem);
@@ -17954,14 +17964,14 @@ function TraceEnvelopeCreator(logger, telemetryItem, customUndefinedValue) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "OfflineListener": () => (/* binding */ OfflineListener),
-/* harmony export */   "Offline": () => (/* binding */ Offline)
+/* harmony export */   "Offline": () => (/* binding */ Offline),
+/* harmony export */   "OfflineListener": () => (/* binding */ OfflineListener)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -18059,7 +18069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -18302,7 +18312,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TelemetryProcessors_Sample__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./TelemetryProcessors/Sample */ "./node_modules/@microsoft/applicationinsights-channel-js/dist-esm/TelemetryProcessors/Sample.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 var _a;
@@ -19202,7 +19212,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19385,7 +19395,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/DiagnosticLogger.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19440,7 +19450,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HashCodeScoreGenerator": () => (/* binding */ HashCodeScoreGenerator)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19494,7 +19504,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HashCodeScoreGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HashCodeScoreGenerator */ "./node_modules/@microsoft/applicationinsights-channel-js/dist-esm/TelemetryProcessors/SamplingScoreGenerators/HashCodeScoreGenerator.js");
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/ContextTagKeys.js");
 /*
- * Application Insights JavaScript SDK - Channel, 2.7.3
+ * Application Insights JavaScript SDK - Channel, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19543,13 +19553,13 @@ var SamplingScoreGenerator = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "parseConnectionString": () => (/* binding */ parseConnectionString),
-/* harmony export */   "ConnectionStringParser": () => (/* binding */ ConnectionStringParser)
+/* harmony export */   "ConnectionStringParser": () => (/* binding */ ConnectionStringParser),
+/* harmony export */   "parseConnectionString": () => (/* binding */ parseConnectionString)
 /* harmony export */ });
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19600,16 +19610,16 @@ var ConnectionStringParser = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DisabledPropertyName": () => (/* binding */ DisabledPropertyName),
-/* harmony export */   "SampleRate": () => (/* binding */ SampleRate),
-/* harmony export */   "ProcessLegacy": () => (/* binding */ ProcessLegacy),
-/* harmony export */   "HttpMethod": () => (/* binding */ HttpMethod),
 /* harmony export */   "DEFAULT_BREEZE_ENDPOINT": () => (/* binding */ DEFAULT_BREEZE_ENDPOINT),
-/* harmony export */   "strNotSpecified": () => (/* binding */ strNotSpecified),
-/* harmony export */   "strIkey": () => (/* binding */ strIkey)
+/* harmony export */   "DisabledPropertyName": () => (/* binding */ DisabledPropertyName),
+/* harmony export */   "HttpMethod": () => (/* binding */ HttpMethod),
+/* harmony export */   "ProcessLegacy": () => (/* binding */ ProcessLegacy),
+/* harmony export */   "SampleRate": () => (/* binding */ SampleRate),
+/* harmony export */   "strIkey": () => (/* binding */ strIkey),
+/* harmony export */   "strNotSpecified": () => (/* binding */ strNotSpecified)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19646,7 +19656,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19679,11 +19689,11 @@ function createDomEvent(eventName) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "StorageType": () => (/* binding */ StorageType),
-/* harmony export */   "DistributedTracingModes": () => (/* binding */ DistributedTracingModes)
+/* harmony export */   "DistributedTracingModes": () => (/* binding */ DistributedTracingModes),
+/* harmony export */   "StorageType": () => (/* binding */ StorageType)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19724,14 +19734,14 @@ var DistributedTracingModes;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "stringToBoolOrDefault": () => (/* binding */ stringToBoolOrDefault),
-/* harmony export */   "msToTimeSpan": () => (/* binding */ msToTimeSpan),
 /* harmony export */   "getExtensionByName": () => (/* binding */ getExtensionByName),
-/* harmony export */   "isCrossOriginError": () => (/* binding */ isCrossOriginError)
+/* harmony export */   "isCrossOriginError": () => (/* binding */ isCrossOriginError),
+/* harmony export */   "msToTimeSpan": () => (/* binding */ msToTimeSpan),
+/* harmony export */   "stringToBoolOrDefault": () => (/* binding */ stringToBoolOrDefault)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19792,7 +19802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Base": () => (/* binding */ Base)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19825,7 +19835,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19930,7 +19940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _Base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Base */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/Base.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -19966,7 +19976,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _DataPointType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataPointType */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/DataPointType.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20001,7 +20011,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "DataPointType": () => (/* binding */ DataPointType)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20031,7 +20041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Envelope": () => (/* binding */ Envelope)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20073,7 +20083,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "EventData": () => (/* binding */ EventData)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20115,7 +20125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ExceptionData": () => (/* binding */ ExceptionData)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20161,7 +20171,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ExceptionDetails": () => (/* binding */ ExceptionDetails)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20199,7 +20209,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "MessageData": () => (/* binding */ MessageData)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20241,7 +20251,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "MetricData": () => (/* binding */ MetricData)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20289,7 +20299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _EventData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EventData */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/EventData.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20339,7 +20349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _PageViewData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PageViewData */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/PageViewData.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20387,7 +20397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "RemoteDependencyData": () => (/* binding */ RemoteDependencyData)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20433,7 +20443,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SeverityLevel": () => (/* binding */ SeverityLevel)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20466,7 +20476,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "StackFrame": () => (/* binding */ StackFrame)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20498,7 +20508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20534,12 +20544,12 @@ var ConfigurationManager = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Extensions": () => (/* binding */ Extensions),
-/* harmony export */   "CtxTagKeys": () => (/* binding */ CtxTagKeys)
+/* harmony export */   "CtxTagKeys": () => (/* binding */ CtxTagKeys),
+/* harmony export */   "Extensions": () => (/* binding */ Extensions)
 /* harmony export */ });
 /* harmony import */ var _Contracts_Generated_ContextTagKeys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contracts/Generated/ContextTagKeys */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/ContextTagKeys.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20570,7 +20580,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "RequestHeaders": () => (/* binding */ RequestHeaders)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20599,16 +20609,16 @@ var RequestHeaders = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "utlDisableStorage": () => (/* binding */ utlDisableStorage),
 /* harmony export */   "utlCanUseLocalStorage": () => (/* binding */ utlCanUseLocalStorage),
-/* harmony export */   "utlGetLocalStorage": () => (/* binding */ utlGetLocalStorage),
-/* harmony export */   "utlSetLocalStorage": () => (/* binding */ utlSetLocalStorage),
-/* harmony export */   "utlRemoveStorage": () => (/* binding */ utlRemoveStorage),
 /* harmony export */   "utlCanUseSessionStorage": () => (/* binding */ utlCanUseSessionStorage),
-/* harmony export */   "utlGetSessionStorageKeys": () => (/* binding */ utlGetSessionStorageKeys),
+/* harmony export */   "utlDisableStorage": () => (/* binding */ utlDisableStorage),
+/* harmony export */   "utlGetLocalStorage": () => (/* binding */ utlGetLocalStorage),
 /* harmony export */   "utlGetSessionStorage": () => (/* binding */ utlGetSessionStorage),
-/* harmony export */   "utlSetSessionStorage": () => (/* binding */ utlSetSessionStorage),
-/* harmony export */   "utlRemoveSessionStorage": () => (/* binding */ utlRemoveSessionStorage)
+/* harmony export */   "utlGetSessionStorageKeys": () => (/* binding */ utlGetSessionStorageKeys),
+/* harmony export */   "utlRemoveSessionStorage": () => (/* binding */ utlRemoveSessionStorage),
+/* harmony export */   "utlRemoveStorage": () => (/* binding */ utlRemoveStorage),
+/* harmony export */   "utlSetLocalStorage": () => (/* binding */ utlSetLocalStorage),
+/* harmony export */   "utlSetSessionStorage": () => (/* binding */ utlSetSessionStorage)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Helpers.js");
@@ -20616,7 +20626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _Enums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Enums */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Enums.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20796,7 +20806,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20867,7 +20877,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _Interfaces_Contracts_Generated_Data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Interfaces/Contracts/Generated/Data */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/Data.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20913,7 +20923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _Interfaces_Contracts_Generated_DataPoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Interfaces/Contracts/Generated/DataPoint */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/DataPoint.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -20954,24 +20964,24 @@ var DataPoint = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataSanitizeKeyAndAddUniqueness": () => (/* binding */ dataSanitizeKeyAndAddUniqueness),
-/* harmony export */   "dataSanitizeKey": () => (/* binding */ dataSanitizeKey),
-/* harmony export */   "dataSanitizeString": () => (/* binding */ dataSanitizeString),
-/* harmony export */   "dataSanitizeUrl": () => (/* binding */ dataSanitizeUrl),
-/* harmony export */   "dataSanitizeMessage": () => (/* binding */ dataSanitizeMessage),
+/* harmony export */   "DataSanitizer": () => (/* binding */ DataSanitizer),
 /* harmony export */   "dataSanitizeException": () => (/* binding */ dataSanitizeException),
-/* harmony export */   "dataSanitizeProperties": () => (/* binding */ dataSanitizeProperties),
-/* harmony export */   "dataSanitizeMeasurements": () => (/* binding */ dataSanitizeMeasurements),
 /* harmony export */   "dataSanitizeId": () => (/* binding */ dataSanitizeId),
 /* harmony export */   "dataSanitizeInput": () => (/* binding */ dataSanitizeInput),
-/* harmony export */   "dsPadNumber": () => (/* binding */ dsPadNumber),
-/* harmony export */   "DataSanitizer": () => (/* binding */ DataSanitizer)
+/* harmony export */   "dataSanitizeKey": () => (/* binding */ dataSanitizeKey),
+/* harmony export */   "dataSanitizeKeyAndAddUniqueness": () => (/* binding */ dataSanitizeKeyAndAddUniqueness),
+/* harmony export */   "dataSanitizeMeasurements": () => (/* binding */ dataSanitizeMeasurements),
+/* harmony export */   "dataSanitizeMessage": () => (/* binding */ dataSanitizeMessage),
+/* harmony export */   "dataSanitizeProperties": () => (/* binding */ dataSanitizeProperties),
+/* harmony export */   "dataSanitizeString": () => (/* binding */ dataSanitizeString),
+/* harmony export */   "dataSanitizeUrl": () => (/* binding */ dataSanitizeUrl),
+/* harmony export */   "dsPadNumber": () => (/* binding */ dsPadNumber)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21138,7 +21148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21193,7 +21203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Common/DataSanitizer */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Telemetry/Common/DataSanitizer.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21238,10 +21248,10 @@ var Event = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "_formatErrorCode": () => (/* binding */ _formatErrorCode),
 /* harmony export */   "Exception": () => (/* binding */ Exception),
 /* harmony export */   "_ExceptionDetails": () => (/* binding */ _ExceptionDetails),
-/* harmony export */   "_StackFrame": () => (/* binding */ _StackFrame)
+/* harmony export */   "_StackFrame": () => (/* binding */ _StackFrame),
+/* harmony export */   "_formatErrorCode": () => (/* binding */ _formatErrorCode)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/TsLibShims.js");
 /* harmony import */ var _Interfaces_Contracts_Generated_StackFrame__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Interfaces/Contracts/Generated/StackFrame */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/StackFrame.js");
@@ -21251,7 +21261,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21784,7 +21794,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Common_DataPoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Common/DataPoint */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Telemetry/Common/DataPoint.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21844,7 +21854,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/HelperFuncs.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21905,7 +21915,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Common/DataSanitizer */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Telemetry/Common/DataSanitizer.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -21974,7 +21984,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Interfaces_Contracts_Generated_RemoteDependencyData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Interfaces/Contracts/Generated/RemoteDependencyData */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/Contracts/Generated/RemoteDependencyData.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../HelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22056,7 +22066,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Common/DataSanitizer */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Telemetry/Common/DataSanitizer.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Constants */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22105,17 +22115,17 @@ var Trace = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "urlParseUrl": () => (/* binding */ urlParseUrl),
 /* harmony export */   "urlGetAbsoluteUrl": () => (/* binding */ urlGetAbsoluteUrl),
-/* harmony export */   "urlGetPathName": () => (/* binding */ urlGetPathName),
 /* harmony export */   "urlGetCompleteUrl": () => (/* binding */ urlGetCompleteUrl),
+/* harmony export */   "urlGetPathName": () => (/* binding */ urlGetPathName),
+/* harmony export */   "urlParseFullHost": () => (/* binding */ urlParseFullHost),
 /* harmony export */   "urlParseHost": () => (/* binding */ urlParseHost),
-/* harmony export */   "urlParseFullHost": () => (/* binding */ urlParseFullHost)
+/* harmony export */   "urlParseUrl": () => (/* binding */ urlParseUrl)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22215,14 +22225,14 @@ function urlParseFullHost(url, inclPort) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isInternalApplicationInsightsEndpoint": () => (/* binding */ isInternalApplicationInsightsEndpoint),
-/* harmony export */   "Util": () => (/* binding */ Util),
-/* harmony export */   "UrlHelper": () => (/* binding */ UrlHelper),
-/* harmony export */   "CorrelationIdHelper": () => (/* binding */ CorrelationIdHelper),
 /* harmony export */   "AjaxHelperParseDependencyPath": () => (/* binding */ AjaxHelperParseDependencyPath),
-/* harmony export */   "dateTimeUtilsNow": () => (/* binding */ dateTimeUtilsNow),
+/* harmony export */   "CorrelationIdHelper": () => (/* binding */ CorrelationIdHelper),
+/* harmony export */   "DateTimeUtils": () => (/* binding */ DateTimeUtils),
+/* harmony export */   "UrlHelper": () => (/* binding */ UrlHelper),
+/* harmony export */   "Util": () => (/* binding */ Util),
 /* harmony export */   "dateTimeUtilsDuration": () => (/* binding */ dateTimeUtilsDuration),
-/* harmony export */   "DateTimeUtils": () => (/* binding */ DateTimeUtils)
+/* harmony export */   "dateTimeUtilsNow": () => (/* binding */ dateTimeUtilsNow),
+/* harmony export */   "isInternalApplicationInsightsEndpoint": () => (/* binding */ isInternalApplicationInsightsEndpoint)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CoreUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CookieMgr.js");
@@ -22237,7 +22247,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./StorageHelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/StorageHelperFuncs.js");
 /* harmony import */ var _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./UrlHelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/UrlHelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22455,78 +22465,78 @@ var DateTimeUtils = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Util": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.Util),
-/* harmony export */   "CorrelationIdHelper": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.CorrelationIdHelper),
-/* harmony export */   "DateTimeUtils": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.DateTimeUtils),
-/* harmony export */   "dateTimeUtilsNow": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.dateTimeUtilsNow),
-/* harmony export */   "dateTimeUtilsDuration": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.dateTimeUtilsDuration),
-/* harmony export */   "UrlHelper": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.UrlHelper),
-/* harmony export */   "isInternalApplicationInsightsEndpoint": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.isInternalApplicationInsightsEndpoint),
-/* harmony export */   "parseConnectionString": () => (/* reexport safe */ _ConnectionStringParser__WEBPACK_IMPORTED_MODULE_1__.parseConnectionString),
-/* harmony export */   "ConnectionStringParser": () => (/* reexport safe */ _ConnectionStringParser__WEBPACK_IMPORTED_MODULE_1__.ConnectionStringParser),
-/* harmony export */   "RequestHeaders": () => (/* reexport safe */ _RequestResponseHeaders__WEBPACK_IMPORTED_MODULE_2__.RequestHeaders),
-/* harmony export */   "DisabledPropertyName": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.DisabledPropertyName),
-/* harmony export */   "ProcessLegacy": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.ProcessLegacy),
-/* harmony export */   "SampleRate": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.SampleRate),
-/* harmony export */   "HttpMethod": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.HttpMethod),
-/* harmony export */   "DEFAULT_BREEZE_ENDPOINT": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.DEFAULT_BREEZE_ENDPOINT),
-/* harmony export */   "strNotSpecified": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.strNotSpecified),
-/* harmony export */   "AIData": () => (/* reexport safe */ _Interfaces_Contracts_Generated_Data__WEBPACK_IMPORTED_MODULE_4__.Data),
 /* harmony export */   "AIBase": () => (/* reexport safe */ _Interfaces_Contracts_Generated_Base__WEBPACK_IMPORTED_MODULE_5__.Base),
+/* harmony export */   "AIData": () => (/* reexport safe */ _Interfaces_Contracts_Generated_Data__WEBPACK_IMPORTED_MODULE_4__.Data),
+/* harmony export */   "AnalyticsPluginIdentifier": () => (/* binding */ AnalyticsPluginIdentifier),
+/* harmony export */   "BreezeChannelIdentifier": () => (/* binding */ BreezeChannelIdentifier),
+/* harmony export */   "ConfigurationManager": () => (/* reexport safe */ _Interfaces_IConfig__WEBPACK_IMPORTED_MODULE_17__.ConfigurationManager),
+/* harmony export */   "ConnectionStringParser": () => (/* reexport safe */ _ConnectionStringParser__WEBPACK_IMPORTED_MODULE_1__.ConnectionStringParser),
+/* harmony export */   "ContextTagKeys": () => (/* reexport safe */ _Interfaces_Contracts_Generated_ContextTagKeys__WEBPACK_IMPORTED_MODULE_18__.ContextTagKeys),
+/* harmony export */   "CorrelationIdHelper": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.CorrelationIdHelper),
+/* harmony export */   "CtxTagKeys": () => (/* reexport safe */ _Interfaces_PartAExtensions__WEBPACK_IMPORTED_MODULE_21__.CtxTagKeys),
+/* harmony export */   "DEFAULT_BREEZE_ENDPOINT": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.DEFAULT_BREEZE_ENDPOINT),
+/* harmony export */   "Data": () => (/* reexport safe */ _Telemetry_Common_Data__WEBPACK_IMPORTED_MODULE_15__.Data),
+/* harmony export */   "DataSanitizer": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.DataSanitizer),
+/* harmony export */   "DateTimeUtils": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.DateTimeUtils),
+/* harmony export */   "DisabledPropertyName": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.DisabledPropertyName),
+/* harmony export */   "DistributedTracingModes": () => (/* reexport safe */ _Enums__WEBPACK_IMPORTED_MODULE_22__.DistributedTracingModes),
 /* harmony export */   "Envelope": () => (/* reexport safe */ _Telemetry_Common_Envelope__WEBPACK_IMPORTED_MODULE_6__.Envelope),
 /* harmony export */   "Event": () => (/* reexport safe */ _Telemetry_Event__WEBPACK_IMPORTED_MODULE_7__.Event),
 /* harmony export */   "Exception": () => (/* reexport safe */ _Telemetry_Exception__WEBPACK_IMPORTED_MODULE_8__.Exception),
+/* harmony export */   "Extensions": () => (/* reexport safe */ _Interfaces_PartAExtensions__WEBPACK_IMPORTED_MODULE_21__.Extensions),
+/* harmony export */   "HttpMethod": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.HttpMethod),
 /* harmony export */   "Metric": () => (/* reexport safe */ _Telemetry_Metric__WEBPACK_IMPORTED_MODULE_9__.Metric),
 /* harmony export */   "PageView": () => (/* reexport safe */ _Telemetry_PageView__WEBPACK_IMPORTED_MODULE_10__.PageView),
 /* harmony export */   "PageViewData": () => (/* reexport safe */ _Interfaces_Contracts_Generated_PageViewData__WEBPACK_IMPORTED_MODULE_11__.PageViewData),
-/* harmony export */   "RemoteDependencyData": () => (/* reexport safe */ _Telemetry_RemoteDependencyData__WEBPACK_IMPORTED_MODULE_12__.RemoteDependencyData),
-/* harmony export */   "Trace": () => (/* reexport safe */ _Telemetry_Trace__WEBPACK_IMPORTED_MODULE_13__.Trace),
 /* harmony export */   "PageViewPerformance": () => (/* reexport safe */ _Telemetry_PageViewPerformance__WEBPACK_IMPORTED_MODULE_14__.PageViewPerformance),
-/* harmony export */   "Data": () => (/* reexport safe */ _Telemetry_Common_Data__WEBPACK_IMPORTED_MODULE_15__.Data),
+/* harmony export */   "ProcessLegacy": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.ProcessLegacy),
+/* harmony export */   "PropertiesPluginIdentifier": () => (/* binding */ PropertiesPluginIdentifier),
+/* harmony export */   "RemoteDependencyData": () => (/* reexport safe */ _Telemetry_RemoteDependencyData__WEBPACK_IMPORTED_MODULE_12__.RemoteDependencyData),
+/* harmony export */   "RequestHeaders": () => (/* reexport safe */ _RequestResponseHeaders__WEBPACK_IMPORTED_MODULE_2__.RequestHeaders),
+/* harmony export */   "SampleRate": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.SampleRate),
 /* harmony export */   "SeverityLevel": () => (/* reexport safe */ _Interfaces_Contracts_Generated_SeverityLevel__WEBPACK_IMPORTED_MODULE_16__.SeverityLevel),
-/* harmony export */   "ConfigurationManager": () => (/* reexport safe */ _Interfaces_IConfig__WEBPACK_IMPORTED_MODULE_17__.ConfigurationManager),
-/* harmony export */   "ContextTagKeys": () => (/* reexport safe */ _Interfaces_Contracts_Generated_ContextTagKeys__WEBPACK_IMPORTED_MODULE_18__.ContextTagKeys),
-/* harmony export */   "DataSanitizer": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.DataSanitizer),
-/* harmony export */   "dataSanitizeKeyAndAddUniqueness": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeKeyAndAddUniqueness),
-/* harmony export */   "dataSanitizeKey": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeKey),
-/* harmony export */   "dataSanitizeString": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeString),
-/* harmony export */   "dataSanitizeUrl": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeUrl),
-/* harmony export */   "dataSanitizeMessage": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeMessage),
+/* harmony export */   "TelemetryItemCreator": () => (/* reexport safe */ _TelemetryItemCreator__WEBPACK_IMPORTED_MODULE_20__.TelemetryItemCreator),
+/* harmony export */   "Trace": () => (/* reexport safe */ _Telemetry_Trace__WEBPACK_IMPORTED_MODULE_13__.Trace),
+/* harmony export */   "UrlHelper": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.UrlHelper),
+/* harmony export */   "Util": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.Util),
+/* harmony export */   "createDomEvent": () => (/* reexport safe */ _DomHelperFuncs__WEBPACK_IMPORTED_MODULE_25__.createDomEvent),
 /* harmony export */   "dataSanitizeException": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeException),
-/* harmony export */   "dataSanitizeProperties": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeProperties),
-/* harmony export */   "dataSanitizeMeasurements": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeMeasurements),
 /* harmony export */   "dataSanitizeId": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeId),
 /* harmony export */   "dataSanitizeInput": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeInput),
+/* harmony export */   "dataSanitizeKey": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeKey),
+/* harmony export */   "dataSanitizeKeyAndAddUniqueness": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeKeyAndAddUniqueness),
+/* harmony export */   "dataSanitizeMeasurements": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeMeasurements),
+/* harmony export */   "dataSanitizeMessage": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeMessage),
+/* harmony export */   "dataSanitizeProperties": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeProperties),
+/* harmony export */   "dataSanitizeString": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeString),
+/* harmony export */   "dataSanitizeUrl": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dataSanitizeUrl),
+/* harmony export */   "dateTimeUtilsDuration": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.dateTimeUtilsDuration),
+/* harmony export */   "dateTimeUtilsNow": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.dateTimeUtilsNow),
 /* harmony export */   "dsPadNumber": () => (/* reexport safe */ _Telemetry_Common_DataSanitizer__WEBPACK_IMPORTED_MODULE_19__.dsPadNumber),
-/* harmony export */   "TelemetryItemCreator": () => (/* reexport safe */ _TelemetryItemCreator__WEBPACK_IMPORTED_MODULE_20__.TelemetryItemCreator),
-/* harmony export */   "CtxTagKeys": () => (/* reexport safe */ _Interfaces_PartAExtensions__WEBPACK_IMPORTED_MODULE_21__.CtxTagKeys),
-/* harmony export */   "Extensions": () => (/* reexport safe */ _Interfaces_PartAExtensions__WEBPACK_IMPORTED_MODULE_21__.Extensions),
-/* harmony export */   "DistributedTracingModes": () => (/* reexport safe */ _Enums__WEBPACK_IMPORTED_MODULE_22__.DistributedTracingModes),
-/* harmony export */   "stringToBoolOrDefault": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.stringToBoolOrDefault),
-/* harmony export */   "msToTimeSpan": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.msToTimeSpan),
 /* harmony export */   "getExtensionByName": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.getExtensionByName),
-/* harmony export */   "isCrossOriginError": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.isCrossOriginError),
 /* harmony export */   "isBeaconApiSupported": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_24__.isBeaconsSupported),
-/* harmony export */   "createDomEvent": () => (/* reexport safe */ _DomHelperFuncs__WEBPACK_IMPORTED_MODULE_25__.createDomEvent),
-/* harmony export */   "utlDisableStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlDisableStorage),
-/* harmony export */   "utlCanUseLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlCanUseLocalStorage),
-/* harmony export */   "utlGetLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetLocalStorage),
-/* harmony export */   "utlSetLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlSetLocalStorage),
-/* harmony export */   "utlRemoveStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlRemoveStorage),
-/* harmony export */   "utlCanUseSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlCanUseSessionStorage),
-/* harmony export */   "utlGetSessionStorageKeys": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetSessionStorageKeys),
-/* harmony export */   "utlGetSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetSessionStorage),
-/* harmony export */   "utlSetSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlSetSessionStorage),
-/* harmony export */   "utlRemoveSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlRemoveSessionStorage),
-/* harmony export */   "urlParseUrl": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlParseUrl),
+/* harmony export */   "isCrossOriginError": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.isCrossOriginError),
+/* harmony export */   "isInternalApplicationInsightsEndpoint": () => (/* reexport safe */ _Util__WEBPACK_IMPORTED_MODULE_0__.isInternalApplicationInsightsEndpoint),
+/* harmony export */   "msToTimeSpan": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.msToTimeSpan),
+/* harmony export */   "parseConnectionString": () => (/* reexport safe */ _ConnectionStringParser__WEBPACK_IMPORTED_MODULE_1__.parseConnectionString),
+/* harmony export */   "strNotSpecified": () => (/* reexport safe */ _Constants__WEBPACK_IMPORTED_MODULE_3__.strNotSpecified),
+/* harmony export */   "stringToBoolOrDefault": () => (/* reexport safe */ _HelperFuncs__WEBPACK_IMPORTED_MODULE_23__.stringToBoolOrDefault),
 /* harmony export */   "urlGetAbsoluteUrl": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlGetAbsoluteUrl),
-/* harmony export */   "urlGetPathName": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlGetPathName),
 /* harmony export */   "urlGetCompleteUrl": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlGetCompleteUrl),
-/* harmony export */   "urlParseHost": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlParseHost),
+/* harmony export */   "urlGetPathName": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlGetPathName),
 /* harmony export */   "urlParseFullHost": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlParseFullHost),
-/* harmony export */   "PropertiesPluginIdentifier": () => (/* binding */ PropertiesPluginIdentifier),
-/* harmony export */   "BreezeChannelIdentifier": () => (/* binding */ BreezeChannelIdentifier),
-/* harmony export */   "AnalyticsPluginIdentifier": () => (/* binding */ AnalyticsPluginIdentifier)
+/* harmony export */   "urlParseHost": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlParseHost),
+/* harmony export */   "urlParseUrl": () => (/* reexport safe */ _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__.urlParseUrl),
+/* harmony export */   "utlCanUseLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlCanUseLocalStorage),
+/* harmony export */   "utlCanUseSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlCanUseSessionStorage),
+/* harmony export */   "utlDisableStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlDisableStorage),
+/* harmony export */   "utlGetLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetLocalStorage),
+/* harmony export */   "utlGetSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetSessionStorage),
+/* harmony export */   "utlGetSessionStorageKeys": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlGetSessionStorageKeys),
+/* harmony export */   "utlRemoveSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlRemoveSessionStorage),
+/* harmony export */   "utlRemoveStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlRemoveStorage),
+/* harmony export */   "utlSetLocalStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlSetLocalStorage),
+/* harmony export */   "utlSetSessionStorage": () => (/* reexport safe */ _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__.utlSetSessionStorage)
 /* harmony export */ });
 /* harmony import */ var _Util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Util */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Util.js");
 /* harmony import */ var _ConnectionStringParser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConnectionStringParser */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/ConnectionStringParser.js");
@@ -22557,7 +22567,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _StorageHelperFuncs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./StorageHelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/StorageHelperFuncs.js");
 /* harmony import */ var _UrlHelperFuncs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./UrlHelperFuncs */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/UrlHelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Common, 2.7.3
+ * Application Insights JavaScript SDK - Common, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22609,7 +22619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "EventsDiscardedReason": () => (/* binding */ EventsDiscardedReason)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22660,7 +22670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "_InternalMessageId": () => (/* binding */ _InternalMessageId)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22789,7 +22799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -22936,7 +22946,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DiagnosticLogger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DiagnosticLogger */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/DiagnosticLogger.js");
 /* harmony import */ var _DbgExtensionUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DbgExtensionUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/DbgExtensionUtils.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -23170,7 +23180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Constants */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/Constants.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -23283,7 +23293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TelemetryHelpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TelemetryHelpers */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/TelemetryHelpers.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -23399,11 +23409,11 @@ var ChannelController = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strIKey": () => (/* binding */ strIKey),
-/* harmony export */   "strExtensionConfig": () => (/* binding */ strExtensionConfig)
+/* harmony export */   "strExtensionConfig": () => (/* binding */ strExtensionConfig),
+/* harmony export */   "strIKey": () => (/* binding */ strIKey)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -23424,16 +23434,16 @@ var strExtensionConfig = "extensionConfig";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "_gblCookieMgr": () => (/* binding */ _gblCookieMgr),
-/* harmony export */   "safeGetCookieMgr": () => (/* binding */ safeGetCookieMgr),
-/* harmony export */   "createCookieMgr": () => (/* binding */ createCookieMgr),
 /* harmony export */   "areCookiesSupported": () => (/* binding */ areCookiesSupported),
+/* harmony export */   "createCookieMgr": () => (/* binding */ createCookieMgr),
+/* harmony export */   "safeGetCookieMgr": () => (/* binding */ safeGetCookieMgr),
 /* harmony export */   "uaDisallowsSameSiteNone": () => (/* binding */ uaDisallowsSameSiteNone)
 /* harmony export */ });
 /* harmony import */ var _JavaScriptSDK_Enums_LoggingEnums__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../JavaScriptSDK.Enums/LoggingEnums */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _EnvUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EnvUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -23765,25 +23775,25 @@ function uaDisallowsSameSiteNone(userAgent) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Undefined": () => (/* binding */ Undefined),
-/* harmony export */   "addEventHandler": () => (/* binding */ addEventHandler),
-/* harmony export */   "addEventListeners": () => (/* binding */ addEventListeners),
-/* harmony export */   "addPageUnloadEventListener": () => (/* binding */ addPageUnloadEventListener),
-/* harmony export */   "addPageHideEventListener": () => (/* binding */ addPageHideEventListener),
-/* harmony export */   "addPageShowEventListener": () => (/* binding */ addPageShowEventListener),
-/* harmony export */   "newGuid": () => (/* binding */ newGuid),
-/* harmony export */   "perfNow": () => (/* binding */ perfNow),
-/* harmony export */   "newId": () => (/* binding */ newId),
-/* harmony export */   "strEndsWith": () => (/* binding */ strEndsWith),
-/* harmony export */   "generateW3CId": () => (/* binding */ generateW3CId),
 /* harmony export */   "CoreUtils": () => (/* binding */ CoreUtils),
 /* harmony export */   "EventHelper": () => (/* binding */ EventHelper),
+/* harmony export */   "Undefined": () => (/* binding */ Undefined),
 /* harmony export */   "_legacyCookieMgr": () => (/* binding */ _legacyCookieMgr),
-/* harmony export */   "disableCookies": () => (/* binding */ disableCookies),
+/* harmony export */   "addEventHandler": () => (/* binding */ addEventHandler),
+/* harmony export */   "addEventListeners": () => (/* binding */ addEventListeners),
+/* harmony export */   "addPageHideEventListener": () => (/* binding */ addPageHideEventListener),
+/* harmony export */   "addPageShowEventListener": () => (/* binding */ addPageShowEventListener),
+/* harmony export */   "addPageUnloadEventListener": () => (/* binding */ addPageUnloadEventListener),
 /* harmony export */   "canUseCookies": () => (/* binding */ canUseCookies),
+/* harmony export */   "deleteCookie": () => (/* binding */ deleteCookie),
+/* harmony export */   "disableCookies": () => (/* binding */ disableCookies),
+/* harmony export */   "generateW3CId": () => (/* binding */ generateW3CId),
 /* harmony export */   "getCookie": () => (/* binding */ getCookie),
+/* harmony export */   "newGuid": () => (/* binding */ newGuid),
+/* harmony export */   "newId": () => (/* binding */ newId),
+/* harmony export */   "perfNow": () => (/* binding */ perfNow),
 /* harmony export */   "setCookie": () => (/* binding */ setCookie),
-/* harmony export */   "deleteCookie": () => (/* binding */ deleteCookie)
+/* harmony export */   "strEndsWith": () => (/* binding */ strEndsWith)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Helpers.js");
@@ -23792,7 +23802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _RandomHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RandomHelper */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/RandomHelper.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -24148,7 +24158,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _EnvUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EnvUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -24206,9 +24216,9 @@ function getDebugListener(config) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DiagnosticLogger": () => (/* binding */ DiagnosticLogger),
 /* harmony export */   "_InternalLogMessage": () => (/* binding */ _InternalLogMessage),
-/* harmony export */   "safeGetLogger": () => (/* binding */ safeGetLogger),
-/* harmony export */   "DiagnosticLogger": () => (/* binding */ DiagnosticLogger)
+/* harmony export */   "safeGetLogger": () => (/* binding */ safeGetLogger)
 /* harmony export */ });
 /* harmony import */ var _JavaScriptSDK_Enums_LoggingEnums__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../JavaScriptSDK.Enums/LoggingEnums */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /* harmony import */ var _EnvUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EnvUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
@@ -24216,7 +24226,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _DbgExtensionUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DbgExtensionUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/DbgExtensionUtils.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -24448,38 +24458,38 @@ var DiagnosticLogger = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setEnableEnvMocks": () => (/* binding */ setEnableEnvMocks),
+/* harmony export */   "dumpObj": () => (/* binding */ dumpObj),
+/* harmony export */   "getConsole": () => (/* binding */ getConsole),
+/* harmony export */   "getCrypto": () => (/* binding */ getCrypto),
+/* harmony export */   "getDocument": () => (/* binding */ getDocument),
 /* harmony export */   "getGlobalInst": () => (/* binding */ getGlobalInst),
-/* harmony export */   "hasWindow": () => (/* binding */ hasWindow),
+/* harmony export */   "getHistory": () => (/* binding */ getHistory),
+/* harmony export */   "getIEVersion": () => (/* binding */ getIEVersion),
+/* harmony export */   "getJSON": () => (/* binding */ getJSON),
+/* harmony export */   "getLocation": () => (/* binding */ getLocation),
+/* harmony export */   "getMsCrypto": () => (/* binding */ getMsCrypto),
+/* harmony export */   "getNavigator": () => (/* binding */ getNavigator),
+/* harmony export */   "getPerformance": () => (/* binding */ getPerformance),
 /* harmony export */   "getWindow": () => (/* binding */ getWindow),
 /* harmony export */   "hasDocument": () => (/* binding */ hasDocument),
-/* harmony export */   "getDocument": () => (/* binding */ getDocument),
-/* harmony export */   "hasNavigator": () => (/* binding */ hasNavigator),
-/* harmony export */   "getNavigator": () => (/* binding */ getNavigator),
 /* harmony export */   "hasHistory": () => (/* binding */ hasHistory),
-/* harmony export */   "getHistory": () => (/* binding */ getHistory),
-/* harmony export */   "getLocation": () => (/* binding */ getLocation),
-/* harmony export */   "getConsole": () => (/* binding */ getConsole),
-/* harmony export */   "getPerformance": () => (/* binding */ getPerformance),
 /* harmony export */   "hasJSON": () => (/* binding */ hasJSON),
-/* harmony export */   "getJSON": () => (/* binding */ getJSON),
-/* harmony export */   "getCrypto": () => (/* binding */ getCrypto),
-/* harmony export */   "getMsCrypto": () => (/* binding */ getMsCrypto),
-/* harmony export */   "isReactNative": () => (/* binding */ isReactNative),
-/* harmony export */   "isIE": () => (/* binding */ isIE),
-/* harmony export */   "getIEVersion": () => (/* binding */ getIEVersion),
-/* harmony export */   "dumpObj": () => (/* binding */ dumpObj),
-/* harmony export */   "isSafari": () => (/* binding */ isSafari),
+/* harmony export */   "hasNavigator": () => (/* binding */ hasNavigator),
+/* harmony export */   "hasWindow": () => (/* binding */ hasWindow),
 /* harmony export */   "isBeaconsSupported": () => (/* binding */ isBeaconsSupported),
 /* harmony export */   "isFetchSupported": () => (/* binding */ isFetchSupported),
-/* harmony export */   "useXDomainRequest": () => (/* binding */ useXDomainRequest),
-/* harmony export */   "isXhrSupported": () => (/* binding */ isXhrSupported)
+/* harmony export */   "isIE": () => (/* binding */ isIE),
+/* harmony export */   "isReactNative": () => (/* binding */ isReactNative),
+/* harmony export */   "isSafari": () => (/* binding */ isSafari),
+/* harmony export */   "isXhrSupported": () => (/* binding */ isXhrSupported),
+/* harmony export */   "setEnableEnvMocks": () => (/* binding */ setEnableEnvMocks),
+/* harmony export */   "useXDomainRequest": () => (/* binding */ useXDomainRequest)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Helpers.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -24854,54 +24864,60 @@ function isXhrSupported() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "objToString": () => (/* binding */ objToString),
-/* harmony export */   "isTypeof": () => (/* binding */ isTypeof),
-/* harmony export */   "isUndefined": () => (/* binding */ isUndefined),
-/* harmony export */   "isNotUndefined": () => (/* binding */ isNotUndefined),
-/* harmony export */   "isNullOrUndefined": () => (/* binding */ isNullOrUndefined),
-/* harmony export */   "isNotNullOrUndefined": () => (/* binding */ isNotNullOrUndefined),
-/* harmony export */   "hasOwnProperty": () => (/* binding */ hasOwnProperty),
-/* harmony export */   "isObject": () => (/* binding */ isObject),
-/* harmony export */   "isFunction": () => (/* binding */ isFunction),
-/* harmony export */   "attachEvent": () => (/* binding */ attachEvent),
-/* harmony export */   "detachEvent": () => (/* binding */ detachEvent),
-/* harmony export */   "normalizeJsName": () => (/* binding */ normalizeJsName),
-/* harmony export */   "objForEachKey": () => (/* binding */ objForEachKey),
-/* harmony export */   "strEndsWith": () => (/* binding */ strEndsWith),
-/* harmony export */   "strStartsWith": () => (/* binding */ strStartsWith),
-/* harmony export */   "strContains": () => (/* binding */ strContains),
-/* harmony export */   "isDate": () => (/* binding */ isDate),
-/* harmony export */   "isArray": () => (/* binding */ isArray),
-/* harmony export */   "isError": () => (/* binding */ isError),
-/* harmony export */   "isString": () => (/* binding */ isString),
-/* harmony export */   "isNumber": () => (/* binding */ isNumber),
-/* harmony export */   "isBoolean": () => (/* binding */ isBoolean),
-/* harmony export */   "isSymbol": () => (/* binding */ isSymbol),
-/* harmony export */   "toISOString": () => (/* binding */ toISOString),
+/* harmony export */   "_getObjProto": () => (/* binding */ _getObjProto),
+/* harmony export */   "_strEndsWithPoly": () => (/* binding */ _strEndsWithPoly),
+/* harmony export */   "_strStartsWithPoly": () => (/* binding */ _strStartsWithPoly),
+/* harmony export */   "_toISOStringPoly": () => (/* binding */ _toISOStringPoly),
 /* harmony export */   "arrForEach": () => (/* binding */ arrForEach),
 /* harmony export */   "arrIndexOf": () => (/* binding */ arrIndexOf),
 /* harmony export */   "arrMap": () => (/* binding */ arrMap),
 /* harmony export */   "arrReduce": () => (/* binding */ arrReduce),
-/* harmony export */   "strTrim": () => (/* binding */ strTrim),
-/* harmony export */   "objKeys": () => (/* binding */ objKeys),
-/* harmony export */   "objDefineAccessors": () => (/* binding */ objDefineAccessors),
-/* harmony export */   "objFreeze": () => (/* binding */ objFreeze),
-/* harmony export */   "objSeal": () => (/* binding */ objSeal),
-/* harmony export */   "dateNow": () => (/* binding */ dateNow),
-/* harmony export */   "getExceptionName": () => (/* binding */ getExceptionName),
-/* harmony export */   "setValue": () => (/* binding */ setValue),
-/* harmony export */   "getSetValue": () => (/* binding */ getSetValue),
-/* harmony export */   "isNotTruthy": () => (/* binding */ isNotTruthy),
-/* harmony export */   "isTruthy": () => (/* binding */ isTruthy),
-/* harmony export */   "throwError": () => (/* binding */ throwError),
-/* harmony export */   "proxyAssign": () => (/* binding */ proxyAssign),
+/* harmony export */   "attachEvent": () => (/* binding */ attachEvent),
 /* harmony export */   "createClassFromInterface": () => (/* binding */ createClassFromInterface),
-/* harmony export */   "optimizeObject": () => (/* binding */ optimizeObject)
+/* harmony export */   "dateNow": () => (/* binding */ dateNow),
+/* harmony export */   "detachEvent": () => (/* binding */ detachEvent),
+/* harmony export */   "getExceptionName": () => (/* binding */ getExceptionName),
+/* harmony export */   "getSetValue": () => (/* binding */ getSetValue),
+/* harmony export */   "hasOwnProperty": () => (/* binding */ hasOwnProperty),
+/* harmony export */   "isArray": () => (/* binding */ isArray),
+/* harmony export */   "isBoolean": () => (/* binding */ isBoolean),
+/* harmony export */   "isDate": () => (/* binding */ isDate),
+/* harmony export */   "isError": () => (/* binding */ isError),
+/* harmony export */   "isFunction": () => (/* binding */ isFunction),
+/* harmony export */   "isNotNullOrUndefined": () => (/* binding */ isNotNullOrUndefined),
+/* harmony export */   "isNotTruthy": () => (/* binding */ isNotTruthy),
+/* harmony export */   "isNotUndefined": () => (/* binding */ isNotUndefined),
+/* harmony export */   "isNullOrUndefined": () => (/* binding */ isNullOrUndefined),
+/* harmony export */   "isNumber": () => (/* binding */ isNumber),
+/* harmony export */   "isObject": () => (/* binding */ isObject),
+/* harmony export */   "isPlainObject": () => (/* binding */ isPlainObject),
+/* harmony export */   "isString": () => (/* binding */ isString),
+/* harmony export */   "isSymbol": () => (/* binding */ isSymbol),
+/* harmony export */   "isTruthy": () => (/* binding */ isTruthy),
+/* harmony export */   "isTypeof": () => (/* binding */ isTypeof),
+/* harmony export */   "isUndefined": () => (/* binding */ isUndefined),
+/* harmony export */   "normalizeJsName": () => (/* binding */ normalizeJsName),
+/* harmony export */   "objDefineAccessors": () => (/* binding */ objDefineAccessors),
+/* harmony export */   "objExtend": () => (/* binding */ objExtend),
+/* harmony export */   "objForEachKey": () => (/* binding */ objForEachKey),
+/* harmony export */   "objFreeze": () => (/* binding */ objFreeze),
+/* harmony export */   "objKeys": () => (/* binding */ objKeys),
+/* harmony export */   "objSeal": () => (/* binding */ objSeal),
+/* harmony export */   "objToString": () => (/* binding */ objToString),
+/* harmony export */   "optimizeObject": () => (/* binding */ optimizeObject),
+/* harmony export */   "proxyAssign": () => (/* binding */ proxyAssign),
+/* harmony export */   "setValue": () => (/* binding */ setValue),
+/* harmony export */   "strContains": () => (/* binding */ strContains),
+/* harmony export */   "strEndsWith": () => (/* binding */ strEndsWith),
+/* harmony export */   "strStartsWith": () => (/* binding */ strStartsWith),
+/* harmony export */   "strTrim": () => (/* binding */ strTrim),
+/* harmony export */   "throwError": () => (/* binding */ throwError),
+/* harmony export */   "toISOString": () => (/* binding */ toISOString)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
 /* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Helpers.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -24915,11 +24931,66 @@ var strAddEventHelper = "addEventListener";
 var strDetachEvent = "detachEvent";
 var strRemoveEventListener = "removeEventListener";
 var strToISOString = "toISOString";
+var cStrEndsWith = "endsWith";
+var cStrStartsWith = "startsWith";
+var strIndexOf = "indexOf";
+var strMap = "map";
+var strReduce = "reduce";
+var cStrTrim = "trim";
+var strToString = "toString";
+/**
+ * Constant string defined to support minimization
+ * @ignore
+ */
+var str__Proto = "__proto__";
+/**
+ * Constant string defined to support minimization
+ * @ignore
+ */
+var strConstructor = "constructor";
 var _objDefineProperty = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjDefineProperty;
 var _objFreeze = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass.freeze;
 var _objSeal = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass.seal;
+var _objKeys = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass.keys;
+var StringProto = String[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype];
+var _strTrim = StringProto[cStrTrim];
+var _strEndsWith = StringProto[cStrEndsWith];
+var _strStartsWith = StringProto[cStrStartsWith];
+var DateProto = Date[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype];
+var _dataToISOString = DateProto[strToISOString];
+var _isArray = Array.isArray;
+var _objToString = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjProto[strToString];
+var _fnToString = _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjHasOwnProperty[strToString];
+// Cache what this browser reports as the object function constructor (as a string)
+var _objFunctionString = _fnToString.call(_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass);
+var rCamelCase = /-([a-z])/g;
+var rNormalizeInvalid = /([^\w\d_$])/g;
+var rLeadingNumeric = /^(\d+[\w\d_$])/;
+/**
+ * Pre-lookup to check if we are running on a modern browser (i.e. not IE8)
+ * @ignore
+ */
+var _objGetPrototypeOf = Object["getPrototypeOf"];
+/**
+ * Helper used to get the prototype of the target object as getPrototypeOf is not available in an ES3 environment.
+ * @ignore
+ */
+function _getObjProto(target) {
+    if (target) {
+        // This method doesn't existing in older browsers (e.g. IE8)
+        if (_objGetPrototypeOf) {
+            return _objGetPrototypeOf(target);
+        }
+        // target[Constructor] May break if the constructor has been changed or removed
+        var newProto = target[str__Proto] || target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype] || target[strConstructor];
+        if (newProto) {
+            return newProto;
+        }
+    }
+    return null;
+}
 function objToString(obj) {
-    return _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjProto.toString.call(obj);
+    return _objToString.call(obj);
 }
 function isTypeof(value, theType) {
     return typeof value === theType;
@@ -24937,15 +25008,15 @@ function isNotNullOrUndefined(value) {
     return !isNullOrUndefined(value);
 }
 function hasOwnProperty(obj, prop) {
-    return obj && _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjHasOwnProperty.call(obj, prop);
+    return !!(obj && _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjHasOwnProperty.call(obj, prop));
 }
 function isObject(value) {
     // Changing to inline for performance
-    return typeof value === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimObject;
+    return !!(value && typeof value === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimObject);
 }
 function isFunction(value) {
     // Changing to inline for performance
-    return typeof value === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimFunction;
+    return !!(value && typeof value === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimFunction);
 }
 /**
  * Binds the specified function to an event, so that the function gets called whenever the event fires on the object
@@ -25009,9 +25080,15 @@ function detachEvent(obj, eventNameWithoutOn, handlerRef, useCapture) {
  */
 function normalizeJsName(name) {
     var value = name;
-    var match = /([^\w\d_$])/g;
-    if (match.test(name)) {
-        value = name.replace(match, "_");
+    if (value && isString(value)) {
+        // CamelCase everything after the "-" and remove the dash
+        value = value.replace(rCamelCase, function (_all, letter) {
+            return letter.toUpperCase();
+        });
+        value = value.replace(rNormalizeInvalid, "_");
+        value = value.replace(rLeadingNumeric, function (_all, match) {
+            return "_" + match;
+        });
     }
     return value;
 }
@@ -25037,24 +25114,34 @@ function objForEachKey(target, callbackfn) {
  * @returns true if the given search value is found at the end of the string, otherwise false.
  */
 function strEndsWith(value, search) {
-    if (value && search) {
-        var searchLen = search.length;
-        var valLen = value.length;
-        if (value === search) {
-            return true;
-        }
-        else if (valLen >= searchLen) {
-            var pos = valLen - 1;
-            for (var lp = searchLen - 1; lp >= 0; lp--) {
-                if (value[pos] != search[lp]) {
-                    return false;
-                }
-                pos--;
-            }
-            return true;
-        }
+    var result = false;
+    if (value && search && !(result = value === search)) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        result = _strEndsWith ? value[cStrEndsWith](search) : _strEndsWithPoly(value, search);
     }
-    return false;
+    return result;
+}
+/**
+ * The _strEndsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.
+ * @param value - The value to check whether it ends with the search value.
+ * @param search - The characters to be searched for at the end of the value.
+ * @returns true if the given search value is found at the end of the string, otherwise false.
+ */
+function _strEndsWithPoly(value, search) {
+    var result = false;
+    var searchLen = search ? search.length : 0;
+    var valLen = value ? value.length : 0;
+    if (searchLen && valLen && valLen >= searchLen && !(result = value === search)) {
+        var pos = valLen - 1;
+        for (var lp = searchLen - 1; lp >= 0; lp--) {
+            if (value[pos] != search[lp]) {
+                return false;
+            }
+            pos--;
+        }
+        result = true;
+    }
+    return result;
 }
 /**
  * The strStartsWith() method determines whether a string starts with the characters of the specified string, returning true or false as appropriate.
@@ -25063,21 +25150,30 @@ function strEndsWith(value, search) {
  * @returns true if the given search value is found at the start of the string, otherwise false.
  */
 function strStartsWith(value, checkValue) {
+    var result = false;
+    if (value && checkValue && !(result = value === checkValue)) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        result = _strStartsWith ? value[cStrStartsWith](checkValue) : _strStartsWithPoly(value, checkValue);
+    }
+    return result;
+}
+/**
+ * The strStartsWith() method determines whether a string starts with the characters of the specified string, returning true or false as appropriate.
+ * @param value - The value to check whether it ends with the search value.
+ * @param checkValue - The characters to be searched for at the start of the value.
+ * @returns true if the given search value is found at the start of the string, otherwise false.
+ */
+function _strStartsWithPoly(value, checkValue) {
     // Using helper for performance and because string startsWith() is not available on IE
     var result = false;
-    if (value && checkValue) {
-        var chkLen = checkValue.length;
-        if (value === checkValue) {
-            return true;
-        }
-        else if (value.length >= chkLen) {
-            for (var lp = 0; lp < chkLen; lp++) {
-                if (value[lp] !== checkValue[lp]) {
-                    return false;
-                }
+    var chkLen = checkValue ? checkValue.length : 0;
+    if (value && chkLen && value.length >= chkLen && !(result = value === checkValue)) {
+        for (var lp = 0; lp < chkLen; lp++) {
+            if (value[lp] !== checkValue[lp]) {
+                return false;
             }
-            result = true;
         }
+        result = true;
     }
     return result;
 }
@@ -25096,19 +25192,20 @@ function strContains(value, search) {
  * Check if an object is of type Date
  */
 function isDate(obj) {
-    return objToString(obj) === "[object Date]";
+    return !!(obj && _objToString.call(obj) === "[object Date]");
 }
 /**
  * Check if an object is of type Array
  */
-function isArray(obj) {
-    return objToString(obj) === "[object Array]";
+var isArray = _isArray || _isArrayPoly;
+function _isArrayPoly(obj) {
+    return !!(obj && _objToString.call(obj) === "[object Array]");
 }
 /**
  * Check if an object is of type Error
  */
 function isError(obj) {
-    return objToString(obj) === "[object Error]";
+    return !!(obj && _objToString.call(obj) === "[object Error]");
 }
 /**
  * Checks if the type of value is a string.
@@ -25147,31 +25244,57 @@ function isSymbol(value) {
     return typeof value === "symbol";
 }
 /**
+ * Checks if the type of the value is a normal plain object (not a null or data)
+ * @param value
+ */
+function isPlainObject(value) {
+    var result = false;
+    if (value && typeof value === "object") {
+        // Inlining _objGetPrototypeOf for performance to avoid an additional function call
+        var proto = _objGetPrototypeOf ? _objGetPrototypeOf(value) : _getObjProto(value);
+        if (!proto) {
+            // No prototype found so this is a plain Object eg. 'Object.create(null)'
+            result = true;
+        }
+        else {
+            // Objects that have a prototype are plain only if they were created using the Object global (native) function
+            if (proto[strConstructor] && _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjHasOwnProperty.call(proto, strConstructor)) {
+                proto = proto[strConstructor];
+            }
+            result = typeof proto === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimFunction && _fnToString.call(proto) === _objFunctionString;
+        }
+    }
+    return result;
+}
+/**
  * Convert a date to I.S.O. format in IE8
  */
 function toISOString(date) {
     if (date) {
-        if (date[strToISOString]) {
-            // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
-            return date[strToISOString]();
-        }
-        if (isDate(date)) {
-            var pad = function (num) {
-                var r = String(num);
-                if (r.length === 1) {
-                    r = "0" + r;
-                }
-                return r;
-            };
-            return date.getUTCFullYear()
-                + "-" + pad(date.getUTCMonth() + 1)
-                + "-" + pad(date.getUTCDate())
-                + "T" + pad(date.getUTCHours())
-                + ":" + pad(date.getUTCMinutes())
-                + ":" + pad(date.getUTCSeconds())
-                + "." + String((date.getUTCMilliseconds() / 1000).toFixed(3)).slice(2, 5)
-                + "Z";
-        }
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        return _dataToISOString ? date[strToISOString]() : _toISOStringPoly(date);
+    }
+}
+/**
+ * Convert a date to I.S.O. format in IE8
+ */
+function _toISOStringPoly(date) {
+    if (date && date.getUTCFullYear) {
+        var pad = function (num) {
+            var r = String(num);
+            if (r.length === 1) {
+                r = "0" + r;
+            }
+            return r;
+        };
+        return date.getUTCFullYear()
+            + "-" + pad(date.getUTCMonth() + 1)
+            + "-" + pad(date.getUTCDate())
+            + "T" + pad(date.getUTCHours())
+            + ":" + pad(date.getUTCMinutes())
+            + ":" + pad(date.getUTCSeconds())
+            + "." + String((date.getUTCMilliseconds() / 1000).toFixed(3)).slice(2, 5)
+            + "Z";
     }
 }
 /**
@@ -25206,17 +25329,23 @@ function arrForEach(arr, callbackfn, thisArg) {
  * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
  */
 function arrIndexOf(arr, searchElement, fromIndex) {
-    var len = arr.length;
-    var from = fromIndex || 0;
-    try {
-        for (var lp = Math.max(from >= 0 ? from : len - Math.abs(from), 0); lp < len; lp++) {
-            if (lp in arr && arr[lp] === searchElement) {
-                return lp;
+    if (arr) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        if (arr[strIndexOf]) {
+            return arr[strIndexOf](searchElement, fromIndex);
+        }
+        var len = arr.length;
+        var from = fromIndex || 0;
+        try {
+            for (var lp = Math.max(from >= 0 ? from : len - Math.abs(from), 0); lp < len; lp++) {
+                if (lp in arr && arr[lp] === searchElement) {
+                    return lp;
+                }
             }
         }
-    }
-    catch (e) {
-        // This can happen with some native browser objects, but should not happen for the type we are checking for
+        catch (e) {
+            // This can happen with some native browser objects, but should not happen for the type we are checking for
+        }
     }
     return -1;
 }
@@ -25229,18 +25358,25 @@ function arrIndexOf(arr, searchElement, fromIndex) {
  * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
  */
 function arrMap(arr, callbackfn, thisArg) {
-    var len = arr.length;
-    var _this = thisArg || arr;
-    var results = new Array(len);
-    try {
-        for (var lp = 0; lp < len; lp++) {
-            if (lp in arr) {
-                results[lp] = callbackfn.call(_this, arr[lp], arr);
+    var results;
+    if (arr) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        if (arr[strMap]) {
+            return arr[strMap](callbackfn, thisArg);
+        }
+        var len = arr.length;
+        var _this = thisArg || arr;
+        results = new Array(len);
+        try {
+            for (var lp = 0; lp < len; lp++) {
+                if (lp in arr) {
+                    results[lp] = callbackfn.call(_this, arr[lp], arr);
+                }
             }
         }
-    }
-    catch (e) {
-        // This can happen with some native browser objects, but should not happen for the type we are checking for
+        catch (e) {
+            // This can happen with some native browser objects, but should not happen for the type we are checking for
+        }
     }
     return results;
 }
@@ -25253,24 +25389,30 @@ function arrMap(arr, callbackfn, thisArg) {
  * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
  */
 function arrReduce(arr, callbackfn, initialValue) {
-    var len = arr.length;
-    var lp = 0;
     var value;
-    // Specifically checking the number of passed arguments as the value could be anything
-    if (arguments.length >= 3) {
-        value = arguments[2];
-    }
-    else {
-        while (lp < len && !(lp in arr)) {
+    if (arr) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        if (arr[strReduce]) {
+            return arr[strReduce](callbackfn, initialValue);
+        }
+        var len = arr.length;
+        var lp = 0;
+        // Specifically checking the number of passed arguments as the value could be anything
+        if (arguments.length >= 3) {
+            value = arguments[2];
+        }
+        else {
+            while (lp < len && !(lp in arr)) {
+                lp++;
+            }
+            value = arr[lp++];
+        }
+        while (lp < len) {
+            if (lp in arr) {
+                value = callbackfn(value, arr[lp], lp, arr);
+            }
             lp++;
         }
-        value = arr[lp++];
-    }
-    while (lp < len) {
-        if (lp in arr) {
-            value = callbackfn(value, arr[lp], lp, arr);
-        }
-        lp++;
     }
     return value;
 }
@@ -25278,10 +25420,11 @@ function arrReduce(arr, callbackfn, initialValue) {
  * helper method to trim strings (IE8 does not implement String.prototype.trim)
  */
 function strTrim(str) {
-    if (typeof str !== "string") {
-        return str;
+    if (str) {
+        // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+        str = (_strTrim && str[cStrTrim]) ? str[cStrTrim]() : (str.replace ? str.replace(/^\s+|\s+$/g, "") : str);
     }
-    return str.replace(/^\s+|\s+$/g, "");
+    return str;
 }
 var _objKeysHasDontEnumBug = !({ toString: null }).propertyIsEnumerable("toString");
 var _objKeysDontEnums = [
@@ -25303,6 +25446,10 @@ function objKeys(obj) {
     var objType = typeof obj;
     if (objType !== _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimFunction && (objType !== _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimObject || obj === null)) {
         (0,_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__.throwTypeError)("objKeys called on non-object");
+    }
+    // For Performance try and use the native instance, using string lookup of the function to easily pass the ES3 build checks and minification
+    if (!_objKeysHasDontEnumBug && _objKeys) {
+        return _objKeys(obj);
     }
     var result = [];
     for (var prop in obj) {
@@ -25353,28 +25500,18 @@ function objDefineAccessors(target, prop, getProp, setProp) {
     }
     return false;
 }
-function objFreeze(value) {
-    if (_objFreeze) {
-        value = _objFreeze(value);
-    }
+function _doNothing(value) {
     return value;
 }
-function objSeal(value) {
-    if (_objSeal) {
-        value = _objSeal(value);
-    }
-    return value;
-}
+var objFreeze = _objFreeze || _doNothing;
+var objSeal = _objSeal || _doNothing;
 /**
  * Return the current time via the Date now() function (if available) and falls back to (new Date()).getTime() if now() is unavailable (IE8 or less)
  * https://caniuse.com/#search=Date.now
  */
 function dateNow() {
     var dt = Date;
-    if (dt.now) {
-        return dt.now();
-    }
-    return new dt().getTime();
+    return dt.now ? dt.now() : new dt().getTime();
 }
 /**
  * Returns the name of object if it's an Error. Otherwise, returns empty string.
@@ -25523,10 +25660,74 @@ function createClassFromInterface(defaults) {
 function optimizeObject(theObject) {
     // V8 Optimization to cause the JIT compiler to create a new optimized object for looking up the own properties
     // primarily for object with <= 19 properties for >= 20 the effect is reduced or non-existent
-    if (theObject) {
-        theObject = (0,_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass)(_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjAssign ? (0,_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjAssign)({}, theObject) : theObject);
+    if (theObject && _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjAssign) {
+        theObject = (0,_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjClass)((0,_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjAssign)({}, theObject));
     }
     return theObject;
+}
+/**
+ * Pass in the objects to merge as arguments, this will only "merge" (extend) properties that are owned by the object.
+ * It will NOT merge inherited or non-enumerable properties.
+ * @param obj1 - object to merge.  Set this argument to 'true' for a deep extend.
+ * @param obj2 - object to merge.
+ * @param obj3 - object to merge.
+ * @param obj4 - object to merge.
+ * @param obj5 - object to merge.
+ * @returns The extended first object.
+ */
+function objExtend(obj, obj2, obj3, obj4, obj5, obj6) {
+    // Variables
+    var theArgs = arguments;
+    var extended = theArgs[0] || {};
+    var argLen = theArgs.length;
+    var deep = false;
+    var idx = 1;
+    // Check for "Deep" flag
+    if (argLen > 0 && isBoolean(extended)) {
+        deep = extended;
+        extended = theArgs[idx] || {};
+        idx++;
+    }
+    // Handle case when target is a string or something (possible in deep copy)
+    if (!isObject(extended)) {
+        extended = {};
+    }
+    // Loop through each remaining object and conduct a merge
+    for (; idx < argLen; idx++) {
+        var arg = theArgs[idx];
+        var isArgArray = isArray(arg);
+        var isArgObj = isObject(arg);
+        for (var prop in arg) {
+            var propOk = (isArgArray && (prop in arg)) || (isArgObj && (_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.ObjHasOwnProperty.call(arg, prop)));
+            if (!propOk) {
+                continue;
+            }
+            var newValue = arg[prop];
+            var isNewArray = void 0;
+            // If deep merge and property is an object, merge properties
+            if (deep && newValue && ((isNewArray = isArray(newValue)) || isPlainObject(newValue))) {
+                // Grab the current value of the extended object
+                var clone = extended[prop];
+                if (isNewArray) {
+                    if (!isArray(clone)) {
+                        // We can't "merge" an array with a non-array so overwrite the original
+                        clone = [];
+                    }
+                }
+                else if (!isPlainObject(clone)) {
+                    // We can't "merge" an object with a non-object
+                    clone = {};
+                }
+                // Never move the original objects always clone them
+                newValue = objExtend(deep, clone, newValue);
+            }
+            // Assign the new (or previous) value (unless undefined)
+            if (newValue !== undefined) {
+                extended[prop] = newValue;
+            }
+        }
+    }
+    return extended;
 }
 //# sourceMappingURL=HelperFuncs.js.map
 
@@ -25541,15 +25742,15 @@ function optimizeObject(theObject) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InstrumentProto": () => (/* binding */ InstrumentProto),
-/* harmony export */   "InstrumentProtos": () => (/* binding */ InstrumentProtos),
 /* harmony export */   "InstrumentFunc": () => (/* binding */ InstrumentFunc),
-/* harmony export */   "InstrumentFuncs": () => (/* binding */ InstrumentFuncs)
+/* harmony export */   "InstrumentFuncs": () => (/* binding */ InstrumentFuncs),
+/* harmony export */   "InstrumentProto": () => (/* binding */ InstrumentProto),
+/* harmony export */   "InstrumentProtos": () => (/* binding */ InstrumentProtos)
 /* harmony export */ });
-/* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
-/* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
+/* harmony import */ var _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-shims */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
+/* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -25560,16 +25761,6 @@ var aiInstrumentHooks = "_aiHooks";
 var cbNames = [
     "req", "rsp", "hkErr", "fnErr"
 ];
-/**
- * Constant string defined to support minimization
- * @ignore
- */
-var str__Proto = "__proto__";
-/**
- * Constant string defined to support minimization
- * @ignore
- */
-var strConstructor = "constructor";
 /** @ignore */
 function _arrLoop(arr, fn) {
     if (arr) {
@@ -25663,38 +25854,15 @@ function _createFunctionHook(aiHook) {
         return funcArgs.rslt;
     };
 }
-/**
- * Pre-lookup to check if we are running on a modern browser (i.e. not IE8)
- * @ignore
- */
-var _objGetPrototypeOf = Object["getPrototypeOf"];
-/**
- * Helper used to get the prototype of the target object as getPrototypeOf is not available in an ES3 environment.
- * @ignore
- */
-function _getObjProto(target) {
-    if (target) {
-        // This method doesn't existing in older browsers (e.g. IE8)
-        if (_objGetPrototypeOf) {
-            return _objGetPrototypeOf(target);
-        }
-        // target[Constructor] May break if the constructor has been changed or removed
-        var newProto = target[str__Proto] || target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype] || target[strConstructor];
-        if (newProto) {
-            return newProto;
-        }
-    }
-    return null;
-}
 /** @ignore */
 function _getOwner(target, name, checkPrototype) {
     var owner = null;
     if (target) {
-        if ((0,_HelperFuncs__WEBPACK_IMPORTED_MODULE_1__.hasOwnProperty)(target, name)) {
+        if ((0,_HelperFuncs__WEBPACK_IMPORTED_MODULE_0__.hasOwnProperty)(target, name)) {
             owner = target;
         }
         else if (checkPrototype) {
-            owner = _getOwner(_getObjProto(target), name, false);
+            owner = _getOwner((0,_HelperFuncs__WEBPACK_IMPORTED_MODULE_0__._getObjProto)(target), name, false);
         }
     }
     return owner;
@@ -25707,7 +25875,7 @@ function _getOwner(target, name, checkPrototype) {
  */
 function InstrumentProto(target, funcName, callbacks) {
     if (target) {
-        return InstrumentFunc(target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype], funcName, callbacks, false);
+        return InstrumentFunc(target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__.strShimPrototype], funcName, callbacks, false);
     }
     return null;
 }
@@ -25719,7 +25887,7 @@ function InstrumentProto(target, funcName, callbacks) {
  */
 function InstrumentProtos(target, funcNames, callbacks) {
     if (target) {
-        return InstrumentFuncs(target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimPrototype], funcNames, callbacks, false);
+        return InstrumentFuncs(target[_microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__.strShimPrototype], funcNames, callbacks, false);
     }
     return null;
 }
@@ -25736,7 +25904,7 @@ function InstrumentFunc(target, funcName, callbacks, checkPrototype) {
         var owner = _getOwner(target, funcName, checkPrototype);
         if (owner) {
             var fn = owner[funcName];
-            if (typeof fn === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_0__.strShimFunction) {
+            if (typeof fn === _microsoft_applicationinsights_shims__WEBPACK_IMPORTED_MODULE_1__.strShimFunction) {
                 var aiHook_1 = fn[aiInstrumentHooks];
                 if (!aiHook_1) {
                     // Only hook the function once
@@ -25815,7 +25983,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -25936,13 +26104,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PerfEvent": () => (/* binding */ PerfEvent),
 /* harmony export */   "PerfManager": () => (/* binding */ PerfManager),
 /* harmony export */   "doPerf": () => (/* binding */ doPerf),
-/* harmony export */   "setGblPerfMgr": () => (/* binding */ setGblPerfMgr),
-/* harmony export */   "getGblPerfMgr": () => (/* binding */ getGblPerfMgr)
+/* harmony export */   "getGblPerfMgr": () => (/* binding */ getGblPerfMgr),
+/* harmony export */   "setGblPerfMgr": () => (/* binding */ setGblPerfMgr)
 /* harmony export */ });
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26151,7 +26319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TelemetryPluginChain__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TelemetryPluginChain */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/TelemetryPluginChain.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26319,15 +26487,15 @@ var ProcessTelemetryContext = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "randomValue": () => (/* binding */ randomValue),
-/* harmony export */   "random32": () => (/* binding */ random32),
+/* harmony export */   "mwcRandom32": () => (/* binding */ mwcRandom32),
 /* harmony export */   "mwcRandomSeed": () => (/* binding */ mwcRandomSeed),
-/* harmony export */   "mwcRandom32": () => (/* binding */ mwcRandom32)
+/* harmony export */   "random32": () => (/* binding */ random32),
+/* harmony export */   "randomValue": () => (/* binding */ randomValue)
 /* harmony export */ });
 /* harmony import */ var _EnvUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EnvUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26449,7 +26617,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26528,7 +26696,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HelperFuncs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelperFuncs */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _EnvUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EnvUtils */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Core, 2.7.3
+ * Application Insights JavaScript SDK - Core, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26619,7 +26787,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CoreUtils.js");
 /*
- * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -26691,7 +26859,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TraceParent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./TraceParent */ "./node_modules/@microsoft/applicationinsights-dependencies-js/dist-esm/TraceParent.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -27584,7 +27752,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_dynamicproto_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @microsoft/dynamicproto-js */ "./node_modules/@microsoft/dynamicproto-js/lib/dist/esm/dynamicproto-js.js");
 /*
- * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Dependencies Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -27862,7 +28030,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Application": () => (/* binding */ Application)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -27889,7 +28057,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Device": () => (/* binding */ Device)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -27924,12 +28092,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Internal": () => (/* binding */ Internal)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
 
-var Version = "2.7.3";
+var Version = "2.7.4";
 var Internal = /** @class */ (function () {
     /**
      * Constructs a new instance of the internal telemetry data class.
@@ -27956,7 +28124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Location": () => (/* binding */ Location)
 /* harmony export */ });
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -27992,7 +28160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CoreUtils.js");
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -28197,7 +28365,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CoreUtils.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/EnvUtils.js");
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -28242,7 +28410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK.Enums/LoggingEnums.js");
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -28411,7 +28579,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/HelperFuncs.js");
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Telemetry/PageView.js");
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 /**
@@ -28554,7 +28722,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Context_Location__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Context/Location */ "./node_modules/@microsoft/applicationinsights-properties-js/dist-esm/Context/Location.js");
 /* harmony import */ var _Context_TelemetryTrace__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Context/TelemetryTrace */ "./node_modules/@microsoft/applicationinsights-properties-js/dist-esm/Context/TelemetryTrace.js");
 /*
- * Application Insights JavaScript SDK - Properties Plugin, 2.7.3
+ * Application Insights JavaScript SDK - Properties Plugin, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 /**
@@ -28719,18 +28887,18 @@ var TelemetryContext = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strShimFunction": () => (/* binding */ strShimFunction),
-/* harmony export */   "strShimObject": () => (/* binding */ strShimObject),
-/* harmony export */   "strShimUndefined": () => (/* binding */ strShimUndefined),
-/* harmony export */   "strShimPrototype": () => (/* binding */ strShimPrototype),
-/* harmony export */   "strShimHasOwnProperty": () => (/* binding */ strShimHasOwnProperty),
-/* harmony export */   "strDefault": () => (/* binding */ strDefault),
-/* harmony export */   "ObjClass": () => (/* binding */ ObjClass),
-/* harmony export */   "ObjProto": () => (/* binding */ ObjProto),
 /* harmony export */   "ObjAssign": () => (/* binding */ ObjAssign),
+/* harmony export */   "ObjClass": () => (/* binding */ ObjClass),
 /* harmony export */   "ObjCreate": () => (/* binding */ ObjCreate),
 /* harmony export */   "ObjDefineProperty": () => (/* binding */ ObjDefineProperty),
-/* harmony export */   "ObjHasOwnProperty": () => (/* binding */ ObjHasOwnProperty)
+/* harmony export */   "ObjHasOwnProperty": () => (/* binding */ ObjHasOwnProperty),
+/* harmony export */   "ObjProto": () => (/* binding */ ObjProto),
+/* harmony export */   "strDefault": () => (/* binding */ strDefault),
+/* harmony export */   "strShimFunction": () => (/* binding */ strShimFunction),
+/* harmony export */   "strShimHasOwnProperty": () => (/* binding */ strShimHasOwnProperty),
+/* harmony export */   "strShimObject": () => (/* binding */ strShimObject),
+/* harmony export */   "strShimPrototype": () => (/* binding */ strShimPrototype),
+/* harmony export */   "strShimUndefined": () => (/* binding */ strShimUndefined)
 /* harmony export */ });
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -28760,8 +28928,8 @@ var ObjHasOwnProperty = ObjProto[strShimHasOwnProperty];
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getGlobal": () => (/* binding */ getGlobal),
-/* harmony export */   "throwTypeError": () => (/* binding */ throwTypeError),
-/* harmony export */   "objCreateFn": () => (/* binding */ objCreateFn)
+/* harmony export */   "objCreateFn": () => (/* binding */ objCreateFn),
+/* harmony export */   "throwTypeError": () => (/* binding */ throwTypeError)
 /* harmony export */ });
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Constants */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -28838,26 +29006,26 @@ function objCreateFn(obj) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SymbolObj": () => (/* binding */ SymbolObj),
 /* harmony export */   "ReflectObj": () => (/* binding */ ReflectObj),
-/* harmony export */   "__hasSymbol": () => (/* binding */ __hasSymbol),
-/* harmony export */   "__hasReflect": () => (/* binding */ __hasReflect),
-/* harmony export */   "__objAssignFnImpl": () => (/* binding */ __objAssignFnImpl),
+/* harmony export */   "SymbolObj": () => (/* binding */ SymbolObj),
 /* harmony export */   "__assignFn": () => (/* binding */ __assignFn),
-/* harmony export */   "__extendsFn": () => (/* binding */ __extendsFn),
-/* harmony export */   "__restFn": () => (/* binding */ __restFn),
-/* harmony export */   "__decorateFn": () => (/* binding */ __decorateFn),
-/* harmony export */   "__paramFn": () => (/* binding */ __paramFn),
-/* harmony export */   "__metadataFn": () => (/* binding */ __metadataFn),
-/* harmony export */   "__exportStarFn": () => (/* binding */ __exportStarFn),
 /* harmony export */   "__createBindingFn": () => (/* binding */ __createBindingFn),
-/* harmony export */   "__valuesFn": () => (/* binding */ __valuesFn),
-/* harmony export */   "__readFn": () => (/* binding */ __readFn),
-/* harmony export */   "__spreadArraysFn": () => (/* binding */ __spreadArraysFn),
-/* harmony export */   "__spreadArrayFn": () => (/* binding */ __spreadArrayFn),
-/* harmony export */   "__makeTemplateObjectFn": () => (/* binding */ __makeTemplateObjectFn),
+/* harmony export */   "__decorateFn": () => (/* binding */ __decorateFn),
+/* harmony export */   "__exportStarFn": () => (/* binding */ __exportStarFn),
+/* harmony export */   "__extendsFn": () => (/* binding */ __extendsFn),
+/* harmony export */   "__hasReflect": () => (/* binding */ __hasReflect),
+/* harmony export */   "__hasSymbol": () => (/* binding */ __hasSymbol),
+/* harmony export */   "__importDefaultFn": () => (/* binding */ __importDefaultFn),
 /* harmony export */   "__importStarFn": () => (/* binding */ __importStarFn),
-/* harmony export */   "__importDefaultFn": () => (/* binding */ __importDefaultFn)
+/* harmony export */   "__makeTemplateObjectFn": () => (/* binding */ __makeTemplateObjectFn),
+/* harmony export */   "__metadataFn": () => (/* binding */ __metadataFn),
+/* harmony export */   "__objAssignFnImpl": () => (/* binding */ __objAssignFnImpl),
+/* harmony export */   "__paramFn": () => (/* binding */ __paramFn),
+/* harmony export */   "__readFn": () => (/* binding */ __readFn),
+/* harmony export */   "__restFn": () => (/* binding */ __restFn),
+/* harmony export */   "__spreadArrayFn": () => (/* binding */ __spreadArrayFn),
+/* harmony export */   "__spreadArraysFn": () => (/* binding */ __spreadArraysFn),
+/* harmony export */   "__valuesFn": () => (/* binding */ __valuesFn)
 /* harmony export */ });
 /* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Constants */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Constants.js");
 /* harmony import */ var _Helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Helpers */ "./node_modules/@microsoft/applicationinsights-shims/dist-esm/Helpers.js");
@@ -29102,7 +29270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Initialization__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Initialization */ "./node_modules/@microsoft/applicationinsights-web/dist-esm/Initialization.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/CoreUtils.js");
 /*
- * Application Insights JavaScript SDK - Web, 2.7.3
+ * Application Insights JavaScript SDK - Web, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -29155,7 +29323,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Constants.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/HelperFuncs.js");
 /*
- * Application Insights JavaScript SDK - Web, 2.7.3
+ * Application Insights JavaScript SDK - Web, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -29353,8 +29521,8 @@ var AppInsightsDeprecated = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Telemetry": () => (/* binding */ Telemetry),
-/* harmony export */   "Initialization": () => (/* binding */ Initialization)
+/* harmony export */   "Initialization": () => (/* binding */ Initialization),
+/* harmony export */   "Telemetry": () => (/* binding */ Telemetry)
 /* harmony export */ });
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/AppInsightsCore.js");
 /* harmony import */ var _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @microsoft/applicationinsights-core-js */ "./node_modules/@microsoft/applicationinsights-core-js/dist-esm/JavaScriptSDK/PerfManager.js");
@@ -29391,7 +29559,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Interfaces/PartAExtensions.js");
 /* harmony import */ var _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @microsoft/applicationinsights-common */ "./node_modules/@microsoft/applicationinsights-common/dist-esm/Enums.js");
 /*
- * Application Insights JavaScript SDK - Web, 2.7.3
+ * Application Insights JavaScript SDK - Web, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
@@ -29897,33 +30065,33 @@ var Initialization = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ApplicationInsights": () => (/* reexport safe */ _Initialization__WEBPACK_IMPORTED_MODULE_0__.Initialization),
-/* harmony export */   "Telemetry": () => (/* reexport safe */ _Initialization__WEBPACK_IMPORTED_MODULE_0__.Telemetry),
-/* harmony export */   "ApplicationInsightsContainer": () => (/* reexport safe */ _ApplicationInsightsContainer__WEBPACK_IMPORTED_MODULE_1__.ApplicationInsightsContainer),
 /* harmony export */   "AppInsightsCore": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_2__.AppInsightsCore),
-/* harmony export */   "LoggingSeverity": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__.LoggingSeverity),
-/* harmony export */   "_InternalMessageId": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__._InternalMessageId),
-/* harmony export */   "PerfEvent": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.PerfEvent),
-/* harmony export */   "PerfManager": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.PerfManager),
-/* harmony export */   "doPerf": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.doPerf),
-/* harmony export */   "NotificationManager": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_5__.NotificationManager),
-/* harmony export */   "BaseTelemetryPlugin": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_6__.BaseTelemetryPlugin),
+/* harmony export */   "ApplicationAnalytics": () => (/* reexport safe */ _microsoft_applicationinsights_analytics_js__WEBPACK_IMPORTED_MODULE_20__.ApplicationInsights),
+/* harmony export */   "ApplicationInsights": () => (/* reexport safe */ _Initialization__WEBPACK_IMPORTED_MODULE_0__.Initialization),
+/* harmony export */   "ApplicationInsightsContainer": () => (/* reexport safe */ _ApplicationInsightsContainer__WEBPACK_IMPORTED_MODULE_1__.ApplicationInsightsContainer),
 /* harmony export */   "BaseCore": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_7__.BaseCore),
+/* harmony export */   "BaseTelemetryPlugin": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_6__.BaseTelemetryPlugin),
 /* harmony export */   "CoreUtils": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_8__.CoreUtils),
-/* harmony export */   "Util": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_9__.Util),
-/* harmony export */   "SeverityLevel": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_10__.SeverityLevel),
+/* harmony export */   "DependenciesPlugin": () => (/* reexport safe */ _microsoft_applicationinsights_dependencies_js__WEBPACK_IMPORTED_MODULE_22__.AjaxMonitor),
+/* harmony export */   "DistributedTracingModes": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_18__.DistributedTracingModes),
 /* harmony export */   "Event": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_11__.Event),
 /* harmony export */   "Exception": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_12__.Exception),
+/* harmony export */   "LoggingSeverity": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__.LoggingSeverity),
 /* harmony export */   "Metric": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_13__.Metric),
+/* harmony export */   "NotificationManager": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_5__.NotificationManager),
 /* harmony export */   "PageView": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_14__.PageView),
 /* harmony export */   "PageViewPerformance": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_15__.PageViewPerformance),
-/* harmony export */   "RemoteDependencyData": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_16__.RemoteDependencyData),
-/* harmony export */   "Trace": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_17__.Trace),
-/* harmony export */   "DistributedTracingModes": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_18__.DistributedTracingModes),
-/* harmony export */   "Sender": () => (/* reexport safe */ _microsoft_applicationinsights_channel_js__WEBPACK_IMPORTED_MODULE_19__.Sender),
-/* harmony export */   "ApplicationAnalytics": () => (/* reexport safe */ _microsoft_applicationinsights_analytics_js__WEBPACK_IMPORTED_MODULE_20__.ApplicationInsights),
+/* harmony export */   "PerfEvent": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.PerfEvent),
+/* harmony export */   "PerfManager": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.PerfManager),
 /* harmony export */   "PropertiesPlugin": () => (/* reexport safe */ _microsoft_applicationinsights_properties_js__WEBPACK_IMPORTED_MODULE_21__["default"]),
-/* harmony export */   "DependenciesPlugin": () => (/* reexport safe */ _microsoft_applicationinsights_dependencies_js__WEBPACK_IMPORTED_MODULE_22__.AjaxMonitor)
+/* harmony export */   "RemoteDependencyData": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_16__.RemoteDependencyData),
+/* harmony export */   "Sender": () => (/* reexport safe */ _microsoft_applicationinsights_channel_js__WEBPACK_IMPORTED_MODULE_19__.Sender),
+/* harmony export */   "SeverityLevel": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_10__.SeverityLevel),
+/* harmony export */   "Telemetry": () => (/* reexport safe */ _Initialization__WEBPACK_IMPORTED_MODULE_0__.Telemetry),
+/* harmony export */   "Trace": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_17__.Trace),
+/* harmony export */   "Util": () => (/* reexport safe */ _microsoft_applicationinsights_common__WEBPACK_IMPORTED_MODULE_9__.Util),
+/* harmony export */   "_InternalMessageId": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_3__._InternalMessageId),
+/* harmony export */   "doPerf": () => (/* reexport safe */ _microsoft_applicationinsights_core_js__WEBPACK_IMPORTED_MODULE_4__.doPerf)
 /* harmony export */ });
 /* harmony import */ var _Initialization__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Initialization */ "./node_modules/@microsoft/applicationinsights-web/dist-esm/Initialization.js");
 /* harmony import */ var _ApplicationInsightsContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApplicationInsightsContainer */ "./node_modules/@microsoft/applicationinsights-web/dist-esm/ApplicationInsightsContainer.js");
@@ -29949,7 +30117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_applicationinsights_properties_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @microsoft/applicationinsights-properties-js */ "./node_modules/@microsoft/applicationinsights-properties-js/dist-esm/PropertiesPlugin.js");
 /* harmony import */ var _microsoft_applicationinsights_dependencies_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @microsoft/applicationinsights-dependencies-js */ "./node_modules/@microsoft/applicationinsights-dependencies-js/dist-esm/ajax.js");
 /*
- * Application Insights JavaScript SDK - Web, 2.7.3
+ * Application Insights JavaScript SDK - Web, 2.7.4
  * Copyright (c) Microsoft and contributors. All rights reserved.
  */
 
